@@ -1,0 +1,118 @@
+//Color Variables
+$dark-blue: #333645; //Logo, about, socials
+$white: #fff;
+$lightgrey: #ddd;
+
+$btn-blue: #4183D7;
+$btn-blue-hover: #2A6EC6; //Btn on hover
+$btn-grey: #999AA2;
+$btn-grey-hover: #84858F; //Btn on hover
+$soft: #67809F; //Software card, nav
+$soft-dark: #526784; // Darker on hover
+$it: #4183D7; //IT card, nav
+$it-dark: #286ABD; // Darker on hover
+$market: #2ECC71; // Marketing card, nav
+$market-dark: #25A25A; // Darker on hover
+$tele: #D64541; // Telecoms card, nav
+$tele-dark: #BC2C28; // Darker on hover
+$web: #926FB1; // Web Design and Training Card, Nav
+$web-dark: #79539A; // Darker on hover
+$cyber: #F62459; // Cyber Security Card, Nav
+$cyber-dark: #DE093F; // Darker on hover
+
+/*========== GLOBAL STYLES ===*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    margin: 0;
+}
+
+/*========== HEADER/NAV ======*/
+
+.navigation {
+    height: 20vh;
+}
+
+/*========== HERO ============*/
+
+.hero {
+    height: 80vh;
+}
+/*========== CARDS ===========*/
+.cards {
+    border: 1px solid purple;
+    height: 300vh;
+}
+
+.fa-desktop {
+    font-size: 5rem;
+}
+/*========== ABOUT ===========*/
+.about {
+    border: 1px solid black;
+    height: 90vh;
+}
+/*========== NEWS ============*/
+.news {
+    border: 1px solid orange;
+    height: 300vh;
+}
+/*========== CLIENTS =========*/
+.clients {
+    border: 1px solid purple;
+    height: 20vh;
+}
+/*========== EMAIL FORM ======*/
+.email {
+    border: 1px solid grey;
+    height: 90vh;
+}
+/*========== FOOTER ==========*/
+.footer {
+    border: 1px solid pink;
+    height: 130vh;
+}
+/*========== AWARDS ======*/
+.awards {
+    border: 1px solid teal;
+    height: 50vh;
+}
+/*========== MEDIA QUERIES ===*/
+
+@media screen and (max-width: 576px) {
+    .hero-img {
+        object-fit: none;
+        mask-image: linear-gradient(to bottom, transparent 10%, black);
+    }
+  }
+
+@media screen and (min-width: 576px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 992px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 1400px) {
+    
+}

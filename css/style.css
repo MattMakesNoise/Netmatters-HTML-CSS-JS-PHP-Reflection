@@ -1,0 +1,88 @@
+/*========== GLOBAL STYLES ===*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  margin: 0;
+}
+
+/*========== HEADER/NAV ======*/
+.navigation {
+  height: 20vh;
+}
+
+/*========== HERO ============*/
+.hero {
+  height: 80vh;
+}
+
+/*========== CARDS ===========*/
+.cards {
+  border: 1px solid purple;
+  height: 300vh;
+}
+
+.fa-desktop {
+  font-size: 5rem;
+}
+
+/*========== ABOUT ===========*/
+.about {
+  border: 1px solid black;
+  height: 90vh;
+}
+
+/*========== NEWS ============*/
+.news {
+  border: 1px solid orange;
+  height: 300vh;
+}
+
+/*========== CLIENTS =========*/
+.clients {
+  border: 1px solid purple;
+  height: 20vh;
+}
+
+/*========== EMAIL FORM ======*/
+.email {
+  border: 1px solid grey;
+  height: 90vh;
+}
+
+/*========== FOOTER ==========*/
+.footer {
+  border: 1px solid pink;
+  height: 130vh;
+}
+
+/*========== AWARDS ======*/
+.awards {
+  border: 1px solid teal;
+  height: 50vh;
+}
+
+/*========== MEDIA QUERIES ===*/
+@media screen and (max-width: 576px) {
+  .hero-img {
+    -o-object-fit: none;
+       object-fit: none;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), to(black));
+    -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black);
+            mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), to(black));
+            mask-image: linear-gradient(to bottom, transparent 10%, black);
+  }
+}
+/*# sourceMappingURL=style.css.map */
