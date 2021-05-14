@@ -20,6 +20,16 @@ $web-dark: #79539A; // Darker on hover
 $cyber: #F62459; // Cyber Security Card, Nav
 $cyber-dark: #DE093F; // Darker on hover
 
+//Mixins
+@mixin fxalgnctr {
+    display: flex;
+    align-items: center;
+}
+
+@mixin circleborder {
+
+}
+
 /*========== GLOBAL STYLES ===*/
 
 * {
@@ -50,14 +60,159 @@ body {
     height: 80vh;
 }
 /*========== CARDS ===========*/
-.cards {
-    border: 1px solid purple;
+.cards-section {
     height: 300vh;
+    background-color: $lightgrey;
 }
 
-.fa-desktop {
-    font-size: 5rem;
+.card {
+    @include fxalgnctr;
 }
+
+.card-icon {
+    font-size: 1.6rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title,
+.card-text {
+    text-align: center;
+    &:hover {
+    color: white;
+}
+}
+
+.card-btn {
+    margin: auto auto 0 auto;
+    text-transform: uppercase;
+    width: 35%;
+}
+    /*========== SOFT CARD =======*/
+    .soft-card {
+        &:hover {
+            background-color: $soft-dark;
+        }
+    }
+
+    .soft-btn {
+        background-color: $soft-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $soft-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== IT CARD =========*/
+    .it-card {
+        &:hover {
+            background-color: $it-dark;
+        }
+    }
+
+    .it-btn {
+        background-color: $it-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $it-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== MARKET CARD =====*/
+    .market-card {
+        &:hover {
+            background-color: $market-dark;
+        }
+    }
+
+    .market-btn {
+        background-color: $market-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $market-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== TELE CARD =======*/
+    .tele-card {
+        &:hover {
+            background-color: $tele-dark;
+        }
+    }
+
+    .tele-btn {
+        background-color: $tele-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $tele-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== WEB CARD ========*/
+    .web-card {
+        &:hover {
+            background-color: $web-dark;
+        }
+    }
+
+    .web-btn {
+        background-color: $soft-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $web-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== CYBER CARD ======*/
+    .cyber-card {
+        &:hover {
+            background-color: $cyber-dark;
+        }
+    }
+
+    .cyber-btn {
+        background-color: $cyber-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $cyber-dark;
+            text-decoration: none;
+        }
+    }
+    /*========== TRAIN CARD ======*/
+    .train-card {
+        &:hover {
+            background-color: $web-dark;
+        }
+    }
+
+    .train-btn {
+        background-color: $web-dark;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            background-color: $white;
+            color: $web-dark;
+            text-decoration: none;
+        }
+    }
+
 /*========== ABOUT ===========*/
 .about {
     border: 1px solid black;

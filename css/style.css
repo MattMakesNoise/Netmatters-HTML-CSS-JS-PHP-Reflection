@@ -29,13 +29,169 @@ body {
 }
 
 /*========== CARDS ===========*/
-.cards {
-  border: 1px solid purple;
+.cards-section {
   height: 300vh;
+  background-color: #ddd;
 }
 
-.fa-desktop {
-  font-size: 5rem;
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
+
+.card-title:hover,
+.card-text:hover {
+  color: white;
+}
+
+.card-btn {
+  margin: auto auto 0 auto;
+  text-transform: uppercase;
+  width: 35%;
+}
+
+/*========== SOFT CARD =======*/
+.soft-card:hover {
+  background-color: #526784;
+}
+
+.soft-btn {
+  background-color: #526784;
+  color: #fff;
+  text-decoration: none;
+}
+
+.soft-btn:hover {
+  background-color: #fff;
+  color: #526784;
+  text-decoration: none;
+}
+
+/*========== IT CARD =========*/
+.it-card:hover {
+  background-color: #286ABD;
+}
+
+.it-btn {
+  background-color: #286ABD;
+  color: #fff;
+  text-decoration: none;
+}
+
+.it-btn:hover {
+  background-color: #fff;
+  color: #286ABD;
+  text-decoration: none;
+}
+
+/*========== MARKET CARD =====*/
+.market-card:hover {
+  background-color: #25A25A;
+}
+
+.market-btn {
+  background-color: #25A25A;
+  color: #fff;
+  text-decoration: none;
+}
+
+.market-btn:hover {
+  background-color: #fff;
+  color: #25A25A;
+  text-decoration: none;
+}
+
+/*========== TELE CARD =======*/
+.tele-card:hover {
+  background-color: #BC2C28;
+}
+
+.tele-btn {
+  background-color: #BC2C28;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tele-btn:hover {
+  background-color: #fff;
+  color: #BC2C28;
+  text-decoration: none;
+}
+
+/*========== WEB CARD ========*/
+.web-card:hover {
+  background-color: #79539A;
+}
+
+.web-btn {
+  background-color: #526784;
+  color: #fff;
+  text-decoration: none;
+}
+
+.web-btn:hover {
+  background-color: #fff;
+  color: #79539A;
+  text-decoration: none;
+}
+
+/*========== CYBER CARD ======*/
+.cyber-card:hover {
+  background-color: #DE093F;
+}
+
+.cyber-btn {
+  background-color: #DE093F;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cyber-btn:hover {
+  background-color: #fff;
+  color: #DE093F;
+  text-decoration: none;
+}
+
+/*========== TRAIN CARD ======*/
+.train-card:hover {
+  background-color: #79539A;
+}
+
+.train-btn {
+  background-color: #79539A;
+  color: #fff;
+  text-decoration: none;
+}
+
+.train-btn:hover {
+  background-color: #fff;
+  color: #79539A;
+  text-decoration: none;
 }
 
 /*========== ABOUT ===========*/
