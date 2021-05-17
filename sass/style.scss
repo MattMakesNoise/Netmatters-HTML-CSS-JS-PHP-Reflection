@@ -1,5 +1,6 @@
 //Color Variables
 $dark-blue: #333645; //Logo, about, socials
+$darker-blue: #262834;
 $white: #fff;
 $lightgrey: #ddd;
 $black: #000;
@@ -455,6 +456,10 @@ body {
     color: $btn-grey;
 }
 
+.news-btn {
+    margin-top: auto;
+}
+
 .scion-title {
     color: $web;
 }
@@ -557,8 +562,49 @@ body {
 }
 /*========== FOOTER ==========*/
 .footer {
-    border: 1px solid pink;
-    height: 130vh;
+    background-color: $dark-blue;
+    height: 99vh;
+    color: $white;
+    padding-bottom: 2.5vh;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+        text-decoration: underline;
+        color: $white;
+    }
+}
+
+.social-wrapper {
+    background-color: $darker-blue;
+    @mixin fxalgnctr {
+        justify-content: center;
+    }
+    i {
+        text-align: center;
+        width: 100%;
+        color: $white;
+        margin-top: 1rem;
+    }
+}
+
+.facebook:hover {
+    background-color: #43609C;
+}
+.twitter:hover {
+    background-color: #55acee;
+}
+.insta:hover {
+    background-color: #DD2A7B;
+}
+.linkedin:hover {
+    background-color: #0072B1;
 }
 /*========== AWARDS ======*/
 .awards {
@@ -575,10 +621,16 @@ body {
     .clients {
         display: none !important;
     }
+    .awards {
+        display: none !important;
+    }
   }
 
 @media screen and (min-width: 576px) {
     .clients {
+        display: none !important;
+    }
+    .awards {
         display: none !important;
     }
 }

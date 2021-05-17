@@ -499,6 +499,10 @@ body {
   color: #999AA2;
 }
 
+.news-btn {
+  margin-top: auto;
+}
+
 .scion-title {
   color: #926FB1;
 }
@@ -606,8 +610,51 @@ body {
 
 /*========== FOOTER ==========*/
 .footer {
-  border: 1px solid pink;
-  height: 130vh;
+  background-color: #333645;
+  height: 99vh;
+  color: #fff;
+  padding-bottom: 2.5vh;
+}
+
+.footer-heading {
+  text-transform: uppercase;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.social-wrapper {
+  background-color: #262834;
+}
+
+.social-wrapper i {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.facebook:hover {
+  background-color: #43609C;
+}
+
+.twitter:hover {
+  background-color: #55acee;
+}
+
+.insta:hover {
+  background-color: #DD2A7B;
+}
+
+.linkedin:hover {
+  background-color: #0072B1;
 }
 
 /*========== AWARDS ======*/
@@ -629,10 +676,16 @@ body {
   .clients {
     display: none !important;
   }
+  .awards {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 576px) {
   .clients {
+    display: none !important;
+  }
+  .awards {
     display: none !important;
   }
 }
