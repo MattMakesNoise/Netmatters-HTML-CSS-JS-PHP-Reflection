@@ -2,6 +2,9 @@
 $dark-blue: #333645; //Logo, about, socials
 $white: #fff;
 $lightgrey: #ddd;
+$black: #000;
+$black-25: rgba($black, 0.25);
+$black-10: rgba($black, .1);
 
 $btn-blue: #4183D7;
 $btn-blue-hover: #2A6EC6; //Btn on hover
@@ -91,7 +94,20 @@ body {
 .card-title,
 .card-text {
     text-align: center;
-    color: black;
+    color: $black;
+}
+
+.card-title {
+    background-image: linear-gradient($black, $black);
+    background-repeat: no-repeat;
+    background-size: 5vw 10%;
+    background-position: center bottom, 0.2vw 0;
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
 }
 
 .card-btn {
@@ -114,6 +130,11 @@ body {
             text-align: center;
             color: black;
         }
+        .soft-btn {
+            background-color: $soft-dark;
+            color: $white;
+            text-decoration: none;
+        }
         &:hover {
             background-color: $soft-dark;
             .icon-border {
@@ -126,6 +147,9 @@ body {
             .card-title {
                 color: $white;
             }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
             .soft-btn {
                 background-color: $white;
                 color: $soft-dark;
@@ -133,15 +157,24 @@ body {
             }
         }
     }
-
-    .soft-btn {
-        background-color: $soft-dark;
-        color: $white;
-        text-decoration: none;
-    }
-    
     /*========== IT CARD =========*/
     .it-card {
+        .icon-border {
+            background-color: $it-dark;
+        }
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .it-btn {
+            background-color: $it-dark;
+            color: $white;
+            text-decoration: none;
+        }
         &:hover {
             background-color: $it-dark;
             .icon-border {
@@ -150,6 +183,13 @@ body {
             .card-icon {
                 color: $it-dark;
             }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
             .it-btn {
                 background-color: $white;
                 color: $it-dark;
@@ -157,102 +197,220 @@ body {
             }
         }
     }
-
-    .it-btn {
-        background-color: $it-dark;
-        color: $white;
-        text-decoration: none;
-    }
     /*========== MARKET CARD =====*/
     .market-card {
-        &:hover {
+        .icon-border {
             background-color: $market-dark;
         }
-    }
-
-    .market-btn {
-        background-color: $market-dark;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $market-dark;
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .market-btn {
+            background-color: $market-dark;
+            color: $white;
             text-decoration: none;
+        }
+        &:hover {
+            background-color: $market-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $market-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
+            .market-btn {
+                background-color: $white;
+                color: $market-dark;
+                text-decoration: none;
+            }
         }
     }
     /*========== TELE CARD =======*/
     .tele-card {
-        &:hover {
+        .icon-border {
             background-color: $tele-dark;
         }
-    }
-
-    .tele-btn {
-        background-color: $tele-dark;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $tele-dark;
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .tele-btn {
+            background-color: $tele-dark;
+            color: $white;
             text-decoration: none;
+        }
+        &:hover {
+            background-color: $tele-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $tele-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
+            .tele-btn {
+                background-color: $white;
+                color: $tele-dark;
+                text-decoration: none;
+            }
         }
     }
     /*========== WEB CARD ========*/
     .web-card {
-        &:hover {
+        .icon-border {
             background-color: $web-dark;
         }
-    }
-
-    .web-btn {
-        background-color: $soft-dark;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $web-dark;
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .web-btn {
+            background-color: $web-dark;
+            color: $white;
             text-decoration: none;
+        }
+        &:hover {
+            background-color: $web-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $web-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
+            .web-btn {
+                background-color: $white;
+                color: $web-dark;
+                text-decoration: none;
+            }
         }
     }
     /*========== CYBER CARD ======*/
     .cyber-card {
-        &:hover {
+        .icon-border {
             background-color: $cyber-dark;
         }
-    }
-
-    .cyber-btn {
-        background-color: $cyber-dark;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $cyber-dark;
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .cyber-btn {
+            background-color: $cyber-dark;
+            color: $white;
             text-decoration: none;
+        }
+        &:hover {
+            background-color: $cyber-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $cyber-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
+            .cyber-btn {
+                background-color: $white;
+                color: $cyber-dark;
+                text-decoration: none;
+            }
         }
     }
     /*========== TRAIN CARD ======*/
     .train-card {
-        &:hover {
+        .icon-border {
             background-color: $web-dark;
         }
-    }
-
-    .train-btn {
-        background-color: $web-dark;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $web-dark;
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
+        .train-btn {
+            background-color: $web-dark;
+            color: $white;
             text-decoration: none;
         }
+        &:hover {
+            background-color: $web-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $web-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .card-title {
+                background-image: linear-gradient($white, $white);
+            }
+            .train-btn {
+                background-color: $white;
+                color: $web-dark;
+                text-decoration: none;
+            }
+        }
     }
-
 /*========== ABOUT ===========*/
 .about {
     border: 1px solid black;
-    height: 90vh;
+    height: 70vh;
+    background-color: $dark-blue;
+    color: $white;
+}
+
+.culture-btn {
+    margin: 0 auto auto 1rem;
+    text-transform: uppercase;
+    width: 35% !important;
+    white-space: nowrap;
+    font-size: 0.1rem;
 }
 /*========== NEWS ============*/
 .news {

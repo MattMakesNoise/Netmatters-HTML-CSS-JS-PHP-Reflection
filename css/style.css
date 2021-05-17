@@ -70,7 +70,21 @@ body {
 .card-title,
 .card-text {
   text-align: center;
-  color: black;
+  color: #000;
+}
+
+.card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-size: 5vw 10%;
+  background-position: center bottom, 0.2vw 0;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  font-size: 1rem;
 }
 
 .card-btn {
@@ -96,6 +110,12 @@ body {
   color: black;
 }
 
+.soft-card .soft-btn {
+  background-color: #526784;
+  color: #fff;
+  text-decoration: none;
+}
+
 .soft-card:hover {
   background-color: #526784;
 }
@@ -113,19 +133,38 @@ body {
   color: #fff;
 }
 
+.soft-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
 .soft-card:hover .soft-btn {
   background-color: #fff;
   color: #526784;
   text-decoration: none;
 }
 
-.soft-btn {
-  background-color: #526784;
+/*========== IT CARD =========*/
+.it-card .icon-border {
+  background-color: #286ABD;
+}
+
+.it-card .card-icon {
+  color: #fff;
+}
+
+.it-card .card-title,
+.it-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.it-card .it-btn {
+  background-color: #286ABD;
   color: #fff;
   text-decoration: none;
 }
 
-/*========== IT CARD =========*/
 .it-card:hover {
   background-color: #286ABD;
 }
@@ -138,98 +177,262 @@ body {
   color: #286ABD;
 }
 
+.it-card:hover .card-text,
+.it-card:hover .card-title {
+  color: #fff;
+}
+
+.it-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
 .it-card:hover .it-btn {
   background-color: #fff;
   color: #286ABD;
   text-decoration: none;
 }
 
-.it-btn {
-  background-color: #286ABD;
+/*========== MARKET CARD =====*/
+.market-card .icon-border {
+  background-color: #25A25A;
+}
+
+.market-card .card-icon {
+  color: #fff;
+}
+
+.market-card .card-title,
+.market-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.market-card .market-btn {
+  background-color: #25A25A;
   color: #fff;
   text-decoration: none;
 }
 
-/*========== MARKET CARD =====*/
 .market-card:hover {
   background-color: #25A25A;
 }
 
-.market-btn {
-  background-color: #25A25A;
-  color: #fff;
-  text-decoration: none;
+.market-card:hover .icon-border {
+  background-color: white;
 }
 
-.market-btn:hover {
+.market-card:hover .card-icon {
+  color: #25A25A;
+}
+
+.market-card:hover .card-text,
+.market-card:hover .card-title {
+  color: #fff;
+}
+
+.market-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
+.market-card:hover .market-btn {
   background-color: #fff;
   color: #25A25A;
   text-decoration: none;
 }
 
 /*========== TELE CARD =======*/
-.tele-card:hover {
+.tele-card .icon-border {
   background-color: #BC2C28;
 }
 
-.tele-btn {
+.tele-card .card-icon {
+  color: #fff;
+}
+
+.tele-card .card-title,
+.tele-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.tele-card .tele-btn {
   background-color: #BC2C28;
   color: #fff;
   text-decoration: none;
 }
 
-.tele-btn:hover {
+.tele-card:hover {
+  background-color: #BC2C28;
+}
+
+.tele-card:hover .icon-border {
+  background-color: white;
+}
+
+.tele-card:hover .card-icon {
+  color: #BC2C28;
+}
+
+.tele-card:hover .card-text,
+.tele-card:hover .card-title {
+  color: #fff;
+}
+
+.tele-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
+.tele-card:hover .tele-btn {
   background-color: #fff;
   color: #BC2C28;
   text-decoration: none;
 }
 
 /*========== WEB CARD ========*/
-.web-card:hover {
+.web-card .icon-border {
   background-color: #79539A;
 }
 
-.web-btn {
-  background-color: #526784;
+.web-card .card-icon {
+  color: #fff;
+}
+
+.web-card .card-title,
+.web-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.web-card .web-btn {
+  background-color: #79539A;
   color: #fff;
   text-decoration: none;
 }
 
-.web-btn:hover {
+.web-card:hover {
+  background-color: #79539A;
+}
+
+.web-card:hover .icon-border {
+  background-color: white;
+}
+
+.web-card:hover .card-icon {
+  color: #79539A;
+}
+
+.web-card:hover .card-text,
+.web-card:hover .card-title {
+  color: #fff;
+}
+
+.web-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
+.web-card:hover .web-btn {
   background-color: #fff;
   color: #79539A;
   text-decoration: none;
 }
 
 /*========== CYBER CARD ======*/
-.cyber-card:hover {
+.cyber-card .icon-border {
   background-color: #DE093F;
 }
 
-.cyber-btn {
+.cyber-card .card-icon {
+  color: #fff;
+}
+
+.cyber-card .card-title,
+.cyber-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.cyber-card .cyber-btn {
   background-color: #DE093F;
   color: #fff;
   text-decoration: none;
 }
 
-.cyber-btn:hover {
+.cyber-card:hover {
+  background-color: #DE093F;
+}
+
+.cyber-card:hover .icon-border {
+  background-color: white;
+}
+
+.cyber-card:hover .card-icon {
+  color: #DE093F;
+}
+
+.cyber-card:hover .card-text,
+.cyber-card:hover .card-title {
+  color: #fff;
+}
+
+.cyber-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
+.cyber-card:hover .cyber-btn {
   background-color: #fff;
   color: #DE093F;
   text-decoration: none;
 }
 
 /*========== TRAIN CARD ======*/
-.train-card:hover {
+.train-card .icon-border {
   background-color: #79539A;
 }
 
-.train-btn {
+.train-card .card-icon {
+  color: #fff;
+}
+
+.train-card .card-title,
+.train-card .card-text {
+  text-align: center;
+  color: black;
+}
+
+.train-card .train-btn {
   background-color: #79539A;
   color: #fff;
   text-decoration: none;
 }
 
-.train-btn:hover {
+.train-card:hover {
+  background-color: #79539A;
+}
+
+.train-card:hover .icon-border {
+  background-color: white;
+}
+
+.train-card:hover .card-icon {
+  color: #79539A;
+}
+
+.train-card:hover .card-text,
+.train-card:hover .card-title {
+  color: #fff;
+}
+
+.train-card:hover .card-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: linear-gradient(#fff, #fff);
+}
+
+.train-card:hover .train-btn {
   background-color: #fff;
   color: #79539A;
   text-decoration: none;
@@ -238,7 +441,17 @@ body {
 /*========== ABOUT ===========*/
 .about {
   border: 1px solid black;
-  height: 90vh;
+  height: 70vh;
+  background-color: #333645;
+  color: #fff;
+}
+
+.culture-btn {
+  margin: 0 auto auto 1rem;
+  text-transform: uppercase;
+  width: 35% !important;
+  white-space: nowrap;
+  font-size: 0.1rem;
 }
 
 /*========== NEWS ============*/
