@@ -20,7 +20,24 @@ body {
 
 /*========== HEADER/NAV ======*/
 .navigation {
-  height: 20vh;
+  height: 25vh;
+}
+
+.search {
+  width: 90% !important;
+}
+
+.form-control {
+  width: 90% !important;
+}
+
+input[type="search"] {
+  background-color: #ddd;
+  border: 0.1rem solid #999AA2;
+}
+
+.fa-search {
+  color: #000;
 }
 
 /*========== HERO ============*/
