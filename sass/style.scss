@@ -450,6 +450,48 @@ body {
     background-color: $lightgrey;
     height: 200vh;
 }
+
+.news-text {
+    color: $btn-grey;
+}
+
+.scion-title {
+    color: $web;
+}
+
+.scion-btn {
+    background-color: $web;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.notable-title {
+    color: $tele;
+}
+
+.notable-btn {
+    background-color: $tele;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.job-title {
+    color: $soft;
+}
+
+.job-btn {
+    background-color: $soft;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.card-footer {
+    width: 90%;
+    margin-top: auto;
+}
 /*========== CLIENTS =========*/
 .clients {
     border: 1px solid purple;
@@ -457,12 +499,12 @@ body {
 }
 /*========== EMAIL FORM ======*/
 .email {
-    height: 90vh;
+    height: 60vh;
     background-color: $lightgrey;
 }
 
 .email-wrapper {
-    width: 80% !important;
+    width: 85% !important;
     margin: 0 auto;
 }
 
@@ -471,10 +513,47 @@ body {
 .form-check,
 .form-check-label {
     color: $dark-blue;
+    letter-spacing: 0.1rem;
 }
 
+.email-header {
+    font-weight: 400;
+    font-size: 2rem !important;
+}
+
+.form-label,
+.form-check,
+.form-check-label {
+    font-weight: 700;
+}
+
+.form-check label {
+    display: inline-block
+}
+
+.form-check input {
+    border: 0.2rem solid $dark-blue !important;
+    background-color: $lightgrey;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+}
+
+.form-check-label {
+    line-height: 1.8;
+}
 .make-red {
     color: $tele-dark;
+}
+
+.subscribe-btn {
+    background-color: $dark-blue !important;
+    color: $white !important;
+    text-transform: uppercase;
+    &:hover {
+        background-color:rgb(31, 34, 49) !important;
+    }
 }
 /*========== FOOTER ==========*/
 .footer {

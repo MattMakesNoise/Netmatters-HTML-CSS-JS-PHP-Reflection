@@ -495,6 +495,48 @@ body {
   height: 200vh;
 }
 
+.news-text {
+  color: #999AA2;
+}
+
+.scion-title {
+  color: #926FB1;
+}
+
+.scion-btn {
+  background-color: #926FB1;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.notable-title {
+  color: #D64541;
+}
+
+.notable-btn {
+  background-color: #D64541;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.job-title {
+  color: #67809F;
+}
+
+.job-btn {
+  background-color: #67809F;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-footer {
+  width: 90%;
+  margin-top: auto;
+}
+
 /*========== CLIENTS =========*/
 .clients {
   border: 1px solid purple;
@@ -503,12 +545,12 @@ body {
 
 /*========== EMAIL FORM ======*/
 .email {
-  height: 90vh;
+  height: 60vh;
   background-color: #ddd;
 }
 
 .email-wrapper {
-  width: 80% !important;
+  width: 85% !important;
   margin: 0 auto;
 }
 
@@ -517,10 +559,49 @@ body {
 .form-check,
 .form-check-label {
   color: #333645;
+  letter-spacing: 0.1rem;
+}
+
+.email-header {
+  font-weight: 400;
+  font-size: 2rem !important;
+}
+
+.form-label,
+.form-check,
+.form-check-label {
+  font-weight: 700;
+}
+
+.form-check label {
+  display: inline-block;
+}
+
+.form-check input {
+  border: 0.2rem solid #333645 !important;
+  background-color: #ddd;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+}
+
+.form-check-label {
+  line-height: 1.8;
 }
 
 .make-red {
   color: #BC2C28;
+}
+
+.subscribe-btn {
+  background-color: #333645 !important;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.subscribe-btn:hover {
+  background-color: #1f2231 !important;
 }
 
 /*========== FOOTER ==========*/
