@@ -399,12 +399,29 @@ body {
     }
 /*========== ABOUT ===========*/
 .about {
-    border: 1px solid black;
-    height: 70vh;
+    height: 65vh;
     background-color: $dark-blue;
     color: $white;
 }
 
+.about-title {
+    font-size: 2.25rem;
+    margin-bottom: 0;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.about-p1 {
+    font-size: 1.15rem;
+}
+
+.about-p2 {
+    font-size: 1.15rem;
+    margin-top: 0;
+}
 .culture-btn {
     margin: 0 auto auto 1rem;
     text-transform: uppercase;
@@ -413,9 +430,25 @@ body {
     font-size: 0.1rem;
 }
 /*========== NEWS ============*/
+.news-title {
+    height: 15vh;
+}
+
+.news-title-text {
+    background-image: linear-gradient($dark-blue, $dark-blue);
+    background-repeat: no-repeat;
+    background-size: 15vw 5%;
+    background-position: bottom left 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    color: $dark-blue;
+    padding-top: 2rem;
+    margin-bottom: 0;
+}
+
 .news {
-    border: 1px solid orange;
-    height: 300vh;
+    background-color: $lightgrey;
+    height: 200vh;
 }
 /*========== CLIENTS =========*/
 .clients {
@@ -424,8 +457,24 @@ body {
 }
 /*========== EMAIL FORM ======*/
 .email {
-    border: 1px solid grey;
     height: 90vh;
+    background-color: $lightgrey;
+}
+
+.email-wrapper {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.email-header,
+.form-label,
+.form-check,
+.form-check-label {
+    color: $dark-blue;
+}
+
+.make-red {
+    color: $tele-dark;
 }
 /*========== FOOTER ==========*/
 .footer {
@@ -444,14 +493,21 @@ body {
         object-fit: none;
         mask-image: linear-gradient(to bottom, transparent 10%, black);
     }
+    .clients {
+        display: none !important;
+    }
   }
 
 @media screen and (min-width: 576px) {
-    
+    .clients {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    
+    .clients {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 992px) {
