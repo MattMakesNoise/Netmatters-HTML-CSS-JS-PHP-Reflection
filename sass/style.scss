@@ -67,12 +67,20 @@ body {
 
 .card {
     @include fxalgnctr;
+    width: 95% !important; 
+}
+
+.icon-border {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    width: 15%;
+    margin-top: 2rem;
 }
 
 .card-icon {
     font-size: 1.6rem;
-    border: 1px solid black;
-    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 .card-body {
@@ -83,20 +91,46 @@ body {
 .card-title,
 .card-text {
     text-align: center;
-    &:hover {
-    color: white;
-}
+    color: black;
 }
 
 .card-btn {
     margin: auto auto 0 auto;
     text-transform: uppercase;
     width: 35%;
+    white-space: nowrap;
+    font-size: 0.1rem;
 }
     /*========== SOFT CARD =======*/
     .soft-card {
+        .icon-border {
+            background-color: $soft-dark;
+        }
+        .card-icon {
+            color: $white;
+        } 
+        .card-title,
+        .card-text {
+            text-align: center;
+            color: black;
+        }
         &:hover {
             background-color: $soft-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $soft-dark;
+            }
+            .card-text,
+            .card-title {
+                color: $white;
+            }
+            .soft-btn {
+                background-color: $white;
+                color: $soft-dark;
+                text-decoration: none;
+            }
         }
     }
 
@@ -104,16 +138,23 @@ body {
         background-color: $soft-dark;
         color: $white;
         text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $soft-dark;
-            text-decoration: none;
-        }
     }
+    
     /*========== IT CARD =========*/
     .it-card {
         &:hover {
             background-color: $it-dark;
+            .icon-border {
+                background-color: white;
+            }
+            .card-icon {
+                color: $it-dark;
+            }
+            .it-btn {
+                background-color: $white;
+                color: $it-dark;
+                text-decoration: none;
+            }
         }
     }
 
@@ -121,11 +162,6 @@ body {
         background-color: $it-dark;
         color: $white;
         text-decoration: none;
-        &:hover {
-            background-color: $white;
-            color: $it-dark;
-            text-decoration: none;
-        }
     }
     /*========== MARKET CARD =====*/
     .market-card {

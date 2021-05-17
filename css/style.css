@@ -41,12 +41,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 95% !important;
+}
+
+.icon-border {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  width: 15%;
+  margin-top: 2rem;
 }
 
 .card-icon {
   font-size: 1.6rem;
-  border: 1px solid black;
-  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .card-body {
@@ -62,22 +70,53 @@ body {
 .card-title,
 .card-text {
   text-align: center;
-}
-
-.card-title:hover,
-.card-text:hover {
-  color: white;
+  color: black;
 }
 
 .card-btn {
   margin: auto auto 0 auto;
   text-transform: uppercase;
   width: 35%;
+  white-space: nowrap;
+  font-size: 0.1rem;
 }
 
 /*========== SOFT CARD =======*/
+.soft-card .icon-border {
+  background-color: #526784;
+}
+
+.soft-card .card-icon {
+  color: #fff;
+}
+
+.soft-card .card-title,
+.soft-card .card-text {
+  text-align: center;
+  color: black;
+}
+
 .soft-card:hover {
   background-color: #526784;
+}
+
+.soft-card:hover .icon-border {
+  background-color: white;
+}
+
+.soft-card:hover .card-icon {
+  color: #526784;
+}
+
+.soft-card:hover .card-text,
+.soft-card:hover .card-title {
+  color: #fff;
+}
+
+.soft-card:hover .soft-btn {
+  background-color: #fff;
+  color: #526784;
+  text-decoration: none;
 }
 
 .soft-btn {
@@ -86,26 +125,28 @@ body {
   text-decoration: none;
 }
 
-.soft-btn:hover {
-  background-color: #fff;
-  color: #526784;
-  text-decoration: none;
-}
-
 /*========== IT CARD =========*/
 .it-card:hover {
   background-color: #286ABD;
 }
 
-.it-btn {
-  background-color: #286ABD;
-  color: #fff;
+.it-card:hover .icon-border {
+  background-color: white;
+}
+
+.it-card:hover .card-icon {
+  color: #286ABD;
+}
+
+.it-card:hover .it-btn {
+  background-color: #fff;
+  color: #286ABD;
   text-decoration: none;
 }
 
-.it-btn:hover {
-  background-color: #fff;
-  color: #286ABD;
+.it-btn {
+  background-color: #286ABD;
+  color: #fff;
   text-decoration: none;
 }
 
