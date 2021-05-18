@@ -111,14 +111,6 @@ body {
     }
 }
 
-
-
-// .phone-wrapper {
-//     @mixin fxalgnctr {
-//         justify-content: center;
-//     }
-// }
-
 .rotate {
     transform: rotate(315deg);
 }
@@ -153,15 +145,36 @@ input[type="search"] {
 .fa-search {
     color: $black;
 }
-
 /*========== HERO ============*/
-
 .hero {
     height: 82vh;
+    &::before {
+        background-image: linear-gradient(to bottom right, rgba(0,0,0,1) , rgba(0,0,0,0));
+        z-index: 1;
+    }
     img {
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+// .hero-bg1 {
+//     background-image: url('/img/dev-hero.jpg');
+//     width: 100%;
+//     height: auto;
+//     background-size: cover;
+//     object-fit: none;
+// }
+
+.hero-bg1 {
+    background-image:
+    linear-gradient(to bottom right , rgba(0,0,0,1) 30% , rgba(0,0,0,0)),
+    url('/img/dev-hero.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    object-fit: none;
 }
 /*========== CARDS ===========*/
 .cards-section {
@@ -196,6 +209,7 @@ input[type="search"] {
 .card-text {
     text-align: center;
     color: $black;
+    opacity: 80%;
 }
 
 .card-title {
@@ -552,12 +566,21 @@ input[type="search"] {
     height: 200vh;
 }
 
-.news-text {
-    color: $btn-grey;
+.scion-card,
+.notable-card,
+.job-card {
+    img {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
-.news-btn {
-    margin-top: auto;
+.news-body {
+    padding: 1rem 1rem;
+}
+
+.news-text {
+    color: $btn-grey;
 }
 
 .scion-title {
@@ -569,6 +592,10 @@ input[type="search"] {
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+        background-color: $web-dark;
+        color: $white;
+    }
 }
 
 .notable-title {
@@ -580,6 +607,10 @@ input[type="search"] {
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+        background-color: $tele-dark;
+        color: $white;
+    }
 }
 
 .job-title {
@@ -591,11 +622,19 @@ input[type="search"] {
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+        background-color: $soft-dark;
+        color: $white;
+    }
 }
 
 .card-footer {
     width: 90%;
+    padding: 1.5rem 0.5rem !important;
     margin-top: auto;
+    img {
+        padding-right: 1rem;
+    }
 }
 /*========== CLIENTS =========*/
 .clients {
@@ -714,10 +753,6 @@ input[type="search"] {
 /*========== MEDIA QUERIES ===*/
 
 @media screen and (max-width: 576px) {
-    .hero-img {
-        object-fit: none;
-        //mask-image: linear-gradient(to bottom, transparent 10%, black);
-    }
     .clients {
         display: none !important;
     }

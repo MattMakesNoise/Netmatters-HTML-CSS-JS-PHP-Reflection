@@ -123,9 +123,26 @@ input[type="search"] {
   height: 82vh;
 }
 
+.hero::before {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(black), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom right, black, rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
 .hero img {
   padding-left: 0;
   padding-right: 0;
+}
+
+.hero-bg1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(30%, black), to(rgba(0, 0, 0, 0))), url("/img/dev-hero.jpg");
+  background-image: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0)), url("/img/dev-hero.jpg");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 /*========== CARDS ===========*/
@@ -171,6 +188,7 @@ input[type="search"] {
 .card-text {
   text-align: center;
   color: #000;
+  opacity: 80%;
 }
 
 .card-title {
@@ -595,12 +613,19 @@ input[type="search"] {
   height: 200vh;
 }
 
-.news-text {
-  color: #999AA2;
+.scion-card img,
+.notable-card img,
+.job-card img {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.news-btn {
-  margin-top: auto;
+.news-body {
+  padding: 1rem 1rem;
+}
+
+.news-text {
+  color: #999AA2;
 }
 
 .scion-title {
@@ -614,6 +639,11 @@ input[type="search"] {
   text-transform: uppercase;
 }
 
+.scion-btn:hover {
+  background-color: #79539A;
+  color: #fff;
+}
+
 .notable-title {
   color: #D64541;
 }
@@ -623,6 +653,11 @@ input[type="search"] {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.notable-btn:hover {
+  background-color: #BC2C28;
+  color: #fff;
 }
 
 .job-title {
@@ -636,9 +671,19 @@ input[type="search"] {
   text-transform: uppercase;
 }
 
+.job-btn:hover {
+  background-color: #526784;
+  color: #fff;
+}
+
 .card-footer {
   width: 90%;
+  padding: 1.5rem 0.5rem !important;
   margin-top: auto;
+}
+
+.card-footer img {
+  padding-right: 1rem;
 }
 
 /*========== CLIENTS =========*/
@@ -765,10 +810,6 @@ input[type="search"] {
 
 /*========== MEDIA QUERIES ===*/
 @media screen and (max-width: 576px) {
-  .hero-img {
-    -o-object-fit: none;
-       object-fit: none;
-  }
   .clients {
     display: none !important;
   }
