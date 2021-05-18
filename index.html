@@ -17,27 +17,29 @@
 </head>
 <body>
     <div class="container-fluid wrapper"> <!--Wrapper/Container-->
-
         <!-- Navbar -->
-        <nav class="navigation">
-            <div class="d-flex flex-row my-10 justify-content-evenly">
-                <div class="col-6">
+        <nav class="navbar">
+            <div class="row my-10 nav-top">
+                <div class="col-8">
                     <a class="navbar-brand" href="#">
                         <img src="/img/netmatters-logo.png" alt="Logo">
                     </a>
                 </div>
-                <div class="col-2">
-                    <h6>FONE</h6>
+                <div class="col-2 phone-wrapper d-flex justify-content-center">
+                    <i class="fas fa-phone-volume fa-2x rotate"></i>
                 </div>
-                <div class="col-4">
-                    <i class="fas fa-bars"></i>
+                <div class="col-2 burger-wrapper d-flex">
+                    <div class="burger">
+                        <span class="burgerlines"></span>
+                        <h6>MENU</h6>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
+            <div class="row nav-bottom">
+                <div class="col-12">
                     <div class="input-group search">
                         <input type="search" id="form1" class="form-control" placeholder="Search..."/>
-                        <button class="btn search-btn" type="button" id="button-addon1"><i class="fas fa-search fa-2x"></i></button>
+                        <button class="btn search-btn" type="button" id="button-addon1"><i class="fas fa-search fa-1x"></i></button>
                     </div>
                 </div>
             </div>
