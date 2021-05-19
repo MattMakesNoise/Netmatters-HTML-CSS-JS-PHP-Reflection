@@ -2,8 +2,6 @@
 .cards-section {
     height: 300vh;
     background-color: $lightgrey;
-    margin: 0 !important;
-    padding: 0 !important;
     display: grid;
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
@@ -27,6 +25,8 @@
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(2, 1fr);
         height: 75vh;
+        padding-left: 18.47%;
+        padding-right: 18.47%;
     }
 }
 

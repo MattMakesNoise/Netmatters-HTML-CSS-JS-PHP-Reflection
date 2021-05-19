@@ -1,8 +1,9 @@
 /*========== ABOUT ===========*/
 .about {
-    height: 65vh;
+    height: 75vh;
     background-color: $dark-blue;
     color: $white;
+    margin: 0 !important;
     @include grid-setup;
     @media screen and (max-width: $break-m) {
         grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
@@ -14,43 +15,101 @@
         
     }
     @media screen and (min-width: $break-xl) {
-        
+        height: 60vh;
+        padding-left: 18.47%;
+        padding-right: 18.47%;
     }
 }
 
 .about-title {
     font-size: 2.25rem;
-    margin-bottom: 0;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        grid-area: 1/1/2/13;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        grid-area: 1/1/2/7;
+    }
 }
 
 .about-intro {
     font-size: 1.2rem;
-    margin-top: 0;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        grid-area: 2/1/3/13;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        grid-area: 2/1/3/7;
+    }
 }
 
 .about-p1 {
     font-size: 1.15rem;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        grid-area: 3/1/4/13;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        grid-area: 3/1/4/7;
+    }
 }
 
 .about-p2 {
     font-size: 1.15rem;
-    margin-top: 0;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        grid-area: 4/1/5/13;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        grid-area: 4/1/5/7;
+    }
 }
 .culture-btn {
-    margin: 0 auto auto 1rem;
-    text-transform: uppercase;
-    width: 35% !important;
-    white-space: nowrap;
-    font-size: 0.1rem;
+    @include button-styles;
     @media screen and (max-width: $break-m) {
-        grid-area: 5/1/6/6;
+        grid-area: 5/1/6/7;
     }
     @media screen and (min-width: $break-m) {
-        height: 50vh;
-        grid-area: 5/1/6/5;
+        grid-area: 5/1/6/7;
     }
     @media screen and (min-width: $break-lg) {
-        grid-area: 5/1/6/4;
+        grid-area: 5/1/6/3;
     }
     @media screen and (min-width: $break-xl) {
         
