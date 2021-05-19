@@ -1407,15 +1407,6 @@ input[type="search"] {
 }
 
 /*========== MEDIA QUERIES ===*/
-@media screen and (max-width: 576px) {
-  .clients {
-    display: none !important;
-  }
-  .awards {
-    display: none !important;
-  }
-}
-
 @media screen and (min-width: 576px) {
   .clients {
     display: none !important;

@@ -1,0 +1,10 @@
+//Mixins
+@mixin fxalgnctr {
+    display: flex;
+    align-items: center;
+}
+
+@mixin grid-setup {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}

@@ -1,0 +1,58 @@
+/*========== ABOUT ===========*/
+.about {
+    height: 65vh;
+    background-color: $dark-blue;
+    color: $white;
+    @include grid-setup;
+    @media screen and (max-width: $break-m) {
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+    }
+    @media screen and (min-width: $break-m) {
+        height: 50vh;
+    }
+    @media screen and (min-width: $break-lg) {
+        
+    }
+    @media screen and (min-width: $break-xl) {
+        
+    }
+}
+
+.about-title {
+    font-size: 2.25rem;
+    margin-bottom: 0;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.about-p1 {
+    font-size: 1.15rem;
+}
+
+.about-p2 {
+    font-size: 1.15rem;
+    margin-top: 0;
+}
+.culture-btn {
+    margin: 0 auto auto 1rem;
+    text-transform: uppercase;
+    width: 35% !important;
+    white-space: nowrap;
+    font-size: 0.1rem;
+    @media screen and (max-width: $break-m) {
+        grid-area: 5/1/6/6;
+    }
+    @media screen and (min-width: $break-m) {
+        height: 50vh;
+        grid-area: 5/1/6/5;
+    }
+    @media screen and (min-width: $break-lg) {
+        grid-area: 5/1/6/4;
+    }
+    @media screen and (min-width: $break-xl) {
+        
+    }
+}
