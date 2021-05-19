@@ -8,3 +8,10 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+@mixin button-styles {
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: none;
+}
