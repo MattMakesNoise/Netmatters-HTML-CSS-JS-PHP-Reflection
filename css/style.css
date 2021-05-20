@@ -3,102 +3,15 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.wrapper {
-  margin: 0;
-}
-
 /*========== HEADER/NAV ======*/
 .nav-bar {
   height: 168px;
   padding-top: 3vh !important;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-}
-
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    -ms-grid-rows: 60% 40%;
-        grid-template-rows: 60% 40%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .nav-bar {
-    height: 110px;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .nav-bar {
-    height: 209px;
-    -ms-grid-rows: 110px 99px;
-        grid-template-rows: 110px 99px;
-  }
 }
 
 .navbar-brand img {
   height: auto;
   width: 95%;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar-brand {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 7;
-    grid-area: 1/1/2/8;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navbar-brand {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-area: 1/1/2/7;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar-brand {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-area: 1/1/2/7;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .navbar-brand {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-area: 1/1/2/6;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .phone-wrapper {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 2;
-    grid-area: 1/8/2/10;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .phone-wrapper {
-    visibility: hidden;
-  }
 }
 
 .rotate {
@@ -118,6 +31,8 @@ body {
 
 .burger {
   background-color: #333645;
+  width: 63px;
+  height: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,25 +40,28 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding: 10px 15px 0px 15px;
 }
 
 .burger h6 {
   color: #fff;
+  margin: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .burger span {
   position: relative;
   display: inline-block;
-  width: 18px;
-  height: 2px;
+  width: 33px;
+  height: 3px;
   background-color: #fff;
+  margin: auto;
 }
 
 .burger span::before, .burger span::after {
@@ -157,11 +75,11 @@ body {
 }
 
 .burger span::before {
-  top: -6px;
+  top: -8px;
 }
 
 .burger span::after {
-  bottom: -6px;
+  bottom: -8px;
 }
 
 .nav-bottom {

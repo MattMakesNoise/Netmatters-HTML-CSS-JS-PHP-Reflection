@@ -3,24 +3,24 @@
 .nav-bar {
     height: 168px;
     padding-top: 3vh !important;
-    @include grid-setup;
-    //2 rows up to medium devices
-    @media screen and (max-width: $break-m) {
-        grid-template-rows: 60% 40%;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        height: 110px;
-        grid-template-rows: 1fr;
-    }
-    //Large devices
-    @media screen and (min-width: $break-lg) {
-        height: 209px;
-        grid-template-rows: 110px 99px;
-    }
-    //X-large devices
-    @media screen and (min-width: $break-xl) {
-    }
+    // @include grid-setup;
+    // //2 rows up to medium devices
+    // @media screen and (max-width: $break-m) {
+    //     grid-template-rows: 60% 40%;
+    // }
+    // //Medium and up
+    // @media screen and (min-width: $break-m) {
+    //     height: 110px;
+    //     grid-template-rows: 1fr;
+    // }
+    // //Large devices
+    // @media screen and (min-width: $break-lg) {
+    //     height: 209px;
+    //     grid-template-rows: 110px 99px;
+    // }
+    // //X-large devices
+    // @media screen and (min-width: $break-xl) {
+    // }
 }
 
 .navbar-brand {
@@ -28,30 +28,30 @@
     height: auto;
     width: 95%;
     }
-    //2 rows up to medium devices
-    @media screen and (max-width: $break-m) {
-        grid-area: 1/1/2/8;
-    }
-    @media screen and (min-width: $break-m) {
-        grid-area: 1/1/2/7;
-    }
-    @media screen and (min-width: $break-lg) {
-        grid-area: 1/1/2/7;
-    }
-    @media screen and (min-width: $break-xl) {
-        grid-area: 1/1/2/6;
-    }
+    // //2 rows up to medium devices
+    // @media screen and (max-width: $break-m) {
+    //     grid-area: 1/1/2/8;
+    // }
+    // @media screen and (min-width: $break-m) {
+    //     grid-area: 1/1/2/7;
+    // }
+    // @media screen and (min-width: $break-lg) {
+    //     grid-area: 1/1/2/7;
+    // }
+    // @media screen and (min-width: $break-xl) {
+    //     grid-area: 1/1/2/6;
+    // }
 }
 
 .phone-wrapper {
-    //2 rows up to medium devices
-    @media screen and (max-width: $break-m) {
-        grid-area: 1/8/2/10;
-    }
-    //Hide Div
-    @media screen and (min-width: $break-m) {
-        visibility: hidden;
-    }
+    // //2 rows up to medium devices
+    // @media screen and (max-width: $break-m) {
+    //     grid-area: 1/8/2/10;
+    // }
+    // //Hide Div
+    // @media screen and (min-width: $break-m) {
+    //     visibility: hidden;
+    // }
 }
 
 .rotate {
@@ -66,23 +66,28 @@
 
 .burger {
     background-color: $dark-blue;
+    width: 63px;
+    height: 56px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 0.5rem;
+    padding: 10px 15px 0px 15px;
     h6 {
         color: $white;
-        // padding-top: 0.5rem;
+        margin: auto;
+        font-size: 0.75rem;
+        font-weight: 500;
     }
 }
 
 .burger span { //burger icon
     position: relative;
     display: inline-block;
-    width: 18px;
-    height: 2px;
+    width: 33px;
+    height: 3px;
     background-color: $white;
+    margin: auto;
     &::before,
     &::after {
         content: '';
@@ -94,10 +99,10 @@
         background-color: inherit;
     }
     &::before {
-        top: -6px;
+        top: -8px;
     }
     &::after {
-        bottom: -6px;
+        bottom: -8px;
     }
 }
 
