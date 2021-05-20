@@ -2,11 +2,8 @@
 .clients {
     border: 1px solid purple;
     height: 20vh;
-    @media screen and (max-width: $break-s) {
-    
-    }
     //Medium and up
-    @media screen and (min-width: $break-s) {
+    @media screen and (min-width: $break-m) {
       .clients {
           display: none !important;
       }

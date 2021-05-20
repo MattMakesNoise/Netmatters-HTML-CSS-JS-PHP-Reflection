@@ -1,12 +1,23 @@
 //Mixins
-@mixin fxalgnctr {
+@mixin flexalignctr {
     display: flex;
     align-items: center;
 }
 
-@mixin grid-setup {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+@mixin flexjustifyctr {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexctrboth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin button-styles {
