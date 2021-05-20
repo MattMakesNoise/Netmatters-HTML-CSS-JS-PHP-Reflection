@@ -46,6 +46,8 @@
 .card-icon {
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    color: $white;
+    text-align: center;
 }
 
 .card-body {
@@ -58,6 +60,9 @@
     text-align: center;
     color: $black;
     opacity: 80%;
+    &:hover {
+        color: $white;
+    }
 }
 
 .card-title {
@@ -85,14 +90,6 @@
         .icon-border {
             background-color: $soft-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .soft-btn {
             background-color: $soft-dark;
             color: $white;
@@ -106,9 +103,9 @@
             .card-icon {
                 color: $soft-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -136,14 +133,6 @@
         .icon-border {
             background-color: $it-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .it-btn {
             background-color: $it-dark;
             color: $white;
@@ -157,9 +146,9 @@
             .card-icon {
                 color: $it-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -188,14 +177,6 @@
         .icon-border {
             background-color: $market-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .market-btn {
             background-color: $market-dark;
             color: $white;
@@ -209,9 +190,9 @@
             .card-icon {
                 color: $market-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -240,14 +221,6 @@
         .icon-border {
             background-color: $tele-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .tele-btn {
             background-color: $tele-dark;
             color: $white;
@@ -261,9 +234,9 @@
             .card-icon {
                 color: $tele-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -292,14 +265,6 @@
         .icon-border {
             background-color: $web-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .web-btn {
             background-color: $web-dark;
             color: $white;
@@ -313,9 +278,9 @@
             .card-icon {
                 color: $web-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -344,14 +309,6 @@
         .icon-border {
             background-color: $cyber-dark;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .cyber-btn {
             background-color: $cyber-dark;
             color: $white;
@@ -365,9 +322,9 @@
             .card-icon {
                 color: $cyber-dark;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);
@@ -396,14 +353,6 @@
         .icon-border {
             background-color: $web;
         }
-        .card-icon {
-            color: $white;
-        } 
-        .card-title,
-        .card-text {
-            text-align: center;
-            color: black;
-        }
         .train-btn {
             background-color: $web;
             color: $white;
@@ -417,9 +366,9 @@
             .card-icon {
                 color: $web;
             }
-            .card-text,
-            .card-title {
-                color: $white;
+            .card-title,
+            .card-text {
+            color: $white;
             }
             .card-title {
                 background-image: linear-gradient($white, $white);

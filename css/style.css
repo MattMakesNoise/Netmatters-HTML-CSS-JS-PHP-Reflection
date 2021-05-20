@@ -296,6 +296,7 @@ input[type="search"] {
   text-transform: uppercase;
   white-space: nowrap;
   border: none;
+  cursor: pointer;
 }
 
 .hero-button:hover {
@@ -378,6 +379,8 @@ input[type="search"] {
 .card-icon {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
 }
 
 .card-body {
@@ -395,6 +398,11 @@ input[type="search"] {
   text-align: center;
   color: #000;
   opacity: 80%;
+}
+
+.card-title:hover,
+.card-text:hover {
+  color: #fff;
 }
 
 .card-title {
@@ -424,16 +432,6 @@ input[type="search"] {
   background-color: #526784;
 }
 
-.soft-card .card-icon {
-  color: #fff;
-}
-
-.soft-card .card-title,
-.soft-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .soft-card .soft-btn {
   background-color: #526784;
   color: #fff;
@@ -452,8 +450,8 @@ input[type="search"] {
   color: #526784;
 }
 
-.soft-card:hover .card-text,
-.soft-card:hover .card-title {
+.soft-card:hover .card-title,
+.soft-card:hover .card-text {
   color: #fff;
 }
 
@@ -503,16 +501,6 @@ input[type="search"] {
   background-color: #286ABD;
 }
 
-.it-card .card-icon {
-  color: #fff;
-}
-
-.it-card .card-title,
-.it-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .it-card .it-btn {
   background-color: #286ABD;
   color: #fff;
@@ -531,8 +519,8 @@ input[type="search"] {
   color: #286ABD;
 }
 
-.it-card:hover .card-text,
-.it-card:hover .card-title {
+.it-card:hover .card-title,
+.it-card:hover .card-text {
   color: #fff;
 }
 
@@ -582,16 +570,6 @@ input[type="search"] {
   background-color: #25A25A;
 }
 
-.market-card .card-icon {
-  color: #fff;
-}
-
-.market-card .card-title,
-.market-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .market-card .market-btn {
   background-color: #25A25A;
   color: #fff;
@@ -610,8 +588,8 @@ input[type="search"] {
   color: #25A25A;
 }
 
-.market-card:hover .card-text,
-.market-card:hover .card-title {
+.market-card:hover .card-title,
+.market-card:hover .card-text {
   color: #fff;
 }
 
@@ -661,16 +639,6 @@ input[type="search"] {
   background-color: #BC2C28;
 }
 
-.tele-card .card-icon {
-  color: #fff;
-}
-
-.tele-card .card-title,
-.tele-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .tele-card .tele-btn {
   background-color: #BC2C28;
   color: #fff;
@@ -689,8 +657,8 @@ input[type="search"] {
   color: #BC2C28;
 }
 
-.tele-card:hover .card-text,
-.tele-card:hover .card-title {
+.tele-card:hover .card-title,
+.tele-card:hover .card-text {
   color: #fff;
 }
 
@@ -740,16 +708,6 @@ input[type="search"] {
   background-color: #79539A;
 }
 
-.web-card .card-icon {
-  color: #fff;
-}
-
-.web-card .card-title,
-.web-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .web-card .web-btn {
   background-color: #79539A;
   color: #fff;
@@ -768,8 +726,8 @@ input[type="search"] {
   color: #79539A;
 }
 
-.web-card:hover .card-text,
-.web-card:hover .card-title {
+.web-card:hover .card-title,
+.web-card:hover .card-text {
   color: #fff;
 }
 
@@ -819,16 +777,6 @@ input[type="search"] {
   background-color: #DE093F;
 }
 
-.cyber-card .card-icon {
-  color: #fff;
-}
-
-.cyber-card .card-title,
-.cyber-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .cyber-card .cyber-btn {
   background-color: #DE093F;
   color: #fff;
@@ -847,8 +795,8 @@ input[type="search"] {
   color: #DE093F;
 }
 
-.cyber-card:hover .card-text,
-.cyber-card:hover .card-title {
+.cyber-card:hover .card-title,
+.cyber-card:hover .card-text {
   color: #fff;
 }
 
@@ -898,16 +846,6 @@ input[type="search"] {
   background-color: #926FB1;
 }
 
-.train-card .card-icon {
-  color: #fff;
-}
-
-.train-card .card-title,
-.train-card .card-text {
-  text-align: center;
-  color: black;
-}
-
 .train-card .train-btn {
   background-color: #926FB1;
   color: #fff;
@@ -926,8 +864,8 @@ input[type="search"] {
   color: #926FB1;
 }
 
-.train-card:hover .card-text,
-.train-card:hover .card-title {
+.train-card:hover .card-title,
+.train-card:hover .card-text {
   color: #fff;
 }
 
@@ -1106,6 +1044,7 @@ input[type="search"] {
   text-transform: uppercase;
   white-space: nowrap;
   border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -1256,6 +1195,9 @@ input[type="search"] {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
 }
 
 .scion-btn:hover {
@@ -1302,6 +1244,9 @@ input[type="search"] {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
 }
 
 .notable-btn:hover {
@@ -1341,6 +1286,9 @@ input[type="search"] {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
 }
 
 .job-btn:hover {

@@ -83,8 +83,7 @@
 .scion-btn {
     background-color: $web;
     color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
+    @include button-styles;
     &:hover {
         background-color: $web-dark;
         color: $white;
@@ -113,8 +112,7 @@
 .notable-btn {
     background-color: $tele;
     color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
+    @include button-styles;
     &:hover {
         background-color: $tele-dark;
         color: $white;
@@ -144,8 +142,7 @@
 .job-btn {
     background-color: $soft;
     color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
+    @include button-styles;
     &:hover {
         background-color: $soft-dark;
         color: $white;
