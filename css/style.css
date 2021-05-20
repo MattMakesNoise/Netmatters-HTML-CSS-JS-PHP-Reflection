@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.4px;
   font-size: 1rem;
+  background-color: #fff;
 }
 
 .page-wrapper {
@@ -294,7 +295,7 @@ input[type="search"] {
 /*========== CARDS ===========*/
 .cards-section {
   height: 300vh;
-  background-color: #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width: 768px) {
@@ -352,6 +353,7 @@ input[type="search"] {
   padding: 2rem;
   -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
           box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .icon-border {
@@ -366,21 +368,11 @@ input[type="search"] {
   text-align: center;
 }
 
-.card-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .card-title,
 .card-text {
   text-align: center;
   color: 900;
-  opacity: 80%;
+  opacity: 90%;
   font-weight: 400;
 }
 
@@ -396,19 +388,28 @@ input[type="search"] {
   background-size: 5vw 7%;
   background-position: center bottom, 0.2vw 0;
   padding-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 400;
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card-btn {
+  display: inline-block;
   margin: auto auto 0 auto;
   text-transform: uppercase;
-  width: 35%;
+  height: auto;
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 3px;
 }
 
 /*========== SOFT CARD =======*/
@@ -419,11 +420,11 @@ input[type="search"] {
 }
 
 .soft-card .icon-border {
-  background-color: #526784;
+  background-color: #67809F;
 }
 
 .soft-card .soft-btn {
-  background-color: #526784;
+  background-color: #67809F;
   color: #fff;
   text-decoration: none;
 }
@@ -472,11 +473,11 @@ input[type="search"] {
 }
 
 .it-card .icon-border {
-  background-color: #286ABD;
+  background-color: #4183D7;
 }
 
 .it-card .it-btn {
-  background-color: #286ABD;
+  background-color: #4183D7;
   color: #fff;
   text-decoration: none;
 }
@@ -525,11 +526,11 @@ input[type="search"] {
 }
 
 .market-card .icon-border {
-  background-color: #25A25A;
+  background-color: #2ECC71;
 }
 
 .market-card .market-btn {
-  background-color: #25A25A;
+  background-color: #2ECC71;
   color: #fff;
   text-decoration: none;
 }
@@ -578,11 +579,11 @@ input[type="search"] {
 }
 
 .tele-card .icon-border {
-  background-color: #BC2C28;
+  background-color: #D64541;
 }
 
 .tele-card .tele-btn {
-  background-color: #BC2C28;
+  background-color: #D64541;
   color: #fff;
   text-decoration: none;
 }
@@ -631,11 +632,11 @@ input[type="search"] {
 }
 
 .web-card .icon-border {
-  background-color: #79539A;
+  background-color: #926FB1;
 }
 
 .web-card .web-btn {
-  background-color: #79539A;
+  background-color: #926FB1;
   color: #fff;
   text-decoration: none;
 }
@@ -684,11 +685,11 @@ input[type="search"] {
 }
 
 .cyber-card .icon-border {
-  background-color: #DE093F;
+  background-color: #F62459;
 }
 
 .cyber-card .cyber-btn {
-  background-color: #DE093F;
+  background-color: #F62459;
   color: #fff;
   text-decoration: none;
 }

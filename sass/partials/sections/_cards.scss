@@ -1,7 +1,7 @@
 /*========== CARDS ===========*/
 .cards-section {
     height: 300vh;
-    background-color: $lightgrey;
+    background-color: rgba(255,255,255,0.1);
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
         @include flexcolumn;
@@ -32,6 +32,7 @@
     border-radius: 3px;
     padding: 2rem;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
+    background-color: rgba(255,255,255,0.8);
 }
 
 .icon-border {
@@ -39,7 +40,6 @@
     border-radius: 50%;
     text-align: center;
     padding: 1rem;
-    // width: 15%;
 }
 
 .card-icon {
@@ -47,16 +47,11 @@
     text-align: center;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-}
-
 .card-title,
 .card-text {
     text-align: center;
     color: $black;
-    opacity: 80%;
+    opacity: 90%;
     font-weight: $regular;
     &:hover {
         color: $white;
@@ -69,28 +64,37 @@
     background-size: 5vw 7%;
     background-position: center bottom, 0.2vw 0;
     padding-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-weight: $regular;
 }
 
 .card-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card-btn {
+    display: inline-block;
     margin: auto auto 0 auto;
     text-transform: uppercase;
-    width: 35%;
+    height: auto;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 3px;
 }
     /*========== SOFT CARD =======*/
     .soft-card {
         order: 1;
         .icon-border {
-            background-color: $soft-dark;
+            background-color: $soft;
         }
         .soft-btn {
-            background-color: $soft-dark;
+            background-color: $soft;
             color: $white;
             text-decoration: none;
         }
@@ -132,10 +136,10 @@
     .it-card {
         order: 2;
         .icon-border {
-            background-color: $it-dark;
+            background-color: $it;
         }
         .it-btn {
-            background-color: $it-dark;
+            background-color: $it;
             color: $white;
             text-decoration: none;
         }
@@ -177,10 +181,10 @@
     .market-card {
         order: 3;
         .icon-border {
-            background-color: $market-dark;
+            background-color: $market;
         }
         .market-btn {
-            background-color: $market-dark;
+            background-color: $market;
             color: $white;
             text-decoration: none;
         }
@@ -222,10 +226,10 @@
     .tele-card {
         order: 4;
         .icon-border {
-            background-color: $tele-dark;
+            background-color: $tele;
         }
         .tele-btn {
-            background-color: $tele-dark;
+            background-color: $tele;
             color: $white;
             text-decoration: none;
         }
@@ -267,10 +271,10 @@
     .web-card {
         order: 5;
         .icon-border {
-            background-color: $web-dark;
+            background-color: $web;
         }
         .web-btn {
-            background-color: $web-dark;
+            background-color: $web;
             color: $white;
             text-decoration: none;
         }
@@ -312,10 +316,10 @@
     .cyber-card {
         order: 6;
         .icon-border {
-            background-color: $cyber-dark;
+            background-color: $cyber;
         }
         .cyber-btn {
-            background-color: $cyber-dark;
+            background-color: $cyber;
             color: $white;
             text-decoration: none;
         }
