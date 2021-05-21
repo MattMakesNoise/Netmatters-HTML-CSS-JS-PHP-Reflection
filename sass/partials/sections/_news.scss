@@ -1,27 +1,30 @@
 /*========== NEWS ============*/
 // TITLE SECTION
 .news-title {
-    height: 10vh;
+    height: 104px;
+    margin-left: 1rem;
 }
 
 .news-title-text {
     background-image: linear-gradient($dark-blue, $dark-blue);
     background-repeat: no-repeat;
     background-size: 15vw 5%;
-    background-position: bottom left 1rem;
+    background-position: bottom left 0;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: $semibold;
+    padding: 40px 0;
     color: $dark-blue;
-    padding-top: 2rem;
     margin-bottom: 0;
+    position: relative;
 }
 
 // CARDS SECTION
 .news {
-    background-color: $white;
+    background-color: rgba(221, 221, 221, .4);
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
-        height: 1863px;
+        height: 1963px;
         padding: 2rem 1rem;
     }
     //2 cards on one row for medium devices
@@ -45,8 +48,10 @@
     border-radius: 3px;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
+    padding-bottom: 1rem;
     //Up to Medium
     @media screen and (max-width: $break-m) {
+        margin-top: 1.5rem;
         margin-bottom: 2rem;
     }
     //Medium and up
@@ -64,7 +69,10 @@
 }
 
 .news-card-main {
-    border-bottom: 1px solid lightgray;
+    background-image: linear-gradient($lightgrey, $lightgrey);
+    background-repeat: no-repeat;
+    background-size: 85% 1px;
+    background-position: bottom left 2rem;
 }
 
 .card-img-top {
@@ -82,11 +90,21 @@
 .notable-title,
 .job-title {
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: $semibold;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 } 
 
 .news-text {
-    color: $btn-grey;
-    margin-bottom: 1rem;
+    font-weight: $light;
+    font-size: .85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.375rem;
 }
 
 .news-btn {
@@ -94,16 +112,30 @@
     margin: auto auto 1rem 0;
     height: auto;
     padding: 5px 15px;
+    line-height: 35px;
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
     padding-top: 1.5rem;
-    margin-top: auto;
+    margin: auto auto 1rem 2rem;
     img {
         padding-right: 1rem;
+        height: auto;
+        vertical-align: middle;
     }
+}
+
+.posted-by {
+    font-weight: $semibold;
+    color: $dark-blue;
+    line-height: 1.375rem;
+    font-size: .875rem;
+}
+
+.text-muted {
+    color: $black-25;
 }
 
 // SCION CARD
