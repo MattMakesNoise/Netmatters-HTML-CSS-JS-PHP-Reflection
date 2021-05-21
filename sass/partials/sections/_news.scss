@@ -1,4 +1,5 @@
 /*========== NEWS ============*/
+// TITLE SECTION
 .news-title {
     height: 10vh;
 }
@@ -15,12 +16,13 @@
     margin-bottom: 0;
 }
 
+// CARDS SECTION
 .news {
-    background-color: $lightgrey;
-    height: 200vh;
+    background-color: $white;
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
-        
+        height: 1863px;
+        padding: 2rem 1rem;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
@@ -36,27 +38,75 @@
     }
 }
 
-.scion-card,
-.notable-card,
-.job-card {
-    img {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+.news-card {
+    @include flexcolumn;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
+    background-color: rgba(255,255,255,0.8);
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        margin-bottom: 2rem;
     }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
+}
+
+.news-card-main {
+    border-bottom: 1px solid lightgray;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
 }
 
 .news-body {
     padding: 1rem 1rem;
+    @include flexcolumn;
+    margin-left: 1rem;
 }
+
+.scion-title,
+.notable-title,
+.job-title {
+    margin-bottom: 1rem;
+} 
 
 .news-text {
     color: $btn-grey;
+    margin-bottom: 1rem;
 }
 
-.scion-card {
-    
+.news-btn {
+    @include button-styles;
+    margin: auto auto 1rem 0;
+    height: auto;
+    padding: 5px 15px;
 }
 
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-top: auto;
+    img {
+        padding-right: 1rem;
+    }
+}
+
+// SCION CARD
 .scion-title {
     color: $web;
 }
@@ -64,17 +114,13 @@
 .scion-btn {
     background-color: $web;
     color: $white;
-    @include button-styles;
     &:hover {
         background-color: $web-dark;
         color: $white;
     }
 }
 
-.notable-card {
-    
-}
-
+// NOTABLE CARD
 .notable-title {
     color: $tele;
 }
@@ -82,13 +128,13 @@
 .notable-btn {
     background-color: $tele;
     color: $white;
-    @include button-styles;
     &:hover {
         background-color: $tele-dark;
         color: $white;
     }
 }
 
+// JOB CARD
 .job-card {
     //Hide Card
     @media screen and (min-width: $break-m) {
@@ -111,18 +157,9 @@
 .job-btn {
     background-color: $soft;
     color: $white;
-    @include button-styles;
     &:hover {
         background-color: $soft-dark;
         color: $white;
     }
 }
 
-.card-footer {
-    width: 90%;
-    padding: 1.5rem 0.5rem !important;
-    margin-top: auto;
-    img {
-        padding-right: 1rem;
-    }
-}

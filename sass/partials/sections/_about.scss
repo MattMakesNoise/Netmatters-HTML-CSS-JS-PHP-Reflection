@@ -1,20 +1,21 @@
 /*========== ABOUT ===========*/
 .about {
-    height: 75vh;
     background-color: $dark-blue;
     color: $white;
-    margin: 0 !important;
+    @include flexcolumn;
+    justify-content: space-around;
     @media screen and (max-width: $break-m) {
-    
+        height: 613px;
+        padding: 50px 15px;
     }
     @media screen and (min-width: $break-m) {
-        height: 50vh;
+        height: 493px;
     }
     @media screen and (min-width: $break-lg) {
-        
+        height: 493px;
     }
     @media screen and (min-width: $break-xl) {
-        height: 60vh;
+        height: 553px;
         padding-left: 18.47%;
         padding-right: 18.47%;
     }
@@ -22,19 +23,34 @@
 
 .about-title {
     font-size: 2.25rem;
+    font-weight: $regular;
 }
 
 .about-intro {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: $semibold;
+    line-height: 1.9;
 }
 
-.about-p1 {
-    font-size: 1.15rem;
-}
-
+.about-p1,
 .about-p2 {
-    font-size: 1.15rem;
+    font-size: 1rem;
+    font-weight: $regular;
+    line-height: 1.9;
 }
+
 .culture-btn {
+    height: auto;
+    font-size: 1rem;
+    font-weight: $regular;
+    line-height: 35px;
+    margin: 0 auto 0 0;
+    padding: 5px 15px;
+    border-radius: 3px;
+    white-space: normal;
     @include button-styles;
+    color: $dark-blue;
+    &:hover {
+        opacity: 97%;
+    }
 }

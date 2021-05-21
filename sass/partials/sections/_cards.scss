@@ -1,23 +1,20 @@
 /*========== CARDS ===========*/
 .cards-section {
-    height: 250vh;
-    padding-top: 2rem;
     background-color: rgba(255,255,255,0.1);
     @media screen and (max-width: $break-m) {
-        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     @media screen and (min-width: $break-m) {
         height: 180vh;
-        padding: 2rem 1rem;
+        padding: 1.25rem 2rem;
     }
     @media screen and (min-width: $break-lg) {
         height: 75vh;
         
     }
     @media screen and (min-width: $break-xl) {
-        height: 75vh;
-        padding-left: 18.47%;
-        padding-right: 18.47%;
+        height: 80vh;
     }
 }
 
@@ -71,12 +68,27 @@
 .card {
     @include flexcolumn;
     align-items: center;
-    margin: 1rem;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 2rem;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        margin: 2rem 1rem;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin: 2rem 1rem;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .icon-border {

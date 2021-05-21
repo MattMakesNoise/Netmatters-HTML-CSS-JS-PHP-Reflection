@@ -11,6 +11,7 @@ body {
   letter-spacing: 0.4px;
   font-size: 1rem;
   background-color: #fff;
+  letter-spacing: .4px;
 }
 
 .page-wrapper {
@@ -155,6 +156,10 @@ input[type="search"] {
 }
 
 /*========== HERO ============*/
+.hero-wrapper {
+  min-height: 490px;
+}
+
 @media screen and (max-width: 768px) {
   .hero-wrapper {
     height: calc(100vh - 168px);
@@ -278,8 +283,18 @@ input[type="search"] {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  border: none;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  font-weight: 400;
   cursor: pointer;
+  border-radius: 3px;
+  margin: auto auto 0 auto;
+  height: auto;
+  font-size: 1.25rem;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 3px;
+  line-height: 50px;
 }
 
 .hero-button:hover {
@@ -289,20 +304,26 @@ input[type="search"] {
 .hero-button svg {
   height: 20%;
   width: 20%;
+  padding-top: 0.7rem;
   padding-right: 0.7rem;
 }
 
 /*========== CARDS ===========*/
 .cards-section {
-  height: 250vh;
-  padding-top: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .cards-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .cards-section {
     height: 180vh;
-    padding: 2rem 1rem;
+    padding: 1.25rem 2rem;
   }
 }
 
@@ -314,9 +335,7 @@ input[type="search"] {
 
 @media screen and (min-width: 1260px) {
   .cards-section {
-    height: 75vh;
-    padding-left: 18.47%;
-    padding-right: 18.47%;
+    height: 80vh;
   }
 }
 
@@ -439,13 +458,24 @@ input[type="search"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 2rem;
   -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
           box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 2rem 1rem;
+  }
 }
 
 .icon-border {
@@ -780,21 +810,41 @@ input[type="search"] {
 
 /*========== ABOUT ===========*/
 .about {
-  height: 75vh;
   background-color: #333645;
   color: #fff;
-  margin: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    height: 613px;
+    padding: 50px 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .about {
-    height: 50vh;
+    height: 493px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about {
+    height: 493px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .about {
-    height: 60vh;
+    height: 553px;
     padding-left: 18.47%;
     padding-right: 18.47%;
   }
@@ -802,26 +852,44 @@ input[type="search"] {
 
 .about-title {
   font-size: 2.25rem;
+  font-weight: 400;
 }
 
 .about-intro {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.9;
 }
 
-.about-p1 {
-  font-size: 1.15rem;
-}
-
+.about-p1,
 .about-p2 {
-  font-size: 1.15rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
 }
 
 .culture-btn {
+  height: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 35px;
+  margin: 0 auto 0 0;
+  padding: 5px 15px;
+  border-radius: 3px;
+  white-space: normal;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  border: none;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  font-weight: 400;
   cursor: pointer;
+  border-radius: 3px;
+  color: #333645;
+}
+
+.culture-btn:hover {
+  opacity: 97%;
 }
 
 /*========== NEWS ============*/
@@ -843,8 +911,14 @@ input[type="search"] {
 }
 
 .news {
-  background-color: #ddd;
-  height: 200vh;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    height: 1863px;
+    padding: 2rem 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -865,19 +939,89 @@ input[type="search"] {
   }
 }
 
-.scion-card img,
-.notable-card img,
-.job-card img {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.news-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
+          box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .news-card {
+    margin-bottom: 2rem;
+  }
+}
+
+.news-card-main {
+  border-bottom: 1px solid lightgray;
+}
+
+.card-img-top {
+  height: 100%;
+  width: 100%;
 }
 
 .news-body {
   padding: 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1rem;
+}
+
+.scion-title,
+.notable-title,
+.job-title {
+  margin-bottom: 1rem;
 }
 
 .news-text {
   color: #999AA2;
+  margin-bottom: 1rem;
+}
+
+.news-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: auto auto 1rem 0;
+  height: auto;
+  padding: 5px 15px;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.card-footer img {
+  padding-right: 1rem;
 }
 
 .scion-title {
@@ -887,11 +1031,6 @@ input[type="search"] {
 .scion-btn {
   background-color: #926FB1;
   color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
 }
 
 .scion-btn:hover {
@@ -906,11 +1045,6 @@ input[type="search"] {
 .notable-btn {
   background-color: #D64541;
   color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
 }
 
 .notable-btn:hover {
@@ -943,26 +1077,11 @@ input[type="search"] {
 .job-btn {
   background-color: #67809F;
   color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
 }
 
 .job-btn:hover {
   background-color: #526784;
   color: #fff;
-}
-
-.card-footer {
-  width: 90%;
-  padding: 1.5rem 0.5rem !important;
-  margin-top: auto;
-}
-
-.card-footer img {
-  padding-right: 1rem;
 }
 
 /*========== CLIENTS =========*/
@@ -971,18 +1090,27 @@ input[type="search"] {
   height: 20vh;
 }
 
-@media screen and (min-width: 768px) {
-  .clients .clients {
+@media screen and (max-width: 768px) {
+  .clients {
     display: none !important;
   }
-  .clients .awards {
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .clients .clients {
-    display: none;
+  .clients {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .clients {
+    display: none !important;
   }
 }
 
@@ -1100,6 +1228,30 @@ input[type="search"] {
 .awards {
   border: 1px solid teal;
   height: 50vh;
+}
+
+@media screen and (max-width: 768px) {
+  .awards {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .awards {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .awards {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .awards {
+    display: none !important;
+  }
 }
 
 /*========== PAGE LAYOUT ===*/

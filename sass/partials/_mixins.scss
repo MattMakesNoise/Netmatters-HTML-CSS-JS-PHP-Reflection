@@ -29,6 +29,9 @@
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
-    border: none;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    font-weight: $regular;
     cursor: pointer;
+    border-radius: 3px;
 }
