@@ -1,9 +1,12 @@
 /*========== FOOTER ==========*/
 .footer {
     background-color: $dark-blue;
-    height: 99vh;
+    height: 1046px;
     color: $white;
     padding-bottom: 2.5vh;
+    @include flexcolumn;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
 }
 
 .footer-heading {
@@ -19,11 +22,19 @@
     }
 }
 
+.socials {
+    @include flexcolumn;
+    margin: 1rem 1rem;
+}
+
+.socials-top,
+.socials-bottom {
+    @include flexrow;
+    justify-content: space-evenly;
+}
+
 .social-wrapper {
     background-color: $darker-blue;
-    @mixin fxalgnctr {
-        justify-content: center;
-    }
     i {
         text-align: center;
         width: 100%;
@@ -31,6 +42,8 @@
         margin-top: 1rem;
     }
 }
+
+
 
 .facebook:hover {
     background-color: #43609C;
