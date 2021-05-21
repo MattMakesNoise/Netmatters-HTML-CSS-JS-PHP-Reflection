@@ -20,6 +20,11 @@
     flex-direction: column;
 }
 
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin button-styles {
     text-decoration: none;
     text-transform: uppercase;

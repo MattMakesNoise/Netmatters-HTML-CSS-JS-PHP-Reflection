@@ -1,26 +1,70 @@
 /*========== CARDS ===========*/
 .cards-section {
-    height: 300vh;
+    height: 250vh;
+    padding-top: 2rem;
     background-color: rgba(255,255,255,0.1);
-    //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
-        @include flexcolumn;
+        
     }
-    //3 on own row and 2 x 2 below for medium devices
     @media screen and (min-width: $break-m) {
         height: 180vh;
-        flex-direction: row;
-        flex-wrap: wrap;
+        padding: 2rem 1rem;
     }
-    //3 x 2 x 2 for large devices
     @media screen and (min-width: $break-lg) {
-        height: 180vh;
+        height: 75vh;
+        
     }
-    //3 x 4 for xlarge devices
     @media screen and (min-width: $break-xl) {
         height: 75vh;
         padding-left: 18.47%;
         padding-right: 18.47%;
+    }
+}
+
+.column {
+    @include flexcolumn;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.row-double {
+    @media screen and (min-width: $break-m) {
+        @include flexcolumn;
+    }
+    @media screen and (min-width: $break-lg) {
+        @include flexcolumn; //is this needed?
+    }
+    @media screen and (min-width: $break-xl) {
+        @include flexrow;
+        > * {
+            flex: 1 1 25%;
+        }
+    }
+}
+
+.row-one {
+    @media screen and (min-width: $break-lg) {
+        @include flexrow;
+    }
+}
+
+.row-two {
+    @media screen and (min-width: $break-m) {
+        display: flex;
+    }
+    @media screen and (min-width: $break-lg) {
+        display: flex; //is this needed?
+    }
+    @media screen and (min-width: $break-xl) {
+        display: flex; //is this needed?
+    }
+}
+.row-three {
+    @media screen and (min-width: $break-m) {
+        display: flex;
+    }
+    @media screen and (min-width: $break-lg) {
+        display: flex; //is this needed?
     }
 }
 
@@ -45,6 +89,7 @@
 .card-icon {
     color: $white;
     text-align: center;
+    font-size: 1.25rem;
 }
 
 .card-title,
@@ -89,7 +134,6 @@
 }
     /*========== SOFT CARD =======*/
     .soft-card {
-        order: 1;
         .icon-border {
             background-color: $soft;
         }
@@ -121,7 +165,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 2;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -134,7 +178,6 @@
     }
     /*========== IT CARD =========*/
     .it-card {
-        order: 2;
         .icon-border {
             background-color: $it;
         }
@@ -166,7 +209,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 2;
+        
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -179,7 +222,6 @@
     }
     /*========== MARKET CARD =====*/
     .market-card {
-        order: 3;
         .icon-border {
             background-color: $market;
         }
@@ -211,7 +253,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 2;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -224,7 +266,6 @@
     }
     /*========== TELE CARD =======*/
     .tele-card {
-        order: 4;
         .icon-border {
             background-color: $tele;
         }
@@ -256,7 +297,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 1;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -269,7 +310,6 @@
     }
     /*========== WEB CARD ========*/
     .web-card {
-        order: 5;
         .icon-border {
             background-color: $web;
         }
@@ -301,7 +341,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 1;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -314,7 +354,6 @@
     }
     /*========== CYBER CARD ======*/
     .cyber-card {
-        order: 6;
         .icon-border {
             background-color: $cyber;
         }
@@ -346,7 +385,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 1;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -359,7 +398,6 @@
     }
     /*========== TRAIN CARD ======*/
     .train-card {
-        order: 7;
         .icon-border {
             background-color: $web;
         }
@@ -391,7 +429,7 @@
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            flex-grow: 1;
+            
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {

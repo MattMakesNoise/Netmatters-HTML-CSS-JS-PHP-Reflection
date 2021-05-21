@@ -294,12 +294,49 @@ input[type="search"] {
 
 /*========== CARDS ===========*/
 .cards-section {
-  height: 300vh;
+  height: 250vh;
+  padding-top: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .cards-section {
+    height: 180vh;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .cards-section {
+    height: 75vh;
+    padding-left: 18.47%;
+    padding-right: 18.47%;
+  }
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .row-double {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -310,29 +347,84 @@ input[type="search"] {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .cards-section {
-    height: 180vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 @media screen and (min-width: 992px) {
-  .cards-section {
-    height: 180vh;
+  .row-double {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .cards-section {
-    height: 75vh;
-    padding-left: 18.47%;
-    padding-right: 18.47%;
+  .row-double {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .row-double > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .row-one {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .row-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .row-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row-three {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .row-three {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -366,6 +458,7 @@ input[type="search"] {
 .card-icon {
   color: #fff;
   text-align: center;
+  font-size: 1.25rem;
 }
 
 .card-title,
@@ -413,12 +506,6 @@ input[type="search"] {
 }
 
 /*========== SOFT CARD =======*/
-.soft-card {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
 .soft-card .icon-border {
   background-color: #67809F;
 }
@@ -457,21 +544,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .soft-card {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-  }
-}
-
 /*========== IT CARD =========*/
-.it-card {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
 .it-card .icon-border {
   background-color: #4183D7;
 }
@@ -510,21 +583,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .it-card {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-  }
-}
-
 /*========== MARKET CARD =====*/
-.market-card {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
 .market-card .icon-border {
   background-color: #2ECC71;
 }
@@ -563,21 +622,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .market-card {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-  }
-}
-
 /*========== TELE CARD =======*/
-.tele-card {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-}
-
 .tele-card .icon-border {
   background-color: #D64541;
 }
@@ -616,21 +661,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .tele-card {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
 /*========== WEB CARD ========*/
-.web-card {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-}
-
 .web-card .icon-border {
   background-color: #926FB1;
 }
@@ -669,21 +700,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .web-card {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
 /*========== CYBER CARD ======*/
-.cyber-card {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
-}
-
 .cyber-card .icon-border {
   background-color: #F62459;
 }
@@ -722,21 +739,7 @@ input[type="search"] {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  .cyber-card {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
 /*========== TRAIN CARD ======*/
-.train-card {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
-}
-
 .train-card .icon-border {
   background-color: #926FB1;
 }
@@ -773,14 +776,6 @@ input[type="search"] {
   background-color: #fff;
   color: #926FB1;
   text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-  .train-card {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 
 /*========== ABOUT ===========*/
