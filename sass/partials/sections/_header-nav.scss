@@ -3,6 +3,8 @@
 .nav-bar {
     height: 168px;
     padding-top: 3vh !important;
+    padding: 1rem;
+    @include flexcolumn;
     //2 rows up to medium devices
     @media screen and (max-width: $break-m) {
     
@@ -20,14 +22,25 @@
     }
 }
 
+.header {
+    @include flexrow;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    order: 1;
+}
+
 .navbar-brand {
     img {
     height: auto;
-    width: 95%;
+    width: 65%;
     }
 }
 
 .phone-wrapper {
+    order: 2;
     //2 rows up to medium devices
     @media screen and (max-width: $break-m) {
         
@@ -43,12 +56,15 @@
 }
 
 .burger-wrapper {
+    order: 3;
     @media screen and (max-width: $break-m) {
     }
 }
 
 .burger {
     background-color: $dark-blue;
+    border: 1px solid transparent;
+    border-radius: 3px;
     width: 63px;
     height: 56px;
     display: flex;
@@ -89,13 +105,9 @@
     }
 }
 
-.nav-bottom {
-    width: 100%;
-}
-
 .search {
-    width: 100% !important;
-    position: absolute;
+    order: 4;
+    width: 100%;
     //On its own row up to medium devices
     @media screen and (max-width: $break-m) {
         

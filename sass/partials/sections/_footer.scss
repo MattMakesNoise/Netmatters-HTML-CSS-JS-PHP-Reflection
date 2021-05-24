@@ -11,14 +11,33 @@
 
 .footer-heading {
     text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: $regular;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    @include flexcolumn;
+    margin-bottom: 1rem;
 }
 
 .footer-link {
     text-decoration: none;
     color: $white;
+    font-size: 0.8rem;
+    margin-bottom: .25rem;
     &:hover {
         text-decoration: underline;
         color: $white;
+    }
+}
+
+address {
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    a {
+        margin: 1rem 0;
     }
 }
 
@@ -35,25 +54,55 @@
 
 .social-wrapper {
     background-color: $darker-blue;
+    padding: 0 5rem;
+    margin: 0.5rem;
+    span {
+        @include flexctrboth;
+        margin: .5rem auto;
+    }
     i {
         text-align: center;
-        width: 100%;
         color: $white;
-        margin-top: 1rem;
+        font-size: 1.6rem;
+        font-weight: $regular;
     }
 }
 
 
 
-.facebook:hover {
+.facebook {
+    height: 28.41px;
+    width: 28px;
+    &:hover {
     background-color: #43609C;
+    }
 }
-.twitter:hover {
+
+.twitter {
+    height: 28.41px;
+    width: 28px;
+    &:hover {
     background-color: #55acee;
+    }
 }
-.insta:hover {
-    background-color: #DD2A7B;
-}
-.linkedin:hover {
+
+.insta {
+    height: 28.41px;
+    width: 28px;
+    :hover {
+        background-color: #DD2A7B;
+    }
+} 
+
+.linkedin {
+    height: 28.41px;
+    width: 28px;
+    :hover {
     background-color: #0072B1;
+    }
+}
+    
+
+.copyright {
+    font-size: .75rem;
 }
