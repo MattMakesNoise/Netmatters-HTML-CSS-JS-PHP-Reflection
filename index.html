@@ -16,36 +16,38 @@
 <body>
     <div class="page-wrapper"> <!--Wrapper/Container-->
         <!-- Navbar -->
-        <nav class="nav-bar">
-            <div class="header">
-                <div class="logo-wrapper">
-                    <div class="logo">
-                        <img src="/img/netmatters-logo.png" alt="">
+        <div class="navbar-wrapper">    
+            <nav class="nav-bar">
+                <div class="header">
+                    <div class="logo-wrapper">
+                        <div class="logo">
+                            <img src="/img/netmatters-logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="phone-wrapper">
+                        <i class="fas fa-phone-volume rotate"></i>
+                    </div>
+                    <div class="burger-wrapper">
+                        <div class="burger border rounded border-light">
+                            <span class="burgerlines"></span>
+                            <h6>MENU</h6>
+                        </div>
                     </div>
                 </div>
-                <div class="phone-wrapper">
-                    <i class="fas fa-phone-volume rotate"></i>
-                </div>
-                <div class="burger-wrapper">
-                    <div class="burger border rounded border-light">
-                        <span class="burgerlines"></span>
-                        <h6>MENU</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="search-wrapper">
-                <form action="/" method="GET" class="search-form">
-                    <input type="search" class="form-control" id="search-input" placeholder="Search..." required>
-                    <button type="submit" class="search-btn">
-                        <span class="search-icon"><img src="/img/search.png"></span>
-                    </button>
-                </form>
-            </div> 
+                <div class="search-wrapper">
+                    <form action="/" method="GET" class="search-form">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search..." required>
+                        <button type="submit" class="search-btn">
+                            <span class="search-icon"><img src="/img/search.png"></span>
+                        </button>
+                    </form>
+                </div> 
 
-            <!-- CARDS NAV -->
-            <div class="cards-nav"></div>
-            <!-- CARDS NAV END -->
-        </nav>
+                <!-- CARDS NAV -->
+                <div class="cards-nav"></div>
+                <!-- CARDS NAV END -->
+            </nav>
+        </div>
         <!-- Navbar End -->
 
         <!-- Hero -->
@@ -66,72 +68,74 @@
         <!-- Hero End -->
         
         <!-- Cards -->
-        <section class="cards-section">
-            <div class="row-one">
-                <article class="column card soft-card">
-                    <div class="icon-border">
-                        <i class="fas fa-th card-icon"></i>
-                    </div>
-                    <h5 class="card-title">Bespoke Software</h5>
-                    <p class="card-text">Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p>
-                    <a href="#" class="soft-btn card-btn">Read More</a>
-                </article>
-                <article class="column card it-card">
-                    <div class="icon-border">
-                        <i class="fas fa-desktop card-icon"></i>
-                    </div>
-                    <h5 class="card-title">IT Support</h5>
-                    <p class="card-text">Remotely managed IT services that is catered to your business needs, adds value and reduces costs.</p>
-                    <a href="#" class="it-btn card-btn">Read More</a>
-                </article>
-                <article class="column card market-card">
-                    <div class="icon-border">
-                        <i class="fas fa-signal card-icon"></i>
-                    </div>
-                    <h5 class="card-title">Digital Marketing</h5>
-                    <p class="card-text">Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online performances.</p>
-                    <a href="#" class="market-btn card-btn">Read More</a>
-                </article>
-            </div>
-            <div class="row-double">
-                <div class="row-two">
-                    <article class="column card tele-card">
+        <div class="cards-wrapper">
+            <section class="cards-section">
+                <div class="row-one">
+                    <article class="column card soft-card">
                         <div class="icon-border">
-                            <i class="fas fa-phone-volume card-icon"></i>
+                            <i class="fas fa-th card-icon"></i>
                         </div>
-                        <h5 class="card-title">Telecoms Services</h5>
-                        <p class="card-text">Stay connected with bespoke telecoms solutions when you needs it most.</p>
-                        <a href="#" class="tele-btn card-btn">Read More</a>
+                        <h5 class="card-title">Bespoke Software</h5>
+                        <p class="card-text">Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p>
+                        <a href="#" class="soft-btn card-btn">Read More</a>
                     </article>
-                    <article class="column card web-card">
+                    <article class="column card it-card">
                         <div class="icon-border">
-                            <i class="fas fa-code card-icon"></i>
+                            <i class="fas fa-desktop card-icon"></i>
                         </div>
-                        <h5 class="card-title">Web Design</h5>
-                        <p class="card-text">User-centric design for businesses looking to make a lasting first impression.</p>
-                        <a href="#" class="web-btn card-btn">Read More</a>
+                        <h5 class="card-title">IT Support</h5>
+                        <p class="card-text">Remotely managed IT services that is catered to your business needs, adds value and reduces costs.</p>
+                        <a href="#" class="it-btn card-btn">Read More</a>
+                    </article>
+                    <article class="column card market-card">
+                        <div class="icon-border">
+                            <i class="fas fa-signal card-icon"></i>
+                        </div>
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Driving brand awareness and ROI through creative digital marketing campaigns. We review and monitor online performances.</p>
+                        <a href="#" class="market-btn card-btn">Read More</a>
                     </article>
                 </div>
-                <div class="row-three">
-                    <article class="column card cyber-card">
-                        <div class="icon-border">
-                            <i class="fas fa-shield-virus card-icon"></i>
-                        </div>
-                        <h5 class="card-title">Cyber Security</h5>
-                        <p class="card-text">Ensuring your online busines stays secure 24/7, 365 days of the year.</p>
-                        <a href="#" class="cyber-btn card-btn">Read More</a>
-                    </article>
-                    <article class="column card train-card">
-                        <div class="icon-border">
-                            <i class="fas fa-graduation-cap card-icon"></i>
-                        </div>
-                            <h5 class="card-title">Developer Training</h5>
-                            <p class="card-text">Have you considered a career in web development but you aren't sure where to start?</p>
-                            <a href="#" class="train-btn card-btn">Read More</a>
-                    </article>
+                <div class="row-double">
+                    <div class="row-two">
+                        <article class="column card tele-card">
+                            <div class="icon-border">
+                                <i class="fas fa-phone-volume card-icon"></i>
+                            </div>
+                            <h5 class="card-title">Telecoms Services</h5>
+                            <p class="card-text">Stay connected with bespoke telecoms solutions when you needs it most.</p>
+                            <a href="#" class="tele-btn card-btn">Read More</a>
+                        </article>
+                        <article class="column card web-card">
+                            <div class="icon-border">
+                                <i class="fas fa-code card-icon"></i>
+                            </div>
+                            <h5 class="card-title">Web Design</h5>
+                            <p class="card-text">User-centric design for businesses looking to make a lasting first impression.</p>
+                            <a href="#" class="web-btn card-btn">Read More</a>
+                        </article>
+                    </div>
+                    <div class="row-three">
+                        <article class="column card cyber-card">
+                            <div class="icon-border">
+                                <i class="fas fa-shield-virus card-icon"></i>
+                            </div>
+                            <h5 class="card-title">Cyber Security</h5>
+                            <p class="card-text">Ensuring your online busines stays secure 24/7, 365 days of the year.</p>
+                            <a href="#" class="cyber-btn card-btn">Read More</a>
+                        </article>
+                        <article class="column card train-card">
+                            <div class="icon-border">
+                                <i class="fas fa-graduation-cap card-icon"></i>
+                            </div>
+                                <h5 class="card-title">Developer Training</h5>
+                                <p class="card-text">Have you considered a career in web development but you aren't sure where to start?</p>
+                                <a href="#" class="train-btn card-btn">Read More</a>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <!-- Cards End -->
 
         <!-- About -->
@@ -149,73 +153,77 @@
         <!-- About End -->
 
         <!-- News -->
-        <div class="news-title">
-            <h1 class="news-title-text">LATEST</h1>
+        <div class="news-wrapper">
+            <div class="news-title">
+                <h1 class="news-title-text">LATEST</h1>
+            </div>
+            <section class="news">
+                <article class="news-card scion-card">
+                    <div class="news-card-main">
+                        <img src="img/congratulations-to-lloyd-OGgS.jpg" class="card-img-top" alt="New Scion Graduate">
+                        <div class="news-body">
+                        <a class="scion-title">Congratulations to Lloyd Cox for Graduating t...</a>
+                        <p class="news-text">We are pleased to announce that after a year spent on our Netmatters Scion Coalition Scheme (...</p>
+                        <a href="#" class="scion-btn news-btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <img src="/img/netmatters-ltd-VXAv.webp" class="rounded-circle float-start" alt="Simon Wright">
+                        <div class="user-date">
+                            <p class="posted-by">Posted by Netmatters Ltd</p>
+                            <small class="text-muted">10th May 2021</small>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card notable-card">
+                    <div class="news-card-main">
+                        <img src="img/april-2021-notables-0C1u.jpg" class="card-img-top" alt="New Scion Graduate">
+                        <div class="news-body">
+                        <a class="notable-title">April 2021 Notables</a>
+                        <p class="news-text">Every month we celebrate the most notable of the employees here at Netmatters. Each department he...</p>
+                        <a href="#" class="notable-btn news-btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <img src="/img/netmatters-ltd-VXAv.webp" class="rounded-circle float-start" alt="Simon Wright">
+                        <div class="user-date">
+                            <p class="posted-by">Posted by Netmatters Ltd</p>
+                            <small class="text-muted">6th May 2021</small>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card job-card">
+                    <div class="news-card-main">
+                        <img src="img/web-developer-r6Y3.jpg" class="card-img-top" alt="New Scion Graduate">
+                        <div class="news-body">
+                        <a class="job-title">Web Developer</a>
+                        <p class="news-text">Salary Ra...</p>
+                        <a href="#" class="job-btn news-btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <img src="/img/simon-wright-7UFt.jpg" class="rounded-circle float-start" alt="Simon Wright">
+                        <div class="user-date">
+                            <p class="posted-by">Posted by Simon Wright</p>
+                            <small class="text-muted">1st May 2021</small>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
-        <section class="news">
-            <article class="news-card scion-card">
-                <div class="news-card-main">
-                    <img src="img/congratulations-to-lloyd-OGgS.jpg" class="card-img-top" alt="New Scion Graduate">
-                    <div class="news-body">
-                    <a class="scion-title">Congratulations to Lloyd Cox for Graduating t...</a>
-                    <p class="news-text">We are pleased to announce that after a year spent on our Netmatters Scion Coalition Scheme (...</p>
-                    <a href="#" class="scion-btn news-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <img src="/img/netmatters-ltd-VXAv.webp" class="rounded-circle float-start" alt="Simon Wright">
-                    <div class="user-date">
-                        <p class="posted-by">Posted by Netmatters Ltd</p>
-                        <small class="text-muted">10th May 2021</small>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card notable-card">
-                <div class="news-card-main">
-                    <img src="img/april-2021-notables-0C1u.jpg" class="card-img-top" alt="New Scion Graduate">
-                    <div class="news-body">
-                    <a class="notable-title">April 2021 Notables</a>
-                    <p class="news-text">Every month we celebrate the most notable of the employees here at Netmatters. Each department he...</p>
-                    <a href="#" class="notable-btn news-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <img src="/img/netmatters-ltd-VXAv.webp" class="rounded-circle float-start" alt="Simon Wright">
-                    <div class="user-date">
-                        <p class="posted-by">Posted by Netmatters Ltd</p>
-                        <small class="text-muted">6th May 2021</small>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card job-card">
-                <div class="news-card-main">
-                    <img src="img/web-developer-r6Y3.jpg" class="card-img-top" alt="New Scion Graduate">
-                    <div class="news-body">
-                    <a class="job-title">Web Developer</a>
-                    <p class="news-text">Salary Ra...</p>
-                    <a href="#" class="job-btn news-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <img src="/img/simon-wright-7UFt.jpg" class="rounded-circle float-start" alt="Simon Wright">
-                    <div class="user-date">
-                        <p class="posted-by">Posted by Simon Wright</p>
-                        <small class="text-muted">1st May 2021</small>
-                    </div>
-                </div>
-            </article>
-        </section>
         <!-- News End -->
 
         <!-- Clients -->
-        <section class="row clients">
-            <h1>CLIENTS</h1>
-        </section>
+        <div class="clients-wrapper">
+            <section class="row clients">
+                <h1>CLIENTS</h1>
+            </section>
+        </div>
         <!-- Clients End -->
 
         <!-- Email Form -->
-        <section class="email">
-            <div class="email-wrapper">
+        <div class="email-wrapper">
+            <section class="email">
                 <h1 class="email-header">Email Newsletter Sign-Up</h1>
                 <form>
                     <div class="">
@@ -233,71 +241,75 @@
                     </div>
                     <button type="submit" class="subscribe-btn">Subscribe</button>
                 </form>
-            </div>
-        </section>
+            </section>
+        </div>
         <!-- Email Form End -->
 
         <!-- Footer -->
-        <section class="footer">
-            <h6 class="footer-heading">About Netmatters</h6>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">News</a>
-                    <a href="#" class="footer-link">Our Careers</a>
-                    <a href="#" class="footer-link">Our Team</a>
-                    <a href="#" class="footer-link">Our Office Tour</a>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Cookie Policy</a>
-                    <a href="#" class="footer-link">Terms & Conditions</a>
-                    <a href="#" class="footer-link">UK Domains</a>
+        <div class="footer-wrapper">
+            <section class="footer">
+                <h6 class="footer-heading">About Netmatters</h6>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">News</a>
+                        <a href="#" class="footer-link">Our Careers</a>
+                        <a href="#" class="footer-link">Our Team</a>
+                        <a href="#" class="footer-link">Our Office Tour</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Cookie Policy</a>
+                        <a href="#" class="footer-link">Terms & Conditions</a>
+                        <a href="#" class="footer-link">UK Domains</a>
+                    </div>
+                <h6 class="footer-heading">Wymondham Branch</h6>
+                    <address>
+                        11 Penfold Drive <br>
+                        Wymondham <br>
+                        Norfolk <br>
+                        NR18 0WZ <br>
+                        <br>
+                        Tel: <a href="#" class="footer-link">01603 70 40 20</a> <br> 
+                    </address>
+                <h6 class="footer-heading">Gorleston Branch</h6>
+                    <address>
+                        Suite F23 Beacon Innovation Centre, Beacon Park <br>
+                        Gorleston, Great Yarmouth <br>
+                        Norfolk <br>
+                        NR31 7RA <br>
+                        <br>
+                        Tel: <a href="#" class="footer-link">01493 60 32 04</a> <br> 
+                    </address>
+                
+                <h6 class="footer-heading">Social Media</h6>
+                <div class="socials">
+                    <div class="socials-top">
+                        <div class="social-wrapper facebook">
+                            <span><a href="#"><i class="fab fa-facebook-f"></i></a></span>
+                        </div>
+                        <div class="social-wrapper twitter">
+                            <span><a href="#"><i class="fab fa-twitter"></i></a></span>
+                        </div>
+                    </div>
+                    <div class="socials-bottom">
+                        <div class="social-wrapper insta">
+                            <span><a href="#"><i class="fa fa-instagram"></i></a></span>
+                        </div>
+                        <div class="social-wrapper linkedin">
+                            <span><a href="#"><i class="fab fa-linkedin-in"></i></a></span>
+                        </div>
+                    </div>
                 </div>
-            <h6 class="footer-heading">Wymondham Branch</h6>
-                <address>
-                    11 Penfold Drive <br>
-                    Wymondham <br>
-                    Norfolk <br>
-                    NR18 0WZ <br>
-                    <br>
-                    Tel: <a href="#" class="footer-link">01603 70 40 20</a> <br> 
-                </address>
-            <h6 class="footer-heading">Gorleston Branch</h6>
-                <address>
-                    Suite F23 Beacon Innovation Centre, Beacon Park <br>
-                    Gorleston, Great Yarmouth <br>
-                    Norfolk <br>
-                    NR31 7RA <br>
-                    <br>
-                    Tel: <a href="#" class="footer-link">01493 60 32 04</a> <br> 
-                </address>
-            
-            <h6 class="footer-heading">Social Media</h6>
-            <div class="socials">
-                <div class="socials-top">
-                    <div class="social-wrapper facebook">
-                        <span><a href="#"><i class="fab fa-facebook-f"></i></a></span>
-                    </div>
-                    <div class="social-wrapper twitter">
-                        <span><a href="#"><i class="fab fa-twitter"></i></a></span>
-                    </div>
-                </div>
-                <div class="socials-bottom">
-                    <div class="social-wrapper insta">
-                        <span><a href="#"><i class="fa fa-instagram"></i></a></span>
-                    </div>
-                    <div class="social-wrapper linkedin">
-                        <span><a href="#"><i class="fab fa-linkedin-in"></i></a></span>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="footer-link">Sitemap</a>
-            <p class="copyright">&copy; Copyright Netmatters Ltd. 2021</p>
-            <p class="copyright">All rights reserved</p>
-        </section>
+                <a href="#" class="footer-link">Sitemap</a>
+                <p class="copyright">&copy; Copyright Netmatters Ltd. 2021</p>
+                <p class="copyright">All rights reserved</p>
+            </section>
+        </div>
         <!-- Footer End -->
 
         <!-- Awards -->
-        <section class="row awards">
-            <h1>AWARDS</h1>
-        </section>
+        <div class="awards-wrapper">
+            <section class="row awards">
+                <h1>AWARDS</h1>
+            </section>
+        </div>
         <!-- Awards End -->
           
     </div> <!--Wrapper/Container End-->

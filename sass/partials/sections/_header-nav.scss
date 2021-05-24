@@ -1,17 +1,32 @@
 /*========== HEADER/NAV ======*/
-
-.nav-bar {
-    height: 168px;
-    padding: 1.25rem 1rem 1.25rem 1rem;
-    @include flexcolumn;
+.navbar-wrapper {
+    //Up yo medium
+    @media screen and (max-width: $break-m) {
+        height: 168px;
+    }
     //Medium and up
     @media screen and (min-width: $break-m) {
         height: 110px;
-        @include flexrow;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
         height: 209px;
+    }
+    //X-large devices
+    @media screen and (min-width: $break-xl) {
+        height: 209px;
+    }
+}
+.nav-bar {
+    padding: 1.25rem 1rem 1.25rem 1rem;
+    @include flexcolumn;
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        @include flexrow;
+    }
+    //Large devices
+    @media screen and (min-width: $break-lg) {
+        
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {

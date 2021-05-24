@@ -13,6 +13,10 @@
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
     }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        height: calc(100vh - 209px);
+    }
 }
 
 .hero-bg {

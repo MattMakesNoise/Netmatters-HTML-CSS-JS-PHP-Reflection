@@ -1,20 +1,31 @@
 /*========== CARDS ===========*/
-.cards-section {
-    background-color: rgba(255,255,255,0.1);
+.cards-wrapper {
+    display: block;
     @media screen and (max-width: $break-m) {
         height: 2354px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
     }
     @media screen and (min-width: $break-m) {
         height: 1096px;
-        padding: 1.25rem 2rem;
     }
     @media screen and (min-width: $break-lg) {
         height: 754px;
     }
     @media screen and (min-width: $break-xl) {
         height: 754px;
+    }
+}
+.cards-section {
+    background-color: rgba(255,255,255,0.1);
+    @media screen and (max-width: $break-m) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    @media screen and (min-width: $break-m) {
+        padding: 1.25rem 2rem;
+    }
+    @media screen and (min-width: $break-lg) {
+    }
+    @media screen and (min-width: $break-xl) {
     }
 }
 
@@ -175,18 +186,6 @@
                 text-decoration: none;
             }
         }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
-        }
     }
     /*========== IT CARD =========*/
     .it-card {
@@ -218,18 +217,6 @@
                 color: $it-dark;
                 text-decoration: none;
             }
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-        
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
         }
     }
     /*========== MARKET CARD =====*/
@@ -263,18 +250,6 @@
                 text-decoration: none;
             }
         }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
-        }
     }
     /*========== TELE CARD =======*/
     .tele-card {
@@ -306,18 +281,6 @@
                 color: $tele-dark;
                 text-decoration: none;
             }
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
         }
     }
     /*========== WEB CARD ========*/
@@ -438,17 +401,5 @@
                 color: $web;
                 text-decoration: none;
             }
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
         }
     }

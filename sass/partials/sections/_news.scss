@@ -1,5 +1,25 @@
 /*========== NEWS ============*/
 // TITLE SECTION
+.news-wrapper {
+    //up to medium devices
+    @media screen and (max-width: $break-m) {
+        height: 2049px;
+        padding: 2rem 1rem;
+    }
+    //medium devices
+    @media screen and (min-width: $break-m) {
+        height: 773px;
+    }
+    //large devices
+    @media screen and (min-width: $break-lg) {
+        height: 787px;
+    }
+    //xlarge devices
+    @media screen and (min-width: $break-xl) {
+        height: 787px;
+    }
+}
+
 .news-title {
     height: 104px;
     margin-left: 1rem;
@@ -24,26 +44,25 @@
     background-color: rgba(221, 221, 221, .4);
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
-        height: 1941px;
+        @include flexcolumn;
+        align-items: center;
         padding: 2rem 1rem;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
-        height: 669px;
+        @include flexrow;
     }
     //2 cards on one row for large devices
     @media screen and (min-width: $break-lg) {
-        height: 683px;
+        @include flexrow;
     }
     //3 cards on one row for xlarge devices
     @media screen and (min-width: $break-xl) {
-        height: 683px;
+        @include flexrow;
     }
 }
 
 .news-card {
-    @include flexcolumn;
-    align-items: center;
     border: 1px solid #ccc;
     border-radius: 3px;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
@@ -60,11 +79,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        
     }
 }
 
