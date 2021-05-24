@@ -18,13 +18,13 @@
         <!-- Navbar -->
         <nav class="nav-bar">
             <div class="header">
-                <div class="logo">
-                    <a class="navbar-brand" href="#">
-                        <img src="/img/netmatters-logo.png" alt="Logo">
-                    </a>
+                <div class="logo-wrapper">
+                    <div class="logo">
+                        <img src="/img/netmatters-logo.png" alt="">
+                    </div>
                 </div>
                 <div class="phone-wrapper">
-                    <i class="fas fa-phone-volume fa-2x rotate"></i>
+                    <i class="fas fa-phone-volume rotate"></i>
                 </div>
                 <div class="burger-wrapper">
                     <div class="burger border rounded border-light">
@@ -33,9 +33,13 @@
                     </div>
                 </div>
             </div>
-            <div class="search">
-                <input type="search" id="form1" class="form-control" placeholder="Search..."/>
-                <button class="btn search-btn" type="button" id="button-addon1"><i class="fas fa-search fa-1x"></i></button>
+            <div class="search-wrapper">
+                <form action="/" method="GET" class="search-form">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search..." required>
+                    <button type="submit" class="search-btn">
+                        <span class="search-icon"><img src="/img/search.png"></span>
+                    </button>
+                </form>
             </div> 
 
             <!-- CARDS NAV -->
