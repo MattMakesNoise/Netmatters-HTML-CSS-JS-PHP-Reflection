@@ -1,20 +1,22 @@
 /*========== AWARDS ======*/
 .awards {
     border: 1px solid teal;
-    height: 50vh;
     @media screen and (max-width: $break-m) {
         display: none !important;
       }
       //Medium and up
       @media screen and (min-width: $break-m) {
-        display: none !important;
+        display: initial;
+        height: 274px;
       }
       //Large and Up
       @media screen and (min-width: $break-lg) {
-        display: none !important;
+        display: initial;
+        height: 320px;
       }
       //Extra Large
       @media screen and (min-width: $break-xl) {
-        display: none !important;
+        display: initial;
+        height: 266px;
       }
 }

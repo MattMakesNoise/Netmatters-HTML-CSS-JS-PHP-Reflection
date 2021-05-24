@@ -14,14 +14,52 @@ body {
   letter-spacing: .4px;
 }
 
-.page-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (max-width: 768px) {
+  .page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 /*========== HEADER/NAV ======*/
@@ -40,6 +78,13 @@ body {
 @media screen and (min-width: 768px) {
   .nav-bar {
     height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -78,6 +123,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-wrapper {
+    width: 45vw;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .logo img {
@@ -169,6 +223,15 @@ body {
       -ms-flex-order: 4;
           order: 4;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .search-wrapper {
+    width: 25vw;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .form {
@@ -372,9 +435,22 @@ body {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+}
+
 .hero-subtitle {
   line-height: 1.8;
   margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .hero-button {
@@ -415,6 +491,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .cards-section {
+    height: 2354px;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -422,20 +499,20 @@ body {
 
 @media screen and (min-width: 768px) {
   .cards-section {
-    height: 180vh;
+    height: 1096px;
     padding: 1.25rem 2rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .cards-section {
-    height: 75vh;
+    height: 754px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .cards-section {
-    height: 80vh;
+    height: 754px;
   }
 }
 
@@ -910,6 +987,7 @@ body {
 
 /*========== ABOUT ===========*/
 .about {
+  display: block;
   background-color: #333645;
   color: #fff;
   display: -webkit-box;
@@ -1019,26 +1097,26 @@ body {
 
 @media screen and (max-width: 768px) {
   .news {
-    height: 1963px;
+    height: 1941px;
     padding: 2rem 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .news {
-    height: 70vh;
+    height: 669px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .news {
-    height: 70vh;
+    height: 683px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .news {
-    height: 75vh;
+    height: 683px;
   }
 }
 
@@ -1144,9 +1222,10 @@ body {
 }
 
 .card-footer img {
-  padding-right: 1rem;
+  margin-right: 1rem;
   height: auto;
   vertical-align: middle;
+  border-radius: 50%;
 }
 
 .posted-by {
@@ -1234,19 +1313,22 @@ body {
 
 @media screen and (min-width: 768px) {
   .clients {
-    display: none !important;
+    display: initial !important;
+    height: 145px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .clients {
-    display: none !important;
+    display: initial !important;
+    height: 170px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .clients {
-    display: none !important;
+    display: inital !important;
+    height: 170px;
   }
 }
 
@@ -1254,6 +1336,30 @@ body {
 .email {
   height: 569px;
   background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .email {
+    height: 569px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .email {
+    height: 502px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email {
+    height: 381px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .email {
+    height: 381px;
+  }
 }
 
 .email-wrapper {
@@ -1360,9 +1466,7 @@ body {
 /*========== FOOTER ==========*/
 .footer {
   background-color: #333645;
-  height: 1046px;
   color: #fff;
-  padding-bottom: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1374,6 +1478,30 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 1046px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 614px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    height: 614px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .footer {
+    height: 553px;
+  }
 }
 
 .footer-heading {
@@ -1510,7 +1638,6 @@ address a {
 /*========== AWARDS ======*/
 .awards {
   border: 1px solid teal;
-  height: 50vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -1521,19 +1648,22 @@ address a {
 
 @media screen and (min-width: 768px) {
   .awards {
-    display: none !important;
+    display: initial;
+    height: 274px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .awards {
-    display: none !important;
+    display: initial;
+    height: 320px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .awards {
-    display: none !important;
+    display: initial;
+    height: 266px;
   }
 }
 

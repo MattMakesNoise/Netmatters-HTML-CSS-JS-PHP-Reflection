@@ -24,20 +24,20 @@
     background-color: rgba(221, 221, 221, .4);
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
-        height: 1963px;
+        height: 1941px;
         padding: 2rem 1rem;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
-        height: 70vh;
+        height: 669px;
     }
     //2 cards on one row for large devices
     @media screen and (min-width: $break-lg) {
-        height: 70vh;
+        height: 683px;
     }
     //3 cards on one row for xlarge devices
     @media screen and (min-width: $break-xl) {
-        height: 75vh;
+        height: 683px;
     }
 }
 
@@ -121,9 +121,10 @@
     padding-top: 1.5rem;
     margin: auto auto 1rem 2rem;
     img {
-        padding-right: 1rem;
+        margin-right: 1rem;
         height: auto;
         vertical-align: middle;
+        border-radius: 50%;
     }
 }
 

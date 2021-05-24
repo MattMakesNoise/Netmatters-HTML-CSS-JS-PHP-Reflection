@@ -1,12 +1,26 @@
 /*========== FOOTER ==========*/
 .footer {
     background-color: $dark-blue;
-    height: 1046px;
     color: $white;
-    padding-bottom: 2.5vh;
     @include flexcolumn;
     justify-content: space-evenly;
     padding: 2rem 1rem;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        height: 1046px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        height: 614px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        height: 614px;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        height: 553px;
+    }
 }
 
 .footer-heading {

@@ -1,6 +1,7 @@
 /*========== HERO ============*/
 .hero-wrapper {
     min-height: 490px;
+    //Up to medium devices
     @media screen and (max-width: $break-m) {
         height: calc(100vh - 168px);
     }
@@ -8,6 +9,7 @@
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
     }
+    //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
     }
@@ -76,11 +78,36 @@
     text-transform: uppercase;
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-bottom: 1rem;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        
+    }
 }
 
 .hero-subtitle {
     line-height: 1.8;
     margin-bottom: 2.5rem;
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        
+    }
 }
 
 .hero-button-wrapper {

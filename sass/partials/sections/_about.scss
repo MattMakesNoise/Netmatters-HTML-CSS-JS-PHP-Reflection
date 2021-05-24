@@ -1,5 +1,6 @@
 /*========== ABOUT ===========*/
 .about {
+    display: block;
     background-color: $dark-blue;
     color: $white;
     @include flexcolumn;

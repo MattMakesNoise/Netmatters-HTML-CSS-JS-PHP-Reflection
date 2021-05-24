@@ -2,19 +2,19 @@
 .cards-section {
     background-color: rgba(255,255,255,0.1);
     @media screen and (max-width: $break-m) {
+        height: 2354px;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
     @media screen and (min-width: $break-m) {
-        height: 180vh;
+        height: 1096px;
         padding: 1.25rem 2rem;
     }
     @media screen and (min-width: $break-lg) {
-        height: 75vh;
-        
+        height: 754px;
     }
     @media screen and (min-width: $break-xl) {
-        height: 80vh;
+        height: 754px;
     }
 }
 
