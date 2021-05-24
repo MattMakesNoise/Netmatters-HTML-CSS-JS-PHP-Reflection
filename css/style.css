@@ -14,6 +14,10 @@ body {
   letter-spacing: .4px;
 }
 
+.page-wrapper {
+  min-height: 100%;
+}
+
 /*========== HEADER/NAV ======*/
 @media screen and (max-width: 768px) {
   .navbar-wrapper {
@@ -500,7 +504,25 @@ body {
 
 @media screen and (min-width: 768px) {
   .cards-section {
-    padding: 1.25rem 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section {
+    margin-right: auto;
+    margin-left: auto;
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .cards-section {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
   }
 }
 
@@ -560,6 +582,12 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .row-one {
+    margin-top: 1rem;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .row-one {
     display: -webkit-box;
@@ -569,6 +597,13 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .row-one {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -631,18 +666,6 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    margin: 2rem 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .card {
-    margin: 2rem 1rem;
-  }
-}
-
 .icon-border {
   border: 1px solid transparent;
   border-radius: 50%;
@@ -673,7 +696,7 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
   background-image: linear-gradient(black, black);
   background-repeat: no-repeat;
-  background-size: 5vw 7%;
+  background-size: 28px 7%;
   background-position: center bottom, 0.2vw 0;
   padding-bottom: 1rem;
   font-size: 1.1rem;

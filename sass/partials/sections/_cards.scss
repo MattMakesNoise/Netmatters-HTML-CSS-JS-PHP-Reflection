@@ -21,11 +21,20 @@
         padding-bottom: 1rem;
     }
     @media screen and (min-width: $break-m) {
-        padding: 1.25rem 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        // padding: 1.25rem 2rem;
+        width: 750px;
     }
     @media screen and (min-width: $break-lg) {
+        margin-right: auto;
+        margin-left: auto;
+        width: 970px;
     }
     @media screen and (min-width: $break-xl) {
+        margin-right: auto;
+        margin-left: auto;
+        width: 1200px;
     }
 }
 
@@ -51,8 +60,22 @@
 }
 
 .row-one {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        margin-top: 1rem;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        
+    }
+    //Large and Up
     @media screen and (min-width: $break-lg) {
         @include flexrow;
+    }   
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -84,22 +107,6 @@
     padding: 2rem;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        margin: 2rem 1rem;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        margin: 2rem 1rem;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-    
-    }
 }
 
 .icon-border {
@@ -129,7 +136,7 @@
 .card-title {
     background-image: linear-gradient(black, black);
     background-repeat: no-repeat;
-    background-size: 5vw 7%;
+    background-size: 28px 7%;
     background-position: center bottom, 0.2vw 0;
     padding-bottom: 1rem;
     font-size: 1.1rem;
@@ -314,18 +321,6 @@
                 text-decoration: none;
             }
         }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
-        }
     }
     /*========== CYBER CARD ======*/
     .cyber-card {
@@ -357,18 +352,6 @@
                 color: $cyber-dark;
                 text-decoration: none;
             }
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            
         }
     }
     /*========== TRAIN CARD ======*/
