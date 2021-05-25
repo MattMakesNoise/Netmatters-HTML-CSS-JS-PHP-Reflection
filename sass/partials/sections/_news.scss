@@ -5,7 +5,6 @@
     //up to medium devices
     @media screen and (max-width: $break-m) {
         height: 2049px;
-        padding: 2rem 1rem;
     }
     //medium devices
     @media screen and (min-width: $break-m) {
@@ -137,7 +136,6 @@
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
     padding-top: 1.5rem;
     margin: auto auto 1rem 2rem;
     img {

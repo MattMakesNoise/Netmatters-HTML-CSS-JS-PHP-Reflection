@@ -989,6 +989,7 @@ body {
 /*========== ABOUT ===========*/
 .about-wrapper {
   display: block;
+  background-color: #333645;
 }
 
 @media screen and (max-width: 768px) {
@@ -1000,6 +1001,9 @@ body {
 @media screen and (min-width: 768px) {
   .about-wrapper {
     height: 493px;
+    background-image: url(/img/branded.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 }
 
@@ -1016,7 +1020,6 @@ body {
 }
 
 .about {
-  background-color: #333645;
   color: #fff;
   min-height: 100%;
   display: -webkit-box;
@@ -1036,10 +1039,26 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 50px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about {
+    width: 1200px;
+  }
+}
+
 @media screen and (min-width: 1260px) {
   .about {
-    padding-left: 18.47%;
-    padding-right: 18.47%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
   }
 }
 
@@ -1093,7 +1112,6 @@ body {
 @media screen and (max-width: 768px) {
   .news-wrapper {
     height: 2049px;
-    padding: 2rem 1rem;
   }
 }
 
@@ -1275,9 +1293,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-top: 1.5rem;
   margin: auto auto 1rem 2rem;
 }
@@ -1365,36 +1380,76 @@ body {
   display: block;
 }
 
-.clients {
-  border: 1px solid purple;
-  height: 20vh;
-}
-
 @media screen and (max-width: 768px) {
-  .clients {
+  .clients-wrapper {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .clients {
+  .clients-wrapper {
     display: initial !important;
-    height: 145px;
+    max-width: 100%;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .clients {
+  .clients-wrapper {
     display: initial !important;
-    height: 170px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .clients {
+  .clients-wrapper {
     display: inital !important;
-    height: 170px;
   }
+}
+
+.clients {
+  background-color: rgba(221, 221, 221, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.show img {
+  height: auto;
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.show img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+#busseys {
+  display: none;
+}
+
+.busseys-container {
+  position: relative;
+}
+
+.busseys-container:hover + #busseys {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: -200px;
+  right: -200px;
 }
 
 /*========== EMAIL FORM ======*/
@@ -1444,8 +1499,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.form-check input {
-  border: 1.5rem solid #333645 !important;
+.form-check input[type=checkbox] {
+  border: 5rem solid #333645;
   background-color: #ddd;
   cursor: pointer;
   height: 2rem;

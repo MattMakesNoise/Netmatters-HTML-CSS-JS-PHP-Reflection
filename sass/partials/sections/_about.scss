@@ -1,11 +1,15 @@
 /*========== ABOUT ===========*/
 .about-wrapper {
     display: block;
+    background-color: $dark-blue;
     @media screen and (max-width: $break-m) {
         height: 613px;
     }
     @media screen and (min-width: $break-m) {
         height: 493px;
+        background-image: url(/img/branded.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
     }
     @media screen and (min-width: $break-lg) {
         height: 493px;
@@ -16,7 +20,6 @@
 }
 
 .about {
-    background-color: $dark-blue;
     color: $white;
     min-height: 100%;
     @include flexcolumn;
@@ -25,14 +28,19 @@
         padding: 50px 15px;
     }
     @media screen and (min-width: $break-m) {
-
+        padding: 50px 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 970px;
     }
     @media screen and (min-width: $break-lg) {
-    
+        width: 1200px;
+
     }
     @media screen and (min-width: $break-xl) {
-        padding-left: 18.47%;
-        padding-right: 18.47%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
     }
 }
 

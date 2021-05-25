@@ -43,8 +43,8 @@
     margin-bottom: 1rem;
 }
 
-.form-check input {
-    border: 1.5rem solid $dark-blue !important;
+.form-check input[type=checkbox] {
+    border: 5rem solid $dark-blue;
     background-color: $lightgrey;
     cursor: pointer;
     height: 2rem;
