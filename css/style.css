@@ -1109,30 +1109,6 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  .news-wrapper {
-    height: 2049px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .news-wrapper {
-    height: 773px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .news-wrapper {
-    height: 787px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .news-wrapper {
-    height: 787px;
-  }
-}
-
 .news-title {
   height: 104px;
   margin-left: 1rem;
@@ -1348,6 +1324,12 @@ body {
 .notable-btn:hover {
   background-color: #BC2C28;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .job-card {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1567,13 +1549,21 @@ body {
   margin-bottom: 1rem;
 }
 
-.form-check input[type=checkbox] {
+.form-check input[type="checkbox"] {
   border: 5rem solid #333645;
   background-color: #ddd;
   cursor: pointer;
   height: 2rem;
   width: 2rem;
   display: inline-block;
+}
+
+.form-check-input {
+  border: 5rem solid #333645;
+}
+
+.form-check-input:checked {
+  background-color: #333645;
 }
 
 .form-check-label {
@@ -1774,12 +1764,18 @@ address a {
 }
 
 .awards {
-  border: 1px solid teal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
   .awards {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -1787,6 +1783,7 @@ address a {
   .awards {
     display: initial;
     height: 274px;
+    width: 750px;
   }
 }
 
@@ -1794,14 +1791,57 @@ address a {
   .awards {
     display: initial;
     height: 320px;
+    width: 970px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .awards {
+    width: 1200px;
     display: initial;
     height: 266px;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+
+.awards-row-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.awards-row-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.awards-logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  vertical-align: middle;
+  padding: 0 20px;
+  position: relative;
+}
+
+.awards-logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.google img {
+  height: 82px;
+  width: 200px;
 }
 
 /*========== PAGE LAYOUT ===*/

@@ -4,23 +4,52 @@
 }
 
 .awards {
-    border: 1px solid teal;
+    @include flexcolumn;
     @media screen and (max-width: $break-m) {
-        display: none !important;
+        display: none;
       }
       //Medium and up
       @media screen and (min-width: $break-m) {
         display: initial;
         height: 274px;
+        width: 750px;
       }
       //Large and Up
       @media screen and (min-width: $break-lg) {
         display: initial;
         height: 320px;
+        width: 970px;
       }
       //Extra Large
       @media screen and (min-width: $break-xl) {
+        width: 1200px;
         display: initial;
         height: 266px;
+        margin-left: auto;
+        margin-right: auto;
       }
+}
+
+.awards-row-one {
+    @include flexrow;
+}
+
+.awards-row-two {
+    @include flexrow;
+}
+
+.awards-logo {
+  flex-grow: 1;
+  vertical-align: middle;
+  padding: 0 20px;
+  position: relative;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+}
+
+.google img {
+  height: 82px;
+  width: 200px;
 }

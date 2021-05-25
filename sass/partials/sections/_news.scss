@@ -2,22 +2,6 @@
 // TITLE SECTION
 .news-wrapper {
     display: block;
-    //up to medium devices
-    @media screen and (max-width: $break-m) {
-        height: 2049px;
-    }
-    //medium devices
-    @media screen and (min-width: $break-m) {
-        height: 773px;
-    }
-    //large devices
-    @media screen and (min-width: $break-lg) {
-        height: 787px;
-    }
-    //xlarge devices
-    @media screen and (min-width: $break-xl) {
-        height: 787px;
-    }
 }
 
 .news-title {
@@ -188,6 +172,10 @@
 
 // JOB CARD
 .job-card {
+    //Show Card
+    @media screen and (max-width: $break-m) {
+        display: block;
+    }
     //Hide Card
     @media screen and (min-width: $break-m) {
         display: none;
