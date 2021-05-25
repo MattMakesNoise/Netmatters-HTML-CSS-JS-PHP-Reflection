@@ -1,7 +1,59 @@
 /*========== EMAIL FORM ======*/
-.email {
+.email-wrapper {
     background-color: $lightgrey;
-    padding: 2rem;
+}
+
+.email {
+    @include flexcolumn;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        padding: 2rem;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        padding: 2rem 15px;
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.boxes {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        @include flexrow;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
+}
+
+.name-wrapper,
+.mail-wrapper {
+    flex: 1 1 450px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .email-header,

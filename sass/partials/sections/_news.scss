@@ -51,6 +51,7 @@
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
         @include flexrow;
+        margin: 0 auto;
     }
     //2 cards on one row for large devices
     @media screen and (min-width: $break-lg) {
@@ -75,7 +76,7 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        
+        margin: 3rem 1rem 3rem 1rem;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -189,15 +190,15 @@
 .job-card {
     //Hide Card
     @media screen and (min-width: $break-m) {
-        visibility: hidden;
+        display: none;
     }
     //Hide Card
     @media screen and (min-width: $break-lg) {
-        visibility: hidden;
+        display: none;
     }
     //3 cards 1 row for xlarge devices (3 colums, 1 row)
     @media screen and (min-width: $break-xl) {
-        visibility: visible;
+        display: block;
     }
 }
 

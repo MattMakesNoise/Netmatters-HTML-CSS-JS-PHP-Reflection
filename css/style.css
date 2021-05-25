@@ -1182,6 +1182,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0 auto;
   }
 }
 
@@ -1222,6 +1223,12 @@ body {
   .news-card {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news-card {
+    margin: 3rem 1rem 3rem 1rem;
   }
 }
 
@@ -1345,19 +1352,19 @@ body {
 
 @media screen and (min-width: 768px) {
   .job-card {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media screen and (min-width: 992px) {
   .job-card {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .job-card {
-    visibility: visible;
+    display: block;
   }
 }
 
@@ -1453,9 +1460,70 @@ body {
 }
 
 /*========== EMAIL FORM ======*/
-.email {
+.email-wrapper {
   background-color: #ddd;
-  padding: 2rem;
+}
+
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .email {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .email {
+    padding: 2rem 15px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .email {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.name-wrapper,
+.mail-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 450px;
+          flex: 1 1 450px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .email-header,
