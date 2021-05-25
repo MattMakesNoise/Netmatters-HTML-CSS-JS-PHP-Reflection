@@ -1,51 +1,73 @@
 /*========== AWARDS ======*/
 .awards-wrapper {
     display: block;
+    @media screen and (max-width: $break-m) {
+      display: none;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+      display: initial;
+      height: 274px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+      display: initial;
+      height: 320px;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+      display: initial;
+      height: 266px;
+    }
 }
 
 .awards {
     @include flexcolumn;
-    @media screen and (max-width: $break-m) {
-        display: none;
+    padding: 50px 0;
+      @media screen and (max-width: $break-m) {
+        // display: none;
       }
       //Medium and up
       @media screen and (min-width: $break-m) {
-        display: initial;
-        height: 274px;
         width: 750px;
       }
       //Large and Up
       @media screen and (min-width: $break-lg) {
-        display: initial;
-        height: 320px;
         width: 970px;
       }
       //Extra Large
       @media screen and (min-width: $break-xl) {
-        width: 1200px;
-        display: initial;
-        height: 266px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 }
 
 .awards-row-one {
     @include flexrow;
+    justify-content: space-between;
 }
 
 .awards-row-two {
     @include flexrow;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .awards-logo {
-  flex-grow: 1;
+  // flex-grow: 1;
   vertical-align: middle;
   padding: 0 20px;
   position: relative;
     img {
       height: auto;
       max-width: 100%;
+      filter: grayscale(100%);
+      &:hover {
+        filter: grayscale(0%);
+      }
     }
 }
 
