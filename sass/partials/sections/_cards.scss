@@ -1,29 +1,17 @@
 /*========== CARDS ===========*/
 .cards-wrapper {
     display: block;
-    @media screen and (max-width: $break-m) {
-        height: 2354px;
-    }
-    @media screen and (min-width: $break-m) {
-        height: 1096px;
-    }
-    @media screen and (min-width: $break-lg) {
-        height: 754px;
-    }
-    @media screen and (min-width: $break-xl) {
-        height: 754px;
-    }
 }
 .cards-section {
     background-color: rgba(255,255,255,0.1);
     @media screen and (max-width: $break-m) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 50px 15px;
+        margin-right: auto;
+        margin-left: auto;
     }
     @media screen and (min-width: $break-m) {
         margin-right: auto;
         margin-left: auto;
-        // padding: 1.25rem 2rem;
         width: 750px;
     }
     @media screen and (min-width: $break-lg) {
@@ -43,26 +31,11 @@
     flex-basis: 100%;
     flex: 1;
 }
-
-.row-double {
-    @media screen and (min-width: $break-m) {
-        @include flexcolumn;
-    }
-    @media screen and (min-width: $break-lg) {
-        @include flexcolumn; //is this needed?
-    }
-    @media screen and (min-width: $break-xl) {
-        @include flexrow;
-        > * {
-            flex: 1 1 25%;
-        }
-    }
-}
-
+// First Three Cards
 .row-one {
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        margin-top: 1rem;
+        // margin-top: 20px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -78,7 +51,22 @@
         margin-bottom: 2rem;
     }
 }
-
+//Last Four Cards Container
+.row-double {
+    @media screen and (min-width: $break-m) {
+        @include flexcolumn;
+    }
+    @media screen and (min-width: $break-lg) {
+        @include flexcolumn; //is this needed?
+    }
+    @media screen and (min-width: $break-xl) {
+        @include flexrow;
+        > * {
+            flex: 1 1 25%;
+        }
+    }
+}
+// First Pair of last four cards 
 .row-two {
     @media screen and (min-width: $break-m) {
         display: flex;
@@ -90,6 +78,7 @@
         display: flex; //is this needed?
     }
 }
+// Second Pair of last four cards
 .row-three {
     @media screen and (min-width: $break-m) {
         display: flex;
@@ -107,6 +96,25 @@
     padding: 2rem;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        margin-top: 30px;
+        padding: 30px;
+        // height: 250px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-top: 30px;
+        padding: 30px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .icon-border {

@@ -1,6 +1,7 @@
 /*========== NEWS ============*/
 // TITLE SECTION
 .news-wrapper {
+    display: block;
     //up to medium devices
     @media screen and (max-width: $break-m) {
         height: 2049px;

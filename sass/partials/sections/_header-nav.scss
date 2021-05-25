@@ -1,6 +1,7 @@
 /*========== HEADER/NAV ======*/
 .navbar-wrapper {
-    //Up yo medium
+    display: block;
+    //Up to medium
     @media screen and (max-width: $break-m) {
         height: 168px;
     }

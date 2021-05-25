@@ -70,8 +70,8 @@
         <!-- Cards -->
         <div class="cards-wrapper">
             <section class="cards-section">
-                <div class="row-one">
-                    <article class="column card soft-card">
+                <div class="row-one"> <!-- TOP THREE CARDS -->
+                    <article class="column card soft-card"> 
                         <div class="icon-border">
                             <i class="fas fa-th card-icon"></i>
                         </div>
@@ -96,8 +96,8 @@
                         <a href="#" class="market-btn card-btn">Read More</a>
                     </article>
                 </div>
-                <div class="row-double">
-                    <div class="row-two">
+                <div class="row-double"> <!-- BOTTOM FOUR CARDS CONTAINER -->
+                    <div class="row-two"> <!-- 1ST PAIR BOTTOM CARDS -->
                         <article class="column card tele-card">
                             <div class="icon-border">
                                 <i class="fas fa-phone-volume card-icon"></i>
@@ -115,7 +115,7 @@
                             <a href="#" class="web-btn card-btn">Read More</a>
                         </article>
                     </div>
-                    <div class="row-three">
+                    <div class="row-three"> <!-- 2ND PAIR BOTTOM CARDS -->
                         <article class="column card cyber-card">
                             <div class="icon-border">
                                 <i class="fas fa-shield-virus card-icon"></i>
@@ -222,27 +222,25 @@
         <!-- Clients End -->
 
         <!-- Email Form -->
-        <div class="email-wrapper">
-            <section class="email">
-                <h1 class="email-header">Email Newsletter Sign-Up</h1>
-                <form>
-                    <div class="">
-                        <label for="nameInput" class="form-label">Your Name <span class="make-red">*</span></label>
-                        <input type="text" class="form-control" id="inputName">
-                    </div>
-                    <div class="">
-                    <label for="emailInput" class="form-label">Your Email <span class="make-red">*</span></label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="marketingCheck">
-                        <label class="form-check-label" for="marketingCheck">Please tick this box if you wish to receive marketing information from us. <br> 
-                        Please see our <u>Privacy Policy</u> for more information on how we use your data.</label>
-                    </div>
-                    <button type="submit" class="subscribe-btn">Subscribe</button>
-                </form>
-            </section>
-        </div>
+        <section class="email">
+            <h1 class="email-header">Email Newsletter Sign-Up</h1>
+            <form>
+                <div class="name-wrapper">
+                    <label for="nameInput" class="form-label">Your Name <span class="make-red">*</span></label>
+                    <input type="text" class="form-control" id="inputName">
+                </div>
+                <div class="mail-wrapper">
+                <label for="emailInput" class="form-label">Your Email <span class="make-red">*</span></label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="marketingCheck">
+                    <label class="form-check-label" for="marketingCheck">Please tick this box if you wish to receive marketing information from us. <br> 
+                    Please see our <u>Privacy Policy</u> for more information on how we use your data.</label>
+                </div>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </section>
         <!-- Email Form End -->
 
         <!-- Footer -->

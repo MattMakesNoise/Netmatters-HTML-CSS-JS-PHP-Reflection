@@ -1,4 +1,8 @@
 /*========== AWARDS ======*/
+.awards-wrapper {
+    display: block;
+}
+
 .awards {
     border: 1px solid teal;
     @media screen and (max-width: $break-m) {

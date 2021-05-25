@@ -14,22 +14,5 @@ body {
 }
 
 .page-wrapper {
-    // // display: block;
-    // // //Up to Medium
-    // // @media screen and (max-width: $break-m) {
-    // //     @include flexcolumn;
-    // // }
-    // // //Medium and up
-    // // @media screen and (min-width: $break-m) {
-    // //     @include flexcolumn;
-    // // }
-    // // //Large and Up
-    // // @media screen and (min-width: $break-lg) {
-    // //     @include flexcolumn;
-    // // }
-    // // //Extra Large
-    // // @media screen and (min-width: $break-xl) {
-    // //     @include flexcolumn;
-    // }
-    min-height: 100%;
+    display: block;
 }

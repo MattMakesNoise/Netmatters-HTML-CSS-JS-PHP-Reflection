@@ -1,6 +1,7 @@
 /*========== HERO ============*/
 .hero-wrapper {
     min-height: 490px;
+    display: block;
     //Up to medium devices
     @media screen and (max-width: $break-m) {
         height: calc(100vh - 168px);

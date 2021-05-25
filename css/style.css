@@ -15,10 +15,14 @@ body {
 }
 
 .page-wrapper {
-  min-height: 100%;
+  display: block;
 }
 
 /*========== HEADER/NAV ======*/
+.navbar-wrapper {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .navbar-wrapper {
     height: 168px;
@@ -293,6 +297,7 @@ body {
 /*========== HERO ============*/
 .hero-wrapper {
   min-height: 490px;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -467,38 +472,15 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  .cards-wrapper {
-    height: 2354px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .cards-wrapper {
-    height: 1096px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .cards-wrapper {
-    height: 754px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .cards-wrapper {
-    height: 754px;
-  }
-}
-
 .cards-section {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width: 768px) {
   .cards-section {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 50px 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -541,6 +523,25 @@ body {
           flex: 1;
 }
 
+@media screen and (min-width: 992px) {
+  .row-one {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .row-one {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .row-double {
     display: -webkit-box;
@@ -579,31 +580,6 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .row-one {
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .row-one {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .row-one {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -664,6 +640,20 @@ body {
   -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
           box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-top: 30px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin-top: 30px;
+    padding: 30px;
+  }
 }
 
 .icon-border {
@@ -1096,6 +1086,10 @@ body {
 }
 
 /*========== NEWS ============*/
+.news-wrapper {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .news-wrapper {
     height: 2049px;
@@ -1367,6 +1361,10 @@ body {
 }
 
 /*========== CLIENTS =========*/
+.clients-wrapper {
+  display: block;
+}
+
 .clients {
   border: 1px solid purple;
   height: 20vh;
@@ -1401,44 +1399,8 @@ body {
 
 /*========== EMAIL FORM ======*/
 .email {
-  height: 569px;
   background-color: #ddd;
-}
-
-@media screen and (max-width: 768px) {
-  .email {
-    height: 569px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .email {
-    height: 502px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .email {
-    height: 381px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .email {
-    height: 381px;
-  }
-}
-
-.email-wrapper {
-  margin: 2rem;
-  padding: 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 2rem;
 }
 
 .email-header,
@@ -1469,6 +1431,7 @@ body {
 .form-control {
   width: 100%;
   height: 3rem;
+  background-color: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
   margin-bottom: 1rem;
@@ -1531,6 +1494,10 @@ body {
 }
 
 /*========== FOOTER ==========*/
+.footer-wrapper {
+  display: block;
+}
+
 .footer {
   background-color: #333645;
   color: #fff;
@@ -1545,30 +1512,6 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 2rem 1rem;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    height: 1046px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer {
-    height: 614px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .footer {
-    height: 614px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .footer {
-    height: 553px;
-  }
 }
 
 .footer-heading {
@@ -1703,6 +1646,10 @@ address a {
 }
 
 /*========== AWARDS ======*/
+.awards-wrapper {
+  display: block;
+}
+
 .awards {
   border: 1px solid teal;
 }
