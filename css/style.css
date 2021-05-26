@@ -186,6 +186,22 @@ body {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .burger-wrapper {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .burger-wrapper {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
 .burger {
   background-color: #333645;
   border: 1px solid transparent;
@@ -252,7 +268,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .search-wrapper {
-    width: 174px;
+    width: 237px;
     height: 56px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -271,6 +287,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .search {
+    display: none;
+  }
 }
 
 #search-input {
@@ -295,6 +317,30 @@ body {
 
 #search-input::placeholder {
   color: #84858F;
+}
+
+@media screen and (max-width: 768px) {
+  #search-input {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #search-input {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #search-input {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  #search-input {
+    display: inline;
+  }
 }
 
 .form-control {
@@ -338,7 +384,7 @@ body {
   .search-btn {
     position: absolute;
     top: 95px;
-    right: 40px;
+    right: 140px;
   }
   .search-btn i {
     font-size: 1.25rem;
@@ -348,13 +394,141 @@ body {
 @media screen and (min-width: 768px) {
   .search-btn {
     background-color: #999AA2;
+    height: 47px;
+    width: 63px;
     position: relative;
-    bottom: 52px;
-    left: 155px;
+    bottom: 64px;
+    left: 173px;
   }
   .search-btn i {
     color: #fff;
     font-size: 1.5rem;
+  }
+}
+
+.support-wrapper {
+  background-color: #4183D7;
+  border-radius: 3px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 5px 15px;
+}
+
+.support-wrapper a {
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.support-wrapper span {
+  font-size: 1.438rem;
+}
+
+@media screen and (max-width: 768px) {
+  .support-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .support-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .support-wrapper {
+    display: inline;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .support-wrapper {
+    display: inline;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.contact-wrapper {
+  background-color: #999AA2;
+  border-radius: 3px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+}
+
+.contact-wrapper a {
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.contact-wrapper span {
+  font-size: 1.438rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-wrapper {
+    display: inline;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .contact-wrapper {
+    display: inline;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 

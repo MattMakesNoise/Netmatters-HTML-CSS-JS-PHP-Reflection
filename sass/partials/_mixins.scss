@@ -35,3 +35,12 @@
     cursor: pointer;
     border-radius: 3px;
 }
+
+@mixin link-styles {
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: $regular;
+    color: $white;
+}

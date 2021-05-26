@@ -125,6 +125,14 @@
     @media screen and (max-width: $break-m) {
         order: 3;
     }
+    //Large
+    @media screen and (min-width: $break-lg) {
+        order: 4;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        order: 4;
+    }
 }
 
 .burger {
@@ -179,7 +187,7 @@
     }
     //1 row layout medium and up
     @media screen and (min-width: $break-m) {
-        width: 174px;
+        width: 237px;
         height: 56px;
         order: 2;
     }
@@ -199,7 +207,22 @@
 }
 
 .search {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
     
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 #search-input {
@@ -209,6 +232,22 @@
     outline: 1px solid hsla(0, 0%, 100%, .2);
     &::placeholder {
         color: $btn-grey-hover;
+    }
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        display: inline;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: inline;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: inline;
     }
 }
 
@@ -254,7 +293,7 @@ input[type=search] {
     @media screen and (max-width: $break-m) {
         position: absolute;
         top: 95px;
-        right: 40px;
+        right: 140px;
         i {
             font-size: 1.25rem;
         }
@@ -262,9 +301,11 @@ input[type=search] {
     //Medium and up
     @media screen and (min-width: $break-m) {
         background-color: $btn-grey;
+        height: 47px;
+        width: 63px;
         position: relative;
-        bottom: 52px;
-        left: 155px;
+        bottom: 64px;
+        left: 173px;
         i {
             color: $white;
             font-size: 1.5rem;
@@ -277,6 +318,74 @@ input[type=search] {
     //Extra Large
     @media screen and (min-width: $break-xl) {
     
+    }
+}
+
+.support-wrapper {
+    background-color: $btn-blue;
+    border-radius: 3px;
+    height: 56px;
+    @include flexctrboth;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px 15px;
+    a {
+        @include link-styles;
+        font-size: 1.125rem;
+    }
+    span {
+        font-size: 1.438rem;
+    }
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        display: none;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: none;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: inline;
+        order: 2;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: inline;
+        order: 2;
+    }
+}
+
+.contact-wrapper {
+    background-color: $btn-grey;
+    border-radius: 3px;
+    height: 56px;
+    @include flexctrboth;
+    padding: 5px 15px;
+    a {
+        @include link-styles;
+        font-size: 1.125rem;
+    }
+    span {
+        font-size: 1.438rem;
+    }
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        display: none;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: none;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: inline;
+        order: 3;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: inline;
+        order: 3;
     }
 }
 
