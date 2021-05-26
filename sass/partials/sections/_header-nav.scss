@@ -1,4 +1,4 @@
-/*========== HEADER/NAV ======*/
+//========== HEADER/NAV ===============//
 .navbar-wrapper { //Main wrapper
     display: block;
     //Up to medium
@@ -21,7 +21,7 @@
 }
 
 .nav-bar { //Wraps Header and slider/cards section
-    padding: 1.25rem 1rem 1.25rem 1rem;
+    padding: 1.5rem 1rem 1.25rem 1rem;
     //Medium and up
     @media screen and (min-width: $break-m) {
         
@@ -35,6 +35,7 @@
     }
 }
 
+//========== HEADER SECTION ==========//
 .header { //Wraps the standard elements but not the cards/slider section
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -43,14 +44,76 @@
         justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 15px;
-        padding-right: 15px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         flex-flow: row nowrap;
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: flex;
+        justify-content: space-evenly;
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//===== LOGO STYLING =====//
+.logo-wrapper {
+    @include flexctrboth;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        width: 70%;
+        order: 1;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        width: 50%;
+        order: 1;
+    }
+    //Large devices
+    @media screen and (min-width: $break-lg) {
+        width: 41.66666667%;
+        order: 1;
+    }
+    //X-large devices
+    @media screen and (min-width: $break-xl) {
+        width: 41.66666667%;
+        order: 1;
+    }
+}
+
+.logo {
+    min-width: 100%;
+    a {
+        cursor: pointer;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: table;
+        table-layout: fixed;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -61,37 +124,9 @@
     
     }
 }
+//===== LOGO STYLING ENDS =====//
 
-.logo-wrapper {
-    padding: 0.1rem;
-    @include flexctrboth;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        width: 60vw;
-        order: 1;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        width: 45vw;
-        order: 1;
-    }
-    //Large devices
-    @media screen and (min-width: $break-lg) {
-        order: 1;
-    }
-    //X-large devices
-    @media screen and (min-width: $break-xl) {
-        order: 1;
-    }
-}
-
-.logo {
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
+//===== PHONE STYLING =====//
 .phone-wrapper {
     font-size: 2rem;
     //Up to Medium
@@ -115,7 +150,9 @@
 .rotate {
     transform: rotate(315deg);
 }
+//===== PHONE STYLING ENDS =====//
 
+//===== BURGER STYLING =====//
 .burger-wrapper {
     //Up to medium
     @media screen and (min-width: $break-m) {
@@ -127,11 +164,11 @@
     }
     //Large
     @media screen and (min-width: $break-lg) {
-        order: 4;
+        order: 5;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-        order: 4;
+        order: 5;
     }
 }
 
@@ -178,12 +215,15 @@
         bottom: -8px;
     }
 }
+//===== BURGER STYLING ENDS=====//
 
+//===== SEARCH STYLING =====//
 .search-wrapper {
     //Up to Medium
     @media screen and (max-width: $break-m) {
         order: 4;
         width: 100%;
+        margin-top: 1rem;
     }
     //1 row layout medium and up
     @media screen and (min-width: $break-m) {
@@ -193,7 +233,7 @@
     }
     //Large
     @media screen and (min-width: $break-lg) {
-        
+        order: 4;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -201,10 +241,14 @@
     }
 }
 
-.form {
-    @include flexrow;
-    justify-content: space-between;
+.search-container {
+    
 }
+
+// .form {
+//     @include flexrow;
+//     justify-content: space-between;
+// }
 
 .search {
     //Up to Medium
@@ -222,6 +266,21 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
     
+    }
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.75rem;
+    width: 100% !important;
+    font-weight: $medium;
+    font-size: 0.9rem;
+    &:hover {
+        box-shadow: none;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
     }
 }
 
@@ -251,21 +310,6 @@
     }
 }
 
-.form-control {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 0.75rem;
-    width: 100% !important;
-    font-weight: $medium;
-    font-size: 0.9rem;
-    &:hover {
-        box-shadow: none;
-    }
-    &:focus {
-        box-shadow: none;
-        outline: none;
-    }
-}
-
 input[type=search] {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -292,8 +336,8 @@ input[type=search] {
     //Up to Medium
     @media screen and (max-width: $break-m) {
         position: absolute;
-        top: 95px;
-        right: 140px;
+        top: 110px;
+        right: 32px;
         i {
             font-size: 1.25rem;
         }
@@ -313,14 +357,18 @@ input[type=search] {
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        position: relative;
+        bottom: 0px;
+        left: 0px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
     
     }
 }
+//===== SEARCH STYLING ENDS=====//
 
+//===== SUPPORT STYLING =====//
 .support-wrapper {
     background-color: $btn-blue;
     border-radius: 3px;
@@ -355,7 +403,9 @@ input[type=search] {
         order: 2;
     }
 }
+//===== SUPPORT STYLING ENDS=====//
 
+//===== CONTACT STYLING =====//
 .contact-wrapper {
     background-color: $btn-grey;
     border-radius: 3px;
@@ -388,7 +438,11 @@ input[type=search] {
         order: 3;
     }
 }
+//===== CONTACT STYLING =====//
 
+//========== HEADER SECTION ENDS ==========//
+
+//========== CARDS SECTION ================//
 .cards-nav {
     @media screen and (max-width: $break-m) {
         visibility: hidden;
@@ -397,3 +451,4 @@ input[type=search] {
         background-color: $dark-blue;
     }
 }
+//========== CARDS SECTION ENDS ==========//
