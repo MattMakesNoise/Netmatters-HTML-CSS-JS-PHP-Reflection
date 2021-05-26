@@ -1,5 +1,5 @@
 /*========== HEADER/NAV ======*/
-.navbar-wrapper {
+.navbar-wrapper { //Main wrapper
     display: block;
     //Up to medium
     @media screen and (max-width: $break-m) {
@@ -8,6 +8,7 @@
     //Medium and up
     @media screen and (min-width: $break-m) {
         height: 110px;
+        // padding: 20px 0;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -18,12 +19,12 @@
         height: 209px;
     }
 }
-.nav-bar {
+
+.nav-bar { //Wraps Header and slider/cards section
     padding: 1.25rem 1rem 1.25rem 1rem;
-    @include flexcolumn;
     //Medium and up
     @media screen and (min-width: $break-m) {
-        @include flexrow;
+        
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -34,17 +35,41 @@
     }
 }
 
-.header {
-    @include flexrow;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+.header { //Wraps the standard elements but not the cards/slider section
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row nowrap;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .logo-wrapper {
-    order: 1;
-    width: 60vw;
     padding: 0.1rem;
     @include flexctrboth;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        width: 60vw;
+        order: 1;
+    }
     //Medium and up
     @media screen and (min-width: $break-m) {
         width: 45vw;
@@ -52,10 +77,11 @@
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        
+        order: 1;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
+        order: 1;
     }
 }
 
@@ -67,15 +93,22 @@
 }
 
 .phone-wrapper {
-    order: 2;
     font-size: 2rem;
-    //2 rows up to medium devices
+    //Up to Medium
     @media screen and (max-width: $break-m) {
-        
+        order: 2;
     }
-    //Hide Div
+    //Medium and up
     @media screen and (min-width: $break-m) {
-        visibility: hidden;
+        display: none;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: none;
     }
 }
 
@@ -84,8 +117,13 @@
 }
 
 .burger-wrapper {
-    order: 3;
+    //Up to medium
+    @media screen and (min-width: $break-m) {
+        order: 3;
+    }
+    //Medium and up
     @media screen and (max-width: $break-m) {
+        order: 3;
     }
 }
 
@@ -134,16 +172,22 @@
 }
 
 .search-wrapper {
-    order: 4;
-    width: 100%;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        order: 4;
+        width: 100%;
+    }
     //1 row layout medium and up
     @media screen and (min-width: $break-m) {
-        width: 25vw;
+        width: 174px;
+        height: 56px;
         order: 2;
     }
+    //Large
     @media screen and (min-width: $break-lg) {
         
     }
+    //Extra Large
     @media screen and (min-width: $break-xl) {
         
     }
@@ -183,17 +227,56 @@
     }
 }
 
+input[type=search] {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        background-color: $lightgrey-80;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        background-color: $white;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
+}
+
 .search-btn {
     background: transparent;
     border: none;
     outline: none;
-    position: absolute;
-    margin-left: -33px;
-    margin-top: 12px;
-    img {
-        width: 24px;
-        height: 24px;
-        object-fit: cover;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        position: absolute;
+        top: 95px;
+        right: 40px;
+        i {
+            font-size: 1.25rem;
+        }
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        background-color: $btn-grey;
+        position: relative;
+        bottom: 52px;
+        left: 155px;
+        i {
+            color: $white;
+            font-size: 1.5rem;
+        }
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
     }
 }
 
