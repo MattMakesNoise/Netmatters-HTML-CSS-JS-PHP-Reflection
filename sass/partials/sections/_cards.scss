@@ -6,22 +6,18 @@
     background-color: rgba(255,255,255,0.1);
     @media screen and (max-width: $break-m) {
         padding: 50px 15px;
-        margin-right: auto;
-        margin-left: auto;
+        @include mginlrauto;
     }
     @media screen and (min-width: $break-m) {
-        margin-right: auto;
-        margin-left: auto;
+        @include mginlrauto;
         width: 750px;
     }
     @media screen and (min-width: $break-lg) {
-        margin-right: auto;
-        margin-left: auto;
+        @include mginlrauto;
         width: 970px;
     }
     @media screen and (min-width: $break-xl) {
-        margin-right: auto;
-        margin-left: auto;
+        @include mginlrauto;
         width: 1200px;
     }
 }

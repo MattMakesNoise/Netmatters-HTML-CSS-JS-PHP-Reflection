@@ -46,10 +46,6 @@ body {
   }
 }
 
-.nav-bar {
-  padding: 1.5rem 1rem 1.25rem 1rem;
-}
-
 @media screen and (min-width: 992px) {
   .nav-bar {
     display: -webkit-box;
@@ -59,6 +55,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -71,6 +70,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 1rem;
   }
 }
 
@@ -129,6 +132,7 @@ body {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px 0 20px 0;
   }
 }
 
@@ -476,6 +480,14 @@ body {
   }
 }
 
+@media screen and (min-width: 1260px) {
+  .search-btn {
+    position: relative;
+    bottom: 100px;
+    left: 0px;
+  }
+}
+
 .support-wrapper {
   background-color: #4183D7;
   border-radius: 3px;
@@ -604,14 +616,27 @@ body {
 
 @media screen and (max-width: 768px) {
   .cards-nav {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   .cards-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-nav {
+    display: initial;
     background-color: #333645;
-    min-width: 100vw;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .cards-nav {
+    display: initial;
+    background-color: #333645;
   }
 }
 
@@ -670,6 +695,95 @@ body {
   text-align: center;
   text-decoration: none;
   color: #fff;
+  text-transform: uppercase;
+  padding: 19px 0 18px 0;
+}
+
+.web span,
+.it span,
+.telecoms span,
+.software span,
+.digital span,
+.security span {
+  padding-bottom: 10px;
+}
+
+.web a:hover {
+  background-color: #926FB1;
+}
+
+.web a:hover .fa-code {
+  color: #fff;
+}
+
+.web .fa-code {
+  color: #79539A;
+  font-size: 1.438rem;
+}
+
+.it a:hover {
+  background-color: #4183D7;
+}
+
+.it a:hover .fa-desktop {
+  color: #fff;
+}
+
+.it .fa-desktop {
+  color: #286ABD;
+  font-size: 1.438rem;
+}
+
+.telecoms a:hover {
+  background-color: #D64541;
+}
+
+.telecoms a:hover .fa-phone-volume {
+  color: #fff;
+}
+
+.telecoms .fa-phone-volume {
+  color: #BC2C28;
+  font-size: 1.438rem;
+}
+
+.software a:hover {
+  background-color: #67809F;
+}
+
+.software a:hover .fa-th {
+  color: #fff;
+}
+
+.software .fa-th {
+  color: #526784;
+  font-size: 1.438rem;
+}
+
+.digital a:hover {
+  background-color: #2ECC71;
+}
+
+.digital a:hover .fa-signal {
+  color: #fff;
+}
+
+.digital .fa-signal {
+  color: #25A25A;
+  font-size: 1.438rem;
+}
+
+.security a:hover {
+  background-color: #F62459;
+}
+
+.security a:hover .fa-shield-virus {
+  color: #fff;
+}
+
+.security .fa-shield-virus {
+  color: #DE093F;
+  font-size: 1.438rem;
 }
 
 .menu li a {
@@ -862,31 +976,31 @@ body {
 @media screen and (max-width: 768px) {
   .cards-section {
     padding: 50px 15px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .cards-section {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     width: 750px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .cards-section {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     width: 970px;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .cards-section {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     width: 1200px;
   }
 }
@@ -1992,22 +2106,79 @@ body {
 /*========== FOOTER ==========*/
 .footer-wrapper {
   display: block;
+  background-color: #333645;
 }
 
 .footer {
-  background-color: #333645;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 47px 0 43px;
+  }
+  .footer .footer-about,
+  .footer .footer-wymondham,
+  .footer .footer-gorleston,
+  .footer .footer-socials {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 47px 0 43px;
+  }
+  .footer .footer-about,
+  .footer .footer-wymondham,
+  .footer .footer-gorleston,
+  .footer .footer-socials {
+    width: 25%;
+  }
+  .footer h6 {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer-heading {
@@ -2058,7 +2229,18 @@ address a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .socials {
+    margin: 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .socials {
+    margin-left: -0.5rem;
+  }
 }
 
 .socials-top,
@@ -2187,12 +2369,16 @@ address a {
 @media screen and (min-width: 768px) {
   .awards {
     width: 750px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 992px) {
   .awards {
     width: 970px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

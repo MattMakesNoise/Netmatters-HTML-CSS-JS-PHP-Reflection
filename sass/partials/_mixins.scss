@@ -44,3 +44,8 @@
     font-weight: $regular;
     color: $white;
 }
+
+@mixin mginlrauto {
+    margin-left: auto;
+    margin-right: auto;
+}

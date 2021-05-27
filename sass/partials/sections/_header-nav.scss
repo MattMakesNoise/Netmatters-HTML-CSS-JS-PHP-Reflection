@@ -13,6 +13,7 @@
     //Large devices
     @media screen and (min-width: $break-lg) {
         height: 209px;
+        
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
@@ -21,7 +22,6 @@
 }
 
 .nav-bar { //Wraps Header and slider/cards section
-    padding: 1.5rem 1rem 1.25rem 1rem;
     //Medium and up
     @media screen and (min-width: $break-m) {
         
@@ -29,10 +29,13 @@
     //Large devices
     @media screen and (min-width: $break-lg) {
         @include flexcolumn;
+        justify-content: space-evenly;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
         @include flexcolumn;
+        justify-content: space-evenly;
+        margin-top: 1rem;
     }
 }
 
@@ -43,8 +46,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -53,22 +55,20 @@
         align-items: center;
         flex-flow: row nowrap;
         width: 750px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
         display: flex;
         justify-content: space-evenly;
         width: 970px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
+        padding: 20px 0 20px 0;
     }
 }
 
@@ -364,7 +364,9 @@ input[type=search] {
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        position: relative;
+        bottom: 100px;
+        left: 0px;
     }
 }
 //===== SEARCH STYLING ENDS=====//
@@ -445,14 +447,23 @@ input[type=search] {
 
 //========== CARDS SECTION ================//
 .cards-nav {
-    //Up to medium
+    //Up to Medium
     @media screen and (max-width: $break-m) {
-        visibility: hidden;
+        display: none;
     }
-    //Medium
+    //Medium and up
     @media screen and (min-width: $break-m) {
+        display: none;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: initial;
         background-color: $dark-blue;
-        min-width: 100vw;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: initial;
+        background-color: $dark-blue;
     }
 }
 
@@ -461,15 +472,13 @@ input[type=search] {
     @media screen and (min-width: $break-lg) {
         width: 970px;
         height: 99px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
         height: 99px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mginlrauto;
     }
 }
 
@@ -478,6 +487,10 @@ input[type=search] {
     justify-content: space-evenly;
     li {
         list-style: none;
+        // &:hover ul {
+        //     display: flex;
+        //     justify-content: space-evenly;
+        // }
         ul {
             display: none;
         }
@@ -495,8 +508,104 @@ input[type=search] {
         text-align: center;
         text-decoration: none;
         color: $white;
+        text-transform: uppercase;
+        padding: 19px 0 18px 0;
+    }
+    span {
+        padding-bottom: 10px;
     }
 }
+
+.web {
+    a {
+        &:hover {
+            background-color: $web;
+            .fa-code {
+                color: $white;
+            }
+        }
+    }
+    .fa-code{
+        color: $web-dark;
+        font-size: 1.438rem;
+    }
+}
+
+.it {
+    a {
+        &:hover {
+            background-color: $it;
+            .fa-desktop {
+                color: $white;
+            }
+        }
+    }
+    .fa-desktop {
+        color: $it-dark;
+        font-size: 1.438rem;
+    }
+}
+
+.telecoms {
+    a {
+        &:hover {
+            background-color: $tele;
+            .fa-phone-volume {
+                color: $white;
+            }
+        }
+    }
+    .fa-phone-volume {
+        color: $tele-dark;
+        font-size: 1.438rem;
+    }
+}
+
+.software {
+    a {
+        &:hover {
+            background-color: $soft;
+            .fa-th {
+                color: $white;
+            }
+        }
+    }
+    .fa-th {
+    color: $soft-dark;
+    font-size: 1.438rem;
+    }
+}
+
+.digital {
+    a {
+        &:hover {
+            background-color: $market;
+            .fa-signal {
+                color: $white;
+            }
+        }
+    }
+    .fa-signal {   
+        color: $market-dark;
+        font-size: 1.438rem;
+    }
+}
+
+.security {
+    a {
+        &:hover {
+            background-color: $cyber;
+            .fa-shield-virus {
+                color: $white;
+            }
+        }
+    }
+    .fa-shield-virus {
+        color: $cyber-dark;
+        font-size: 1.438rem;
+    }
+}
+
 
 
 .menu {
