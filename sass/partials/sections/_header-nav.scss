@@ -444,11 +444,63 @@ input[type=search] {
 
 //========== CARDS SECTION ================//
 .cards-nav {
+    //Up to medium
     @media screen and (max-width: $break-m) {
         visibility: hidden;
     }
+    //Medium
     @media screen and (min-width: $break-m) {
         background-color: $dark-blue;
+        min-width: 100vw;
+    }
+}
+
+.navcards-container {
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.cards-nav-list {
+    @include flexrow;
+    justify-content: space-evenly;
+    li {
+        list-style: none;
+        ul {
+            display: none;
+        }
+    }
+}
+
+.web,
+.it,
+.telecoms,
+.software,
+.digital,
+.security {
+    a {
+        @include flexcolumn;
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+
+.menu {
+    li {
+        a {
+            text-decoration: none;
+            color: $white;
+        }
     }
 }
 //========== CARDS SECTION ENDS ==========//
