@@ -28,10 +28,11 @@
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        
+        @include flexcolumn;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
+        @include flexcolumn;
     }
 }
 
@@ -459,12 +460,14 @@ input[type=search] {
     //Large and Up
     @media screen and (min-width: $break-lg) {
         width: 970px;
+        height: 99px;
         margin-left: auto;
         margin-right: auto;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
+        height: 99px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -489,6 +492,7 @@ input[type=search] {
 .security {
     a {
         @include flexcolumn;
+        text-align: center;
         text-decoration: none;
         color: $white;
     }
