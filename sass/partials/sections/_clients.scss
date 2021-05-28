@@ -31,8 +31,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
+      justify-content: space-around;
       width: 970px;
       @include mginlrauto;
+      padding-left: 15px;
+      padding-right: 15px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -41,15 +44,6 @@
       @include mginlrauto;
     }
 }
-
-// .show img {
-//   height: auto;
-//   width: 100%;
-//   filter: grayscale(100%);
-//   &:hover {
-//     filter: grayscale(0%);
-//   }
-// }
 
 .client-title {
     font-weight: $regular;

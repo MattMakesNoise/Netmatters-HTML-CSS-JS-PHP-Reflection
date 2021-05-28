@@ -60,9 +60,10 @@
     //Large and Up
     @media screen and (min-width: $break-lg) {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         width: 970px;
         @include mginlrauto;
+        padding: 20px 15px 21px 15px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -87,7 +88,7 @@
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        width: 41.66666667%;
+        width: 40%;
         order: 1;
     }
     //X-large devices
@@ -246,11 +247,6 @@
     
 }
 
-// .form {
-//     @include flexrow;
-//     justify-content: space-between;
-// }
-
 .search {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -358,9 +354,10 @@ input[type=search] {
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-        position: relative;
-        bottom: 0px;
-        left: 0px;
+        // position: relative;
+        // bottom: 0px;
+        // left: 150px;
+        display: none;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -386,6 +383,7 @@ input[type=search] {
     }
     span {
         font-size: 1.438rem;
+        padding-right: 0.25rem;
     }
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -399,11 +397,14 @@ input[type=search] {
     @media screen and (min-width: $break-lg) {
         display: inline;
         order: 2;
+        @include flexalignctr;
+        white-space: nowrap;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         display: inline;
         order: 2;
+        @include flexalignctr;
     }
 }
 //===== SUPPORT STYLING ENDS=====//
@@ -421,6 +422,7 @@ input[type=search] {
     }
     span {
         font-size: 1.438rem;
+        padding-right: 0.25rem;
     }
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -434,11 +436,14 @@ input[type=search] {
     @media screen and (min-width: $break-lg) {
         display: inline;
         order: 3;
+        @include flexalignctr;
+        white-space: nowrap;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         display: inline;
         order: 3;
+        @include flexalignctr;
     }
 }
 //===== CONTACT STYLING =====//
@@ -487,14 +492,8 @@ input[type=search] {
     justify-content: space-evenly;
     li {
         list-style: none;
-        // &:hover ul {
-        //     display: flex;
-        //     justify-content: space-evenly;
-        // }
-        ul {
-            display: none;
-        }
     }
+    
 }
 
 .web,
@@ -509,7 +508,7 @@ input[type=search] {
         text-decoration: none;
         color: $white;
         text-transform: uppercase;
-        padding: 19px 0 18px 0;
+        padding: 19px 0 1px 0;
     }
     span {
         padding-bottom: 10px;
@@ -531,6 +530,25 @@ input[type=search] {
     }
 }
 
+.web-show {
+    .web-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $web;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-20%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .web-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 .it {
     a {
         &:hover {
@@ -543,6 +561,25 @@ input[type=search] {
     .fa-desktop {
         color: $it-dark;
         font-size: 1.438rem;
+    }
+}
+
+.it-show {
+    .it-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $it;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-28%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .it-tooltip {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -561,6 +598,25 @@ input[type=search] {
     }
 }
 
+.telecoms-show {
+    .telecoms-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $tele;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-28%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .telecoms-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 .software {
     a {
         &:hover {
@@ -573,6 +629,25 @@ input[type=search] {
     .fa-th {
     color: $soft-dark;
     font-size: 1.438rem;
+    }
+}
+
+.software-show {
+    .software-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $soft;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-28%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .software-tooltip {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -591,6 +666,25 @@ input[type=search] {
     }
 }
 
+.digital-show {
+    .digital-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $market;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-28%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .digital-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 .security {
     a {
         &:hover {
@@ -603,6 +697,25 @@ input[type=search] {
     .fa-shield-virus {
         color: $cyber-dark;
         font-size: 1.438rem;
+    }
+}
+
+.security-show {
+    .security-tooltip {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $cyber;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transform: translate(-28%);
+        &::before { //Shows the tootip
+            content: '';
+        }
+    }
+    &:hover .security-tooltip {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
