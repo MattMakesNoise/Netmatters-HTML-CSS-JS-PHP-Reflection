@@ -1,5 +1,5 @@
 /*========== GLOBAL STYLES ===*/
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -1034,8 +1034,8 @@ body {
 
 @media screen and (min-width: 1260px) {
   .row-one {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1072,6 +1072,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
   .row-double > * {
     -webkit-box-flex: 1;
@@ -1150,6 +1152,13 @@ body {
   .card {
     margin-top: 30px;
     padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .card {
+    margin-top: 0;
+    margin-right: 2rem;
   }
 }
 
@@ -1622,7 +1631,7 @@ body {
   font-weight: 600;
   padding: 40px 0;
   color: #333645;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
   position: relative;
 }
 
@@ -1864,6 +1873,7 @@ body {
 /*========== CLIENTS =========*/
 .clients-wrapper {
   display: block;
+  background-color: rgba(221, 221, 221, 0.8);
 }
 
 @media screen and (max-width: 768px) {
@@ -1891,10 +1901,6 @@ body {
   }
 }
 
-.clients {
-  background-color: rgba(221, 221, 221, 0.8);
-}
-
 @media screen and (min-width: 768px) {
   .clients {
     display: -webkit-box;
@@ -1904,9 +1910,27 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 100%;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .clients {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .clients {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1936,6 +1960,38 @@ body {
   bottom: 100px;
   left: -200px;
   right: -200px;
+}
+
+.crane-container .crane-tooltip {
+  background-color: #333645;
+  color: #fff;
+  position: absolute;
+  opacity: 0;
+}
+
+.crane-container .crane-tooltip::before {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+}
+
+.crane-container .crane-tooltip::after {
+  content: '';
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #333645 10px;
+  bottom: -10px;
+  height: 0;
+  left: 50%;
+  position: absolute;
+  margin-left: 13px;
+  width: 0;
+}
+
+.crane-container:hover .crane-tooltip {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*========== EMAIL FORM ======*/

@@ -1,6 +1,7 @@
 /*========== CLIENTS =========*/
 .clients-wrapper {
     display: block;
+    background-color: $lightgrey-80;
     //Up to Medium
     @media screen and (max-width: $break-m) {
       display: none !important;
@@ -20,21 +21,24 @@
     }
 }
 .clients {
-    background-color: $lightgrey-80;
     //Medium and up
     @media screen and (min-width: $break-m) {
       @include flexrow;
-      max-width: 100%;
+      width: 750px;
+      @include mginlrauto;
       padding-top: 50px;
       padding-bottom: 50px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
+      width: 970px;
+      @include mginlrauto;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
+      width: 1200px;
+      @include mginlrauto;
     }
-
 }
 
 .show img {
@@ -61,3 +65,34 @@
   left: -200px;
   right: -200px;
 } 
+
+.crane-container {
+    .crane-tooltip {
+        background-color: $dark-blue;
+        color: $white;
+        position: absolute;
+        opacity: 0;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            position: absolute;
+        }
+        &::after {
+            content: '';
+            border-left: solid transparent 10px;
+            border-right: solid transparent 10px;
+            border-top: solid $dark-blue 10px;
+            bottom: -10px;
+            height: 0;
+            left: 50%;
+            position: absolute;
+            margin-left: 13px;
+            width: 0;
+        }
+    } 
+    &:hover .crane-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+    } 
+}
