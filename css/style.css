@@ -1946,20 +1946,17 @@ body {
           filter: grayscale(0%);
 }
 
-#busseys {
-  display: none;
+.client-title {
+  font-weight: 400;
 }
 
-.busseys-container {
-  position: relative;
-}
-
-.busseys-container:hover + #busseys {
+.client-title::after {
+  content: '';
   display: block;
-  position: absolute;
-  bottom: 100px;
-  left: -200px;
-  right: -200px;
+  margin: 0 auto;
+  width: 10%;
+  padding-top: 1rem;
+  border-bottom: 3px solid #fff;
 }
 
 .crane-container .crane-tooltip {
@@ -1967,6 +1964,21 @@ body {
   color: #fff;
   position: absolute;
   opacity: 0;
+  max-width: 260px;
+  text-align: center;
+  -webkit-transform: translateY(-35vh);
+          transform: translateY(-35vh);
+  padding: 20px;
+}
+
+.crane-container .crane-tooltip h3 {
+  font-size: 0.875rem;
+}
+
+.crane-container .crane-tooltip p {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .crane-container .crane-tooltip::before {
@@ -1974,19 +1986,20 @@ body {
   display: block;
   width: 100%;
   position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .crane-container .crane-tooltip::after {
   content: '';
-  border-left: solid transparent 10px;
-  border-right: solid transparent 10px;
-  border-top: solid #333645 10px;
-  bottom: -10px;
+  border-left: solid transparent 30px;
+  border-right: solid transparent 30px;
+  border-top: solid #333645 30px;
+  bottom: -29px;
   height: 0;
-  left: 50%;
+  left: 37.5%;
   position: absolute;
-  margin-left: 13px;
-  width: 0;
+  margin-left: 0px;
 }
 
 .crane-container:hover .crane-tooltip {

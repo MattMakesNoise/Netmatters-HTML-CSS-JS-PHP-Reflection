@@ -50,45 +50,48 @@
   }
 }
 
-#busseys {
-  display: none;
+.client-title {
+    font-weight: $regular;
+    &::after {
+        content: ''; //Otherwise after won't work! 
+        display: block; //Places on a seperate line
+        margin: 0 auto; //Center the border to text
+        width: 10%; //Border width
+        padding-top: 1rem; //Create space between the element and border
+        border-bottom: 3px solid $white; //Creates the border
+    }
 }
-
-.busseys-container {
-  position: relative;
-}
-
-.busseys-container:hover + #busseys {
-  display: block;
-  position: absolute;
-  bottom: 100px;
-  left: -200px;
-  right: -200px;
-} 
 
 .crane-container {
     .crane-tooltip {
-        background-color: $dark-blue;
-        color: $white;
-        position: absolute;
-        opacity: 0;
-        &::before {
+        @include tooltip-main;
+        transform: translateY(-35vh); //Positions it above logo
+        padding: 20px;
+        h3 {
+            font-size: 0.875rem;
+        }
+        p {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-weight: $light;
+        }
+        &::before { //Shows the tootip
             content: '';
             display: block;
             width: 100%;
             position: absolute;
+            box-sizing: border-box;
         }
-        &::after {
+        &::after { //Creates the dropdown arrow
             content: '';
-            border-left: solid transparent 10px;
-            border-right: solid transparent 10px;
-            border-top: solid $dark-blue 10px;
-            bottom: -10px;
+            border-left: solid transparent 30px;
+            border-right: solid transparent 30px;
+            border-top: solid $dark-blue 30px;
+            bottom: -29px; //Makes it sit flush with the bottom of the element
             height: 0;
-            left: 50%;
-            position: absolute;
-            margin-left: 13px;
-            width: 0;
+            left: 37.5%; //Centers the arrow
+            position: absolute; //Makes it appear below
+            margin-left: 0px;
         }
     } 
     &:hover .crane-tooltip {
