@@ -1928,10 +1928,26 @@ body {
 
 @media screen and (min-width: 1260px) {
   .clients {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.client-title {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.client-title::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  padding-top: 1rem;
+  border-bottom: 3px solid #fff;
 }
 
 .show img {
@@ -1946,51 +1962,27 @@ body {
           filter: grayscale(0%);
 }
 
-.client-title {
-  font-weight: 400;
-}
-
-.client-title::after {
-  content: '';
-  display: block;
-  margin: 0 auto;
-  width: 10%;
-  padding-top: 1rem;
-  border-bottom: 3px solid #fff;
-}
-
-.crane-container .crane-tooltip {
+.show .tooltip {
   background-color: #333645;
   color: #fff;
   position: absolute;
   opacity: 0;
   max-width: 260px;
   text-align: center;
-  -webkit-transform: translateY(-35vh);
-          transform: translateY(-35vh);
   padding: 20px;
 }
 
-.crane-container .crane-tooltip h3 {
-  font-size: 0.875rem;
-}
-
-.crane-container .crane-tooltip p {
+.show .tooltip p {
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 300;
 }
 
-.crane-container .crane-tooltip::before {
+.show .tooltip::before {
   content: '';
-  display: block;
-  width: 100%;
-  position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-.crane-container .crane-tooltip::after {
+.show .tooltip::after {
   content: '';
   border-left: solid transparent 30px;
   border-right: solid transparent 30px;
@@ -2002,9 +1994,29 @@ body {
   margin-left: 0px;
 }
 
-.crane-container:hover .crane-tooltip {
+.show:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.busseys-tooltip {
+  -webkit-transform: translate(-1.5vw, -28vh);
+          transform: translate(-1.5vw, -28vh);
+}
+
+.crane-tooltip {
+  -webkit-transform: translate(1vw, -35vh);
+          transform: translate(1vw, -35vh);
+}
+
+.beat-tooltip {
+  -webkit-transform: translate(-4.5vw, -28vh);
+          transform: translate(-4.5vw, -28vh);
+}
+
+.diver-tooltip {
+  -webkit-transform: translate(2vw, -32vh);
+          transform: translate(2vw, -32vh);
 }
 
 /*========== EMAIL FORM ======*/

@@ -36,22 +36,24 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
+      justify-content: space-around;
       width: 1200px;
       @include mginlrauto;
     }
 }
 
-.show img {
-  height: auto;
-  width: 100%;
-  filter: grayscale(100%);
-  &:hover {
-    filter: grayscale(0%);
-  }
-}
+// .show img {
+//   height: auto;
+//   width: 100%;
+//   filter: grayscale(100%);
+//   &:hover {
+//     filter: grayscale(0%);
+//   }
+// }
 
 .client-title {
     font-weight: $regular;
+    font-size: 0.875rem;
     &::after {
         content: ''; //Otherwise after won't work! 
         display: block; //Places on a seperate line
@@ -62,14 +64,18 @@
     }
 }
 
-.crane-container {
-    .crane-tooltip {
-        @include tooltip-main;
-        transform: translateY(-35vh); //Positions it above logo
-        padding: 20px;
-        h3 {
-            font-size: 0.875rem;
+.show {
+    img {
+        height: auto;
+        width: 100%;
+        filter: grayscale(100%);
+        &:hover {
+          filter: grayscale(0%);
         }
+    }
+    .tooltip {
+        @include tooltip-main;
+        padding: 20px;
         p {
             margin-top: 1rem;
             font-size: 0.875rem;
@@ -77,10 +83,10 @@
         }
         &::before { //Shows the tootip
             content: '';
-            display: block;
-            width: 100%;
-            position: absolute;
-            box-sizing: border-box;
+
+            // display: block;
+            // width: 100%;
+            // position: absolute;
         }
         &::after { //Creates the dropdown arrow
             content: '';
@@ -94,8 +100,24 @@
             margin-left: 0px;
         }
     } 
-    &:hover .crane-tooltip {
+    &:hover .tooltip {
         opacity: 1;
         pointer-events: auto;
-    } 
+    }
+}
+
+.busseys-tooltip {
+    transform: translate(-1.5vw ,-28vh); //Positions it above logo
+}
+
+.crane-tooltip {
+    transform: translate(1vw ,-35vh); //Positions it above logo
+}
+
+.beat-tooltip {
+    transform: translate(-4.5vw ,-28vh); //Positions it above logo
+}
+
+.diver-tooltip {
+    transform: translate(2vw ,-32vh); //Positions it above logo
 }
