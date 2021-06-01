@@ -763,19 +763,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #79539A;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-20%);
-          transform: translate(-20%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .web-show .web-tooltip::before {
   content: '';
+}
+
+.web-show .web-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.web-show .web-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.web-show .web-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .web-show:hover .web-tooltip {
@@ -808,19 +824,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #286ABD;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-28%);
-          transform: translate(-28%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .it-show .it-tooltip::before {
   content: '';
+}
+
+.it-show .it-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.it-show .it-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.it-show .it-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .it-show:hover .it-tooltip {
@@ -853,19 +885,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #BC2C28;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-28%);
-          transform: translate(-28%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .telecoms-show .telecoms-tooltip::before {
   content: '';
+}
+
+.telecoms-show .telecoms-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.telecoms-show .telecoms-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.telecoms-show .telecoms-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .telecoms-show:hover .telecoms-tooltip {
@@ -898,19 +946,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #526784;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-28%);
-          transform: translate(-28%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .software-show .software-tooltip::before {
   content: '';
+}
+
+.software-show .software-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.software-show .software-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.software-show .software-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .software-show:hover .software-tooltip {
@@ -943,19 +1007,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #25A25A;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-28%);
-          transform: translate(-28%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .digital-show .digital-tooltip::before {
   content: '';
+}
+
+.digital-show .digital-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.digital-show .digital-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.digital-show .digital-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .digital-show:hover .digital-tooltip {
@@ -988,19 +1068,40 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #DE093F;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-75%);
-          transform: translate(-75%);
+  right: -1px;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
 }
 
 .security-show .security-tooltip::before {
   content: '';
+}
+
+.security-show .security-tooltip li a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.security-show .security-tooltip li:not(:last-child) a {
+  text-align: left;
+  display: block;
+}
+
+.security-show .security-tooltip li:not(:last-child) a {
+  padding-right: 30px;
+}
+
+.security-show .security-tooltip li:not(:last-child) a::after {
+  content: '-';
+  padding-left: 30px;
 }
 
 .security-show:hover .security-tooltip {
@@ -1745,6 +1846,9 @@ body {
 @media screen and (min-width: 1260px) {
   .about-wrapper {
     height: 553px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 }
 
@@ -1788,6 +1892,15 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .about-title,
+  .about-intro,
+  .about-p1,
+  .about-p2 {
+    width: 50%;
   }
 }
 
@@ -2567,7 +2680,7 @@ address a {
 
 .social-wrapper {
   background-color: #262834;
-  padding: 0 5rem;
+  padding: 2rem 5rem;
   margin: 0.5rem;
 }
 
@@ -2587,7 +2700,7 @@ address a {
 .social-wrapper i {
   text-align: center;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 
@@ -2614,7 +2727,7 @@ address a {
   width: 28px;
 }
 
-.insta :hover {
+.insta:hover {
   background-color: #DD2A7B;
 }
 
@@ -2623,7 +2736,7 @@ address a {
   width: 28px;
 }
 
-.linkedin :hover {
+.linkedin:hover {
   background-color: #0072B1;
 }
 

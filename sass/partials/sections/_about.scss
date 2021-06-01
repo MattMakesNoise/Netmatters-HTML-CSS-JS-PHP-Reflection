@@ -16,6 +16,9 @@
     }
     @media screen and (min-width: $break-xl) {
         height: 553px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
     }
 }
 
@@ -39,6 +42,15 @@
     @media screen and (min-width: $break-xl) {
         @include mginlrauto;
         width: 1200px;
+    }
+}
+
+.about-title,
+.about-intro,
+.about-p1,
+.about-p2 {
+    @media screen and (min-width: $break-xl) {
+        width: 50%;
     }
 }
 

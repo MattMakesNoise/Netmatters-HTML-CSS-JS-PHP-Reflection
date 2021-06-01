@@ -525,6 +525,7 @@ input[type=search] {
     border-left: 1px solid hsla(0, 0%, 100%, 0.25);
     border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     flex-grow: 1;
+
     a {
         &:hover {
             background-color: $web;
@@ -543,14 +544,29 @@ input[type=search] {
 .web-show {
     .web-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $web-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-20%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translateX(-206px);
         &::before { //Shows the tootip
             content: '';
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .web-tooltip {
@@ -580,14 +596,29 @@ input[type=search] {
 .it-show {
     .it-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $it-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-28%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translate(-28%);
         &::before { //Shows the tootip
             content: '';
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .it-tooltip {
@@ -617,14 +648,29 @@ input[type=search] {
 .telecoms-show {
     .telecoms-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $tele-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-28%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translate(-28%);
         &::before { //Shows the tootip
             content: '';
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .telecoms-tooltip {
@@ -654,14 +700,29 @@ input[type=search] {
 .software-show {
     .software-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $soft-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-28%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translate(-28%);
         &::before { //Shows the tootip
             content: '';
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .software-tooltip {
@@ -691,14 +752,29 @@ input[type=search] {
 .digital-show {
     .digital-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $market-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-28%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translate(-28%);
         &::before { //Shows the tootip
             content: '';
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .digital-tooltip {
@@ -728,14 +804,32 @@ input[type=search] {
 .security-show {
     .security-tooltip {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-color: $cyber-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-75%);
+        right: -1px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        // transform: translate(-75%);
         &::before { //Shows the tootip
             content: '';
+        }
+        li a{
+            @include mginlrauto;
+        }
+        li:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        li:not(:last-child) a {
+            padding-right: 30px;
+            &::after {
+                content: '-';
+                padding-left: 30px;
+            }
         }
     }
     &:hover .security-tooltip {
