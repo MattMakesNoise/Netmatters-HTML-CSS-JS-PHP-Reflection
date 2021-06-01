@@ -12,11 +12,13 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        width: 750px;
+        @include mginlrauto;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        width: 970px;
+        @include mginlrauto;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -48,17 +50,19 @@
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
         @include flexcolumn;
-        align-items: center;
         padding: 2rem 1rem;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
         @include flexrow;
-        margin: 0 auto;
+        width: 750px;
+        @include mginlrauto;
     }
     //2 cards on one row for large devices
     @media screen and (min-width: $break-lg) {
         @include flexrow;
+        width: 970px;
+        @include mginlrauto;
     }
     //3 cards on one row for xlarge devices
     @media screen and (min-width: $break-xl) {
@@ -113,8 +117,16 @@
         width: 100%;
         transition: all .25s ease-in-out;
         &:hover {
-            transform: scale(1.1);
-            opacity: 0.8;
+            //Large and Up
+            @media screen and (min-width: $break-lg) {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+            //Extra Large
+            @media screen and (min-width: $break-xl) {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
     }
     
@@ -227,7 +239,7 @@
     }
     //3 cards 1 row for xlarge devices (3 colums, 1 row)
     @media screen and (min-width: $break-xl) {
-        display: inline-block;
+        display: block;
     }
 }
 
