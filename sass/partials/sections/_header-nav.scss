@@ -377,6 +377,9 @@ input[type=search] {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 5px 15px;
+    &:hover {
+        background-color: $btn-blue-hover;
+    }
     a {
         @include link-styles;
         font-size: 1.125rem;
@@ -416,6 +419,9 @@ input[type=search] {
     height: 56px;
     @include flexctrboth;
     padding: 5px 15px;
+    &:hover {
+        background-color: $btn-grey-hover;
+    }
     a {
         @include link-styles;
         font-size: 1.125rem;
@@ -489,7 +495,7 @@ input[type=search] {
 
 .cards-nav-list {
     @include flexrow;
-    justify-content: space-evenly;
+    justify-content: space-between;
     li {
         list-style: none;
     }
@@ -516,6 +522,9 @@ input[type=search] {
 }
 
 .web {
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
+    flex-grow: 1;
     a {
         &:hover {
             background-color: $web;
@@ -528,13 +537,14 @@ input[type=search] {
         color: $web-dark;
         font-size: 1.438rem;
     }
+    
 }
 
 .web-show {
     .web-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $web;
+        background-color: $web-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
@@ -550,6 +560,9 @@ input[type=search] {
 }
 
 .it {
+    flex-grow: 1;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $it;
@@ -568,7 +581,7 @@ input[type=search] {
     .it-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $it;
+        background-color: $it-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
@@ -584,6 +597,9 @@ input[type=search] {
 }
 
 .telecoms {
+    flex-grow: 1;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $tele;
@@ -602,7 +618,7 @@ input[type=search] {
     .telecoms-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $tele;
+        background-color: $tele-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
@@ -618,6 +634,9 @@ input[type=search] {
 }
 
 .software {
+    flex-grow: 1;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $soft;
@@ -636,7 +655,7 @@ input[type=search] {
     .software-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $soft;
+        background-color: $soft-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
@@ -652,6 +671,9 @@ input[type=search] {
 }
 
 .digital {
+    flex-grow: 1;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $market;
@@ -670,7 +692,7 @@ input[type=search] {
     .digital-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $market;
+        background-color: $market-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
@@ -686,6 +708,9 @@ input[type=search] {
 }
 
 .security {
+    flex-grow: 1;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $cyber;
@@ -704,11 +729,11 @@ input[type=search] {
     .security-tooltip {
         display: flex;
         justify-content: space-evenly;
-        background-color: $cyber;
+        background-color: $cyber-dark;
         opacity: 0;
         position: absolute;
         width: 100%;
-        transform: translate(-28%);
+        transform: translate(-75%);
         &::before { //Shows the tootip
             content: '';
         }

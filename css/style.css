@@ -508,6 +508,10 @@ body {
   padding: 5px 15px;
 }
 
+.support-wrapper:hover {
+  background-color: #2A6EC6;
+}
+
 .support-wrapper a {
   text-decoration: none;
   text-transform: uppercase;
@@ -580,6 +584,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 15px;
+}
+
+.contact-wrapper:hover {
+  background-color: #84858F;
 }
 
 .contact-wrapper a {
@@ -692,9 +700,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cards-nav-list li {
@@ -730,6 +738,14 @@ body {
   padding-bottom: 10px;
 }
 
+.web {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .web a:hover {
   background-color: #926FB1;
 }
@@ -750,7 +766,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #926FB1;
+  background-color: #79539A;
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -765,6 +781,14 @@ body {
 .web-show:hover .web-tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.it {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .it a:hover {
@@ -787,7 +811,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #4183D7;
+  background-color: #286ABD;
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -802,6 +826,14 @@ body {
 .it-show:hover .it-tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.telecoms {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .telecoms a:hover {
@@ -824,7 +856,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #D64541;
+  background-color: #BC2C28;
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -839,6 +871,14 @@ body {
 .telecoms-show:hover .telecoms-tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.software {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .software a:hover {
@@ -861,7 +901,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #67809F;
+  background-color: #526784;
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -876,6 +916,14 @@ body {
 .software-show:hover .software-tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.digital {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .digital a:hover {
@@ -898,7 +946,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #2ECC71;
+  background-color: #25A25A;
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -913,6 +961,14 @@ body {
 .digital-show:hover .digital-tooltip {
   opacity: 1;
   pointer-events: auto;
+}
+
+.security {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .security a:hover {
@@ -935,12 +991,12 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #F62459;
+  background-color: #DE093F;
   opacity: 0;
   position: absolute;
   width: 100%;
-  -webkit-transform: translate(-28%);
-          transform: translate(-28%);
+  -webkit-transform: translate(-75%);
+          transform: translate(-75%);
 }
 
 .security-show .security-tooltip::before {
@@ -1200,7 +1256,7 @@ body {
 
 @media screen and (min-width: 1260px) {
   .row-one {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
   }
 }
@@ -1239,7 +1295,7 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .row-double > * {
     -webkit-box-flex: 1;
@@ -1376,6 +1432,7 @@ body {
   display: inline-block;
   margin: auto auto 0 auto;
   text-transform: uppercase;
+  line-height: 35px;
   height: auto;
   white-space: nowrap;
   font-size: 1.1rem;
