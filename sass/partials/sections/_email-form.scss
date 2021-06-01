@@ -49,14 +49,17 @@
 .name-wrapper,
 .mail-wrapper {
     flex: 1 1 450px;
-    padding-left: 15px;
     padding-right: 15px;
+    input {
+        margin-top: 0.25rem;
+    }
 }
 
-.email-header,
-.form-label,
-.form-check,
-.form-check-label {
+.make-red {
+    color: $tele-dark;
+}
+
+.email-header {
     color: $dark-blue;
     letter-spacing: 0.1rem;
 }
@@ -67,55 +70,84 @@
     margin: 0 0 15px;
 }
 
-.form-label,
-.form-check,
-.form-check-label {
+.form-label {
     font-weight: $semibold;
-}
-
-.form-check label {
-    display: inline-block;
-    margin-bottom: 5px;
+    color: $dark-blue;
 }
 
 .form-control {
     width: 100%;
     height: 3rem;
     background-color: $white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #ccc;
     border-radius: 2px;
     margin-bottom: 1rem;
-}
-
-.form-check {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.form-check input[type="checkbox"] {
-    border: 5rem solid $dark-blue;
-    background-color: $lightgrey;
-    cursor: pointer;
-    height: 2rem;
-    width: 2rem;
-    display: inline-block;
-}
-
-.form-check-input {
-    border: 5rem solid $dark-blue;
-    &:checked {
-        background-color: $dark-blue;
+    &:focus {
+        box-shadow: 0px 0px 5px 1px #5BC0DE;
     }
 }
 
-.form-check-label {
-    line-height: 1.8;
-    margin-left: 1rem;
-}
-.make-red {
-    color: $tele-dark;
+//========== CHECK BOX AND LABEL ==========//
+
+//Customise the label (container)
+.checkbox-container {
+    display: block;
+    position: relative;
+    line-height: 2rem;
+    font-weight: $semibold;
+    color: $dark-blue;
+    padding-left: 48px;
+    margin-bottom: 1.5rem;
+    a {
+        color: $dark-blue;
+        &:hover {
+            color: $darker-blue;
+        }
+    }
+    // Hide the default checkbox
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark { //When the checkbox is checked add a blue background
+            background-color: $dark-blue;
+            &::after { // Show the checkmark when checked
+                display: block;
+            }
+        }
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: $lightgrey;
+        border: 3px solid $dark-blue;
+        border-radius: 3px;
+        height: 32px;
+        width: 32px;
+        &::after { // Create the checkmark/indicator (hidden when not checked)
+            content: "";
+            position: absolute;
+            display: none;
+            left: 9px;
+            top: 3px;
+            width: 0.5rem;
+            height: 1rem;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
 }
 
+// SUBSCRIBE BUTTON
 .subscribe-btn {
     background-color: $dark-blue !important;
     color: $white !important;
