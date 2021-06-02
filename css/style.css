@@ -2986,6 +2986,8 @@ address a {
     width: 750px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -3015,9 +3017,6 @@ address a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .awards-row-two {
@@ -3028,21 +3027,22 @@ address a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  text-align: center;
   margin-top: 20px;
 }
 
 .awards-logo {
   vertical-align: middle;
-  padding: 0 20px;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0 20px;
 }
 
 .awards-logo img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
@@ -3050,6 +3050,15 @@ address a {
 .awards-logo img:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+.google {
+  vertical-align: middle;
+  padding: 0 20px;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .google img {
