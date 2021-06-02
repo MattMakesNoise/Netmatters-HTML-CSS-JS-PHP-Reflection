@@ -8,7 +8,6 @@
     //Medium and up
     @media screen and (min-width: $break-m) {
         height: 110px;
-        // padding: 20px 0;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -22,9 +21,15 @@
 }
 
 .nav-bar { //Wraps Header and slider/cards section
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        @include mginlrauto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        
+        padding: 22px 0;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -35,7 +40,6 @@
     @media screen and (min-width: $break-xl) {
         @include flexcolumn;
         justify-content: space-evenly;
-        margin-top: 1rem;
     }
 }
 
@@ -51,10 +55,12 @@
     //Medium and up
     @media screen and (min-width: $break-m) {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         flex-flow: row nowrap;
         width: 750px;
+        padding-left: 0;
+        padding-right: 0;
         @include mginlrauto;
     }
     //Large and Up
@@ -84,12 +90,12 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        width: 50%;
+        width: 45%;
         order: 1;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        width: 40%;
+        width: 50%;
         order: 1;
     }
     //X-large devices
@@ -230,12 +236,16 @@
         order: 4;
         width: 100%;
         margin-top: 1rem;
+        border: 2px solid rgba(0,0,0,.1);
+        outline: 1px solid hsla(0,0%,100%,.2);
+        background-color: $black-10;
     }
     //1 row layout medium and up
     @media screen and (min-width: $break-m) {
         width: 237px;
         height: 56px;
         order: 2;
+        margin-top: 11px;
     }
     //Large
     @media screen and (min-width: $break-lg) {
@@ -251,39 +261,46 @@
 }
   
 form.search-form {
+    width: 100%;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        
+    }
     input[type=text] { /* Style the search field */
         padding: 5px 15px;
         font-size: 17px;
-        border: 1px solid #ccc;
         float: left;
         width: 80%;
         height: 56px;
         background: #fff;
         //Up to Medium
         @media screen and (max-width: $break-m) {
+            width: 90%;
             display: initial;
+            border: none;
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
             display: initial;
+            width: 70%;
+            border: 1px solid #ccc;
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
             display: none;
-            // visibility: hidden;
+            border: 1px solid #ccc;
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
             border-radius: 0;
             display: initial;
-            // visibility: visible;
+            border: 1px solid #ccc;
         }
     }
     button { /* Style the submit button */
         float: left;
         padding: 7px 20px 3px;
         outline: none;
-        background: $btn-grey;
         color: white;
         border: none;
         border-radius: 0 3px 3px 0;
@@ -294,25 +311,45 @@ form.search-form {
         overflow: visible;
         //Up to Medium
         @media screen and (max-width: $break-m) {
-    
+            background: transparent;
+            color: $dark-blue;
+            width: 10%;
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-  
+            width: 30%;
+            background: $btn-grey;
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
             border-radius: 3px;
             width: 100%;
             height: 100%;
+            background: $btn-grey;
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
             width: 20%;
             height: 56px;
+            background: $btn-grey;
         }
         &:hover {
-            background: $btn-grey-hover;
+            //Up to Medium
+            @media screen and (max-width: $break-m) {
+                
+            }
+            //Medium and up
+            @media screen and (min-width: $break-m) {
+                background: $btn-grey-hover;
+            }
+            //Large and Up
+            @media screen and (min-width: $break-lg) {
+                background: $btn-grey-hover;
+            }
+            //Extra Large
+            @media screen and (min-width: $break-xl) {
+                background: $btn-grey-hover;
+            }
         }
         i {
             font-size: 23px;
@@ -329,101 +366,6 @@ form.search-form {
     }
 }
 
-// .form-control {
-//     background-color: rgba(0, 0, 0, 0.1);
-//     padding: 0.75rem;
-//     width: 100% !important;
-//     font-weight: $medium;
-//     font-size: 0.9rem;
-//     &:hover {
-//         box-shadow: none;
-//     }
-//     &:focus {
-//         box-shadow: none;
-//         outline: none;
-//     }
-// }
-
-// #search-input {
-//     border: 2px solid rgba(0, 0, 0, 0.1);
-//     border-radius: 3px;
-//     box-shadow: 0px 1px 1px rgba(0, 0, 0, .08) inset;
-//     outline: 1px solid hsla(0, 0%, 100%, .2);
-//     &::placeholder {
-//         color: $btn-grey-hover;
-//     }
-//     //Up to Medium
-//     @media screen and (max-width: $break-m) {
-//         display: inline;
-//     }
-//     //Medium and up
-//     @media screen and (min-width: $break-m) {
-//         display: inline;
-//     }
-//     //Large and Up
-//     @media screen and (min-width: $break-lg) {
-//         display: inline;
-//     }
-//     //Extra Large
-//     @media screen and (min-width: $break-xl) {
-//         display: inline;
-//     }
-// }
-
-// input[type=search] {
-//     //Up to Medium
-//     @media screen and (max-width: $break-m) {
-//         background-color: $lightgrey-80;
-//     }
-//     //Medium and up
-//     @media screen and (min-width: $break-m) {
-//         background-color: $white;
-//     }
-//     //Large and Up
-//     @media screen and (min-width: $break-lg) {
-
-//     }
-//     //Extra Large
-//     @media screen and (min-width: $break-xl) {
-    
-//     }
-// }
-
-// .search-btn {
-//     background: transparent;
-//     border: none;
-//     outline: none;
-//     //Up to Medium
-//     @media screen and (max-width: $break-m) {
-//         position: relative;
-//         i {
-//             font-size: 1.25rem;
-//         }
-//     }
-//     //Medium and up
-//     @media screen and (min-width: $break-m) {
-//         background-color: $btn-grey;
-//         height: 47px;
-//         width: 63px;
-//         position: relative;
-//         bottom: 64px;
-//         left: 173px;
-//         i {
-//             color: $white;
-//             font-size: 1.5rem;
-//         }
-//     }
-//     //Large and Up
-//     @media screen and (min-width: $break-lg) {
-        
-//     }
-//     //Extra Large
-//     @media screen and (min-width: $break-xl) {
-//         position: relative;
-//         bottom: 100px;
-//         left: 0px;
-//     }
-// }
 //===== SEARCH STYLING ENDS=====//
 
 //===== SUPPORT STYLING =====//

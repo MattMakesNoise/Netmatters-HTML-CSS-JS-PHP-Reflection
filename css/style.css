@@ -46,6 +46,21 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    padding: 22px 0;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .nav-bar {
     display: -webkit-box;
@@ -73,7 +88,6 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: 1rem;
   }
 }
 
@@ -97,9 +111,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -108,6 +122,8 @@ body {
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     width: 750px;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -163,7 +179,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .logo-wrapper {
-    width: 50%;
+    width: 45%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -172,7 +188,7 @@ body {
 
 @media screen and (min-width: 992px) {
   .logo-wrapper {
-    width: 40%;
+    width: 50%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -342,6 +358,9 @@ body {
             order: 4;
     width: 100%;
     margin-top: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -352,6 +371,7 @@ body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-top: 11px;
   }
 }
 
@@ -374,11 +394,14 @@ body {
   }
 }
 
+form.search-form {
+  width: 100%;
+}
+
 form.search-form input[type=text] {
   /* Style the search field */
   padding: 5px 15px;
   font-size: 17px;
-  border: 1px solid #ccc;
   float: left;
   width: 80%;
   height: 56px;
@@ -387,19 +410,24 @@ form.search-form input[type=text] {
 
 @media screen and (max-width: 768px) {
   form.search-form input[type=text] {
+    width: 90%;
     display: initial;
+    border: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   form.search-form input[type=text] {
     display: initial;
+    width: 70%;
+    border: 1px solid #ccc;
   }
 }
 
 @media screen and (min-width: 992px) {
   form.search-form input[type=text] {
     display: none;
+    border: 1px solid #ccc;
   }
 }
 
@@ -407,6 +435,7 @@ form.search-form input[type=text] {
   form.search-form input[type=text] {
     border-radius: 0;
     display: initial;
+    border: 1px solid #ccc;
   }
 }
 
@@ -415,7 +444,6 @@ form.search-form button {
   float: left;
   padding: 7px 20px 3px;
   outline: none;
-  background: #999AA2;
   color: white;
   border: none;
   border-radius: 0 3px 3px 0;
@@ -427,11 +455,27 @@ form.search-form button {
   overflow: visible;
 }
 
+@media screen and (max-width: 768px) {
+  form.search-form button {
+    background: transparent;
+    color: #333645;
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  form.search-form button {
+    width: 30%;
+    background: #999AA2;
+  }
+}
+
 @media screen and (min-width: 992px) {
   form.search-form button {
     border-radius: 3px;
     width: 100%;
     height: 100%;
+    background: #999AA2;
   }
 }
 
@@ -439,11 +483,26 @@ form.search-form button {
   form.search-form button {
     width: 20%;
     height: 56px;
+    background: #999AA2;
   }
 }
 
-form.search-form button:hover {
-  background: #84858F;
+@media screen and (min-width: 768px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
 }
 
 form.search-form button i {
