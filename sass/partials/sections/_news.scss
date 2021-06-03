@@ -1,10 +1,10 @@
 /*========== NEWS ============*/
 // TITLE SECTION
-.news-wrapper {
+.news-wrapper { // Wraps the entire section. Title and cards themselves.
     display: block;
 }
 
-.news-title {
+.news-title { // Wraps the title section
     height: 104px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -28,17 +28,20 @@
 }
 
 .news-title-text {
-    background-image: linear-gradient($dark-blue, $dark-blue);
-    background-repeat: no-repeat;
-    background-size: 15vw 5%;
-    background-position: bottom left 0;
-    padding-bottom: 1rem;
+    padding: 40px 0;
     font-size: 1.25rem;
     font-weight: $semibold;
     padding: 40px 0;
     color: $dark-blue;
     margin-bottom: 1.25rem;
-    position: relative;
+    &::after { // Adds the mini border below the title text
+        content: ' ';
+        display: block;
+        border-bottom: 5px solid $dark-blue;
+        width: 15%;
+        padding-top: 28px;
+    }
+    
 }
 
 //========== CARDS SECTION ==========//
@@ -50,7 +53,8 @@
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
         @include flexcolumn;
-        padding: 2rem 1rem;
+        padding: 50px 15px 25px 15px;
+        @include mginlrauto;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
@@ -83,7 +87,6 @@
     justify-content: space-between;
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        margin-top: 1.5rem;
         margin-bottom: 2rem;
     }
     //Medium and up
@@ -112,10 +115,29 @@
 
 .card-img-top {
     overflow: hidden;
+    position: relative;
+    a {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        z-index: 5;
+        color: $white;
+        font-size: 0.75rem;
+        font-weight: $semibold;
+        line-height: 1.438rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0 10px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     img {
         height: 100%;
         width: 100%;
+        object-fit: contain;
         transition: all .25s ease-in-out;
+        z-index: 1;
         &:hover {
             //Large and Up
             @media screen and (min-width: $break-lg) {
@@ -129,7 +151,24 @@
             }
         }
     }
-    
+}
+
+.scion {
+    a {
+        background-color: $web;
+    }
+}
+
+.notable {
+    a {
+        background-color: $tele;
+    }
+}
+
+.job {
+    a {
+        background-color: $soft;
+    }
 }
 
 .card-footer {
@@ -224,25 +263,6 @@
 }
 
 //===== JOB CARD =====//
-.job-card {
-    //Show Card
-    @media screen and (max-width: $break-m) {
-        display: block;
-    }
-    //Hide Card
-    @media screen and (min-width: $break-m) {
-        display: none;
-    }
-    //Hide Card
-    @media screen and (min-width: $break-lg) {
-        display: none;
-    }
-    //3 cards 1 row for xlarge devices (3 colums, 1 row)
-    @media screen and (min-width: $break-xl) {
-        display: block;
-    }
-}
-
 .job-title {
     color: $soft;
 }

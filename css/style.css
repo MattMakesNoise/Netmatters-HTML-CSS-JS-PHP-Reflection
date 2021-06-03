@@ -2063,18 +2063,20 @@ form.search-form::after {
 }
 
 .news-title-text {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#333645), to(#333645));
-  background-image: linear-gradient(#333645, #333645);
-  background-repeat: no-repeat;
-  background-size: 15vw 5%;
-  background-position: bottom left 0;
-  padding-bottom: 1rem;
+  padding: 40px 0;
   font-size: 1.25rem;
   font-weight: 600;
   padding: 40px 0;
   color: #333645;
   margin-bottom: 1.25rem;
-  position: relative;
+}
+
+.news-title-text::after {
+  content: ' ';
+  display: block;
+  border-bottom: 5px solid #333645;
+  width: 15%;
+  padding-top: 28px;
 }
 
 .news {
@@ -2090,7 +2092,9 @@ form.search-form::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 50px 15px 25px 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2160,7 +2164,6 @@ form.search-form::after {
 
 @media screen and (max-width: 768px) {
   .news-card {
-    margin-top: 1.5rem;
     margin-bottom: 2rem;
   }
 }
@@ -2199,13 +2202,35 @@ form.search-form::after {
 
 .card-img-top {
   overflow: hidden;
+  position: relative;
+}
+
+.card-img-top a {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 5;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.438rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.card-img-top a:hover {
+  text-decoration: underline;
 }
 
 .card-img-top img {
   height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
+  z-index: 1;
 }
 
 @media screen and (min-width: 992px) {
@@ -2222,6 +2247,18 @@ form.search-form::after {
             transform: scale(1.1);
     opacity: 0.8;
   }
+}
+
+.scion a {
+  background-color: #926FB1;
+}
+
+.notable a {
+  background-color: #D64541;
+}
+
+.job a {
+  background-color: #67809F;
 }
 
 .news-body {
@@ -2327,30 +2364,6 @@ form.search-form::after {
 .notable-btn:hover {
   background-color: #BC2C28;
   color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .job-card {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .job-card {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .job-card {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .job-card {
-    display: block;
-  }
 }
 
 .job-title {
