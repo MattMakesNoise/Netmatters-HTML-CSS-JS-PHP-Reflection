@@ -7,12 +7,13 @@
     }
     @media screen and (min-width: $break-m) {
         height: 493px;
-        background-image: url(/img/branded.png);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
     }
     @media screen and (min-width: $break-lg) {
         height: 493px;
+        background-image: url(/img/branded.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
     }
     @media screen and (min-width: $break-xl) {
         height: 553px;
@@ -33,11 +34,10 @@
     @media screen and (min-width: $break-m) {
         padding: 50px 15px;
         @include mginlrauto;
-        width: 970px;
+        width: 750px;
     }
     @media screen and (min-width: $break-lg) {
-        width: 1200px;
-
+        width: 970px;
     }
     @media screen and (min-width: $break-xl) {
         @include mginlrauto;
@@ -57,12 +57,44 @@
 .about-title {
     font-size: 2.25rem;
     font-weight: $regular;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        padding-bottom: 4px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .about-intro {
     font-size: 1rem;
     font-weight: $semibold;
     line-height: 1.9;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        padding-bottom: 10px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .about-p1,
@@ -70,6 +102,44 @@
     font-size: 1rem;
     font-weight: $regular;
     line-height: 1.9;
+}
+
+.about-p1 {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        padding-bottom: 12px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
+}
+
+.about-p2 {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        padding-bottom: 12px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
 }
 
 .culture-btn {
@@ -85,5 +155,8 @@
     color: $dark-blue;
     &:hover {
         opacity: 97%;
+    }
+    .about-icon {
+        margin-left: 12px;
     }
 }

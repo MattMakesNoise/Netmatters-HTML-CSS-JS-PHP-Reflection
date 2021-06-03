@@ -12,6 +12,7 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
+        padding-left: 1rem;
         width: 750px;
         @include mginlrauto;
     }
@@ -106,11 +107,16 @@
     }
 }
 
-.news-card-main {
-    background-image: linear-gradient($lightgrey, $lightgrey);
-    background-repeat: no-repeat;
-    background-size: 85% 1px;
-    background-position: bottom left 2rem;
+.news-card-main::after {
+    content: '';
+    border-bottom: 1px solid $lightgrey;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    // background-image: linear-gradient($lightgrey, $lightgrey);
+    // background-repeat: no-repeat;
+    // background-size: 85% 1px;
+    // background-position: bottom left 2rem;
 }
 
 .card-img-top {
@@ -171,8 +177,11 @@
     }
 }
 
-.card-footer {
-    
+.card-footer::before {
+    // content: '';
+    // border-top: 1px solid $lightgrey;
+    // width: 90%;
+    // display: block;
 }
 
 .news-body {
@@ -263,6 +272,25 @@
 }
 
 //===== JOB CARD =====//
+.job-card {
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        display: initial;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        display: none;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        display: initial;
+    }
+}
+
 .job-title {
     color: $soft;
 }
@@ -275,4 +303,3 @@
         color: $white;
     }
 }
-
