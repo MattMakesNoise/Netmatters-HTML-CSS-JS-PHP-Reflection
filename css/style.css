@@ -1375,7 +1375,7 @@ form.search-form::after {
 
 @media screen and (max-width: 768px) {
   .cards-section {
-    padding: 50px 15px;
+    padding: 20px 15px 50px 15px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1383,6 +1383,7 @@ form.search-form::after {
 
 @media screen and (min-width: 768px) {
   .cards-section {
+    padding: 20px 15px 50px 15px;
     margin-left: auto;
     margin-right: auto;
     width: 750px;
@@ -1399,6 +1400,7 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .cards-section {
+    padding: 50px 15px 50px 15px;
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
@@ -1429,13 +1431,6 @@ form.search-form::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .row-one {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
   }
 }
 
@@ -1473,7 +1468,6 @@ form.search-form::after {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 1.5rem;
-    margin-bottom: 3rem;
   }
   .row-double > * {
     -webkit-box-flex: 1;
@@ -1503,6 +1497,7 @@ form.search-form::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 10px;
   }
 }
 
@@ -1519,6 +1514,7 @@ form.search-form::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 10px;
   }
 }
 
@@ -1535,7 +1531,7 @@ form.search-form::after {
           align-items: center;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 2rem;
+  padding: 0 2rem;
   -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
           box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
@@ -1621,6 +1617,12 @@ form.search-form::after {
 }
 
 /*========== SOFT CARD =======*/
+@media screen and (min-width: 992px) {
+  .soft-card {
+    margin-right: 16px;
+  }
+}
+
 .soft-card .icon-border {
   background-color: #67809F;
 }
@@ -1660,6 +1662,13 @@ form.search-form::after {
 }
 
 /*========== IT CARD =========*/
+@media screen and (min-width: 992px) {
+  .it-card {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
 .it-card .icon-border {
   background-color: #4183D7;
 }
@@ -1699,6 +1708,12 @@ form.search-form::after {
 }
 
 /*========== MARKET CARD =====*/
+@media screen and (min-width: 992px) {
+  .market-card {
+    margin-left: 16px;
+  }
+}
+
 .market-card .icon-border {
   background-color: #2ECC71;
 }
@@ -1738,6 +1753,12 @@ form.search-form::after {
 }
 
 /*========== TELE CARD =======*/
+@media screen and (min-width: 768px) {
+  .tele-card {
+    margin-right: 16px;
+  }
+}
+
 .tele-card .icon-border {
   background-color: #D64541;
 }
@@ -1777,6 +1798,12 @@ form.search-form::after {
 }
 
 /*========== WEB CARD ========*/
+@media screen and (min-width: 768px) {
+  .web-card {
+    margin-left: 16px;
+  }
+}
+
 .web-card .icon-border {
   background-color: #926FB1;
 }
@@ -1816,6 +1843,12 @@ form.search-form::after {
 }
 
 /*========== CYBER CARD ======*/
+@media screen and (min-width: 768px) {
+  .cyber-card {
+    margin-right: 16px;
+  }
+}
+
 .cyber-card .icon-border {
   background-color: #F62459;
 }
@@ -1855,6 +1888,12 @@ form.search-form::after {
 }
 
 /*========== TRAIN CARD ======*/
+@media screen and (min-width: 768px) {
+  .train-card {
+    margin-left: 16px;
+  }
+}
+
 .train-card .icon-border {
   background-color: #926FB1;
 }
@@ -1895,7 +1934,6 @@ form.search-form::after {
 
 /*========== ABOUT ===========*/
 .about-wrapper {
-  display: block;
   background-color: #333645;
 }
 
@@ -1907,7 +1945,7 @@ form.search-form::after {
 
 @media screen and (min-width: 768px) {
   .about-wrapper {
-    height: 493px;
+    height: 493px !important;
   }
 }
 
@@ -1932,7 +1970,6 @@ form.search-form::after {
 
 .about {
   color: #fff;
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1940,8 +1977,9 @@ form.search-form::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -1952,7 +1990,7 @@ form.search-form::after {
 
 @media screen and (min-width: 768px) {
   .about {
-    padding: 50px 15px;
+    padding: 50px 15px 50px 15px;
     margin-left: auto;
     margin-right: auto;
     width: 750px;
@@ -1990,6 +2028,12 @@ form.search-form::after {
 @media screen and (max-width: 768px) {
   .about-title {
     padding-bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-title {
+    padding-bottom: 0;
   }
 }
 

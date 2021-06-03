@@ -1,12 +1,12 @@
 /*========== ABOUT ===========*/
 .about-wrapper {
-    display: block;
+    // display: block;
     background-color: $dark-blue;
     @media screen and (max-width: $break-m) {
         height: 613px;
     }
     @media screen and (min-width: $break-m) {
-        height: 493px;
+        height: 493px !important;
     }
     @media screen and (min-width: $break-lg) {
         height: 493px;
@@ -25,16 +25,16 @@
 
 .about {
     color: $white;
-    min-height: 100%;
     @include flexcolumn;
-    justify-content: space-around;
+    justify-content: space-between;
     @media screen and (max-width: $break-m) {
         padding: 50px 15px;
     }
     @media screen and (min-width: $break-m) {
-        padding: 50px 15px;
+        padding: 50px 15px 50px 15px;
         @include mginlrauto;
         width: 750px;
+        // height: 393px !important;
     }
     @media screen and (min-width: $break-lg) {
         width: 970px;
@@ -63,7 +63,7 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        padding-bottom: 0;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
