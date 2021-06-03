@@ -2537,13 +2537,15 @@ form.search-form::after {
 
 @media screen and (max-width: 768px) {
   .email {
-    padding: 2rem;
+    padding: 50px 45px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .email {
-    padding: 2rem 15px;
+    padding: 50px 45px;
     width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -2566,6 +2568,35 @@ form.search-form::after {
   }
 }
 
+.email-header {
+  color: #333645;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0 0 15px;
+  line-height: 1.1;
+}
+
+.boxes .name-wrapper,
+.boxes .mail-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 450px;
+          flex: 1 1 450px;
+}
+
+.boxes .name-wrapper input,
+.boxes .mail-wrapper input {
+  margin-top: 0.25rem;
+}
+
+.boxes .name-wrapper {
+  padding-right: 15px;
+}
+
+.boxes .mail-wrapper {
+  padding-left: 15px;
+}
+
 @media screen and (min-width: 992px) {
   .boxes {
     display: -webkit-box;
@@ -2575,40 +2606,20 @@ form.search-form::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-}
-
-.name-wrapper,
-.mail-wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 450px;
-          flex: 1 1 450px;
-  padding-right: 15px;
-}
-
-.name-wrapper input,
-.mail-wrapper input {
-  margin-top: 0.25rem;
 }
 
 .make-red {
   color: #BC2C28;
 }
 
-.email-header {
-  color: #333645;
-  letter-spacing: 0.1rem;
-}
-
-.email-header {
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 0 0 15px;
-}
-
 .form-label {
   font-weight: 600;
   color: #333645;
+  margin-bottom: 5px;
 }
 
 .form-control {
@@ -2632,7 +2643,7 @@ form.search-form::after {
   font-weight: 600;
   color: #333645;
   padding-left: 48px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   /* Create a custom checkbox */
 }
 
@@ -2671,6 +2682,7 @@ form.search-form::after {
   border-radius: 3px;
   height: 32px;
   width: 32px;
+  margin-right: 20px;
 }
 
 .checkbox-container .checkmark::after {
@@ -2688,9 +2700,8 @@ form.search-form::after {
 }
 
 .subscribe-btn {
-  background-color: #333645 !important;
-  color: #fff !important;
-  text-transform: uppercase;
+  background-color: #333645;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2699,11 +2710,10 @@ form.search-form::after {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
-  width: 120px;
-  height: 47px;
+  width: 118px;
+  height: 45px;
   padding: 5px 15px;
-  font-size: 1.06rem;
-  border-radius: 3px;
+  font-size: 1.063rem;
   text-align: center;
   line-height: 35px;
   display: -webkit-box;
