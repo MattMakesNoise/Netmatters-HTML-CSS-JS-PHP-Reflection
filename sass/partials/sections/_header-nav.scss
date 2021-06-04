@@ -11,7 +11,7 @@
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        height: 209px;
+        height: 209px !important;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
@@ -34,7 +34,6 @@
     //Large devices
     @media screen and (min-width: $break-lg) {
         @include flexcolumn;
-        justify-content: space-evenly;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
@@ -67,9 +66,8 @@
     //Large and Up
     @media screen and (min-width: $break-lg) {
         display: flex;
-        justify-content: space-between;
         @include mginlrauto;
-        padding: 20px 15px 26px 15px;
+        padding: 20px 15px 19px 15px;
         width: 970px;
     }
     //Extra Large
@@ -133,8 +131,11 @@
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        width: 50%;
+        flex: 0 1 41.66666667%;
         order: 1;
+        padding-right: 15px;
+        padding-bottom: 8px;
+        margin-right: 60px;
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
@@ -234,8 +235,10 @@
     @media screen and (min-width: $break-lg) {
         display: initial;
         order: 2;
+        width: 136px;
         @include flexalignctr;
         white-space: nowrap;
+        margin-right: 28px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -278,6 +281,7 @@
         order: 3;
         @include flexalignctr;
         white-space: nowrap;
+        margin-right: 16px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -431,6 +435,12 @@ form.search-form {
             border: 1px solid #ccc;
             opacity: .9;
             letter-spacing: .5px;
+            &:focus {
+                border-top: 1px solid #5BC0DE;
+                border-bottom: 1px solid #5BC0DE;
+                border-left: 1px solid #5BC0DE;
+                box-shadow: 0px 0px 4px 0px#5BC0DE;
+            }
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -446,7 +456,6 @@ form.search-form {
     }
     button { /* Style the submit button */
         float: left;
-        
         outline: none;
         color: white;
         border: none;
@@ -476,6 +485,7 @@ form.search-form {
             width: 100%;
             height: 100%;
             background: $btn-grey;
+            padding: 6px 16px 5px 0px;
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
@@ -547,6 +557,8 @@ form.search-form {
         width: 970px;
         height: 99px;
         @include mginlrauto;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -561,6 +573,26 @@ form.search-form {
     justify-content: space-between;
     li {
         list-style: none;
+        ul li {
+            //Large and Up
+            @media screen and (min-width: $break-lg) {
+                
+            }
+            //Extra Large
+            @media screen and (min-width: $break-xl) {
+            
+            }
+        }
+        ul li a {
+            //Large and Up
+            @media screen and (min-width: $break-lg) {
+                font-size: 0.8rem;
+            }
+            //Extra Large
+            @media screen and (min-width: $break-xl) {
+            
+            }
+        }
     }
 }
 
@@ -570,13 +602,29 @@ form.search-form {
 .software,
 .digital,
 .security {
+    border-left: 1px solid rgba(0,0,0,.25);
+    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
-        @include flexcolumn;
-        text-align: center;
-        text-decoration: none;
-        color: $white;
-        text-transform: uppercase;
-        padding: 19px 0 1px 0;
+        //Large and Up
+        @media screen and (min-width: $break-lg) {
+            font-size: 1rem;
+            @include flexcolumn;
+            text-align: center;
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            padding: 19px 0 20px 0;
+            line-height: 1;
+        }
+        //Extra Large
+        @media screen and (min-width: $break-xl) {
+            @include flexcolumn;
+            text-align: center;
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            padding: 19px 0 1px 0;
+        }
     }
     span {
         padding-bottom: 10px;
@@ -584,8 +632,6 @@ form.search-form {
 }
 
 .web {
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     flex-grow: 1;
 
     a {
@@ -598,7 +644,12 @@ form.search-form {
     }
     .fa-code{
         color: $web-dark;
-        font-size: 1.438rem;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
+        }
     }
     
 }
@@ -639,8 +690,6 @@ form.search-form {
 
 .it {
     flex-grow: 1;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $it;
@@ -651,7 +700,12 @@ form.search-form {
     }
     .fa-desktop {
         color: $it-dark;
-        font-size: 1.438rem;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
+        }
     }
 }
 
@@ -691,8 +745,6 @@ form.search-form {
 
 .telecoms {
     flex-grow: 1;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $tele;
@@ -703,7 +755,12 @@ form.search-form {
     }
     .fa-phone-volume {
         color: $tele-dark;
-        font-size: 1.438rem;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
+        }
     }
 }
 
@@ -743,8 +800,6 @@ form.search-form {
 
 .software {
     flex-grow: 1;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $soft;
@@ -755,7 +810,12 @@ form.search-form {
     }
     .fa-th {
     color: $soft-dark;
-    font-size: 1.438rem;
+    @media screen and (min-width: $break-lg) {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: $break-xl) {
+        font-size: 1.438rem;
+    }
     }
 }
 
@@ -795,8 +855,6 @@ form.search-form {
 
 .digital {
     flex-grow: 1;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $market;
@@ -807,7 +865,12 @@ form.search-form {
     }
     .fa-signal {   
         color: $market-dark;
-        font-size: 1.438rem;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
+        }
     }
 }
 
@@ -823,7 +886,6 @@ form.search-form {
         padding: 0;
         margin: 0;
         z-index: 10;
-        // transform: translate(-28%);
         &::before { //Shows the tootip
             content: '';
         }
@@ -847,8 +909,6 @@ form.search-form {
 
 .security {
     flex-grow: 1;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a {
         &:hover {
             background-color: $cyber;
@@ -859,7 +919,12 @@ form.search-form {
     }
     .fa-shield-virus {
         color: $cyber-dark;
-        font-size: 1.438rem;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
+        }
     }
 }
 
@@ -875,7 +940,6 @@ form.search-form {
         padding: 0;
         margin: 0;
         z-index: 10;
-        // transform: translate(-75%);
         &::before { //Shows the tootip
             content: '';
         }
@@ -900,9 +964,15 @@ form.search-form {
     }
 }
 
-
-
 .menu {
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        height: 44px;
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+    
+    }
     li {
         a {
             text-decoration: none;
