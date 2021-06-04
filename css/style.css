@@ -31,7 +31,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .navbar-wrapper {
-    height: 110px;
+    height: 110px !important;
   }
 }
 
@@ -58,7 +58,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav-bar {
-    padding: 22px 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -115,21 +116,19 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    width: 750px;
-    padding-left: 0;
-    padding-right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 18px;
+    width: 750px;
   }
 }
 
@@ -141,10 +140,10 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 970px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 15px 26px 15px;
+    width: 970px;
   }
 }
 
@@ -153,10 +152,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0 20px 0;
+    width: 1200px;
   }
 }
 
@@ -207,10 +206,15 @@ body {
 
 @media screen and (min-width: 768px) {
   .logo-wrapper {
-    width: 45%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-right: 28px;
   }
 }
 
@@ -469,6 +473,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .burger-wrapper {
+    margin-left: 20px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 63px;
+            flex: 0 0 63px;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -509,14 +517,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 15px 0px 15px;
+  padding: 12px 15px 0px 15px;
 }
 
 .burger h6 {
   color: #fff;
   margin: auto;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding-top: 4px;
+  width: 31px;
 }
 
 .burger:hover {
@@ -526,7 +536,7 @@ body {
 .burger span {
   position: relative;
   display: inline-block;
-  width: 33px;
+  width: 31px;
   height: 3px;
   background-color: #fff;
   margin: auto;
@@ -566,12 +576,15 @@ body {
 
 @media screen and (min-width: 768px) {
   .search-wrapper {
-    width: 237px;
-    height: 56px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin-top: 11px;
+    height: 56px;
+    width: 237px;
+    margin-left: 16px;
+    margin-top: 0;
+    border: none;
+    background-color: #fff;
   }
 }
 
@@ -601,7 +614,6 @@ form.search-form {
 form.search-form input[type=text] {
   /* Style the search field */
   font-size: 14px;
-  opacity: 0.8;
   float: left;
   padding-bottom: 1.25px;
   background: transparent;
@@ -611,11 +623,12 @@ form.search-form input[type=text] {
 
 @media screen and (max-width: 768px) {
   form.search-form input[type=text] {
+    display: initial;
     height: 46px;
     width: 80%;
     padding-left: 16px;
-    display: initial;
     border: none;
+    opacity: 0.8;
   }
   form.search-form input[type=text]:focus {
     outline: none;
@@ -625,8 +638,12 @@ form.search-form input[type=text] {
 @media screen and (min-width: 768px) {
   form.search-form input[type=text] {
     display: initial;
-    width: 70%;
+    width: 75%;
+    height: 54px;
+    padding-left: 16px;
     border: 1px solid #ccc;
+    opacity: .9;
+    letter-spacing: .5px;
   }
 }
 
@@ -648,7 +665,6 @@ form.search-form input[type=text] {
 form.search-form button {
   /* Style the submit button */
   float: left;
-  padding: 3px 8px 5px 20px;
   outline: none;
   color: white;
   border: none;
@@ -666,13 +682,16 @@ form.search-form button {
     background: transparent;
     color: #333645;
     width: 20%;
+    padding: 3px 8px 5px 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
   form.search-form button {
-    width: 30%;
+    width: 25%;
     background: #999AA2;
+    color: #fff;
+    padding: 6px 16px 2px 0px;
   }
 }
 

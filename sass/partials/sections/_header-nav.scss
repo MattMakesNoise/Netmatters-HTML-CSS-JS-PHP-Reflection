@@ -7,12 +7,11 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        height: 110px;
+        height: 110px !important;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
         height: 209px;
-        
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
@@ -29,7 +28,8 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        padding: 22px 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -56,28 +56,28 @@
     //Medium and up
     @media screen and (min-width: $break-m) {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         flex-flow: row nowrap;
-        width: 750px;
-        padding-left: 0;
-        padding-right: 0;
+        align-items: center;
         @include mginlrauto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 18px;
+        width: 750px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
         display: flex;
         justify-content: space-between;
-        width: 970px;
         @include mginlrauto;
         padding: 20px 15px 26px 15px;
+        width: 970px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         display: flex;
-        width: 1200px;
         @include mginlrauto;
         padding: 20px 0 20px 0;
+        width: 1200px;
     }
 }
 
@@ -125,8 +125,11 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        width: 45%;
+        flex: 0 1 50%;
         order: 1;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        margin-right: 28px;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -295,6 +298,8 @@
     }
     //Medium and up
     @media screen and (max-width: $break-m) {
+        margin-left: 20px;
+        flex: 0 0 63px;
         order: 3;
     }
     //Large
@@ -317,12 +322,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 15px 0px 15px;
+    padding: 12px 15px 0px 15px;
     h6 {
         color: $white;
         margin: auto;
-        font-size: 0.75rem;
-        font-weight: 500;
+        font-size: 0.7rem;
+        font-weight: $regular;
+        padding-top: 4px;
+        width: 31px;
     }
     &:hover {
         background-color: $darker-blue;
@@ -332,7 +339,7 @@
 .burger span { //burger icon
     position: relative;
     display: inline-block;
-    width: 33px;
+    width: 31px;
     height: 3px;
     background-color: $white;
     margin: auto;
@@ -369,10 +376,13 @@
     }
     //Medium
     @media screen and (min-width: $break-m) {
-        width: 237px;
-        height: 56px;
         order: 2;
-        margin-top: 11px;
+        height: 56px;
+        width: 237px;
+        margin-left: 16px;
+        margin-top: 0;
+        border: none;
+        background-color: $white;
     }
     //Large
     @media screen and (min-width: $break-lg) {
@@ -395,7 +405,6 @@ form.search-form {
     }
     input[type=text] { /* Style the search field */
         font-size: 14px;
-        opacity: 0.8;
         float: left;
         padding-bottom: 1.25px;
         background: transparent;
@@ -403,11 +412,12 @@ form.search-form {
         color: $lightgrey-80;
         //Up to Medium
         @media screen and (max-width: $break-m) {
+            display: initial;
             height: 46px;
             width: 80%;
             padding-left: 16px;
-            display: initial;
             border: none;
+            opacity: 0.8;
             &:focus {
                 outline: none;
             }
@@ -415,8 +425,12 @@ form.search-form {
         //Medium and up
         @media screen and (min-width: $break-m) {
             display: initial;
-            width: 70%;
+            width: 75%;
+            height: 54px;
+            padding-left: 16px;
             border: 1px solid #ccc;
+            opacity: .9;
+            letter-spacing: .5px;
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -432,7 +446,7 @@ form.search-form {
     }
     button { /* Style the submit button */
         float: left;
-        padding: 3px 8px 5px 20px;
+        
         outline: none;
         color: white;
         border: none;
@@ -447,11 +461,14 @@ form.search-form {
             background: transparent;
             color: $dark-blue;
             width: 20%;
+            padding: 3px 8px 5px 20px;
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            width: 30%;
+            width: 25%;
             background: $btn-grey;
+            color: $white;
+            padding: 6px 16px 2px 0px;
         }
         //Large and Up
         @media screen and (min-width: $break-lg) {
