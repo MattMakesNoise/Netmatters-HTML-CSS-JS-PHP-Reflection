@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*========== GLOBAL STYLES ===*/
 *, *::before, *::after {
   margin: 0;
@@ -96,13 +97,16 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 28px;
   }
 }
 
@@ -156,21 +160,45 @@ body {
   }
 }
 
-.logo-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
+/*=== FLEX GROW (MAX) - FLEX SHRINK (MIN) - FLEX BASIS (IDEAL SIZE)             =====
+===== GROW (MAX) - 0 is the default and allows the container to grow with the   =====
+=====              content inside it. 1 will make it take up all of the         =====
+=====              available space. It's done in fractions (essentially) so if  =====
+=====              there's two divs and one has a grow of 1 and the other of 2  =====
+=====              the second one will take up twice the available space of the =====
+=====              other.                                                       =====
+===== SHRINK (MIN) - 1 is the default and this means that it will not shrink to =====
+=====                smaller than its content. 0 means that it won't shrink at  =====
+=====                all. Applying to multiple items divides up in the same way =====
+=====                as grow.                                                   =====
+===== BASIS (IDEAL) - This works best when used alongside grow and shrink. EG...=====
+=====                 FLEX: 1 0 200px;                                          =====
+=====                 If you have one element that has a flex-basis of 200px,   =====
+=====                 flex-grow of 1, and flex-shrink of 0, this element will   =====
+=====                 be at minimum 200px wide, but it will be allowed to grow  =====
+=====                 if there is extra space. In this case, you can think of   ===== 
+=====                 the flex-basis as being a minimum width.                  =====
+=====                 FLEX: 0 1 200px;                                          =====
+=====                 Let’s consider the opposite case. Let’s set a flex-basis  =====
+=====                 of 200px again, but let’s only set a flex-shrink of 1,    =====
+=====                 flex-grow will be 0. Here we will have an element that is =====
+=====                 200px at it’s largest, but it’s allowed to be smaller.    =====
+=====                 Here flex-basis is acting like a maximum width.           ===== 
+=====                 An element that has a flex shrink value of 0, a flex grow =====
+=====                 value of 0, but has a flex basis pixel value, will only   =====
+=====                 ever be that pixel value size. It won’t shrink and it     =====
+=====                 won’t grow. This would be the same as setting a pixel     =====
+=====                 value to the width property.                              =====
+=====                 FLEX: 1 0 auto;                                           =====
+=====                 Auto is a cool keyword that lets us tell an element to be =====
+=====                 the size of its content. This is useful when we don’t want=====
+=====                 to give the element a min size or max size.               ===== 
+===================================================================================*/
 @media screen and (max-width: 768px) {
   .logo-wrapper {
-    width: 70%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -205,7 +233,8 @@ body {
 }
 
 .logo {
-  min-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .logo a {
@@ -231,9 +260,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .phone-wrapper {
+    margin-left: 20px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70px;
+            flex: 0 1 70px;
   }
 }
 
@@ -258,266 +291,6 @@ body {
 .rotate {
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
-}
-
-@media screen and (min-width: 768px) {
-  .burger-wrapper {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .burger-wrapper {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .burger-wrapper {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .burger-wrapper {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-}
-
-.burger {
-  background-color: #333645;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  width: 63px;
-  height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 15px 0px 15px;
-}
-
-.burger h6 {
-  color: #fff;
-  margin: auto;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.burger:hover {
-  background-color: #262834;
-}
-
-.burger span {
-  position: relative;
-  display: inline-block;
-  width: 33px;
-  height: 3px;
-  background-color: #fff;
-  margin: auto;
-}
-
-.burger span::before, .burger span::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-}
-
-.burger span::before {
-  top: -8px;
-}
-
-.burger span::after {
-  bottom: -8px;
-}
-
-@media screen and (max-width: 768px) {
-  .search-wrapper {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    width: 100%;
-    margin-top: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    outline: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .search-wrapper {
-    width: 237px;
-    height: 56px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-top: 11px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .search-wrapper {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    width: 63px;
-    height: 56px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .search-wrapper {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    width: 303px;
-  }
-}
-
-form.search-form {
-  width: 100%;
-}
-
-form.search-form input[type=text] {
-  /* Style the search field */
-  padding: 5px 15px;
-  font-size: 17px;
-  float: left;
-  width: 80%;
-  height: 56px;
-  background: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  form.search-form input[type=text] {
-    width: 90%;
-    display: initial;
-    border: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  form.search-form input[type=text] {
-    display: initial;
-    width: 70%;
-    border: 1px solid #ccc;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  form.search-form input[type=text] {
-    display: none;
-    border: 1px solid #ccc;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  form.search-form input[type=text] {
-    border-radius: 0;
-    display: initial;
-    border: 1px solid #ccc;
-  }
-}
-
-form.search-form button {
-  /* Style the submit button */
-  float: left;
-  padding: 7px 20px 3px;
-  outline: none;
-  color: white;
-  border: none;
-  border-radius: 0 3px 3px 0;
-  border-left: none;
-  /* Prevent double borders */
-  cursor: pointer;
-  text-align: center;
-  vertical-align: bottom;
-  overflow: visible;
-}
-
-@media screen and (max-width: 768px) {
-  form.search-form button {
-    background: transparent;
-    color: #333645;
-    width: 10%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  form.search-form button {
-    width: 30%;
-    background: #999AA2;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  form.search-form button {
-    border-radius: 3px;
-    width: 100%;
-    height: 100%;
-    background: #999AA2;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  form.search-form button {
-    width: 20%;
-    height: 56px;
-    background: #999AA2;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  form.search-form button:hover {
-    background: #84858F;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  form.search-form button:hover {
-    background: #84858F;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  form.search-form button:hover {
-    background: #84858F;
-  }
-}
-
-form.search-form button i {
-  font-size: 23px;
-  line-height: 1;
-  width: 23px;
-  height: 46px;
-  padding: 9px 0 3px 0;
-}
-
-form.search-form::after {
-  /* Clear floats */
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .support-wrapper {
@@ -680,6 +453,277 @@ form.search-form::after {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .burger-wrapper {
+    margin-left: 20px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 63px;
+            flex: 0 0 63px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger-wrapper {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .burger-wrapper {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .burger-wrapper {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
+
+.burger {
+  background-color: #333645;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  width: 63px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px 0px 15px;
+}
+
+.burger h6 {
+  color: #fff;
+  margin: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.burger:hover {
+  background-color: #262834;
+}
+
+.burger span {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 3px;
+  background-color: #fff;
+  margin: auto;
+}
+
+.burger span::before, .burger span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.burger span::before {
+  top: -8px;
+}
+
+.burger span::after {
+  bottom: -8px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-wrapper {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    height: 47px;
+    width: 100%;
+    margin-top: 1.25rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-wrapper {
+    width: 237px;
+    height: 56px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .search-wrapper {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    width: 63px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .search-wrapper {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    width: 303px;
+  }
+}
+
+form.search-form {
+  width: 100%;
+}
+
+form.search-form input[type=text] {
+  /* Style the search field */
+  font-size: 14px;
+  opacity: 0.8;
+  float: left;
+  padding-bottom: 1.25px;
+  background: transparent;
+  font-weight: 200;
+  color: rgba(221, 221, 221, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  form.search-form input[type=text] {
+    height: 46px;
+    width: 80%;
+    padding-left: 16px;
+    display: initial;
+    border: none;
+  }
+  form.search-form input[type=text]:focus {
+    outline: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  form.search-form input[type=text] {
+    display: initial;
+    width: 70%;
+    border: 1px solid #ccc;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  form.search-form input[type=text] {
+    display: none;
+    border: 1px solid #ccc;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  form.search-form input[type=text] {
+    border-radius: 0;
+    display: initial;
+    border: 1px solid #ccc;
+  }
+}
+
+form.search-form button {
+  /* Style the submit button */
+  float: left;
+  padding: 3px 8px 5px 20px;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+  text-align: right;
+  vertical-align: bottom;
+  overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  form.search-form button {
+    background: transparent;
+    color: #333645;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  form.search-form button {
+    width: 30%;
+    background: #999AA2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  form.search-form button {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    background: #999AA2;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  form.search-form button {
+    width: 20%;
+    height: 56px;
+    background: #999AA2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  form.search-form button:hover {
+    background: #84858F;
+  }
+}
+
+form.search-form button i {
+  font-size: 23px;
+  line-height: 1;
+  width: 23px;
+  height: 46px;
+  padding: 9px 0 3px 0;
+}
+
+form.search-form::after {
+  /* Clear floats */
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @media screen and (max-width: 768px) {
@@ -1248,6 +1292,7 @@ form.search-form::after {
             align-items: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 24px;
   }
 }
 
@@ -1314,7 +1359,12 @@ form.search-form::after {
 .hero-title {
   text-transform: uppercase;
   font-size: 3rem;
-  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1362,6 +1412,13 @@ form.search-form::after {
 
 .hero-button:hover {
   background-color: #79539A;
+}
+
+.hero-button .hero-icon i {
+  margin-left: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 50px;
 }
 
 /*========== CARDS ===========*/

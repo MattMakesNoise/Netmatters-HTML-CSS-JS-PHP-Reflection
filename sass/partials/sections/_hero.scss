@@ -62,6 +62,7 @@
         justify-content: center;
         align-items: center;
         @include mginlrauto;
+        margin-top: 24px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -102,7 +103,10 @@
 .hero-title {
     text-transform: uppercase;
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        margin-bottom: 16px;
+    }
     //Medium and up
     @media screen and (min-width: $break-m) {
         margin-bottom: 1rem;
@@ -155,5 +159,11 @@
     line-height: 50px;
     &:hover {
         background-color: $web-dark;
+    }
+    .hero-icon i {
+        margin-left: 12px;
+        font-weight: $semibold;
+        font-size: 18px;
+        line-height: 50px;
     }
 }
