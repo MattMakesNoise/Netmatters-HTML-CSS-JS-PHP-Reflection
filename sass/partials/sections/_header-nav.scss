@@ -568,9 +568,15 @@ form.search-form {
     }
 }
 
-.cards-nav-list {
+.main-menu { // The initial UL that contains the six product cards.
     @include flexrow;
-    justify-content: space-between;
+    // justify-content: space-between;
+    ul ul {
+        display: none;
+    }
+    ul li:hover > ul {
+        display: block;
+     }
     li {
         list-style: none;
         ul li {
@@ -604,6 +610,7 @@ form.search-form {
 .security {
     border-left: 1px solid rgba(0,0,0,.25);
     border-right: 1px solid hsla(0, 0%, 100%, 0.1);
+    flex: 1 1 0;
     a {
         //Large and Up
         @media screen and (min-width: $break-lg) {
@@ -655,37 +662,37 @@ form.search-form {
 }
 
 .web-show {
-    .web-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $web-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        // transform: translateX(-206px);
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .web-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    // .web-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $web-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     // transform: translateX(-206px);
+    //     &::before { //Shows the tootip
+    //         content: '';
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .web-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 
 .it {
@@ -710,37 +717,37 @@ form.search-form {
 }
 
 .it-show {
-    .it-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $it-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        // transform: translate(-28%);
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .it-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    // .it-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $it-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     // transform: translate(-28%);
+    //     &::before { //Shows the tootip
+    //         content: '';
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .it-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 
 .telecoms {
@@ -765,37 +772,37 @@ form.search-form {
 }
 
 .telecoms-show {
-    .telecoms-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $tele-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        // transform: translate(-28%);
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .telecoms-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    // .telecoms-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $tele-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     // transform: translate(-28%);
+    //     &::before { //Shows the tootip
+    //         content: '';
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .telecoms-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 
 .software {
@@ -820,37 +827,37 @@ form.search-form {
 }
 
 .software-show {
-    .software-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $soft-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        // transform: translate(-28%);
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .software-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    // .software-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $soft-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     // transform: translate(-28%);
+    //     &::before { //Shows the tootip
+    //         content: '';
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .software-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 
 .digital {
@@ -875,36 +882,36 @@ form.search-form {
 }
 
 .digital-show {
-    .digital-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $market-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .digital-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    // .digital-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $market-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     &::before { //Shows the tootip
+    //         content: '';
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .digital-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 
 .security {
@@ -929,55 +936,38 @@ form.search-form {
 }
 
 .security-show {
-    .security-tooltip {
-        display: flex;
-        justify-content: center;
-        background-color: $cyber-dark;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        right: -1px;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        &::before { //Shows the tootip
-            content: '';
-        }
-        li a{
-            @include mginlrauto;
-        }
-        li:not(:last-child) a {
-            text-align: left;
-            display: block;
-        }
-        li:not(:last-child) a {
-            padding-right: 30px;
-            &::after {
-                content: '-';
-                padding-left: 30px;
-            }
-        }
-    }
-    &:hover .security-tooltip {
-        opacity: 1;
-        pointer-events: auto;
-    }
-}
-
-.menu {
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-        height: 44px;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-    
-    }
-    li {
-        a {
-            text-decoration: none;
-            color: $white;
-        }
-    }
+    // .security-tooltip {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $cyber-dark;
+    //     // opacity: 0;
+    //     position: absolute;
+    //     width: 100%;
+    //     right: -1px;
+    //     padding: 0;
+    //     margin: 0;
+    //     z-index: 10;
+    //     // &::before { //Shows the tootip
+    //     //     content: '';
+    //     // }
+    //     li a{
+    //         @include mginlrauto;
+    //     }
+    //     li:not(:last-child) a {
+    //         text-align: left;
+    //         // display: block;
+    //     }
+    //     li:not(:last-child) a {
+    //         padding-right: 30px;
+    //         &::after {
+    //             content: '-';
+    //             padding-left: 30px;
+    //         }
+    //     }
+    // }
+    // &:hover .security-tooltip {
+    //     // opacity: 1;
+    //     pointer-events: auto;
+    // }
 }
 //========== CARDS SECTION ENDS ==========//
