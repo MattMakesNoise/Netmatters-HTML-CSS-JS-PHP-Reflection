@@ -549,6 +549,19 @@ form.search-form {
         display: initial;
         background-color: $dark-blue;
     }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        display: flex;
+    }
+    li {
+        flex: 1 1 0;
+        &:hover .menu-sub { //Displays dropdown menu items on hover
+            display: block;
+        }
+    }
 }
 
 .navcards-container {
@@ -570,25 +583,11 @@ form.search-form {
 
 .main-menu { // The initial UL that contains the six product cards.
     @include flexrow;
-    // justify-content: space-between;
-    ul ul {
-        display: none;
-    }
-    ul li:hover > ul {
-        display: block;
-     }
     li {
-        list-style: none;
-        ul li {
-            //Large and Up
-            @media screen and (min-width: $break-lg) {
-                
-            }
-            //Extra Large
-            @media screen and (min-width: $break-xl) {
-            
-            }
-        }
+        // list-style: none;
+        // @include flexcolumn;
+        // border-left: 1px solid rgba(0,0,0,.25);
+        // border-right: 1px solid hsla(0, 0%, 100%, 0.1);
         ul li a {
             //Large and Up
             @media screen and (min-width: $break-lg) {
@@ -602,16 +601,40 @@ form.search-form {
     }
 }
 
-.web,
-.it,
-.telecoms,
-.software,
-.digital,
-.security {
-    border-left: 1px solid rgba(0,0,0,.25);
-    border-right: 1px solid hsla(0, 0%, 100%, 0.1);
-    flex: 1 1 0;
-    a {
+.menu-sub { // Collective selecter for all dropdown menus.
+    position: absolute;
+    left: 0; // Aligns each dropdown with the first LI (WEB).
+    width: 100%; // Makes dropdown as large as it's containing UL.
+    height: 40px;
+    display: none; //Stops the dropdown appearing unless hovered over.
+    li {
+        text-transform: uppercase;
+        a {
+            font-size: 0.8125rem;
+            white-space: nowrap;
+            // line-height: 2.813rem;
+        }
+        &:not(:last-child) a {
+            text-align: left;
+            display: block;
+        }
+        &:not(:last-child) a { 
+            padding-right: 10px;
+            &::after { //Adds the dashes after each dropdown item.
+                content: '-';
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.web-main,
+.it-main,
+.telecoms-main,
+.software-main,
+.digital-main,
+.security-main {
+    a { // Styles the product cards 
         //Large and Up
         @media screen and (min-width: $break-lg) {
             font-size: 1rem;
@@ -622,6 +645,8 @@ form.search-form {
             text-transform: uppercase;
             padding: 19px 0 20px 0;
             line-height: 1;
+            // border-left: 1px solid rgba(0,0,0,.25);
+            // border-right: 1px solid hsla(0, 0%, 100%, 0.1);
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
@@ -637,19 +662,9 @@ form.search-form {
         padding-bottom: 10px;
     }
 }
-
-.web {
-    flex-grow: 1;
-
-    a {
-        &:hover {
-            background-color: $web;
-            .fa-code {
-                color: $white;
-            }
-        }
-    }
-    .fa-code{
+//=== INDIVIDUAL CARDS/DROPDOWNS ===//
+.web-main {
+    .fa-code {
         color: $web-dark;
         @media screen and (min-width: $break-lg) {
             font-size: 1.2rem;
@@ -658,53 +673,36 @@ form.search-form {
             font-size: 1.438rem;
         }
     }
-    
-}
-
-.web-show {
-    // .web-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $web-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     // transform: translateX(-206px);
-    //     &::before { //Shows the tootip
-    //         content: '';
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .web-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
-
-.it {
-    flex-grow: 1;
-    a {
-        &:hover {
-            background-color: $it;
-            .fa-desktop {
-                color: $white;
-            }
+    &:hover {
+        background: $web;
+        .fa-code {
+            color: $white;
         }
     }
+}
+    
+.web-dropdown {
+        background: $web-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $web-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.it-main {
     .fa-desktop {
         color: $it-dark;
         @media screen and (min-width: $break-lg) {
@@ -714,52 +712,36 @@ form.search-form {
             font-size: 1.438rem;
         }
     }
-}
-
-.it-show {
-    // .it-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $it-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     // transform: translate(-28%);
-    //     &::before { //Shows the tootip
-    //         content: '';
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .it-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
-
-.telecoms {
-    flex-grow: 1;
-    a {
-        &:hover {
-            background-color: $tele;
-            .fa-phone-volume {
-                color: $white;
-            }
+    &:hover {
+        background: $it;
+        .fa-desktop {
+            color: $white;
         }
     }
+}
+    
+.it-dropdown {
+        background: $it-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $it-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.telecoms-main {
     .fa-phone-volume {
         color: $tele-dark;
         @media screen and (min-width: $break-lg) {
@@ -769,108 +751,76 @@ form.search-form {
             font-size: 1.438rem;
         }
     }
-}
-
-.telecoms-show {
-    // .telecoms-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $tele-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     // transform: translate(-28%);
-    //     &::before { //Shows the tootip
-    //         content: '';
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .telecoms-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
-
-.software {
-    flex-grow: 1;
-    a {
-        &:hover {
-            background-color: $soft;
-            .fa-th {
-                color: $white;
-            }
+    &:hover {
+        background: $tele;
+        .fa-phone-volume {
+            color: $white;
         }
     }
+}
+
+.telecoms-dropdown {
+        background: $tele-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $tele-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.software-main {
     .fa-th {
-    color: $soft-dark;
-    @media screen and (min-width: $break-lg) {
-        font-size: 1.2rem;
-    }
-    @media screen and (min-width: $break-xl) {
-        font-size: 1.438rem;
-    }
-    }
-}
-
-.software-show {
-    // .software-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $soft-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     // transform: translate(-28%);
-    //     &::before { //Shows the tootip
-    //         content: '';
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .software-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
-
-.digital {
-    flex-grow: 1;
-    a {
-        &:hover {
-            background-color: $market;
-            .fa-signal {
-                color: $white;
-            }
+        color: $soft-dark;
+        @media screen and (min-width: $break-lg) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.438rem;
         }
     }
-    .fa-signal {   
+    &:hover {
+        background: $soft;
+        .fa-th {
+            color: $white;
+        }
+    }
+}
+    
+.software-dropdown {
+        background: $soft-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $soft-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.digital-main {
+    .fa-signal {
         color: $market-dark;
         @media screen and (min-width: $break-lg) {
             font-size: 1.2rem;
@@ -879,51 +829,36 @@ form.search-form {
             font-size: 1.438rem;
         }
     }
-}
-
-.digital-show {
-    // .digital-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $market-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     &::before { //Shows the tootip
-    //         content: '';
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .digital-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
-
-.security {
-    flex-grow: 1;
-    a {
-        &:hover {
-            background-color: $cyber;
-            .fa-shield-virus {
-                color: $white;
-            }
+    &:hover {
+        background: $market;
+        .fa-signal {
+            color: $white;
         }
     }
+}
+    
+.digital-dropdown {
+        background: $market-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $market-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.security-main {
     .fa-shield-virus {
         color: $cyber-dark;
         @media screen and (min-width: $break-lg) {
@@ -933,41 +868,405 @@ form.search-form {
             font-size: 1.438rem;
         }
     }
+    &:hover {
+        background: $cyber;
+        .fa-shield-virus {
+            color: $white;
+        }
+    }
+}
+    
+.security-dropdown {
+        background: $cyber-dark;
+        z-index: 10;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        top: 0;
+        width: 5000px;
+        z-index: -10;
+        background-color: $cyber-dark;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
 }
 
-.security-show {
-    // .security-tooltip {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $cyber-dark;
-    //     // opacity: 0;
-    //     position: absolute;
-    //     width: 100%;
-    //     right: -1px;
-    //     padding: 0;
-    //     margin: 0;
-    //     z-index: 10;
-    //     // &::before { //Shows the tootip
-    //     //     content: '';
-    //     // }
-    //     li a{
-    //         @include mginlrauto;
-    //     }
-    //     li:not(:last-child) a {
-    //         text-align: left;
-    //         // display: block;
-    //     }
-    //     li:not(:last-child) a {
-    //         padding-right: 30px;
-    //         &::after {
-    //             content: '-';
-    //             padding-left: 30px;
-    //         }
-    //     }
-    // }
-    // &:hover .security-tooltip {
-    //     // opacity: 1;
-    //     pointer-events: auto;
-    // }
-}
+// .main-menu-web {
+//     &:hover > .sub-menu-web { // Makes the product categories dropdown.
+//         background-color: $web-dark;
+//     }
+//     .sub-menu-web {
+//         display: flex;
+//         flex-direction: row;
+//         width: 100%;
+//     }
+//     a {
+//         &:hover { //Changes Web card background color on hover
+//             background-color: $web;
+//             .fa-code {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-code{
+//         color: $web-dark;
+//         @media screen and (min-width: $break-lg) {
+//             font-size: 1.2rem;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             font-size: 1.438rem;
+//         }
+//     }
+// }
+
+// .web-show {
+//     // .web-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $web-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     // transform: translateX(-206px);
+//     //     &::before { //Shows the tootip
+//     //         content: '';
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .web-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
+
+// .it {
+//     flex-grow: 1;
+//     .sub-menu {
+//         display: none;
+//     }
+//     &:hover > ul { // Makes the product categories dropdown.
+//         display: inline-block;
+//         background-color: $it-dark;
+//     }
+//     a {
+//         &:hover { //Changes IT card background color on hover
+//             background-color: $it;
+//             .fa-desktop {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-desktop {
+//         color: $it-dark;
+//         @media screen and (min-width: $break-lg) {
+//             font-size: 1.2rem;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             font-size: 1.438rem;
+//         }
+//     }
+// }
+
+// .it-show {
+//     // .it-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $it-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     // transform: translate(-28%);
+//     //     &::before { //Shows the tootip
+//     //         content: '';
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .it-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
+
+// .telecoms {
+//     flex-grow: 1;
+//     .sub-menu {
+//         display: none;
+//     }
+//     &:hover > ul { // Makes the product categories dropdown.
+//         display: inline-block;
+//         background-color: $tele-dark;
+//     }
+//     a {
+//         &:hover { //Changes Telecoms card background color on hover
+//             background-color: $tele;
+//             .fa-phone-volume {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-phone-volume {
+//         color: $tele-dark;
+//         @media screen and (min-width: $break-lg) {
+//             font-size: 1.2rem;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             font-size: 1.438rem;
+//         }
+//     }
+// }
+
+// .telecoms-show {
+//     // .telecoms-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $tele-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     // transform: translate(-28%);
+//     //     &::before { //Shows the tootip
+//     //         content: '';
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .telecoms-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
+
+// .software {
+//     flex-grow: 1;
+//     .sub-menu {
+//         display: none;
+//     }
+//     &:hover > ul { // Makes the web product categories dropdown.
+//         display: inline-block;
+//         background-color: $soft-dark;
+//     }
+//     a {
+//         &:hover { //Changes Software card background color on hover
+//             background-color: $soft;
+//             .fa-th {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-th {
+//     color: $soft-dark;
+//     @media screen and (min-width: $break-lg) {
+//         font-size: 1.2rem;
+//     }
+//     @media screen and (min-width: $break-xl) {
+//         font-size: 1.438rem;
+//     }
+//     }
+// }
+
+// .software-show {
+//     // .software-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $soft-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     // transform: translate(-28%);
+//     //     &::before { //Shows the tootip
+//     //         content: '';
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .software-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
+
+// .digital {
+//     flex-grow: 1;
+//     .sub-menu {
+//         display: none;
+//     }
+//     &:hover > ul { // Makes the web product categories dropdown.
+//         display: inline-block;
+//         background-color: $market-dark;
+//     }
+//     a {
+//         &:hover { //Changes Marketing card background color on hover
+//             background-color: $market;
+//             .fa-signal {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-signal {   
+//         color: $market-dark;
+//         @media screen and (min-width: $break-lg) {
+//             font-size: 1.2rem;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             font-size: 1.438rem;
+//         }
+//     }
+// }
+
+// .digital-show {
+//     // .digital-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $market-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     &::before { //Shows the tootip
+//     //         content: '';
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .digital-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
+
+// .security {
+//     flex-grow: 1;
+//     .sub-menu {
+//         display: none;
+//     }
+//     &:hover > ul { // Makes the web product categories dropdown.
+//         display: inline-block;
+//         background-color: $cyber-dark;
+//     }
+//     a {
+//         &:hover { //Changes Security card background color on hover
+//             background-color: $cyber;
+//             .fa-shield-virus {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .fa-shield-virus {
+//         color: $cyber-dark;
+//         @media screen and (min-width: $break-lg) {
+//             font-size: 1.2rem;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             font-size: 1.438rem;
+//         }
+//     }
+// }
+
+// .security-show {
+//     // .security-tooltip {
+//     //     display: flex;
+//     //     justify-content: center;
+//     //     background-color: $cyber-dark;
+//     //     // opacity: 0;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     right: -1px;
+//     //     padding: 0;
+//     //     margin: 0;
+//     //     z-index: 10;
+//     //     // &::before { //Shows the tootip
+//     //     //     content: '';
+//     //     // }
+//     //     li a{
+//     //         @include mginlrauto;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         text-align: left;
+//     //         // display: block;
+//     //     }
+//     //     li:not(:last-child) a {
+//     //         padding-right: 30px;
+//     //         &::after {
+//     //             content: '-';
+//     //             padding-left: 30px;
+//     //         }
+//     //     }
+//     // }
+//     // &:hover .security-tooltip {
+//     //     // opacity: 1;
+//     //     pointer-events: auto;
+//     // }
+// }
 //========== CARDS SECTION ENDS ==========//
