@@ -151,6 +151,7 @@ body {
     margin-right: auto;
     padding: 20px 0 20px 0;
     width: 1200px;
+    height: 110px;
   }
 }
 
@@ -822,7 +823,7 @@ form.search-form::after {
   }
 }
 
-.main-menu {
+.menu-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,12 +831,8 @@ form.search-form::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-@media screen and (min-width: 992px) {
-  .main-menu li ul li a {
-    font-size: 0.8rem;
-  }
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu-sub {
@@ -846,6 +843,18 @@ form.search-form::after {
   display: none;
 }
 
+.menu-sub ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-sub ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 .menu-sub li {
   text-transform: uppercase;
 }
@@ -853,6 +862,7 @@ form.search-form::after {
 .menu-sub li a {
   font-size: 0.8125rem;
   white-space: nowrap;
+  line-height: 2.813rem;
 }
 
 .menu-sub li:not(:last-child) a {
@@ -861,12 +871,22 @@ form.search-form::after {
 }
 
 .menu-sub li:not(:last-child) a {
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 .menu-sub li:not(:last-child) a::after {
   content: '-';
-  padding-left: 10px;
+  padding-left: 30px;
+}
+
+.web-main,
+.it-main,
+.telecoms-main,
+.software-main,
+.digital-main,
+.security-main {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (min-width: 992px) {
@@ -888,8 +908,16 @@ form.search-form::after {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    padding: 19px 0 20px 0;
+    padding: 19px 0 18px 0;
     line-height: 1;
+  }
+  .web-main a small,
+  .it-main a small,
+  .telecoms-main a small,
+  .software-main a small,
+  .digital-main a small,
+  .security-main a small {
+    padding-bottom: 1px;
   }
 }
 
@@ -900,6 +928,7 @@ form.search-form::after {
   .software-main a,
   .digital-main a,
   .security-main a {
+    font-size: 1.125rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -911,7 +940,16 @@ form.search-form::after {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    padding: 19px 0 1px 0;
+    padding: 19px 0 18px 0;
+  }
+  .web-main a small,
+  .it-main a small,
+  .telecoms-main a small,
+  .software-main a small,
+  .digital-main a small,
+  .security-main a small {
+    font-size: 0.625rem;
+    padding-bottom: 1px;
   }
 }
 
