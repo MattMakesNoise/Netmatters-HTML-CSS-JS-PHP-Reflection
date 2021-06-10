@@ -2729,24 +2729,60 @@ form.search-form::after {
   pointer-events: auto;
 }
 
-.busseys-tooltip {
-  -webkit-transform: translate(-1.5vw, -28vh);
-          transform: translate(-1.5vw, -28vh);
+@media screen and (min-width: 992px) {
+  .busseys-tooltip {
+    -webkit-transform: translate(-30px, -267px);
+            transform: translate(-30px, -267px);
+  }
 }
 
-.crane-tooltip {
-  -webkit-transform: translate(1vw, -35vh);
-          transform: translate(1vw, -35vh);
+@media screen and (min-width: 1260px) {
+  .busseys-tooltip {
+    -webkit-transform: translate(-30px, -265px);
+            transform: translate(-30px, -265px);
+  }
 }
 
-.beat-tooltip {
-  -webkit-transform: translate(-4.5vw, -28vh);
-          transform: translate(-4.5vw, -28vh);
+@media screen and (min-width: 992px) {
+  .crane-tooltip {
+    -webkit-transform: translate(20px, -327px);
+            transform: translate(20px, -327px);
+  }
 }
 
-.diver-tooltip {
-  -webkit-transform: translate(2vw, -32vh);
-          transform: translate(2vw, -32vh);
+@media screen and (min-width: 1260px) {
+  .crane-tooltip {
+    -webkit-transform: translate(20px, -330px);
+            transform: translate(20px, -330px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .beat-tooltip {
+    -webkit-transform: translate(-90px, -266px);
+            transform: translate(-90px, -266px);
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .beat-tooltip {
+    -webkit-transform: translate(-88px, -265px);
+            transform: translate(-88px, -265px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .diver-tooltip {
+    -webkit-transform: translate(30px, -307px);
+            transform: translate(30px, -307px);
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .diver-tooltip {
+    -webkit-transform: translate(34px, -308px);
+            transform: translate(34px, -308px);
+  }
 }
 
 /*========== EMAIL FORM ======*/
