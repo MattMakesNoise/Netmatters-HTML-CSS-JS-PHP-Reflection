@@ -2340,9 +2340,6 @@ form.search-form::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -2373,14 +2370,6 @@ form.search-form::after {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-.news-card-main::after {
-  content: '';
-  border-bottom: 1px solid #ddd;
-  width: 90%;
-  display: block;
-  margin: 0 auto;
 }
 
 .card-img-top {
@@ -2466,6 +2455,14 @@ form.search-form::after {
   font-weight: 600;
 }
 
+@media screen and (min-width: 1260px) {
+  .scion-title,
+  .notable-title,
+  .job-title {
+    height: 47px;
+  }
+}
+
 .scion-title:hover,
 .notable-title:hover,
 .job-title:hover {
@@ -2480,6 +2477,12 @@ form.search-form::after {
   line-height: 1.375rem;
 }
 
+@media screen and (min-width: 1260px) {
+  .news-text {
+    height: 66px;
+  }
+}
+
 .news-btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -2489,8 +2492,7 @@ form.search-form::after {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
-  margin: auto auto 1rem 0;
-  height: auto;
+  margin: 4px auto 3px 0;
   padding: 5px 15px;
   line-height: 35px;
 }
@@ -2499,8 +2501,9 @@ form.search-form::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 1.5rem;
+  padding-top: 40px;
   margin: auto auto 1rem 2rem;
+  position: relative;
 }
 
 .card-footer img {
@@ -2508,6 +2511,14 @@ form.search-form::after {
   height: auto;
   vertical-align: middle;
   border-radius: 50%;
+}
+
+.card-footer::before {
+  content: '';
+  border-bottom: 1px solid #ddd;
+  width: 125%;
+  position: absolute;
+  top: 10px;
 }
 
 .posted-by {
@@ -2569,7 +2580,9 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .job-card {
-    display: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -2687,7 +2700,7 @@ form.search-form::after {
   background-color: #333645;
   color: #fff;
   position: absolute;
-  opacity: 0;
+  display: none;
   max-width: 260px;
   text-align: center;
   padding: 20px;
@@ -2697,10 +2710,6 @@ form.search-form::after {
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 300;
-}
-
-.show .tooltip::before {
-  content: '';
 }
 
 .show .tooltip::after {
@@ -2716,7 +2725,7 @@ form.search-form::after {
 }
 
 .show:hover .tooltip {
-  opacity: 1;
+  display: block;
   pointer-events: auto;
 }
 

@@ -75,13 +75,6 @@
             font-size: 0.875rem;
             font-weight: $light;
         }
-        &::before { //Shows the tootip
-            content: '';
-
-            // display: block;
-            // width: 100%;
-            // position: absolute;
-        }
         &::after { //Creates the dropdown arrow
             content: '';
             border-left: solid transparent 30px;
@@ -95,7 +88,7 @@
         }
     } 
     &:hover .tooltip {
-        opacity: 1;
+        display: block;
         pointer-events: auto;
     }
 }
