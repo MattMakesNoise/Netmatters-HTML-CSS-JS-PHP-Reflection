@@ -1,6 +1,5 @@
 /*========== ABOUT ===========*/
 .about-wrapper {
-    // display: block;
     background-color: $dark-blue;
     @media screen and (max-width: $break-m) {
         height: 613px;
@@ -16,7 +15,7 @@
         background-size: auto 100%;
     }
     @media screen and (min-width: $break-xl) {
-        height: 553px;
+        height: 583px !important;
         background-position: right;
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -37,9 +36,11 @@
         // height: 393px !important;
     }
     @media screen and (min-width: $break-lg) {
+        padding: 30px 15px 0px 15px;
         width: 970px;
     }
     @media screen and (min-width: $break-xl) {
+        padding: 30px 15px 0px 15px;
         @include mginlrauto;
         width: 1200px;
     }
@@ -67,11 +68,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        padding-bottom: 20px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        padding-bottom: 24px;
     }
 }
 
@@ -89,11 +90,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        padding-bottom: 20px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        padding-bottom: 24px;
     }
 }
 
@@ -101,7 +102,7 @@
 .about-p2 {
     font-size: 1rem;
     font-weight: $regular;
-    line-height: 1.9;
+    line-height: 1.875rem;
 }
 
 .about-p1 {
@@ -115,11 +116,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        padding-bottom: 20px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        padding-bottom: 24px;
     }
 }
 
@@ -134,11 +135,11 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        padding-bottom: 24px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        padding-bottom: 24px;
     }
 }
 

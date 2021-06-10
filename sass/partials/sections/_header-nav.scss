@@ -74,7 +74,7 @@
     @media screen and (min-width: $break-xl) {
         display: flex;
         @include mginlrauto;
-        padding: 20px 0 20px 0;
+        padding: 20px 15px 20px 15px;
         width: 1200px;
         height: 110px;
     }
@@ -140,6 +140,8 @@
     }
     //X-large devices
     @media screen and (min-width: $break-xl) {
+        padding-right: 4px;
+        margin-right: 0;
         width: 41.66666667%;
         order: 1;
     }
@@ -171,7 +173,7 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        width: 84%;
     }
 }
 //===== LOGO STYLING ENDS =====//
@@ -246,6 +248,7 @@
         display: initial;
         order: 2;
         @include flexalignctr;
+        margin-right: 20px;
     }
 }
 //===== SUPPORT STYLING ENDS=====//
@@ -289,6 +292,7 @@
         display: initial;
         order: 3;
         @include flexalignctr;
+        margin-right: 0;
     }
 }
 //===== CONTACT STYLING =====//
@@ -313,6 +317,7 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
+        margin-left: 0;
         order: 5;
     }
 }
@@ -398,7 +403,7 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         order: 4;
-        width: 303px;
+        width: 301px;
     }
 }
   
@@ -586,11 +591,6 @@ form.search-form {
     @include flexrow;
     border-right: 1px solid rgba(0,0,0,.25);
     border-left: 1px solid hsla(0, 0%, 100%, 0.1);
-    li {
-        a {
-        
-        }
-    }
 }
 
 .menu-sub { // Collective selecter for all dropdown menus.
@@ -601,6 +601,8 @@ form.search-form {
     display: none; //Stops the dropdown appearing unless hovered over.
     ul {
         display: flex;
+        position: relative;
+        top: -20px;
         li {
             flex: 1 0 auto;
         }
@@ -686,15 +688,6 @@ form.search-form {
             color: $white;
         }
     }
-    // &::before {
-    //     content: '.';
-    //     background: red;
-    //     display: block;
-    //     position: absolute;
-    //     border: 1px solid hsla(0, 0%, 100%, 0.1);
-    //     right: 0;
-    //     z-index: 15;
-    // }
 }
     
 .web-dropdown {
