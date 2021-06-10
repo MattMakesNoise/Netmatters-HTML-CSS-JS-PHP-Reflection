@@ -112,13 +112,14 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-    
+        padding-bottom: 10px;
     }
     
 }
 
 .footer-links {
     @include flexcolumn;
+    font-size: 13px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 0;
@@ -171,7 +172,7 @@
 
 address {
     font-style: normal;
-    font-size: 0.8rem;
+    font-size: 13px;
     line-height: 1.25rem;
     a {
         margin: 1rem 0;
@@ -181,6 +182,7 @@ address {
 
 //========== FOOTER GORLESTON ==========//
 .footer-gorleston {
+    font-size: 13px;
     //Small and up
     @media screen and (max-width: $break-m) {
         margin-bottom: 45px;
@@ -216,19 +218,19 @@ address {
     @include flexcolumn;
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        // margin: 1rem 0.5rem;
+        margin-top: -24px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        margin-top: -24px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-
+        margin-top: -24px;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-        // margin-left: -0.5rem;
+        margin-top: -24px;
     }
 }
 
@@ -255,9 +257,25 @@ address {
 
 //===== INDIVIDUAL SOCIALS =====//
 .facebook {
-    // height: 28.41px;
-    // width: 28px;
-    flex: 1 0 auto;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        flex: 1 0 211.5px;
+        height: 55px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        flex: 1 0 157.5px;
+        height: 55px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        flex: 1 0 120px;
+        height: 55px;
+    }
     margin-top: 30px;
     margin-right: 30px;
     display: flex;
@@ -266,12 +284,32 @@ address {
     &:hover {
     background-color: #43609C;
     }
+    i {
+        position: relative;
+        top: 6px;
+    }
 }
 
 .twitter {
-    // height: 28.41px;
-    // width: 28px;
-    flex: 1 0 auto;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        flex: 1 0 211.5px;
+        height: 55px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        flex: 1 0 157.5px;
+        height: 55px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        flex: 1 0 120px;
+        height: 55px;
+    }
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -279,12 +317,32 @@ address {
     &:hover {
     background-color: #55acee;
     }
+    i {
+        position: relative;
+        top: 6px;
+    }
 }
 
 .insta {
-    // height: 28.41px;
-    // width: 28px;
-    flex: 1 0 auto;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        flex: 1 0 211.5px;
+        height: 55px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        flex: 1 0 157.5px;
+        height: 55px;   
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        flex: 1 0 120px;
+        height: 55px;
+    }
     margin-top: 30px;
     margin-right: 30px;
     display: flex;
@@ -293,11 +351,32 @@ address {
     &:hover {
         background-color: #DD2A7B;
     }
+    i {
+        position: relative;
+        top: 6px;
+    }
 } 
 
 .linkedin {
-    // height: 28.41px;
-    // width: 28px;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        flex: 1 0 211.5px;
+        height: 55px;
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        flex: 1 0 157.5px;
+        height: 55px;
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        flex: 1 0 120px;
+        height: 55px;
+    }
     flex: 1 0 auto;
     margin-top: 30px;
     display: flex;
@@ -305,6 +384,10 @@ address {
     align-items: center;
     &:hover {
     background-color: #0072B1;
+    }
+    i {
+        position: relative;
+        top: 6px;
     }
 }
 
