@@ -3643,7 +3643,7 @@ address a {
 @media screen and (min-width: 1260px) {
   .awards-wrapper {
     display: initial;
-    height: 266px;
+    height: 266px !important;
   }
 }
 
@@ -3678,11 +3678,10 @@ address a {
 
 @media screen and (min-width: 1260px) {
   .awards {
-    max-width: 1200px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -3694,6 +3693,9 @@ address a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .awards-row-two {
@@ -3704,6 +3706,8 @@ address a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
   margin-top: 20px;
 }
@@ -3711,9 +3715,9 @@ address a {
 .awards-logo {
   vertical-align: middle;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   padding: 0 20px;
 }
 
@@ -3733,9 +3737,9 @@ address a {
   vertical-align: middle;
   padding: 0 20px;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .google img {
