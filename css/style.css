@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+*, *:focus, *:hover {
+  outline: none;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.4px;
@@ -2917,12 +2921,52 @@ form.search-form::after {
   margin-top: 0.25rem;
 }
 
-.boxes .name-wrapper {
-  padding-right: 15px;
+@media screen and (max-width: 768px) {
+  .boxes .name-wrapper {
+    padding-right: 0;
+  }
 }
 
-.boxes .mail-wrapper {
-  padding-left: 15px;
+@media screen and (min-width: 768px) {
+  .boxes .name-wrapper {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .boxes .name-wrapper {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .boxes .name-wrapper {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boxes .mail-wrapper {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .boxes .mail-wrapper {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .boxes .mail-wrapper {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .boxes .mail-wrapper {
+    padding-left: 15px;
+  }
 }
 
 @media screen and (min-width: 992px) {
