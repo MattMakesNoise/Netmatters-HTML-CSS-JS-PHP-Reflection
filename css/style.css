@@ -3789,6 +3789,78 @@ address a {
   width: 200px;
 }
 
+.future50 {
+  background-image: url("/img/future-50-bw.jpg");
+  width: 40px;
+  height: 70px;
+}
+
+.future50:hover {
+  background-image: url("/img/future-50.jpg");
+  width: 40px;
+  height: 70px;
+}
+
+.qms {
+  background-image: url("/img/qms-bw.jpg");
+  width: 60px;
+  height: 70px;
+}
+
+.qms:hover {
+  background-image: url("/img/qms.jpg");
+  width: 60px;
+  height: 70px;
+}
+
+.carbon {
+  background-image: url("/img/norfolk-carbon-charter-bw.jpg");
+  width: 175px;
+  height: 70px;
+}
+
+.carbon:hover {
+  background-image: url("/img/norfolk-carbon-charter.jpg");
+  width: 175px;
+  height: 70px;
+}
+
+.future-growth {
+  background-image: url("/img/investing-in-future-growth-bw.jpg");
+  width: 175px;
+  height: 58px;
+}
+
+.future-growth:hover {
+  background-image: url("/img/investing-in-future-growth.jpg");
+  width: 175px;
+  height: 58px;
+}
+
+.princess-royal {
+  background-image: url("/img/princess-royal-training-bw.jpg");
+  width: 175px;
+  height: 44px;
+}
+
+.princess-royal:hover {
+  background-image: url("/img/princess-royal-training.jpg");
+  width: 175px;
+  height: 44px;
+}
+
+.business-awards {
+  background-image: url("/img/skills-of-tomorrow-bw.jpg");
+  width: 175px;
+  height: 58px;
+}
+
+.business-awards:hover {
+  background-image: url("/img/skills-of-tomorrow.jpg");
+  width: 175px;
+  height: 58px;
+}
+
 /*========== PAGE LAYOUT ===*/
 /*========== NAVBAR ========*/
 /*========== HERO ==========*/
