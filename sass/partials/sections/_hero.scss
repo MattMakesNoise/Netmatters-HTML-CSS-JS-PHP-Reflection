@@ -31,13 +31,13 @@
     @media screen and (max-width: $break-m) {
         background-image:
         linear-gradient(to right , rgba(0,0,0,1) 5% , rgba(0,0,0,0)),
-        url('/img/home-3wAI\ \(2\).jpg');
+        url('/img/home-3wAI.jpg');
     }
     //Medium
     @media screen and (min-width: $break-m) {
         background-image:
         linear-gradient(to right , rgba(0,0,0,1) 5% , rgba(0,0,0,0)),
-        url('/img/home-3wAI\ \(2\).jpg');
+        url('/img/home-3wAI.jpg');
         justify-content: center;
         align-items: center;
     }
@@ -50,7 +50,7 @@
     @media screen and (min-width: $break-xl) {
         background-image: 
         linear-gradient(to right , rgba(0,0,0,0.9) 10% , rgba(0,0,0,0)),
-        url('/img/home-3wAI\ \(2\).jpg');
+        url('/img/home-3wAI.jpg');
     }
 }
 

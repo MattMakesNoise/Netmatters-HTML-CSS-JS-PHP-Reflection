@@ -422,7 +422,7 @@ form.search-form {
         color: $lightgrey-80;
         //Up to Medium
         @media screen and (max-width: $break-m) {
-            display: initial;
+            display: inline-block;
             height: 46px;
             width: 80%;
             padding-left: 16px;
@@ -434,7 +434,7 @@ form.search-form {
         }
         //Medium and up
         @media screen and (min-width: $break-m) {
-            display: initial;
+            display: inline-block;
             width: 75%;
             height: 54px;
             padding-left: 16px;
@@ -456,7 +456,7 @@ form.search-form {
         //Extra Large
         @media screen and (min-width: $break-xl) {
             border-radius: 0;
-            display: initial;
+            display: inline-block;
             border: 1px solid #ccc;
         }
     }
@@ -547,12 +547,12 @@ form.search-form {
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-        display: initial;
+        display: inline-block;
         background-color: $dark-blue;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-        display: initial;
+        display: inline-block;
         background-color: $dark-blue;
     }
     ul {

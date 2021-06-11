@@ -647,7 +647,7 @@ form.search-form input[type=text] {
 
 @media screen and (max-width: 768px) {
   form.search-form input[type=text] {
-    display: initial;
+    display: inline-block;
     height: 46px;
     width: 80%;
     padding-left: 16px;
@@ -661,7 +661,7 @@ form.search-form input[type=text] {
 
 @media screen and (min-width: 768px) {
   form.search-form input[type=text] {
-    display: initial;
+    display: inline-block;
     width: 75%;
     height: 54px;
     padding-left: 16px;
@@ -688,7 +688,7 @@ form.search-form input[type=text] {
 @media screen and (min-width: 1260px) {
   form.search-form input[type=text] {
     border-radius: 0;
-    display: initial;
+    display: inline-block;
     border: 1px solid #ccc;
   }
 }
@@ -791,14 +791,14 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .cards-nav {
-    display: initial;
+    display: inline-block;
     background-color: #333645;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .cards-nav {
-    display: initial;
+    display: inline-block;
     background-color: #333645;
   }
 }
@@ -1310,15 +1310,15 @@ form.search-form::after {
 
 @media screen and (max-width: 768px) {
   .hero-bg {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, black), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI (2).jpg");
-    background-image: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0)), url("/img/home-3wAI (2).jpg");
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, black), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI.jpg");
+    background-image: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0)), url("/img/home-3wAI.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero-bg {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, black), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI (2).jpg");
-    background-image: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0)), url("/img/home-3wAI (2).jpg");
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, black), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI.jpg");
+    background-image: linear-gradient(to right, black 5%, rgba(0, 0, 0, 0)), url("/img/home-3wAI.jpg");
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1341,8 +1341,8 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .hero-bg {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI (2).jpg");
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0)), url("/img/home-3wAI (2).jpg");
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0))), url("/img/home-3wAI.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0)), url("/img/home-3wAI.jpg");
   }
 }
 
@@ -2675,7 +2675,7 @@ form.search-form::after {
 /*========== CLIENTS =========*/
 .clients-wrapper {
   display: block;
-  background-color: rgba(221, 221, 221, 0.8);
+  background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -2756,18 +2756,6 @@ form.search-form::after {
   border-bottom: 3px solid #fff;
 }
 
-.show img {
-  height: auto;
-  width: 100%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
-.show img:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
 .show .tooltip {
   background-color: #333645;
   color: #fff;
@@ -2801,6 +2789,18 @@ form.search-form::after {
   pointer-events: auto;
 }
 
+.busseys-container {
+  background-image: url("/img/home-T5gi.jpg");
+  width: 188px;
+  height: 70px;
+}
+
+.busseys-container:hover {
+  background-image: url("/img/home-gZQR.png");
+  width: 188px;
+  height: 70px;
+}
+
 @media screen and (min-width: 992px) {
   .busseys-tooltip {
     -webkit-transform: translate(-30px, -267px);
@@ -2810,9 +2810,21 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .busseys-tooltip {
-    -webkit-transform: translate(-30px, -265px);
-            transform: translate(-30px, -265px);
+    -webkit-transform: translate(-30px, -188px);
+            transform: translate(-30px, -188px);
   }
+}
+
+.crane-container {
+  background-image: url("/img/home-BsyK.jpg");
+  width: 287px;
+  height: 70px;
+}
+
+.crane-container:hover {
+  background-image: url("/img/home-MjHw.png");
+  width: 287px;
+  height: 70px;
 }
 
 @media screen and (min-width: 992px) {
@@ -2824,9 +2836,21 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .crane-tooltip {
-    -webkit-transform: translate(20px, -330px);
-            transform: translate(20px, -330px);
+    -webkit-transform: translate(20px, -251px);
+            transform: translate(20px, -251px);
   }
+}
+
+.beat-container {
+  background-image: url("/img/home-RfLc.jpg");
+  width: 72px;
+  height: 70px;
+}
+
+.beat-container:hover {
+  background-image: url("/img/home-ukEL.png");
+  width: 72px;
+  height: 70px;
 }
 
 @media screen and (min-width: 992px) {
@@ -2838,9 +2862,21 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .beat-tooltip {
-    -webkit-transform: translate(-88px, -265px);
-            transform: translate(-88px, -265px);
+    -webkit-transform: translate(-88px, -188px);
+            transform: translate(-88px, -188px);
   }
+}
+
+.diver-container {
+  background-image: url("/img/home-jHUl.jpg");
+  width: 322px;
+  height: 70px;
+}
+
+.diver-container:hover {
+  background-image: url("/img/home-kGn4.png");
+  width: 322px;
+  height: 70px;
 }
 
 @media screen and (min-width: 992px) {
@@ -2852,8 +2888,8 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .diver-tooltip {
-    -webkit-transform: translate(34px, -308px);
-            transform: translate(34px, -308px);
+    -webkit-transform: translate(34px, -231px);
+            transform: translate(34px, -231px);
   }
 }
 

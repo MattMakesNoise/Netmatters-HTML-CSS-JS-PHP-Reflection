@@ -1,7 +1,7 @@
 /*========== CLIENTS =========*/
 .clients-wrapper {
     display: block;
-    background-color: $lightgrey-80;
+    background-color: #fff;
     //Up to Medium
     @media screen and (max-width: $break-m) {
       display: none !important;
@@ -58,15 +58,14 @@
     }
 }
 
+// .hide {
+//   display: none;
+// }
 .show {
-    img {
-        height: auto;
-        width: 100%;
-        filter: grayscale(100%);
-        &:hover {
-          filter: grayscale(0%);
-        }
-    }
+    // img {
+    //     height: auto;
+    //     width: 100%;
+    // }
     .tooltip {
         @include tooltip-main;
         padding: 20px;
@@ -93,6 +92,16 @@
     }
 }
 
+.busseys-container {
+  background-image: url('/img/home-T5gi.jpg');
+  width: 188px;
+  height: 70px;
+  &:hover {
+    background-image: url('/img/home-gZQR.png');
+    width: 188px;
+    height: 70px;
+  }
+}
 .busseys-tooltip {
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -100,10 +109,19 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-      transform: translate(-30px , -265px); //Positions it above logo (L-R , U-D)
+      transform: translate(-30px , -188px); //Positions it above logo (L-R , U-D)
     }
 }
-
+.crane-container {
+  background-image: url('/img/home-BsyK.jpg');
+  width: 287px;
+  height: 70px;
+  &:hover {
+    background-image: url('/img/home-MjHw.png');
+    width: 287px;
+    height: 70px;
+  }
+}
 .crane-tooltip {
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -111,10 +129,19 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-      transform: translate(20px , -330px); //Positions it above logo (L-R , U-D)
+      transform: translate(20px , -251px); //Positions it above logo (L-R , U-D)
     }
 }
-
+.beat-container {
+  background-image: url('/img/home-RfLc.jpg');
+  width: 72px;
+  height: 70px;
+  &:hover {
+    background-image: url('/img/home-ukEL.png');
+    width: 72px;
+    height: 70px;
+  }
+}
 .beat-tooltip {
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -122,10 +149,19 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-      transform: translate(-88px , -265px); //Positions it above logo (L-R , U-D)
+      transform: translate(-88px , -188px); //Positions it above logo (L-R , U-D)
     }
 }
-
+.diver-container {
+  background-image: url('/img/home-jHUl.jpg');
+  width: 322px;
+  height: 70px;
+  &:hover {
+    background-image: url('/img/home-kGn4.png');
+    width: 322px;
+    height: 70px;
+  }
+}
 .diver-tooltip {
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -133,6 +169,6 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-      transform: translate(34px ,-308px); //Positions it above logo (L-R , U-D)
+      transform: translate(34px ,-231px); //Positions it above logo (L-R , U-D)
     }
 }
