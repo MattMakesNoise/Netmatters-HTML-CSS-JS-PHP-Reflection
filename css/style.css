@@ -11,6 +11,11 @@
   outline: none;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url("/Poppins_Font/Poppins-Regular.ttf") format("truetype");
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.4px;
