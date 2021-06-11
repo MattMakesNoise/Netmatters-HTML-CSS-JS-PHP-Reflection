@@ -3001,6 +3001,7 @@ form.search-form::after {
   border: 1px solid #ccc;
   border-radius: 2px;
   margin-bottom: 1rem;
+  padding-left: 15px;
 }
 
 .form-control:focus {
