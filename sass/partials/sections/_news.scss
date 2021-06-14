@@ -51,29 +51,34 @@
 }
 
 .news-cards-wrapper {
+    display: block;
     //All on each row up to medium devices
     @media screen and (max-width: $break-m) {
         @include flexcolumn;
         padding: 50px 15px 25px 15px;
         @include mginlrauto;
+        align-self: center;
     }
     //2 cards on one row for medium devices
     @media screen and (min-width: $break-m) {
         @include flexrow;
         width: 750px;
         @include mginlrauto;
+        align-self: center;
     }
     //2 cards on one row for large devices
     @media screen and (min-width: $break-lg) {
         @include flexrow;
         width: 970px;
         @include mginlrauto;
+        align-self: center;
     }
     //3 cards on one row for xlarge devices
     @media screen and (min-width: $break-xl) {
         @include flexrow;
         width: 1200px;
         @include mginlrauto;
+        align-self: center;
     }
 }
 
@@ -88,17 +93,22 @@
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 2rem;
+        height: 629px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
         margin: 3rem 1rem 3rem 1rem;
+        height: 599px;
+        flex: 1;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-        
+        height: 663px;
+        flex: 1;
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
+        height: 613px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -107,6 +117,7 @@
 }
 
 .card-img-top {
+    height: 363px;
     overflow: hidden;
     position: relative;
     a {
@@ -173,6 +184,7 @@
 .scion-title,
 .notable-title,
 .job-title {
+    height: 24px;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     font-size: 1rem;
@@ -189,6 +201,7 @@
 } 
 
 .news-text {
+    height: 43px;
     font-weight: $light;
     font-size: .85rem;
     margin-bottom: 1.5rem;
@@ -200,15 +213,18 @@
 }
 
 .news-btn {
+    height: 35px;
     @include button-styles;
+    display: inline-block;
     margin: 4px auto 3px 0;
-    padding: 5px 15px;
+    padding: 5px 15px 5px 15px;
     line-height: 35px;
-    // justify-self: flex-end;
+    width: 97px;
 }
 
 //===== CARD FOOTER =====//
 .card-footer {
+    height: 43px;
     display: flex;
     padding-top: 40px;
     margin: auto auto 1rem 2rem;
@@ -224,7 +240,7 @@
         border-bottom: 1px solid $lightgrey;
         width: 125%;
         position: absolute;
-        top: 10px;
+        bottom: 10px;
     }
 }
 

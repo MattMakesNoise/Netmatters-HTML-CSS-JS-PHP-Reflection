@@ -1708,6 +1708,7 @@ form.search-form::after {
   color: 900;
   opacity: 90%;
   font-weight: 400;
+  max-width: 100%;
 }
 
 .card-title:hover,
@@ -2338,6 +2339,10 @@ form.search-form::after {
   background-color: rgba(221, 221, 221, 0.4);
 }
 
+.news-cards-wrapper {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .news-cards-wrapper {
     display: -webkit-box;
@@ -2350,6 +2355,8 @@ form.search-form::after {
     padding: 50px 15px 25px 15px;
     margin-left: auto;
     margin-right: auto;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -2365,6 +2372,8 @@ form.search-form::after {
     width: 750px;
     margin-left: auto;
     margin-right: auto;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -2380,6 +2389,8 @@ form.search-form::after {
     width: 970px;
     margin-left: auto;
     margin-right: auto;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -2395,6 +2406,8 @@ form.search-form::after {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -2417,17 +2430,32 @@ form.search-form::after {
 @media screen and (max-width: 768px) {
   .news-card {
     margin-bottom: 2rem;
+    height: 629px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .news-card {
     margin: 3rem 1rem 3rem 1rem;
+    height: 599px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .news-card {
+    height: 663px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
 @media screen and (min-width: 1260px) {
   .news-card {
+    height: 613px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -2445,6 +2473,7 @@ form.search-form::after {
 }
 
 .card-img-top {
+  height: 363px;
   overflow: hidden;
   position: relative;
 }
@@ -2520,6 +2549,7 @@ form.search-form::after {
 .scion-title,
 .notable-title,
 .job-title {
+  height: 24px;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
   font-size: 1rem;
@@ -2543,6 +2573,7 @@ form.search-form::after {
 }
 
 .news-text {
+  height: 43px;
   font-weight: 300;
   font-size: .85rem;
   margin-bottom: 1.5rem;
@@ -2556,6 +2587,7 @@ form.search-form::after {
 }
 
 .news-btn {
+  height: 35px;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2564,12 +2596,15 @@ form.search-form::after {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
+  display: inline-block;
   margin: 4px auto 3px 0;
-  padding: 5px 15px;
+  padding: 5px 15px 5px 15px;
   line-height: 35px;
+  width: 97px;
 }
 
 .card-footer {
+  height: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2590,7 +2625,7 @@ form.search-form::after {
   border-bottom: 1px solid #ddd;
   width: 125%;
   position: absolute;
-  top: 10px;
+  bottom: 10px;
 }
 
 .posted-by {
