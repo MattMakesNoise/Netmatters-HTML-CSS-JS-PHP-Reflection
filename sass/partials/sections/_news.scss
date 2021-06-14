@@ -87,13 +87,10 @@
     border-radius: 3px;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 2rem;
-        height: 629px;
+        height: 613px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -108,16 +105,12 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-        height: 613px;
+        height: 583px;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 }
 
 .card-img-top {
-    height: 363px;
     overflow: hidden;
     position: relative;
     a {
@@ -184,12 +177,15 @@
 .scion-title,
 .notable-title,
 .job-title {
-    height: 24px;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: $semibold;
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        height: 47px;
+    }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         height: 47px;
@@ -201,7 +197,6 @@
 } 
 
 .news-text {
-    height: 43px;
     font-weight: $light;
     font-size: .85rem;
     margin-bottom: 1.5rem;
@@ -213,34 +208,55 @@
 }
 
 .news-btn {
-    height: 35px;
     @include button-styles;
-    display: inline-block;
+    display: block;
     margin: 4px auto 3px 0;
     padding: 5px 15px 5px 15px;
     line-height: 35px;
-    width: 97px;
 }
 
 //===== CARD FOOTER =====//
 .card-footer {
-    height: 43px;
     display: flex;
-    padding-top: 40px;
-    margin: auto auto 1rem 2rem;
+    max-width: 100%;
     position: relative;
+    //Up to Medium
+    @media screen and (max-width: $break-m) {
+        
+    }
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+    
+    }
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        margin: 0 0 0 2rem;
+        padding-top: 85px;
+        &::before {
+            content: '';
+            border-bottom: 1px solid $lightgrey;
+            width: 90%;
+            position: absolute;
+            top: 50px;
+        }
+    }
+    //Extra Large
+    @media screen and (min-width: $break-xl) {
+        margin: 0 0 0 2rem;
+        padding-top: 40px;
+        &::before {
+            content: '';
+            border-bottom: 1px solid $lightgrey;
+            width: 95%;
+            position: absolute;
+            top: 8px;
+        }
+    }
     img {
         margin-right: 1rem;
         height: auto;
         vertical-align: middle;
         border-radius: 50%;
-    }
-    &::before {
-        content: '';
-        border-bottom: 1px solid $lightgrey;
-        width: 125%;
-        position: absolute;
-        bottom: 10px;
     }
 }
 
@@ -256,6 +272,9 @@
 }
 
 //===== SCION CARD =====//
+.scion-card {
+    display: block;
+}
 .scion-title {
     color: $web;
 }
@@ -270,6 +289,9 @@
 }
 
 //===== NOTABLE CARD =====//
+.notable-card {
+    display: block;
+}
 .notable-title {
     color: $tele;
 }
@@ -287,7 +309,7 @@
 .job-card {
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        display: initial;
+        display: block;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -299,12 +321,13 @@
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
-        display: flex;
+        display: block;
     }
 }
 
 .job-title {
     color: $soft;
+    margin-top: 14px;
 }
 
 .job-btn {
@@ -313,5 +336,31 @@
     &:hover {
         background-color: $soft-dark;
         color: $white;
+    }
+}
+
+//Target IE Specifically
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .news-body {
+        display: inline-block;
+    }
+    
+    .news-btn {
+        //Up to Medium
+        @media screen and (max-width: $break-m) {
+            margin: 4px 81% 3px 0;
+        }
+        //Medium and up
+        @media screen and (min-width: $break-m) {
+            margin: 4px 58% 3px 0;
+        }
+        //Large and Up
+        @media screen and (min-width: $break-lg) {
+            margin: 4px 69% 3px 0;
+        }
+        //Extra Large
+        @media screen and (min-width: $break-xl) {
+            margin: 4px 62% 3px 0;
+        }
     }
 }

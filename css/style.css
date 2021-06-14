@@ -2417,20 +2417,12 @@ form.search-form::after {
   -webkit-box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
           box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
-  padding-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
   .news-card {
     margin-bottom: 2rem;
-    height: 629px;
+    height: 613px;
   }
 }
 
@@ -2455,25 +2447,14 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .news-card {
-    height: 613px;
+    height: 583px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
 .card-img-top {
-  height: 363px;
   overflow: hidden;
   position: relative;
 }
@@ -2549,12 +2530,19 @@ form.search-form::after {
 .scion-title,
 .notable-title,
 .job-title {
-  height: 24px;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
+}
+
+@media screen and (min-width: 992px) {
+  .scion-title,
+  .notable-title,
+  .job-title {
+    height: 47px;
+  }
 }
 
 @media screen and (min-width: 1260px) {
@@ -2573,7 +2561,6 @@ form.search-form::after {
 }
 
 .news-text {
-  height: 43px;
   font-weight: 300;
   font-size: .85rem;
   margin-bottom: 1.5rem;
@@ -2587,7 +2574,6 @@ form.search-form::after {
 }
 
 .news-btn {
-  height: 35px;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2596,21 +2582,46 @@ form.search-form::after {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
-  display: inline-block;
+  display: block;
   margin: 4px auto 3px 0;
   padding: 5px 15px 5px 15px;
   line-height: 35px;
-  width: 97px;
 }
 
 .card-footer {
-  height: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 40px;
-  margin: auto auto 1rem 2rem;
+  max-width: 100%;
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .card-footer {
+    margin: 0 0 0 2rem;
+    padding-top: 85px;
+  }
+  .card-footer::before {
+    content: '';
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    position: absolute;
+    top: 50px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .card-footer {
+    margin: 0 0 0 2rem;
+    padding-top: 40px;
+  }
+  .card-footer::before {
+    content: '';
+    border-bottom: 1px solid #ddd;
+    width: 95%;
+    position: absolute;
+    top: 8px;
+  }
 }
 
 .card-footer img {
@@ -2618,14 +2629,6 @@ form.search-form::after {
   height: auto;
   vertical-align: middle;
   border-radius: 50%;
-}
-
-.card-footer::before {
-  content: '';
-  border-bottom: 1px solid #ddd;
-  width: 125%;
-  position: absolute;
-  bottom: 10px;
 }
 
 .posted-by {
@@ -2637,6 +2640,10 @@ form.search-form::after {
 
 .text-muted {
   color: rgba(0, 0, 0, 0.25);
+}
+
+.scion-card {
+  display: block;
 }
 
 .scion-title {
@@ -2651,6 +2658,10 @@ form.search-form::after {
 .scion-btn:hover {
   background-color: #79539A;
   color: #fff;
+}
+
+.notable-card {
+  display: block;
 }
 
 .notable-title {
@@ -2669,7 +2680,7 @@ form.search-form::after {
 
 @media screen and (max-width: 768px) {
   .job-card {
-    display: initial;
+    display: block;
   }
 }
 
@@ -2687,14 +2698,13 @@ form.search-form::after {
 
 @media screen and (min-width: 1260px) {
   .job-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
 .job-title {
   color: #67809F;
+  margin-top: 14px;
 }
 
 .job-btn {
@@ -2705,6 +2715,36 @@ form.search-form::after {
 .job-btn:hover {
   background-color: #526784;
   color: #fff;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .news-body {
+    display: inline-block;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 768px), screen and (-ms-high-contrast: none) and (max-width: 768px) {
+  .news-btn {
+    margin: 4px 81% 3px 0;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 768px), screen and (-ms-high-contrast: none) and (min-width: 768px) {
+  .news-btn {
+    margin: 4px 58% 3px 0;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
+  .news-btn {
+    margin: 4px 69% 3px 0;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 1260px), screen and (-ms-high-contrast: none) and (min-width: 1260px) {
+  .news-btn {
+    margin: 4px 62% 3px 0;
+  }
 }
 
 /*========== CLIENTS =========*/
@@ -2838,8 +2878,8 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .busseys-tooltip {
-    -webkit-transform: translate(-30px, -267px);
-            transform: translate(-30px, -267px);
+    -webkit-transform: translate(-30px, -188px);
+            transform: translate(-30px, -188px);
   }
 }
 
@@ -2864,8 +2904,8 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .crane-tooltip {
-    -webkit-transform: translate(20px, -327px);
-            transform: translate(20px, -327px);
+    -webkit-transform: translate(20px, -250px);
+            transform: translate(20px, -250px);
   }
 }
 
@@ -2890,8 +2930,8 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .beat-tooltip {
-    -webkit-transform: translate(-90px, -266px);
-            transform: translate(-90px, -266px);
+    -webkit-transform: translate(-90px, -190px);
+            transform: translate(-90px, -190px);
   }
 }
 
@@ -2916,8 +2956,8 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .diver-tooltip {
-    -webkit-transform: translate(30px, -307px);
-            transform: translate(30px, -307px);
+    -webkit-transform: translate(30px, -232px);
+            transform: translate(30px, -232px);
   }
 }
 
