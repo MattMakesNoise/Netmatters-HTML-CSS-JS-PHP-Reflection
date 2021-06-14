@@ -2,7 +2,7 @@
 .about-wrapper {
     background-color: $dark-blue;
     @media screen and (max-width: $break-m) {
-        height: 613px;
+        height: 493px;
     }
     @media screen and (min-width: $break-m) {
         height: 493px !important;
@@ -27,13 +27,12 @@
     @include flexcolumn;
     justify-content: space-between;
     @media screen and (max-width: $break-m) {
-        padding: 50px 15px;
+        padding: 36px 15px 36px 15px;
     }
     @media screen and (min-width: $break-m) {
-        padding: 50px 15px 50px 15px;
+        padding: 36px 15px 36px 15px;
         @include mginlrauto;
         width: 750px;
-        // height: 393px !important;
     }
     @media screen and (min-width: $break-lg) {
         padding: 30px 15px 0px 15px;
@@ -46,25 +45,16 @@
     }
 }
 
-.about-title,
-.about-intro,
-.about-p1,
-.about-p2 {
-    @media screen and (min-width: $break-xl) {
-        width: 50%;
-    }
-}
-
 .about-title {
     font-size: 2.25rem;
     font-weight: $regular;
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        padding-bottom: 4px;
+        padding-bottom: 28px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        padding-bottom: 0;
+        padding-bottom: 28px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -73,6 +63,7 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
+        width: 50%;
     }
 }
 
@@ -82,11 +73,11 @@
     line-height: 1.9;
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        padding-bottom: 10px;
+        padding-bottom: 25px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        padding-bottom: 25px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -95,6 +86,7 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
+        width: 50%;
     }
 }
 
@@ -108,11 +100,11 @@
 .about-p1 {
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        padding-bottom: 12px;
+        padding-bottom: 25px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        padding-bottom: 25px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -121,17 +113,18 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
+        width: 50%;
     }
 }
 
 .about-p2 {
     //Up to Medium
     @media screen and (max-width: $break-m) {
-        padding-bottom: 12px;
+        padding-bottom: 25px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-    
+        padding-bottom: 25px;
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -140,6 +133,7 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
+        width: 50%;
     }
 }
 
@@ -161,3 +155,30 @@
         margin-left: 12px;
     }
 }
+//===== Target IE Specifically =====//
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//     .about {
+//         display: inline-block;
+//         color: $white;
+//         @include flexcolumn;
+//         justify-content: space-between;
+//         @media screen and (max-width: $break-m) {
+//             padding: 50px 15px;
+//         }
+//         @media screen and (min-width: $break-m) {
+//             padding: 50px 15px 50px 15px;
+//             @include mginlrauto;
+//             width: 750px;
+//             // height: 393px !important;
+//         }
+//         @media screen and (min-width: $break-lg) {
+//             padding: 30px 15px 0px 15px;
+//             width: 970px;
+//         }
+//         @media screen and (min-width: $break-xl) {
+//             padding: 30px 15px 0px 15px;
+//             @include mginlrauto;
+//             width: 1200px;
+//         }
+//     }
+// }

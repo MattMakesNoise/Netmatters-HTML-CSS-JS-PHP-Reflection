@@ -111,6 +111,10 @@
   }
 }
 .busseys-tooltip {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+      transform: translate(-65px , -188px); //Positions it above logo (L-R , U-D)
+    }
     //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(-30px , -188px); //Positions it above logo (L-R , U-D)
@@ -146,6 +150,10 @@
   }
 }
 .crane-tooltip {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+      transform: translate(-34px , -250px); //Positions it above logo (L-R , U-D)
+    }
     //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(20px , -250px); //Positions it above logo (L-R , U-D)
@@ -181,6 +189,10 @@
   }
 }
 .beat-tooltip {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+      transform: translate(-102px , -190px); //Positions it above logo (L-R , U-D)
+    }
     //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(-90px , -190px); //Positions it above logo (L-R , U-D)
@@ -217,6 +229,10 @@
   
 }
 .diver-tooltip {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+      transform: translate(-24px , -232px); //Positions it above logo (L-R , U-D)
+    }
     //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(30px , -232px); //Positions it above logo (L-R , U-D)
