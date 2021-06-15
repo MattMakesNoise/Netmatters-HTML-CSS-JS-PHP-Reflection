@@ -18,7 +18,6 @@
         height: 209px;
     }
 }
-
 .nav-bar { //Wraps Header and slider/cards section
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -41,7 +40,6 @@
         justify-content: space-evenly;
     }
 }
-
 //========== HEADER SECTION ==========//
 .header { //Wraps the standard elements but not the cards/slider section
     //Up to Medium
@@ -81,42 +79,6 @@
         height: 110px;
     }
 }
-
-/*=== FLEX GROW (MAX) - FLEX SHRINK (MIN) - FLEX BASIS (IDEAL SIZE)             =====
-===== GROW (MAX) - 0 is the default and allows the container to grow with the   =====
-=====              content inside it. 1 will make it take up all of the         =====
-=====              available space. It's done in fractions (essentially) so if  =====
-=====              there's two divs and one has a grow of 1 and the other of 2  =====
-=====              the second one will take up twice the available space of the =====
-=====              other.                                                       =====
-===== SHRINK (MIN) - 1 is the default and this means that it will not shrink to =====
-=====                smaller than its content. 0 means that it won't shrink at  =====
-=====                all. Applying to multiple items divides up in the same way =====
-=====                as grow.                                                   =====
-===== BASIS (IDEAL) - This works best when used alongside grow and shrink. EG...=====
-=====                 FLEX: 1 0 200px;                                          =====
-=====                 If you have one element that has a flex-basis of 200px,   =====
-=====                 flex-grow of 1, and flex-shrink of 0, this element will   =====
-=====                 be at minimum 200px wide, but it will be allowed to grow  =====
-=====                 if there is extra space. In this case, you can think of   ===== 
-=====                 the flex-basis as being a minimum width.                  =====
-=====                 FLEX: 0 1 200px;                                          =====
-=====                 Let’s consider the opposite case. Let’s set a flex-basis  =====
-=====                 of 200px again, but let’s only set a flex-shrink of 1,    =====
-=====                 flex-grow will be 0. Here we will have an element that is =====
-=====                 200px at it’s largest, but it’s allowed to be smaller.    =====
-=====                 Here flex-basis is acting like a maximum width.           ===== 
-=====                 An element that has a flex shrink value of 0, a flex grow =====
-=====                 value of 0, but has a flex basis pixel value, will only   =====
-=====                 ever be that pixel value size. It won’t shrink and it     =====
-=====                 won’t grow. This would be the same as setting a pixel     =====
-=====                 value to the width property.                              =====
-=====                 FLEX: 1 0 auto;                                           =====
-=====                 Auto is a cool keyword that lets us tell an element to be =====
-=====                 the size of its content. This is useful when we don’t want=====
-=====                 to give the element a min size or max size.               ===== 
-===================================================================================*/
-
 //===== LOGO STYLING =====//
 .logo-wrapper {
     //Up to Medium
@@ -148,7 +110,6 @@
         order: 1;
     }
 }
-
 .logo {
     width: 100%;
     height: auto;
@@ -160,18 +121,10 @@
         height: auto;
         vertical-align: middle;
     }
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        
-    }
     //Medium and up
     @media screen and (min-width: $break-m) {
         display: table;
         table-layout: fixed;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -193,16 +146,7 @@
     @media screen and (min-width: $break-m) {
         display: none;
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-        display: none;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        display: none;
-    }
 }
-
 .rotate {
     transform: rotate(315deg);
 }
@@ -323,7 +267,6 @@
         order: 5;
     }
 }
-
 .burger {
     background-color: $dark-blue;
     border: 1px solid transparent;
@@ -347,7 +290,6 @@
         background-color: $darker-blue;
     }
 }
-
 .burger span { //burger icon
     position: relative;
     display: inline-block;
@@ -407,14 +349,9 @@
         order: 4;
         width: 301px;
     }
-}
-  
+} 
 form.search-form {
     width: 100%;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        
-    }
     input[type=text] { /* Style the search field */
         font-size: 14px;
         float: left;
@@ -502,20 +439,8 @@ form.search-form {
             background: $btn-grey;
         }
         &:hover {
-            //Up to Medium
-            @media screen and (max-width: $break-m) {
-                
-            }
             //Medium and up
             @media screen and (min-width: $break-m) {
-                background: $btn-grey-hover;
-            }
-            //Large and Up
-            @media screen and (min-width: $break-lg) {
-                background: $btn-grey-hover;
-            }
-            //Extra Large
-            @media screen and (min-width: $break-xl) {
                 background: $btn-grey-hover;
             }
         }
@@ -571,7 +496,6 @@ form.search-form {
         }
     }
 }
-
 .navcards-container {
     //Large and Up
     @media screen and (min-width: $break-lg) {
@@ -588,13 +512,11 @@ form.search-form {
         @include mginlrauto;
     }
 }
-
 .menu-main { // The initial UL that contains the six product cards.
     @include flexrow;
     border-right: 1px solid rgba(0,0,0,.25);
     border-left: 1px solid hsla(0, 0%, 100%, 0.1);
 }
-
 .menu-sub { // Collective selecter for all dropdown menus.
     position: absolute;
     left: 0; // Aligns each dropdown with the first LI (WEB).
@@ -629,7 +551,6 @@ form.search-form {
         }
     }
 }
-
 .web-main,
 .it-main,
 .telecoms-main,
@@ -691,7 +612,6 @@ form.search-form {
         }
     }
 }
-    
 .web-dropdown {
         background: $web-dark;
         z-index: 10;
@@ -712,7 +632,6 @@ form.search-form {
         right: 0;
     }
 }
-
 .it-main {
     .fa-desktop {
         color: $it-dark;
@@ -730,7 +649,6 @@ form.search-form {
         }
     }
 }
-    
 .it-dropdown {
         background: $it-dark;
         z-index: 10;
@@ -751,7 +669,6 @@ form.search-form {
         right: 0;
     }
 }
-
 .telecoms-main {
     .fa-phone-volume {
         color: $tele-dark;
@@ -769,7 +686,6 @@ form.search-form {
         }
     }
 }
-
 .telecoms-dropdown {
         background: $tele-dark;
         z-index: 10;
@@ -790,7 +706,6 @@ form.search-form {
         right: 0;
     }
 }
-
 .software-main {
     .fa-th {
         color: $soft-dark;
@@ -807,8 +722,7 @@ form.search-form {
             color: $white;
         }
     }
-}
-    
+}   
 .software-dropdown {
         background: $soft-dark;
         z-index: 10;
@@ -829,7 +743,6 @@ form.search-form {
         right: 0;
     }
 }
-
 .digital-main {
     .fa-signal {
         color: $market-dark;
@@ -847,7 +760,6 @@ form.search-form {
         }
     }
 }
-    
 .digital-dropdown {
         background: $market-dark;
         z-index: 10;
@@ -868,7 +780,6 @@ form.search-form {
         right: 0;
     }
 }
-
 .security-main {
     .fa-shield-virus {
         color: $cyber-dark;
@@ -886,7 +797,6 @@ form.search-form {
         }
     }
 }
-    
 .security-dropdown {
         background: $cyber-dark;
         z-index: 10;
@@ -908,8 +818,3 @@ form.search-form {
     }
 }
 //========== CARDS SECTION ENDS ==========//
-
-//===== Target IE Specifically =====//
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    
-}

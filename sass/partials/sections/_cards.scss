@@ -23,7 +23,6 @@
         width: 1200px;
     }
 }
-
 .column {
     @include flexcolumn;
     flex-basis: 100%;
@@ -31,23 +30,11 @@
 }
 // First Three Cards
 .row-one {
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        // margin-top: 20px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        
-    }
     //Large and Up
     @media screen and (min-width: $break-lg) {
         @include flexrow;
         
     }   
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        
-    }
 }
 //Last Four Cards Container
 .row-double {
@@ -88,7 +75,6 @@
         margin-top: 10px;
     }
 }
-
 //========== CARD STYLING ===========//
 .card {
     @include flexcolumn;
@@ -108,30 +94,23 @@
         margin-top: 30px;
         padding: 30px;
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         margin-top: 0;
         margin-right: 2rem;
     }
 }
-
 .icon-border {
     border: 1px solid transparent;
     border-radius: 50%;
     text-align: center;
     padding: 1rem;
 }
-
 .card-icon {
     color: $white;
     text-align: center;
     font-size: 1.25rem;
 }
-
 .card-title,
 .card-text {
     text-align: center;
@@ -143,7 +122,6 @@
         color: $white;
     }
 }
-
 .card-title {
     background-image: linear-gradient(black, black);
     background-repeat: no-repeat;
@@ -154,13 +132,11 @@
     margin-top: 1rem;
     font-weight: $regular;
 }
-
 .card-text {
     font-size: 0.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
 .card-btn {
     display: inline-block;
     margin: auto auto 0 auto;
@@ -176,21 +152,9 @@
 }
     /*========== SOFT CARD =======*/
     .soft-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
         //Large and Up
         @media screen and (min-width: $break-lg) {
             margin-right: 16px;
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $soft;
@@ -224,22 +188,10 @@
     }
     /*========== IT CARD =========*/
     .it-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
         //Large and Up
         @media screen and (min-width: $break-lg) {
             margin-left: 16px;
             margin-right: 16px;
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $it;
@@ -273,21 +225,9 @@
     }
     /*========== MARKET CARD =====*/
     .market-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            
-        }
         //Large and Up
         @media screen and (min-width: $break-lg) {
             margin-left: 16px;
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $market;
@@ -321,21 +261,9 @@
     }
     /*========== TELE CARD =======*/
     .tele-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
         //Medium and up
         @media screen and (min-width: $break-m) {
             margin-right: 16px;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $tele;
@@ -369,21 +297,9 @@
     }
     /*========== WEB CARD ========*/
     .web-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
         //Medium and up
         @media screen and (min-width: $break-m) {
             margin-left: 16px;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $web;
@@ -417,21 +333,9 @@
     }
     /*========== CYBER CARD ======*/
     .cyber-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
         //Medium and up
         @media screen and (min-width: $break-m) {
             margin-right: 16px;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $cyber;
@@ -465,21 +369,9 @@
     }
     /*========== TRAIN CARD ======*/
     .train-card {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            
-        }
         //Medium and up
         @media screen and (min-width: $break-m) {
             margin-left: 16px;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-        
         }
         .icon-border {
             background-color: $web;

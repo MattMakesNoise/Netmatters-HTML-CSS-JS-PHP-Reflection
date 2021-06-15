@@ -3,7 +3,6 @@
 .news-wrapper { // Wraps the entire section. Title and cards themselves.
     display: block;
 }
-
 .news-title { // Wraps the title section
     height: 104px;
     //Up to Medium
@@ -27,7 +26,6 @@
         @include mginlrauto;
     }
 }
-
 .news-title-text {
     padding: 40px 0;
     font-size: 1.25rem;
@@ -42,14 +40,11 @@
         width: 15%;
         padding-top: 28px;
     }
-    
 }
-
 //========== CARDS SECTION ==========//
 .news {
     background-color: rgba(221, 221, 221, .4);
 }
-
 .news-cards-wrapper {
     display: block;
     //All on each row up to medium devices
@@ -81,7 +76,6 @@
         align-self: center;
     }
 }
-
 .news-card {
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -109,7 +103,6 @@
         flex: 1;
     }
 }
-
 .card-img-top {
     overflow: hidden;
     position: relative;
@@ -149,31 +142,26 @@
         }
     }
 }
-
 .scion {
     a {
         background-color: $web;
     }
 }
-
 .notable {
     a {
         background-color: $tele;
     }
 }
-
 .job {
     a {
         background-color: $soft;
     }
 }
-
 .news-body {
     padding: 1rem 1rem;
     @include flexcolumn;
     margin-left: 1rem;
 }
-
 .scion-title,
 .notable-title,
 .job-title {
@@ -199,7 +187,6 @@
         text-decoration: underline;
     }
 } 
-
 .news-text {
     font-weight: $light;
     font-size: .85rem;
@@ -210,7 +197,6 @@
         height: 66px;
     }
 }
-
 .news-btn {
     @include button-styles;
     display: block;
@@ -233,7 +219,6 @@
         margin: 4px auto 3px 0;
     }
 }
-
 //===== CARD FOOTER =====//
 .card-footer {
     display: flex;
@@ -294,18 +279,15 @@
         border-radius: 50%;
     }
 }
-
 .posted-by {
     font-weight: $semibold;
     color: $dark-blue;
     line-height: 1.375rem;
     font-size: .875rem;
 }
-
 .text-muted {
     color: $black-25;
 }
-
 //===== SCION CARD =====//
 .scion-card {
     display: block;
@@ -313,7 +295,6 @@
 .scion-title {
     color: $web;
 }
-
 .scion-btn {
     background-color: $web;
     color: $white;
@@ -322,7 +303,6 @@
         color: $white;
     }
 }
-
 //===== NOTABLE CARD =====//
 .notable-card {
     display: block;
@@ -330,7 +310,6 @@
 .notable-title {
     color: $tele;
 }
-
 .notable-btn {
     background-color: $tele;
     color: $white;
@@ -339,7 +318,6 @@
         color: $white;
     }
 }
-
 //===== JOB CARD =====//
 .job-card {
     //Up to Medium
@@ -359,12 +337,10 @@
         display: block;
     }
 }
-
 .job-title {
     color: $soft;
     margin-top: 14px;
 }
-
 .job-btn {
     background-color: $soft;
     color: $white;
@@ -373,7 +349,6 @@
         color: $white;
     }
 }
-
 //===== Target IE Specifically =====//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .news-body {

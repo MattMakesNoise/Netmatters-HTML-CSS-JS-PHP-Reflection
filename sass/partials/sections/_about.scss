@@ -21,7 +21,6 @@
         background-size: auto 100%;
     }
 }
-
 .about {
     color: $white;
     @include flexcolumn;
@@ -44,7 +43,6 @@
         width: 1200px;
     }
 }
-
 .about-title {
     font-size: 2.25rem;
     font-weight: $regular;
@@ -66,7 +64,6 @@
         width: 50%;
     }
 }
-
 .about-intro {
     font-size: 1rem;
     font-weight: $semibold;
@@ -89,14 +86,12 @@
         width: 50%;
     }
 }
-
 .about-p1,
 .about-p2 {
     font-size: 1rem;
     font-weight: $regular;
     line-height: 1.875rem;
 }
-
 .about-p1 {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -116,7 +111,6 @@
         width: 50%;
     }
 }
-
 .about-p2 {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -136,7 +130,6 @@
         width: 50%;
     }
 }
-
 .culture-btn {
     height: auto;
     font-size: 1rem;

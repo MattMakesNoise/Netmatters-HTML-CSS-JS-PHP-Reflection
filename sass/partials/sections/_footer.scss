@@ -2,24 +2,7 @@
 .footer-wrapper { // Wraps all of it
     display: block;
     background-color: $dark-blue;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        // height: 1046px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-    
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-    
-    }
 }
-
 .footer { // Inner container wrapping the four sections
     color: $white;
     //Up to Medium
@@ -74,24 +57,11 @@
         }
     }
 }
-
 //========== FOOTER ABOUT ==========//
 .footer-about {
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 30px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-    
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-    
     }
 }
 .footer-heading {
@@ -106,17 +76,11 @@
     @media screen and (min-width: $break-m) {
         margin-bottom: 1.5rem;
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 10px;
     }
-    
 }
-
 .footer-links {
     @include flexcolumn;
     font-size: 13px;
@@ -137,7 +101,6 @@
         margin-bottom: 30px;
     }
 }
-
 .footer-link {
     text-decoration: none;
     color: $white;
@@ -169,7 +132,6 @@
         margin-bottom: 30px;
     }
 }
-
 address {
     font-style: normal;
     font-size: 13px;
@@ -213,7 +175,6 @@ address {
 
     }
 }
-
 .socials {
     @include flexcolumn;
     //Up to Medium
@@ -233,13 +194,11 @@ address {
         margin-top: -24px;
     }
 }
-
 .socials-top,
 .socials-bottom {
     @include flexrow;
     justify-content: space-between;
 }
-
 .social-wrapper { //Creates the background boxes for the icons
     background-color: rgba(0,0,0,.25);
     a {
@@ -267,10 +226,6 @@ address {
         flex: 1 0 157.5px;
         height: 55px;
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
-    }
     //Extra Large
     @media screen and (min-width: $break-xl) {
         flex: 1 0 120px;
@@ -289,7 +244,6 @@ address {
         top: 6px;
     }
 }
-
 .twitter {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -300,10 +254,6 @@ address {
     @media screen and (min-width: $break-m) {
         flex: 1 0 157.5px;
         height: 55px;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -322,7 +272,6 @@ address {
         top: 6px;
     }
 }
-
 .insta {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -333,10 +282,6 @@ address {
     @media screen and (min-width: $break-m) {
         flex: 1 0 157.5px;
         height: 55px;   
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -356,7 +301,6 @@ address {
         top: 6px;
     }
 } 
-
 .linkedin {
     //Up to Medium
     @media screen and (max-width: $break-m) {
@@ -367,10 +311,6 @@ address {
     @media screen and (min-width: $break-m) {
         flex: 1 0 157.5px;
         height: 55px;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-
     }
     //Extra Large
     @media screen and (min-width: $break-xl) {
@@ -390,11 +330,9 @@ address {
         top: 6px;
     }
 }
-
 .sitemap-wrapper {
     margin-top: 1rem;
 }
-
 .copyright {
     font-size: .75rem;
 }

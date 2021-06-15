@@ -44,7 +44,6 @@
       @include mginlrauto;
     }
 }
-
 .client-title {
     font-weight: $regular;
     font-size: 0.875rem;
@@ -57,7 +56,6 @@
         border-bottom: 3px solid $white; //Creates the border
     }
 }
-
 .show {
     .tooltip {
         @include tooltip-main;
@@ -84,7 +82,6 @@
         pointer-events: auto;
     }
 }
-
 .busseys-container {
   //Medium and up
   @media screen and (min-width: $break-m) {
