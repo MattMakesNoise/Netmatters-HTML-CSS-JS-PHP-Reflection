@@ -163,6 +163,7 @@
     padding: 5px 15px;
     &:hover {
         background-color: $btn-blue-hover;
+        cursor: pointer;
     }
     a {
         @include link-styles;
@@ -208,6 +209,7 @@
     padding: 5px 15px;
     &:hover {
         background-color: $btn-grey-hover;
+        cursor: pointer;
     }
     a {
         @include link-styles;
@@ -288,6 +290,7 @@
     }
     &:hover {
         background-color: $darker-blue;
+        cursor: pointer;
     }
 }
 .burger span { //burger icon
@@ -397,6 +400,7 @@ form.search-form {
             border-radius: 0;
             display: inline-block;
             border: 1px solid #ccc;
+            height: 56px;
         }
     }
     button { /* Style the submit button */
@@ -437,6 +441,8 @@ form.search-form {
             width: 20%;
             height: 56px;
             background: $btn-grey;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
         }
         &:hover {
             //Medium and up
@@ -449,7 +455,7 @@ form.search-form {
             line-height: 1;
             width: 23px;
             height: 46px;
-            padding: 9px 0 3px 0;
+            padding: 12px 2px 3px 0;
         }
     }
     &::after { /* Clear floats */
@@ -534,7 +540,7 @@ form.search-form {
     li {
         text-transform: uppercase;
         a {
-            font-size: 0.8125rem;
+            font-size: 1.1rem;
             white-space: nowrap;
             line-height: 2.813rem;
         }

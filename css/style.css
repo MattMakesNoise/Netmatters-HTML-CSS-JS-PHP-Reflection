@@ -300,6 +300,7 @@ body {
 
 .support-wrapper:hover {
   background-color: #2A6EC6;
+  cursor: pointer;
 }
 
 .support-wrapper a {
@@ -381,6 +382,7 @@ body {
 
 .contact-wrapper:hover {
   background-color: #84858F;
+  cursor: pointer;
 }
 
 .contact-wrapper a {
@@ -516,6 +518,7 @@ body {
 
 .burger:hover {
   background-color: #262834;
+  cursor: pointer;
 }
 
 .burger span {
@@ -651,6 +654,7 @@ form.search-form input[type=text] {
     border-radius: 0;
     display: inline-block;
     border: 1px solid #ccc;
+    height: 56px;
   }
 }
 
@@ -702,6 +706,8 @@ form.search-form button {
     width: 20%;
     height: 56px;
     background: #999AA2;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
   }
 }
 
@@ -716,7 +722,7 @@ form.search-form button i {
   line-height: 1;
   width: 23px;
   height: 46px;
-  padding: 9px 0 3px 0;
+  padding: 12px 2px 3px 0;
 }
 
 form.search-form::after {
@@ -831,7 +837,7 @@ form.search-form::after {
 }
 
 .menu-sub li a {
-  font-size: 0.8125rem;
+  font-size: 1.1rem;
   white-space: nowrap;
   line-height: 2.813rem;
 }
@@ -1806,7 +1812,7 @@ form.search-form::after {
 }
 
 .market-card:hover {
-  background-color: #25A25A;
+  background-color: #2ECC71;
 }
 
 .market-card:hover .icon-border {
