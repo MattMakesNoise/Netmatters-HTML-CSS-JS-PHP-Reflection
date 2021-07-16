@@ -1604,6 +1604,11 @@ form.search-form::after {
   }
 }
 
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1649,6 +1654,9 @@ form.search-form::after {
   border-radius: 50%;
   text-align: center;
   padding: 1rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
 }
 
 .card-icon {
@@ -1660,7 +1668,6 @@ form.search-form::after {
 .card-title,
 .card-text {
   text-align: center;
-  color: 900;
   opacity: 90%;
   font-weight: 400;
   max-width: 100%;
@@ -1722,6 +1729,7 @@ form.search-form::after {
 
 .soft-card:hover {
   background-color: #526784;
+  cursor: pointer;
 }
 
 .soft-card:hover .icon-border {
@@ -1768,6 +1776,7 @@ form.search-form::after {
 
 .it-card:hover {
   background-color: #286ABD;
+  cursor: pointer;
 }
 
 .it-card:hover .icon-border {
@@ -1813,6 +1822,7 @@ form.search-form::after {
 
 .market-card:hover {
   background-color: #2ECC71;
+  cursor: pointer;
 }
 
 .market-card:hover .icon-border {
@@ -1858,6 +1868,7 @@ form.search-form::after {
 
 .tele-card:hover {
   background-color: #BC2C28;
+  cursor: pointer;
 }
 
 .tele-card:hover .icon-border {
@@ -1903,6 +1914,7 @@ form.search-form::after {
 
 .web-card:hover {
   background-color: #79539A;
+  cursor: pointer;
 }
 
 .web-card:hover .icon-border {
@@ -1948,6 +1960,7 @@ form.search-form::after {
 
 .cyber-card:hover {
   background-color: #DE093F;
+  cursor: pointer;
 }
 
 .cyber-card:hover .icon-border {
@@ -1993,6 +2006,7 @@ form.search-form::after {
 
 .train-card:hover {
   background-color: #926FB1;
+  cursor: pointer;
 }
 
 .train-card:hover .icon-border {
@@ -2338,7 +2352,7 @@ form.search-form::after {
   content: ' ';
   display: block;
   border-bottom: 5px solid #333645;
-  width: 15%;
+  width: 10%;
   padding-top: 28px;
 }
 
@@ -2461,9 +2475,25 @@ form.search-form::after {
   }
 }
 
+.news-card .news-card-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .card-img-top {
-  overflow: hidden;
+  overflow: hidden !important;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .card-img-top a {
@@ -2485,7 +2515,7 @@ form.search-form::after {
 }
 
 .card-img-top img {
-  height: 100%;
+  height: auto;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -2705,7 +2735,7 @@ form.search-form::after {
 }
 
 .text-muted {
-  color: rgba(0, 0, 0, 0.25);
+  color: #666;
 }
 
 .scion-card {
@@ -3538,21 +3568,17 @@ form.search-form::after {
 
 .footer {
   color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 47px 15px 43px 15px;
-  }
+  padding: 47px 15px 43px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -3563,15 +3589,12 @@ form.search-form::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 47px 15px 43px 15px;
-  }
-  .footer .footer-about,
-  .footer .footer-wymondham,
-  .footer .footer-gorleston,
-  .footer .footer-socials {
-    width: 50%;
   }
 }
 
@@ -3590,12 +3613,6 @@ form.search-form::after {
     margin-left: auto;
     margin-right: auto;
     padding: 47px 15px 43px 15px;
-  }
-  .footer .footer-about,
-  .footer .footer-wymondham,
-  .footer .footer-gorleston,
-  .footer .footer-socials {
-    width: 50%;
   }
 }
 
@@ -3627,8 +3644,29 @@ form.search-form::after {
   }
 }
 
+.footer .footer-about-services {
+  margin-left: -2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-about-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer-about {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-services {
     margin-bottom: 30px;
   }
 }
@@ -3704,6 +3742,62 @@ form.search-form::after {
   color: #fff;
 }
 
+.footer-addresses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-addresses {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-cambridge {
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-cambridge {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer-cambridge {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .footer-cambridge {
+    margin-bottom: 30px;
+  }
+}
+
+address {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.25rem;
+}
+
+address a {
+  margin: 1rem 0;
+}
+
 @media screen and (max-width: 768px) {
   .footer-wymondham {
     margin-bottom: 45px;
@@ -3766,6 +3860,25 @@ address a {
   }
 }
 
+.footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-socials {
+    width: 100%;
+  }
+  .footer-socials p {
+    display: inline-block;
+  }
+}
+
 .footer-socials a,
 .footer-socials p {
   font-size: 0.8125rem;
@@ -3776,69 +3889,17 @@ address a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (max-width: 768px) {
-  .socials {
-    margin-top: -24px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .socials {
-    margin-top: -24px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .socials {
-    margin-top: -24px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .socials {
-    margin-top: -24px;
-  }
-}
-
-.socials-top,
-.socials-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: .5rem;
 }
 
 .social-wrapper {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.social-wrapper a {
-  line-height: 3.438rem;
-  text-align: center;
-}
-
-.social-wrapper i {
-  text-align: center;
-  color: #fff;
-  font-size: 1.75rem;
-  font-weight: 400;
-}
-
-.facebook {
-  margin-top: 30px;
-  margin-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3850,199 +3911,74 @@ address a {
           align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .facebook {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 211.5px;
-            flex: 1 0 211.5px;
-    height: 55px;
-  }
+.social-wrapper a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 400;
 }
 
-@media screen and (min-width: 768px) {
-  .facebook {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 157.5px;
-            flex: 1 0 157.5px;
-    height: 55px;
-  }
+.social-wrapper:hover {
+  border-radius: 50%;
 }
 
-@media screen and (min-width: 1260px) {
-  .facebook {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 120px;
-            flex: 1 0 120px;
-    height: 55px;
-  }
+.facebook {
+  padding: .5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .facebook:hover {
   background-color: #43609C;
 }
 
-.facebook i {
-  position: relative;
-  top: 6px;
-}
-
 .twitter {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .twitter {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 211.5px;
-            flex: 1 0 211.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .twitter {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 157.5px;
-            flex: 1 0 157.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .twitter {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 120px;
-            flex: 1 0 120px;
-    height: 55px;
-  }
+  padding: .5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .twitter:hover {
   background-color: #55acee;
 }
 
-.twitter i {
-  position: relative;
-  top: 6px;
-}
-
 .insta {
-  margin-top: 30px;
-  margin-right: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .insta {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 211.5px;
-            flex: 1 0 211.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .insta {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 157.5px;
-            flex: 1 0 157.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .insta {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 120px;
-            flex: 1 0 120px;
-    height: 55px;
-  }
+  padding: .5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .insta:hover {
   background-color: #DD2A7B;
 }
 
-.insta i {
-  position: relative;
-  top: 6px;
-}
-
 .linkedin {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .linkedin {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 211.5px;
-            flex: 1 0 211.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .linkedin {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 157.5px;
-            flex: 1 0 157.5px;
-    height: 55px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .linkedin {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 120px;
-            flex: 1 0 120px;
-    height: 55px;
-  }
+  padding: .5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .linkedin:hover {
   background-color: #0072B1;
 }
 
-.linkedin i {
-  position: relative;
-  top: 6px;
-}
-
 .sitemap-wrapper {
-  margin-top: 1rem;
+  margin-top: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: .4px;
 }
 
-.copyright {
-  font-size: .75rem;
+.sitemap-wrapper span {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: .7rem;
+}
+
+.sitemap-wrapper .copyright {
+  font-size: .8125rem;
 }
 
 /*========== AWARDS ======*/

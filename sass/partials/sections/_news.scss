@@ -37,7 +37,7 @@
         content: ' ';
         display: block;
         border-bottom: 5px solid $dark-blue;
-        width: 15%;
+        width: 10%;
         padding-top: 28px;
     }
 }
@@ -102,10 +102,16 @@
         height: 583px;
         flex: 1;
     }
+    .news-card-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 .card-img-top {
-    overflow: hidden;
+    overflow: hidden !important;
     position: relative;
+    flex: 1 0 auto;
     a {
         position: absolute;
         right: 0;
@@ -123,7 +129,7 @@
         }
     }
     img {
-        height: 100%;
+        height: auto;
         width: 100%;
         object-fit: contain;
         transition: all .25s ease-in-out;
@@ -286,7 +292,7 @@
     font-size: .875rem;
 }
 .text-muted {
-    color: $black-25;
+    color: $grey-text;
 }
 //===== SCION CARD =====//
 .scion-card {

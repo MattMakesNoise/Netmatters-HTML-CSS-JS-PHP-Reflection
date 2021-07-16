@@ -76,6 +76,10 @@
     }
 }
 //========== CARD STYLING ===========//
+.card-link {
+    text-decoration: none;
+    color: #000;
+}
 .card {
     @include flexcolumn;
     align-items: center;
@@ -105,6 +109,9 @@
     border-radius: 50%;
     text-align: center;
     padding: 1rem;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
 }
 .card-icon {
     color: $white;
@@ -114,7 +121,6 @@
 .card-title,
 .card-text {
     text-align: center;
-    color: $black;
     opacity: 90%;
     font-weight: $regular;
     max-width: 100%;
@@ -166,6 +172,7 @@
         }
         &:hover {
             background-color: $soft-dark;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -203,6 +210,7 @@
         }
         &:hover {
             background-color: $it-dark;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -239,6 +247,7 @@
         }
         &:hover {
             background-color: $market;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -275,6 +284,7 @@
         }
         &:hover {
             background-color: $tele-dark;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -311,6 +321,7 @@
         }
         &:hover {
             background-color: $web-dark;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -347,6 +358,7 @@
         }
         &:hover {
             background-color: $cyber-dark;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
@@ -383,6 +395,7 @@
         }
         &:hover {
             background-color: $web;
+            cursor: pointer;
             .icon-border {
                 background-color: white;
             }
