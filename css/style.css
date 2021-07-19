@@ -841,7 +841,6 @@ form.search-form::after {
 .menu-sub {
   position: absolute;
   left: 0;
-  width: 100%;
   height: 40px;
   display: none;
 }
@@ -877,8 +876,8 @@ form.search-form::after {
 }
 
 .menu-sub li:not(:last-child) a {
-  text-align: left;
   display: block;
+  text-align: left;
 }
 
 .menu-sub li:not(:last-child) a {
@@ -887,8 +886,7 @@ form.search-form::after {
 
 .menu-sub li:not(:last-child) a::after {
   content: '-';
-  display: inline-block;
-  text-align: center;
+  padding-left: 38px;
 }
 
 .web-main,

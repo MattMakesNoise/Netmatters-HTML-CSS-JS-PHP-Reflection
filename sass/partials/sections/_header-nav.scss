@@ -540,7 +540,7 @@ form.search-form {
 .menu-sub { // Collective selecter for all dropdown menus.
     position: absolute;
     left: 0; // Aligns each dropdown with the first LI (WEB).
-    width: 100%; // Makes dropdown as large as it's containing UL.
+    // width: 100%; // Makes dropdown as large as it's containing UL.
     height: 40px;
     display: none; //Stops the dropdown appearing unless hovered over.
     ul {
@@ -562,15 +562,15 @@ form.search-form {
             }
         }
         &:not(:last-child) a {
-            text-align: left;
             display: block;
+            text-align: left;
         }
         &:not(:last-child) a { 
             padding-right: 30px;
             &::after { //Adds the dashes after each dropdown item.
                 content: '-';
-                display: inline-block;
-                text-align: center;
+                // float: right;
+                padding-left: 38px;
             }
         }
     }
