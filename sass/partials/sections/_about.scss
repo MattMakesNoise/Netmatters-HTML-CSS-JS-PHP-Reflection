@@ -1,8 +1,15 @@
 /*========== ABOUT ===========*/
 .about-wrapper {
     background-color: $dark-blue;
-    @media screen and (max-width: $break-xs) {
-        height: 850px !important;
+    height: 100vh !important;
+    @media screen and (min-width: 375px) {
+        height: 85vh !important;
+    }
+    @media screen and (min-width: 425px) {
+        height: 82vh !important;
+    }
+    @media screen and (min-width: $break-xs) {
+        height: 700px !important;
     }
     @media screen and (max-width: $break-m) {
         height: 493px;

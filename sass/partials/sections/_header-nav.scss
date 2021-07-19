@@ -31,6 +31,7 @@
     @media screen and (min-width: $break-m) {
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
@@ -440,7 +441,7 @@ form.search-form {
             width: 100%;
             height: 100%;
             background: $btn-grey;
-            padding: 6px 16px 5px 0px;
+            padding: 8px 16px 2px 0px;
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
@@ -553,9 +554,12 @@ form.search-form {
     li {
         text-transform: uppercase;
         a {
-            font-size: 1.1rem;
+            font-size: 13px;
             white-space: nowrap;
             line-height: 2.813rem;
+            @media screen and (min-width: $break-xl){
+                font-size: 16px;
+            }
         }
         &:not(:last-child) a {
             text-align: left;
@@ -565,7 +569,8 @@ form.search-form {
             padding-right: 30px;
             &::after { //Adds the dashes after each dropdown item.
                 content: '-';
-                padding-left: 30px;
+                display: inline-block;
+                text-align: center;
             }
         }
     }

@@ -74,6 +74,7 @@ body {
   .nav-bar {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
   }
 }
 
@@ -724,7 +725,7 @@ form.search-form button {
     width: 100%;
     height: 100%;
     background: #999AA2;
-    padding: 6px 16px 5px 0px;
+    padding: 8px 16px 2px 0px;
   }
 }
 
@@ -864,9 +865,15 @@ form.search-form::after {
 }
 
 .menu-sub li a {
-  font-size: 1.1rem;
+  font-size: 13px;
   white-space: nowrap;
   line-height: 2.813rem;
+}
+
+@media screen and (min-width: 1260px) {
+  .menu-sub li a {
+    font-size: 16px;
+  }
 }
 
 .menu-sub li:not(:last-child) a {
@@ -880,7 +887,8 @@ form.search-form::after {
 
 .menu-sub li:not(:last-child) a::after {
   content: '-';
-  padding-left: 30px;
+  display: inline-block;
+  text-align: center;
 }
 
 .web-main,
@@ -2054,11 +2062,24 @@ form.search-form::after {
 /*========== ABOUT ===========*/
 .about-wrapper {
   background-color: #333645;
+  height: 100vh !important;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 375px) {
   .about-wrapper {
-    height: 850px !important;
+    height: 85vh !important;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .about-wrapper {
+    height: 82vh !important;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .about-wrapper {
+    height: 700px !important;
   }
 }
 
@@ -2376,7 +2397,7 @@ form.search-form::after {
   content: ' ';
   display: block;
   border-bottom: 5px solid #333645;
-  width: 10%;
+  width: 70px;
   padding-top: 28px;
 }
 
@@ -2415,6 +2436,7 @@ form.search-form::after {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 750px;
+    padding: 20px 15px 25px 15px;
     margin-left: auto;
     margin-right: auto;
     -ms-flex-item-align: center;
@@ -2473,7 +2495,7 @@ form.search-form::after {
 
 @media screen and (min-width: 768px) {
   .news-card {
-    margin: 3rem 1rem 3rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
     height: 569px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -2512,12 +2534,14 @@ form.search-form::after {
           justify-content: space-between;
 }
 
+.img-wrap {
+  overflow: hidden;
+  max-height: 100%;
+}
+
 .card-img-top {
-  overflow: hidden !important;
+  overflow: clip !important;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .card-img-top a {
@@ -2546,6 +2570,7 @@ form.search-form::after {
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   z-index: 1;
+  overflow: clip !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -2553,6 +2578,7 @@ form.search-form::after {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 0.8;
+    overflow: clip !important;
   }
 }
 
@@ -2561,6 +2587,7 @@ form.search-form::after {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 0.8;
+    overflow: clip !important;
   }
 }
 
@@ -2574,6 +2601,13 @@ form.search-form::after {
 
 .job a {
   background-color: #67809F;
+}
+
+.job img {
+  height: 211.5px !important;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .news-body {
@@ -3624,13 +3658,6 @@ form.search-form::after {
 
 @media screen and (min-width: 992px) {
   .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 970px;
@@ -3657,12 +3684,6 @@ form.search-form::after {
     margin-right: auto;
     padding: 47px 0 43px;
   }
-  .footer .footer-about,
-  .footer .footer-wymondham,
-  .footer .footer-gorleston,
-  .footer .footer-socials {
-    width: 25%;
-  }
   .footer h4 {
     margin-bottom: 1rem;
   }
@@ -3683,10 +3704,30 @@ form.search-form::after {
   }
 }
 
+@media screen and (min-width: 1260px) {
+  .footer .footer-about-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer-about {
+  white-space: nowrap;
+  width: 225px;
+}
+
 @media screen and (max-width: 768px) {
   .footer-about {
     margin-bottom: 30px;
   }
+}
+
+.footer-services {
+  width: 225px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3788,6 +3829,18 @@ form.search-form::after {
   }
 }
 
+@media screen and (min-width: 1260px) {
+  .footer-addresses {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.footer-cambridge {
+  white-space: nowrap;
+  width: 225px;
+}
+
 @media screen and (max-width: 768px) {
   .footer-cambridge {
     margin-bottom: 45px;
@@ -3820,6 +3873,11 @@ address {
 
 address a {
   margin: 1rem 0;
+}
+
+.footer-wymondham {
+  white-space: nowrap;
+  width: 225px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3858,6 +3916,8 @@ address a {
 
 .footer-gorleston {
   font-size: 13px;
+  width: 225px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -3903,6 +3963,16 @@ address a {
   }
 }
 
+@media screen and (min-width: 1260px) {
+  .footer-socials {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 800px;
+            flex: 1 0 800px;
+  }
+}
+
 .footer-socials a,
 .footer-socials p {
   font-size: 0.8125rem;
@@ -3944,6 +4014,7 @@ address a {
 }
 
 .social-wrapper:hover {
+  cursor: pointer;
   border-radius: 50%;
 }
 

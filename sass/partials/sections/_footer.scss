@@ -20,7 +20,6 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-        @include flexrow;
         flex-wrap: wrap;
         width: 970px;
         @include mginlrauto;
@@ -33,12 +32,6 @@
         width: 1200px;
         @include mginlrauto;
         padding: 47px 0 43px;
-        .footer-about,
-        .footer-wymondham,
-        .footer-gorleston,
-        .footer-socials {
-            width: 25%;
-        }
         h4 {
             margin-bottom: 1rem;
         }
@@ -49,16 +42,23 @@
             display: flex;
             justify-content: space-evenly;
         }
+        @media screen and (min-width: $break-xl){
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 //========== FOOTER ABOUT/SERVICES =======//
 .footer-about {
+    white-space: nowrap;
+    width: 225px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 30px;
     }
 }
 .footer-services {
+    width: 225px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 30px;
@@ -119,9 +119,14 @@
     @media screen and (min-width: $break-m) {
         flex-direction: row;
     }
+    @media screen and (min-width: $break-xl) {
+        justify-content: space-around;
+    }
 }
 //========== FOOTER CAMBRIDGE ===========//
 .footer-cambridge {
+    white-space: nowrap;
+    width: 225px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 45px;
@@ -151,6 +156,8 @@ address {
 
 //========== FOOTER WYMONDHAM ==========//
 .footer-wymondham {
+    white-space: nowrap;
+    width: 225px;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 45px;
@@ -181,6 +188,8 @@ address {
 //========== FOOTER GORLESTON ==========//
 .footer-gorleston {
     font-size: 13px;
+    width: 225px;
+    white-space: nowrap;
     //Small and up
     @media screen and (max-width: $break-m) {
         margin-bottom: 45px;
@@ -211,6 +220,10 @@ address {
             display: inline-block;
         }
     }
+    @media screen and (min-width: $break-xl) {
+        align-self: flex-end;
+        flex: 1 0 800px;
+    }
     a,
     p {
         font-size: 0.8125rem;
@@ -235,6 +248,7 @@ address {
         font-weight: $regular;
     }
     &:hover {
+        cursor: pointer;
         border-radius: 50%;
     }
 }

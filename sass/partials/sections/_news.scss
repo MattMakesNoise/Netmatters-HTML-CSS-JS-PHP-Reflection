@@ -37,7 +37,7 @@
         content: ' ';
         display: block;
         border-bottom: 5px solid $dark-blue;
-        width: 10%;
+        width: 70px;
         padding-top: 28px;
     }
 }
@@ -58,6 +58,7 @@
     @media screen and (min-width: $break-m) {
         @include flexrow;
         width: 750px;
+        padding: 20px 15px 25px 15px;
         @include mginlrauto;
         align-self: center;
     }
@@ -89,7 +90,7 @@
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        margin: 3rem 1rem 3rem 1rem;
+        margin: 2rem 1rem 2rem 1rem;
         height: 569px;
         flex: 1;
     }
@@ -109,10 +110,13 @@
         justify-content: space-between;
     }
 }
+.img-wrap {
+    overflow: hidden;
+    max-height: 100%;
+}
 .card-img-top {
-    overflow: hidden !important;
+    overflow: clip !important;
     position: relative;
-    flex: 1 0 auto;
     a {
         position: absolute;
         right: 0;
@@ -135,16 +139,19 @@
         object-fit: contain;
         transition: all .25s ease-in-out;
         z-index: 1;
+        overflow: clip !important;
         &:hover {
             //Large and Up
             @media screen and (min-width: $break-lg) {
                 transform: scale(1.1);
                 opacity: 0.8;
+                overflow: clip !important;
             }
             //Extra Large
             @media screen and (min-width: $break-xl) {
                 transform: scale(1.1);
                 opacity: 0.8;
+                overflow: clip !important;
             }
         }
     }
@@ -162,6 +169,11 @@
 .job {
     a {
         background-color: $soft;
+    }
+    img {
+        height: 211.5px !important;
+        width: 100%;
+        object-fit: cover;
     }
 }
 .news-body {
