@@ -81,10 +81,11 @@
     border-radius: 3px;
     box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
     background-color: rgba(255,255,255,0.8);
+    padding-bottom: 1rem;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-bottom: 2rem;
-        height: 702px;
+        // height: 702px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
@@ -297,31 +298,31 @@
 //===== SCION CARD =====//
 .scion-card {
     display: block;
-}
-.scion-title {
-    color: $web;
-}
-.scion-btn {
-    background-color: $web;
-    color: $white;
-    &:hover {
-        background-color: $web-dark;
+    .scion-title {
+        color: $web;
+    }
+    .scion-btn {
+        background-color: $web;
         color: $white;
+        &:hover {
+            background-color: $web-dark;
+            color: $white;
+        }
     }
 }
 //===== NOTABLE CARD =====//
 .notable-card {
     display: block;
-}
-.notable-title {
-    color: $tele;
-}
-.notable-btn {
-    background-color: $tele;
-    color: $white;
-    &:hover {
-        background-color: $tele-dark;
+    .notable-title {
+        color: $tele;
+    }
+    .notable-btn {
+        background-color: $tele;
         color: $white;
+        &:hover {
+            background-color: $tele-dark;
+            color: $white;
+        }
     }
 }
 //===== JOB CARD =====//
@@ -342,17 +343,17 @@
     @media screen and (min-width: $break-xl) {
         display: block;
     }
-}
-.job-title {
-    color: $soft;
-    margin-top: 14px;
-}
-.job-btn {
-    background-color: $soft;
-    color: $white;
-    &:hover {
-        background-color: $soft-dark;
+    .job-title {
+        color: $soft;
+        margin-top: 14px;
+    }
+    .job-btn {
+        background-color: $soft;
         color: $white;
+        &:hover {
+            background-color: $soft-dark;
+            color: $white;
+        }
     }
 }
 //===== Target IE Specifically =====//

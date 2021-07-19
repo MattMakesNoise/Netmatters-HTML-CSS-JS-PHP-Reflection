@@ -33,7 +33,6 @@
     //Large and Up
     @media screen and (min-width: $break-lg) {
         @include flexrow;
-        
     }   
 }
 //Last Four Cards Container
@@ -69,10 +68,6 @@
 .row-three {
     @media screen and (min-width: $break-m) {
         display: flex;
-    }
-    @media screen and (min-width: $break-lg) {
-        display: flex; //is this needed?
-        margin-top: 10px;
     }
 }
 //========== CARD STYLING ===========//

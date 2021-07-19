@@ -1,6 +1,7 @@
 //========== HEADER/NAV ===============//
 .navbar-wrapper { //Main wrapper
     display: block;
+    height: 168px !important;
     //Up to medium
     @media screen and (max-width: $break-m) {
         height: 168px;
@@ -19,6 +20,7 @@
     }
 }
 .nav-bar { //Wraps Header and slider/cards section
+    padding-top: 1rem;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         @include mginlrauto;
@@ -42,6 +44,8 @@
 }
 //========== HEADER SECTION ==========//
 .header { //Wraps the standard elements but not the cards/slider section
+    display: flex;
+    flex-flow: row nowrap;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         display: flex;
@@ -81,7 +85,8 @@
 }
 //===== LOGO STYLING =====//
 .logo-wrapper {
-    //Up to Medium
+    flex: 1 1 50% !important;
+    order: 1;
     @media screen and (max-width: $break-m) {
         flex: 1 1 60%;
         order: 1;
@@ -136,6 +141,7 @@
 //===== PHONE STYLING =====//
 .phone-wrapper {
     font-size: 2rem;
+    flex: 0 1 40px !important;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         margin-left: 20px;
@@ -455,7 +461,14 @@ form.search-form {
             line-height: 1;
             width: 23px;
             height: 46px;
-            padding: 12px 2px 3px 0;
+            padding: 8px 2px 5px 0;
+            // @media screen and (min-width: $break-m) {
+            //     font-size: 23px;
+            //     line-height: 1;
+            //     width: 23px;
+            //     height: 46px;
+            //     padding: 12px 2px 3px 0;
+            // }
         }
     }
     &::after { /* Clear floats */
