@@ -842,3 +842,17 @@ form.search-form {
     }
 }
 //========== CARDS SECTION ENDS ==========//
+//===== Target IE Specifically =====//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .support-wrapper {
+        width: 160px;
+    }
+    .contact-wrapper {
+        width: 170px;
+    }
+    form.search-form {
+        button {
+            width: 56px;
+        }
+    }
+}

@@ -1254,6 +1254,18 @@ form.search-form::after {
   right: 0;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .support-wrapper {
+    width: 160px;
+  }
+  .contact-wrapper {
+    width: 170px;
+  }
+  form.search-form button {
+    width: 56px;
+  }
+}
+
 /*========== HERO ============*/
 .hero-wrapper {
   min-height: 490px;
@@ -2096,12 +2108,12 @@ form.search-form::after {
 /*========== ABOUT ===========*/
 .about-wrapper {
   background-color: #333645;
-  height: 100vh !important;
+  height: 100% !important;
 }
 
 @media screen and (min-width: 375px) {
   .about-wrapper {
-    height: 85vh !important;
+    height: 85% !important;
   }
 }
 
@@ -3634,7 +3646,7 @@ form.search-form::after {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
-  width: 118px;
+  width: 130px;
   height: 45px;
   padding: 5px 15px;
   font-size: 1.063rem;

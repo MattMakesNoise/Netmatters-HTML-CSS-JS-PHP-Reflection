@@ -1,9 +1,9 @@
 /*========== ABOUT ===========*/
 .about-wrapper {
     background-color: $dark-blue;
-    height: 100vh !important;
+    height: 100% !important;
     @media screen and (min-width: 375px) {
-        height: 85vh !important;
+        height: 85% !important;
     }
     @media screen and (min-width: 425px) {
         height: 82vh !important;
