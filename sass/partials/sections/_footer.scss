@@ -299,3 +299,23 @@ address {
         font-size: .8125rem;
     }
 }
+//===== Target IE Specifically =====//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .footer-socials {
+        @media screen and (max-width: 425px) {
+            width: 300px;
+        }
+        @media screen and (min-width: 425px) {
+            width: 400px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 700px;
+        }
+        @media screen and (min-width: $break-lg) {
+            width: 900px;
+        }
+        @media screen and (min-width: $break-xl) {
+            width: 1200px;
+        }
+    }
+}

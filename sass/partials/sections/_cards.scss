@@ -411,3 +411,21 @@
             }
         }
     }
+    //===== Target IE Specifically =====//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .card-text {
+        @media screen and (max-width: 425px) {
+            max-width: 260px;    
+        }
+        @media screen and (min-width: 425px) {
+            max-width: 320px;    
+        }
+        @media screen and (min-width: 500px) {
+            max-width: 400px;    
+        }
+        @media screen and (min-width: 768px) {
+            max-width: 250px;    
+        }
+        
+    }
+}

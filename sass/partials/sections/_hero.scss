@@ -141,3 +141,16 @@
         line-height: 50px;
     }
 }
+//===== Target IE Specifically =====//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .hero-text-wrapper {
+            @media screen and (max-width: 425px) {
+                max-width: 250px;
+            }
+            .hero-subtitle {
+                @media screen and (max-width: 425px) {
+                    max-width: 250px;
+                }
+            }
+        }
+}

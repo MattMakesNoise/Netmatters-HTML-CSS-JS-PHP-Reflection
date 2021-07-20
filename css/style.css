@@ -1483,6 +1483,18 @@ form.search-form::after {
   line-height: 50px;
 }
 
+@media screen and (-ms-high-contrast: active) and (max-width: 425px), screen and (-ms-high-contrast: none) and (max-width: 425px) {
+  .hero-text-wrapper {
+    max-width: 250px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 425px), screen and (-ms-high-contrast: none) and (max-width: 425px) {
+  .hero-text-wrapper .hero-subtitle {
+    max-width: 250px;
+  }
+}
+
 /*========== CARDS ===========*/
 .cards-wrapper {
   display: block;
@@ -2055,6 +2067,30 @@ form.search-form::after {
   background-color: #fff;
   color: #926FB1;
   text-decoration: none;
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 425px), screen and (-ms-high-contrast: none) and (max-width: 425px) {
+  .card-text {
+    max-width: 260px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 425px), screen and (-ms-high-contrast: none) and (min-width: 425px) {
+  .card-text {
+    max-width: 320px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 500px), screen and (-ms-high-contrast: none) and (min-width: 500px) {
+  .card-text {
+    max-width: 400px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 768px), screen and (-ms-high-contrast: none) and (min-width: 768px) {
+  .card-text {
+    max-width: 250px;
+  }
 }
 
 /*========== ABOUT ===========*/
@@ -4068,6 +4104,36 @@ address a {
 
 .sitemap-wrapper .copyright {
   font-size: .8125rem;
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 425px), screen and (-ms-high-contrast: none) and (max-width: 425px) {
+  .footer-socials {
+    width: 300px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 425px), screen and (-ms-high-contrast: none) and (min-width: 425px) {
+  .footer-socials {
+    width: 400px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 768px), screen and (-ms-high-contrast: none) and (min-width: 768px) {
+  .footer-socials {
+    width: 700px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
+  .footer-socials {
+    width: 900px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 1260px), screen and (-ms-high-contrast: none) and (min-width: 1260px) {
+  .footer-socials {
+    width: 1200px;
+  }
 }
 
 /*========== AWARDS ======*/
