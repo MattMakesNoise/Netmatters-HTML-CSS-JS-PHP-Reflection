@@ -58,7 +58,7 @@
     @media screen and (min-width: $break-m) {
         @include flexrow;
         width: 750px;
-        padding: 20px 15px 25px 15px;
+        padding: 20px 0px 25px 0px;
         @include mginlrauto;
         align-self: center;
     }
@@ -91,7 +91,7 @@
     //Medium and up
     @media screen and (min-width: $break-m) {
         margin: 2rem 1rem 2rem 1rem;
-        height: 569px;
+        height: 620px;
         flex: 1;
     }
     //Large and Up
@@ -112,9 +112,9 @@
 }
 .img-wrap {
     overflow: hidden;
-    height: 261px !important;
+    max-height: 261px !important;
     @media screen and (min-width: $break-xl) {
-        height: 214px !important;
+        max-height: 214px !important;
     }
 }
 .card-img-top {
@@ -142,10 +142,9 @@
     img {
         height: 100%;
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         transition: all .25s ease-in-out;
         z-index: 1;
-        // overflow: hidden;
         &:hover {
             //Large and Up
             @media screen and (min-width: $break-lg) {
@@ -175,11 +174,6 @@
 .job {
     a {
         background-color: $soft;
-    }
-    img {
-        height: 211.5px !important;
-        width: 100%;
-        object-fit: cover;
     }
 }
 .news-body {
@@ -363,7 +357,6 @@
     }
     .job-title {
         color: $soft;
-        margin-top: 14px;
     }
     .job-btn {
         background-color: $soft;

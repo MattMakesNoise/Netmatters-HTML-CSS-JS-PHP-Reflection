@@ -37,7 +37,6 @@
         }
     }
     .footer-about-services { //container for the about and services sections
-        margin-left: -2.5rem;
         @media screen and (min-width: $break-m){
             display: flex;
             justify-content: space-evenly;

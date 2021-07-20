@@ -2434,7 +2434,7 @@ form.search-form::after {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 750px;
-    padding: 20px 15px 25px 15px;
+    padding: 20px 0px 25px 0px;
     margin-left: auto;
     margin-right: auto;
     -ms-flex-item-align: center;
@@ -2494,7 +2494,7 @@ form.search-form::after {
 @media screen and (min-width: 768px) {
   .news-card {
     margin: 2rem 1rem 2rem 1rem;
-    height: 569px;
+    height: 620px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -2534,12 +2534,12 @@ form.search-form::after {
 
 .img-wrap {
   overflow: hidden;
-  height: 261px !important;
+  max-height: 261px !important;
 }
 
 @media screen and (min-width: 1260px) {
   .img-wrap {
-    height: 214px !important;
+    max-height: 214px !important;
   }
 }
 
@@ -2572,8 +2572,8 @@ form.search-form::after {
 .card-img-top img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   z-index: 1;
@@ -2607,13 +2607,6 @@ form.search-form::after {
 
 .job a {
   background-color: #67809F;
-}
-
-.job img {
-  height: 211.5px !important;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .news-body {
@@ -2864,7 +2857,6 @@ form.search-form::after {
 
 .job-card .job-title {
   color: #67809F;
-  margin-top: 14px;
 }
 
 .job-card .job-btn {
@@ -3693,10 +3685,6 @@ form.search-form::after {
   .footer h4 {
     margin-bottom: 1rem;
   }
-}
-
-.footer .footer-about-services {
-  margin-left: -2.5rem;
 }
 
 @media screen and (min-width: 768px) {
