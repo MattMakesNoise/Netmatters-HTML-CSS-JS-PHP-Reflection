@@ -1,0 +1,23 @@
+{
+  "name": "netmatters-html-css-reflection",
+  "version": "1.0.0",
+  "description": "adding javascript after the inital html and css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattMakesNoise/Netmatters-HTML-CSS-Reflection.git"
+  },
+  "author": "Matt Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattMakesNoise/Netmatters-HTML-CSS-Reflection/issues"
+  },
+  "homepage": "https://github.com/MattMakesNoise/Netmatters-HTML-CSS-Reflection#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0"
+  }
+}
