@@ -994,7 +994,7 @@ form.search-form::after {
 }
 @media screen and (max-width: 768px) {
   .hero-wrapper {
-    height: calc(100vh - 168px) !important;
+    height: calc(100vh - 168px);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1016,6 +1016,27 @@ form.search-form::after {
 .slide {
   z-index: 1;
   position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 692px;
+}
+@media screen and (min-width: 768px) {
+  .slide {
+    height: calc(100vh - 110px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .slide {
+    height: calc(100vh - 209px);
+  }
+}
+@media screen and (min-width: 1260px) {
+  .slide {
+    height: calc(100vh - 209px);
+  }
 }
 
 .hero-image-overlay::before {
@@ -1026,9 +1047,6 @@ form.search-form::after {
   left: 0;
   right: 0;
   background: linear-gradient(270deg, transparent 25%, #000);
-}
-.hero-image-overlay img {
-  object-position: contain;
 }
 
 .hero-text-wrapper {
@@ -1053,10 +1071,11 @@ form.search-form::after {
 }
 @media screen and (min-width: 992px) {
   .hero-text-wrapper {
+    top: 30%;
     width: 970px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
+    padding-left: 40px;
     padding-right: 15px;
     flex-direction: column;
     justify-content: center;
@@ -1068,8 +1087,17 @@ form.search-form::after {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    top: 35%;
-    right: 15%;
+    top: 30%;
+    right: 10%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero-text-wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 38%;
+    right: 28%;
   }
 }
 
@@ -1141,11 +1169,19 @@ form.search-form::after {
   line-height: 50px;
 }
 
+.web-slide {
+  background-image: url("/img/home-3wAI.jpg");
+}
+
 .web-button {
   background-color: #926FB1;
 }
 .web-button:hover {
   background-color: #79539A;
+}
+
+.it-slide {
+  background-image: url("/img/it-carousel2.jpg");
 }
 
 .it-button {
@@ -1155,11 +1191,19 @@ form.search-form::after {
   background-color: #286ABD;
 }
 
+.tele-slide {
+  background-image: url("/img/telecoms-carousel3.jpg");
+}
+
 .tele-button {
   background-color: #D64541;
 }
 .tele-button:hover {
   background-color: #BC2C28;
+}
+
+.soft-slide {
+  background-image: url("/img/software-carousel4.jpg");
 }
 
 .soft-button {
@@ -1169,11 +1213,19 @@ form.search-form::after {
   background-color: #526784;
 }
 
+.market-slide {
+  background-image: url("/img/marketing-carousel5.jpg");
+}
+
 .market-button {
   background-color: #2ECC71;
 }
 .market-button:hover {
   background-color: #25A25A;
+}
+
+.cyber-slide {
+  background-image: url("/img/cyber-carousel6.jpg");
 }
 
 .cyber-button {
@@ -1188,11 +1240,21 @@ form.search-form::after {
   top: -128px;
   color: white;
   opacity: 0.5;
-  font-size: 48px;
+  font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .slick-dots li button::before {
     top: -64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .slick-dots li button::before {
+    top: -112px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .slick-dots li button::before {
+    top: -80px;
   }
 }
 
@@ -1202,7 +1264,7 @@ form.search-form::after {
   border: 2px solid white;
   border-radius: 50%;
   box-sizing: border-box;
-  padding: 0 18px 20px 1px;
+  padding: 0px 15px 18px 2px;
   margin-top: -2px;
 }
 
