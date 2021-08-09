@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/style.css"> 
     <!-- Font Awesome -->
@@ -207,13 +211,77 @@
 
         <!-- Hero -->
         <main class="hero-wrapper">    
-            <div class="hero-bg">
-                <div class="hero-text-wrapper">
-                    <h2 class="hero-title">Web Design</h2>
-                    <h4 class="hero-subtitle">For businesses looking to make a strong <br> and effective first impression.</h4>
-                    <div class="hero-button-wrapper">
-                        <button class="hero-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span>
-                        </button>
+            <div class="carousel">
+                <div class="slide web-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/webdesign-carousel1.jpg" alt="Web Design - For businesses wanting to make a strong and effective first impression.">
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">Web Design</h2>
+                        <h4 class="hero-subtitle">For businesses looking to make a strong <br> and effective first impression.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button web-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide it-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/it-carousel2.jpg" alt="IT Support - Fast and cost-effective IT support services for your business.">
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">IT Support</h2>
+                        <h4 class="hero-subtitle">Fast and cost-effective IT support<br> servies for your business.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button it-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide tele-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/telecoms-carousel3.jpg" alt="Telecoms Services - A new approach to connectivity, see how we can help your business.">
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">Telecoms Services</h2>
+                        <h4 class="hero-subtitle">A new approach to connectivity, see how <br> we can help your business.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button tele-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide soft-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/software-carousel4.jpg" alt="Bespoke Software - Bring your business together with solutions that grow with you.">                      
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">Bespoke Software</h2>
+                        <h4 class="hero-subtitle">Bring you business together <br> with solutions that grow with you.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button soft-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide market-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/marketing-carousel5.jpg" alt="Digital MArketing - Generating you new business through results driven marketing activities.">
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">Digital Marketing</h2>
+                        <h4 class="hero-subtitle">Generating your new business through <br> results-driven marketing activities.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button market-button">See How We Can Help You <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide cyber-slide">
+                    <div class="hero-image-overlay">
+                        <img src="/img/cyber-carousel6.jpg" alt="Cyber Security - Keeping businesses and their customers sensitive information protected.">
+                    </div>
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title">Cyber Security</h2>
+                        <h4 class="hero-subtitle">Keeping businesses and their customers <br> sensitive information protected.</h4>
+                        <div class="hero-button-wrapper">
+                            <button class="hero-button cyber-button">Find Out More <span class="hero-icon"><i class="fas fa-arrow-right"></i></span></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -575,5 +643,8 @@
         <!-- Awards End -->
           
     </div> <!--Wrapper/Container End-->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/main.js"></script>
     </body>
 </html>

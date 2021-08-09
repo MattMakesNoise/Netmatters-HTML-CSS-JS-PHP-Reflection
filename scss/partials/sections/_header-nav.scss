@@ -47,7 +47,6 @@
 .header { //Wraps the standard elements but not the cards/slider section
     display: flex;
     flex-flow: row nowrap;
-    // background-color: green;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         display: flex;

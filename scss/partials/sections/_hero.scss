@@ -19,41 +19,28 @@
         height: calc(100vh - 209px);
     }
 }
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: none;
-    display: flex;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        background-image:
-        linear-gradient(to right , rgba(0,0,0,1) 5% , rgba(0,0,0,0)),
-        url('/img/home-3wAI.jpg');
+.slide {
+    z-index: 1;
+    position: relative;
+}
+.hero-image-overlay {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(270deg, transparent 25%, #000);
     }
-    //Medium
-    @media screen and (min-width: $break-m) {
-        background-image:
-        linear-gradient(to right , rgba(0,0,0,1) 5% , rgba(0,0,0,0)),
-        url('/img/home-3wAI.jpg');
-        justify-content: center;
-        align-items: center;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-        justify-content: flex-start;
-        align-items: center;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        background-image: 
-        linear-gradient(to right , rgba(0,0,0,0.9) 10% , rgba(0,0,0,0)),
-        url('/img/home-3wAI.jpg');
-    }
+    
 }
 .hero-text-wrapper {
+    position: absolute;
+    top: 35%;
+    right: 15%;
     display: flex;
+    z-index: 10;
     //Up to Medium
     @media screen and (max-width: $break-m) {
         flex-direction: column;
@@ -122,7 +109,6 @@
     }
 }
 .hero-button {
-    background-color: $web;
     color: $white;
     @include button-styles;
     margin: auto auto 0 auto;
@@ -131,15 +117,64 @@
     padding: 3px 20px;
     text-align: center;
     line-height: 50px;
-    &:hover {
-        background-color: $web-dark;
-    }
     .hero-icon i {
         margin-left: 12px;
         font-weight: $semibold;
         font-size: 18px;
         line-height: 50px;
     }
+}
+.web-button {
+    background-color: $web;
+    &:hover {
+        background-color: $web-dark;
+    }
+}
+.it-button {
+    background-color: $it;
+    &:hover {
+        background-color: $it-dark;
+    }
+}
+.tele-button {
+    background-color: $tele;
+    &:hover {
+        background-color: $tele-dark;
+    }
+}
+.soft-button {
+    background-color: $soft;
+    &:hover {
+        background-color: $soft-dark;
+    }
+}
+.market-button {
+    background-color: $market;
+    &:hover {
+        background-color: $market-dark;
+    }
+}
+.cyber-button {
+    background-color: $cyber;
+    &:hover {
+        background-color: $cyber-dark;
+    }
+}
+.slick-dots li button::before {
+    position: absolute;
+    top: -64px;
+    color: white;
+    opacity: .5;
+    font-size: 12px;
+}
+.slick-dots li.slick-active button:before {
+    color:white;
+    opacity: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 0 16px 18px 4px;
+    margin-top: -2px;
 }
 //===== Target IE Specifically =====//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
