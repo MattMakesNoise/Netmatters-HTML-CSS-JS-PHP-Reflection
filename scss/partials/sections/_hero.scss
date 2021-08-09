@@ -4,7 +4,7 @@
     display: block;
     //Up to medium devices
     @media screen and (max-width: $break-m) {
-        height: calc(100vh - 168px);
+        height: calc(100vh - 168px) !important;
     }
     //Medium devices
     @media screen and (min-width: $break-m) {
@@ -23,7 +23,7 @@
     z-index: 1;
     position: relative;
 }
-.hero-image-overlay {
+.hero-image-overlay { //Creates the black mainly opaque overlay
     &::before {
         content: '';
         position: absolute;
@@ -33,22 +33,19 @@
         right: 0;
         background: linear-gradient(270deg, transparent 25%, #000);
     }
-    
+    img {
+        object-position: contain;
+    }
 }
 .hero-text-wrapper {
     position: absolute;
-    top: 35%;
-    right: 15%;
+    top: 20%;
+    padding: 0 15px;
     display: flex;
     z-index: 10;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @include mginlrauto;
-        margin-top: 24px;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     //Medium and up
     @media screen and (min-width: $break-m) {
         width: 750px;
@@ -71,6 +68,8 @@
     @media screen and (min-width: $break-xl) {
         width: 1200px;
         @include mginlrauto;
+        top: 35%;
+        right: 15%;
     }
 }
 .hero-title,
@@ -162,10 +161,14 @@
 }
 .slick-dots li button::before {
     position: absolute;
-    top: -64px;
+    top: -128px;
     color: white;
     opacity: .5;
-    font-size: 12px;
+    font-size: 48px;
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        top: -64px;
+    }
 }
 .slick-dots li.slick-active button:before {
     color:white;
@@ -173,7 +176,7 @@
     border: 2px solid white;
     border-radius: 50%;
     box-sizing: border-box;
-    padding: 0 16px 18px 4px;
+    padding: 0 18px 20px 1px;
     margin-top: -2px;
 }
 //===== Target IE Specifically =====//

@@ -994,7 +994,7 @@ form.search-form::after {
 }
 @media screen and (max-width: 768px) {
   .hero-wrapper {
-    height: calc(100vh - 168px);
+    height: calc(100vh - 168px) !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1027,23 +1027,19 @@ form.search-form::after {
   right: 0;
   background: linear-gradient(270deg, transparent 25%, #000);
 }
+.hero-image-overlay img {
+  object-position: contain;
+}
 
 .hero-text-wrapper {
   position: absolute;
-  top: 35%;
-  right: 15%;
+  top: 20%;
+  padding: 0 15px;
   display: flex;
   z-index: 10;
-}
-@media screen and (max-width: 768px) {
-  .hero-text-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 24px;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero-text-wrapper {
@@ -1072,6 +1068,8 @@ form.search-form::after {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    top: 35%;
+    right: 15%;
   }
 }
 
@@ -1187,10 +1185,15 @@ form.search-form::after {
 
 .slick-dots li button::before {
   position: absolute;
-  top: -64px;
+  top: -128px;
   color: white;
   opacity: 0.5;
-  font-size: 12px;
+  font-size: 48px;
+}
+@media screen and (min-width: 768px) {
+  .slick-dots li button::before {
+    top: -64px;
+  }
 }
 
 .slick-dots li.slick-active button:before {
@@ -1199,7 +1202,7 @@ form.search-form::after {
   border: 2px solid white;
   border-radius: 50%;
   box-sizing: border-box;
-  padding: 0 16px 18px 4px;
+  padding: 0 18px 20px 1px;
   margin-top: -2px;
 }
 

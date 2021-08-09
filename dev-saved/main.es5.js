@@ -1,9 +1,5 @@
 "use strict";
 
-// $('.carousel').slick({
-//     slidesToShow: 6,
-//     slidesToScroll: 6,
-//     speed: 300,
 //Slick Carousel Plugin
 $(document).ready(function () {
   $('.carousel').slick({
@@ -18,7 +14,8 @@ $(document).ready(function () {
     //Loop slides forever
     prevArrow: false,
     //Don't show previous arrow
-    nextArrow: false //Don't show next arrow
-
+    nextArrow: false,
+    //Don't show next arrow
+    responsive: []
   });
 });
