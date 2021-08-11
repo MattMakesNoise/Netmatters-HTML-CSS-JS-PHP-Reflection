@@ -22,8 +22,19 @@ body {
   overflow-x: hidden;
 }
 
-.page-wrapper {
-  display: block;
+nav {
+  position: sticky;
+  z-index: 11;
+  transition: top 0.4s ease-in-out;
+  top: 0;
+}
+
+nav .scroll-up {
+  top: 0;
+}
+
+nav .scroll-down {
+  top: -100%;
 }
 
 .navbar-wrapper {
@@ -52,6 +63,8 @@ body {
 }
 
 .nav-bar {
+  width: 100%;
+  background-color: #fff;
   padding-top: 1rem;
 }
 @media screen and (max-width: 768px) {

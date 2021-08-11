@@ -1,4 +1,16 @@
 //========== HEADER/NAV ===============//
+nav {
+    position: sticky; //Make it sticky/fixed
+    z-index: 11; //Appear in front
+    transition: top 0.4s ease-in-out; //Don't disappear instantly
+    top: 0;
+}
+nav .scroll-up {
+    top: 0;
+}
+nav .scroll-down {
+    top: -100%;
+}
 .navbar-wrapper { //Main wrapper
     display: block;
     height: 168px !important;
@@ -20,6 +32,8 @@
     }
 }
 .nav-bar { //Wraps Header and slider/cards section
+    width: 100%;
+    background-color: #fff;
     padding-top: 1rem;
     //Up to Medium
     @media screen and (max-width: $break-m) {
