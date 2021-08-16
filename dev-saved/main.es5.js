@@ -43,12 +43,14 @@ var sidebar = document.querySelector(".sidebar");
 var pageWrapper = document.querySelector(".page-wrapper");
 burger.addEventListener('click', function () {
   burger.classList.toggle('is-active');
-  pageWrapper.classList.add('sidebar-show');
-  sidebar.classList.add('sidebar-show');
-}); // pageWrapper.addEventListener('click', () => {
-//     pageWrapper.classList.remove('sidebar-show');
-//     sidebar.classList.remove('sidebar-show');
-// })
+  pageWrapper.classList.toggle('sidebar-show');
+  sidebar.classList.toggle('sidebar-show'); // openOverlay();
+}); // function openOverlay() {
+//     pageWrapper:after.style.backgroundColor = 'rgba(0,0,0,0.4)';
+// }
+// function closeOverlay() {
+//     document.body.style.backgroundColor = 'white';
+// }
 // burger.addEventListener("click", function () {
 //     openSidebar();
 // });

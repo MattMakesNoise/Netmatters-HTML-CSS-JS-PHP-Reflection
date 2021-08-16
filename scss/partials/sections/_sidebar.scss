@@ -3,7 +3,7 @@
     top: 0;
     right: 0;
     width: 275px;
-    height: 150%;
+    height: 100%;
     z-index: 11;
     overflow: auto;
     transition: .5s;
@@ -28,7 +28,8 @@
     }
 }
 
-.sidebar>ul>li>a {
+.sidebar>ul>li>a { //Target section header links
+    display: block;
     padding: 20px;
 }
 
@@ -50,8 +51,10 @@
 .sidebar-sub {
     background-color: $darker-blue;
     font-size: 0.875rem;
+    padding: 15px 0 15px 0;
     span {
         padding-right: 1rem;
+        font-size: .5rem;
     }
     a {
         padding: 0 20px;
@@ -59,6 +62,9 @@
     .sidebar-sub-link {
         padding: 20px;
     }
+    // .fa-angle-double-right {
+    //     font-size: .5rem;
+    // }
 }
 
 .sidecards-nav {

@@ -33,14 +33,19 @@ const pageWrapper = document.querySelector(".page-wrapper");
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('is-active');
-    pageWrapper.classList.add('sidebar-show');
-    sidebar.classList.add('sidebar-show');
+    pageWrapper.classList.toggle('sidebar-show');
+    sidebar.classList.toggle('sidebar-show');
+    // openOverlay();
 })
 
-// pageWrapper.addEventListener('click', () => {
-//     pageWrapper.classList.remove('sidebar-show');
-//     sidebar.classList.remove('sidebar-show');
-// })
+// function openOverlay() {
+//     pageWrapper:after.style.backgroundColor = 'rgba(0,0,0,0.4)';
+// }
+// function closeOverlay() {
+//     document.body.style.backgroundColor = 'white';
+// }
+
+
 
 
 

@@ -41,14 +41,6 @@ body {
     left: -350px;
   }
 }
-.page-wrapper.sidebar-show::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 11;
-}
 
 .navbar-wrapper {
   position: sticky;
@@ -3678,7 +3670,7 @@ address a {
   top: 0;
   right: 0;
   width: 275px;
-  height: 150%;
+  height: 100%;
   z-index: 11;
   overflow: auto;
   transition: 0.5s;
@@ -3711,6 +3703,7 @@ address a {
 }
 
 .sidebar > ul > li > a {
+  display: block;
   padding: 20px;
 }
 
@@ -3732,9 +3725,11 @@ address a {
 .sidebar-sub {
   background-color: #262834;
   font-size: 0.875rem;
+  padding: 15px 0 15px 0;
 }
 .sidebar-sub span {
   padding-right: 1rem;
+  font-size: 0.5rem;
 }
 .sidebar-sub a {
   padding: 0 20px;
