@@ -3711,6 +3711,46 @@ address a {
   display: block;
 }
 
+.sidecards-nav {
+  display: block;
+  background-color: #333645;
+}
+@media screen and (min-width: 992px) {
+  .sidecards-nav {
+    display: none;
+  }
+}
+
+.side-main a {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.web-side-main .fa-code {
+  color: #79539A;
+}
+
+.it-side-main .fa-desktop {
+  color: #286ABD;
+}
+
+.telecoms-side-main .fa-phone-volume {
+  color: #BC2C28;
+}
+
+.software-side-main .fa-th {
+  color: #526784;
+}
+
+.digital-side-main .fa-signal {
+  color: #25A25A;
+}
+
+.security-side-main .fa-shield-virus {
+  color: #DE093F;
+}
+
 .sidebar-header {
   background-color: #333645;
   font-size: 1rem;
@@ -3736,12 +3776,6 @@ address a {
 }
 .sidebar-sub .sidebar-sub-link {
   padding: 20px;
-}
-
-@media screen and (min-width: 992px) {
-  .sidecards-nav {
-    display: none;
-  }
 }
 
 /*========== GLOBAL STYLES =*/

@@ -37,6 +37,54 @@
     display: block;
 }
 
+//SIDECARDS ONLY SHOWN BELOW LG SCREEN SIZE
+.sidecards-nav {
+    display: block;
+    background-color: $dark-blue;
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+}
+
+.side-main {
+    a {
+        padding: 20px;
+        @include flexcolumn;
+    }
+}
+
+.web-side-main {
+    .fa-code {
+        color: $web-dark;
+    }
+}
+.it-side-main {
+    .fa-desktop {
+        color: $it-dark;
+    }
+}
+.telecoms-side-main {
+    .fa-phone-volume {
+        color: $tele-dark;
+    }
+}
+.software-side-main {
+    .fa-th {
+        color: $soft-dark;
+    }
+}
+.digital-side-main {
+    .fa-signal {
+        color: $market-dark;
+    }
+}
+.security-side-main {
+    .fa-shield-virus {
+        color: $cyber-dark;
+    }
+}
+
+//SIDEBAR LINK SECTION (SHOWN AT ALL SIZES)
 .sidebar-header {
     background-color: $dark-blue;
     font-size: 1rem;
@@ -62,13 +110,5 @@
     .sidebar-sub-link {
         padding: 20px;
     }
-    // .fa-angle-double-right {
-    //     font-size: .5rem;
-    // }
 }
 
-.sidecards-nav {
-    @media screen and (min-width: $break-lg) {
-        display: none;
-    }
-}
