@@ -17,27 +17,44 @@ body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.4px;
   font-size: 1rem;
-  background-color: #fff;
   letter-spacing: 0.4px;
   overflow-x: hidden;
 }
 
-nav {
+.page-wrapper {
+  transition: left 0.5s;
+  position: relative;
+}
+.page-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.page-wrapper.sidebar-show {
+  left: -275px;
+}
+@media screen and (min-width: 992px) {
+  .page-wrapper.sidebar-show {
+    left: -350px;
+  }
+}
+.page-wrapper.sidebar-show::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 11;
+}
+
+.navbar-wrapper {
   position: sticky;
   z-index: 11;
   transition: top 0.4s ease-in-out;
   top: 0;
-}
-
-nav .scroll-up {
-  top: 0;
-}
-
-nav .scroll-down {
-  top: -100%;
-}
-
-.navbar-wrapper {
   display: block;
   height: 168px !important;
 }
@@ -342,79 +359,117 @@ nav .scroll-down {
   }
 }
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: normal;
+  background-color: #333645;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition-property: opacity filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  margin: 0;
+  overflow: visible;
+}
 @media screen and (min-width: 768px) {
-  .burger-wrapper {
+  .hamburger {
     margin-left: 20px;
     order: 3;
     flex: 0 0 63px;
   }
 }
 @media screen and (max-width: 768px) {
-  .burger-wrapper {
+  .hamburger {
     margin-left: 20px;
     flex: 0 0 63px;
     order: 3;
   }
 }
 @media screen and (min-width: 992px) {
-  .burger-wrapper {
+  .hamburger {
     order: 5;
   }
 }
 @media screen and (min-width: 1260px) {
-  .burger-wrapper {
+  .hamburger {
     margin-left: 0;
     order: 5;
   }
 }
-
-.burger {
-  background-color: #333645;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  width: 63px;
-  height: 56px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 12px 15px 0px 15px;
-}
-.burger h6 {
-  color: #fff;
-  margin: auto;
-  font-size: 0.7rem;
-  font-weight: 400;
-  padding-top: 4px;
-  width: 31px;
-}
-.burger:hover {
-  background-color: #262834;
-  cursor: pointer;
-}
-
-.burger span {
+.hamburger .burger-label {
+  display: block;
   position: relative;
-  display: inline-block;
-  width: 31px;
-  height: 3px;
-  background-color: #fff;
-  margin: auto;
+  top: 5px;
+  margin: 0 auto;
 }
-.burger span::before, .burger span::after {
+.hamburger:hover {
+  background-color: #262834;
+}
+
+.hamburger-box {
+  width: 33px;
+  height: 19px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 33px;
+  height: 3px;
+  font-size: 1.438px;
+  line-height: 45px;
+  background-color: #fff;
+  margin: -1.5px auto;
+  transition-property: transform;
+}
+.hamburger-inner::before, .hamburger-inner::after {
   content: "";
   display: inline-block;
   position: absolute;
+  transition-property: transform;
   left: 0;
-  width: 100%;
+  width: 33px;
   height: 100%;
   background-color: inherit;
 }
-.burger span::before {
+.hamburger-inner::before {
   top: -8px;
 }
-.burger span::after {
-  bottom: -8px;
+.hamburger-inner::after {
+  top: 8px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg) translate(8px);
+  transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
 @media screen and (max-width: 768px) {
@@ -3616,6 +3671,82 @@ address a {
   background-image: url("/img/skills-of-tomorrow.jpg");
   width: 175px;
   height: 58px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 275px;
+  height: 150%;
+  z-index: 11;
+  overflow: auto;
+  transition: 0.5s;
+  overflow-x: hidden;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .sidebar {
+    width: 350px;
+  }
+}
+.sidebar ul {
+  list-style-type: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar ul li:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
+}
+
+.sidebar > ul > li > a {
+  padding: 20px;
+}
+
+.sidebar.sidebar-show {
+  display: block;
+}
+
+.sidebar-header {
+  background-color: #333645;
+  font-size: 1rem;
+}
+.sidebar-header:hover {
+  background-color: #3D404E;
+}
+.sidebar-header .sidebar-header-link {
+  padding: 15px 20px;
+}
+
+.sidebar-sub {
+  background-color: #262834;
+  font-size: 0.875rem;
+}
+.sidebar-sub span {
+  padding-right: 1rem;
+}
+.sidebar-sub a {
+  padding: 0 20px;
+}
+.sidebar-sub .sidebar-sub-link {
+  padding: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .sidecards-nav {
+    display: none;
+  }
 }
 
 /*========== GLOBAL STYLES =*/

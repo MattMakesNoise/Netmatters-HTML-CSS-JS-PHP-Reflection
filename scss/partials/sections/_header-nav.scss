@@ -1,17 +1,9 @@
 //========== HEADER/NAV ===============//
-nav {
+.navbar-wrapper { //Main wrapper
     position: sticky; //Make it sticky/fixed
     z-index: 11; //Appear in front
     transition: top 0.4s ease-in-out; //Don't disappear instantly
     top: 0;
-}
-nav .scroll-up {
-    top: 0;
-}
-nav .scroll-down {
-    top: -100%;
-}
-.navbar-wrapper { //Main wrapper
     display: block;
     height: 168px !important;
     //Up to medium
@@ -267,7 +259,27 @@ nav .scroll-down {
 //===== CONTACT STYLING =====//
 
 //===== BURGER STYLING =====//
-.burger-wrapper {
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px; //YES
+    font-size: .75rem;
+    color: $white;
+    text-transform: uppercase; //YES
+    line-height: 1;
+    letter-spacing: normal;
+    background-color: $dark-blue; //YES
+    border: 0;
+    border-radius: 3px; 
+    padding: 10px 15px;
+    cursor: pointer; //YES
+    transition-property: opacity filter; //YES
+    transition-duration: .15s; //YES
+    transition-timing-function: linear; //YES
+    margin: 0; //YES
+    overflow: visible; //YES
     //Up to medium
     @media screen and (min-width: $break-m) {
         margin-left: 20px;
@@ -289,45 +301,42 @@ nav .scroll-down {
         margin-left: 0;
         order: 5;
     }
-}
-.burger {
-    background-color: $dark-blue;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    width: 63px;
-    height: 56px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 12px 15px 0px 15px;
-    h6 {
-        color: $white;
-        margin: auto;
-        font-size: 0.7rem;
-        font-weight: $regular;
-        padding-top: 4px;
-        width: 31px;
+    .burger-label {
+        display: block;
+        position: relative;
+        top: 5px;
+        margin: 0 auto;
     }
     &:hover {
         background-color: $darker-blue;
-        cursor: pointer;
     }
 }
-.burger span { //burger icon
-    position: relative;
+//NEW BURGER
+.hamburger-box {
+    width: 33px; //YES
+    height: 19px; //YES
     display: inline-block;
-    width: 31px;
-    height: 3px;
+    position: relative; //YES
+}
+.hamburger-inner {
+    position: absolute; //YES
+    display: block; //YES
+    top: 50%; //YES
+    width: 33px; //YES
+    height: 3px; //YES
+    font-size: 1.438px;
+    line-height: 45px;
     background-color: $white;
-    margin: auto;
+    margin: -1.5px auto; //YES
+    transition-property: transform; //YES
     &::before,
     &::after {
-        content: '';
+        content: ''; //YES
         display: inline-block;
-        position: absolute;
+        position: absolute; //YES
+        transition-property: transform; //YES
         left: 0;
-        width: 100%;
+        width: 33px;
         height: 100%;
         background-color: inherit;
     }
@@ -335,9 +344,29 @@ nav .scroll-down {
         top: -8px;
     }
     &::after {
-        bottom: -8px;
+        top: 8px;
     }
 }
+.hamburger--spin .hamburger-inner {
+    transition-duration: .22s; //YES
+}
+.hamburger--spin.is-active
+.hamburger-inner{
+    transform: rotate(225deg); //YES
+    transition-delay: .12s; //YES
+    transition-timing-function: cubic-bezier(.215,.61,.355,1); //YES
+    &::before {
+        top: 0; //YES
+        opacity: 0; //YES
+        transition: top .1s ease-out, opacity .1s ease-out .12s; //YES
+    }
+    &::after {
+        bottom: 0; //YES
+        transform: rotate(-90deg) translate(8px); //YES
+        transition: bottom .1s ease-out, transform .22s cubic-bezier(.215,.61,.355,1) .12s; //YES
+    }
+}
+
 //===== BURGER STYLING ENDS=====//
 
 //===== SEARCH STYLING =====//

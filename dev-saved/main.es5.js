@@ -1,6 +1,6 @@
 "use strict";
 
-//==================== SLICK CAROUSEL PLUGIN ====================//
+//======================================== SLICK CAROUSEL PLUGIN ========================================//
 $(document).ready(function () {
   $('.carousel').slick({
     autoplay: true,
@@ -17,36 +17,11 @@ $(document).ready(function () {
     nextArrow: false //Don't show next arrow
 
   });
-}); //==================== STICKY HEADER ====================//
-// const nav = document.querySelector('nav');
-// //Variable to store previous scroll position
-// let previousScrollPosition = 0;
-// //Anon function, if current scroll posit greater than prev scroll posit user is scrolling down
-// const isScrollingDown = () => {
-//     let currentScrolledPosition = window.scrollY || window.pageYOffset;
-//     let scrollingDown;
-//     if (currentScrolledPosition > previousScrollPosition) {
-//         scrollingDown = true;
-//     } else {
-//         scrollingDown = false;
-//     }
-//     previousScrollPosition = currentScrolledPosition;
-//     return scrollingDown;
-// };
-// //If user is scrolling down assign scroll-down class and remove scroll up, user scrolling up reverse.
-// const handleNavScroll = () => {
-//     if (isScrollingDown()) {
-//         nav.classList.add('scroll-down');
-//         nav.classList.remove('scroll-up')
-//     } else {
-//         nav.classList.add('scroll-up');
-//         nav.classList.remove('scroll-down')
-//     }
-// }
+}); //======================================== STICKY HEADER ================================================//
 
 var lastScrollTop; //Variable to store the top position
 
-var navbar = document.querySelector('nav'); //Get the navbar and store it as a variable
+var navbar = document.querySelector('.navbar-wrapper'); //Get the navbar and store it as a variable
 
 window.addEventListener('scroll', function () {
   //On every scroll this function will be called
@@ -61,5 +36,43 @@ window.addEventListener('scroll', function () {
   }
 
   lastScrollTop = scrollTop; //New position is stored
-}); //==================== BURGER MENU ====================//
-//==================== COOKIES POPUP ====================//
+}); //======================================== BURGER MENU ==================================================//
+
+var burger = document.querySelector('.hamburger');
+var sidebar = document.querySelector(".sidebar");
+var pageWrapper = document.querySelector(".page-wrapper");
+burger.addEventListener('click', function () {
+  burger.classList.toggle('is-active');
+  pageWrapper.classList.add('sidebar-show');
+  sidebar.classList.add('sidebar-show');
+}); // pageWrapper.addEventListener('click', () => {
+//     pageWrapper.classList.remove('sidebar-show');
+//     sidebar.classList.remove('sidebar-show');
+// })
+// burger.addEventListener("click", function () {
+//     openSidebar();
+// });
+// //Set width of sidebar and right margin of the page body and make page body opaque.
+// function openSidebar () {
+//     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+//     document.sidebar.style.width = "350px";
+//     pageWrapper.style.marginRight = "350px";
+//     // function sidebarSize(belowLarge) {
+//     //     if(belowLarge.matches) { //If media query matches
+//     //         document.sidebar.style.width = "275px";
+//     //         pageWrapper.style.marginRight = "275px";
+//     //     } else {
+//     //         document.sidebar.style.width = "350px";
+//     //         pageWrapper.style.marginRight = "350px";
+//     //     }
+//     // }
+//     // sidebarSize(belowLarge) //Call listener function at run time
+//     // belowLarge.addEventListener(sidebarSize) //Attach listener function on state changes
+// }
+// //Set width if sidebar and right margin of the page body to 0 and page body to normal
+// function closeSidebar () {
+//     document.body.style.backgroundColor = "white";
+//     document.sidebar.style.width = "0";
+//     pageWrapper.style.marginRight = "0";
+// }
+//======================================== COOKIES POPUP ==============================================//
