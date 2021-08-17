@@ -1,3 +1,4 @@
+//==================== MAIN SELECTOR FOR THE SIDEBAR CONTAINER ====================//
 .sidebar {
     position: fixed;
     top: 0;
@@ -9,19 +10,12 @@
     transition: .5s;
     overflow-x: hidden;
     display: none;
+    ul,
+    li {
+        list-style: none;
+    }
     @media screen and (min-width: $break-lg) {
         width: 350px;
-    }
-    ul {
-        list-style-type: none;
-        border-top: 1px solid rgba(0,0,0,.25);
-        border-bottom: 1px solid hsla(0,0%,100%,.1);
-        li:not(:first-child) {
-            border-top: 1px solid hsla(0,0%,100%,.1);
-        }
-        li:not(:last-child) {
-            border-bottom: 1px solid rgba(0,0,0,.25);
-        }
     }
     a {
         @include link-styles;
@@ -33,26 +27,68 @@
     padding: 20px;
 }
 
-.sidebar.sidebar-show {
+.sidebar.sidebar-show { //Target class that is added by JS when hamburger clicked
     display: block;
 }
 
-//SIDECARDS ONLY SHOWN BELOW LG SCREEN SIZE
-.sidecards-nav {
+//==================== SIDECARDS ONLY SHOWN BELOW LG SCREEN SIZE ====================//
+.sidecards-nav { //Outer container for the sidecards section
     display: block;
     background-color: $dark-blue;
+    padding: 21px;
     @media screen and (min-width: $break-lg) {
         display: none;
     }
 }
 
-.side-main {
-    a {
-        padding: 20px;
-        @include flexcolumn;
+.sidemenu-sub {
+    background-color: $darker-blue;
+    ul {
+        border-top: 1px solid rgba(0,0,0,.25);
+        border-bottom: 1px solid hsla(0,0%,100%,.1);
+        li:not(:first-child) {
+            border-top: 1px solid hsla(0,0%,100%,.1);
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid rgba(0,0,0,.25);
+        }
     }
 }
 
+.side-main {
+    >a {
+        padding: 19px 0 18px !important;
+        outline: 1px solid rgba(0,0,0,.25);
+        border: 1px solid hsla(0,0%,100%,.1);
+        border-radius: 3px;
+        font-size: 1.125rem;
+        &:hover {
+            background-color: #3D404E;
+        }
+        span {
+            padding-bottom: 10px;
+            font-size: 1.438rem;
+        }
+        small {
+            font-size: .625rem;
+            padding-bottom: 1px;
+        }
+    }
+    a {
+        padding: 10px;
+        @include flexcolumn;
+        align-items: center;
+    }
+    ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+.side-main.side-main-contact {
+    margin-bottom: 20px;
+}
+
+//========== INDIVIDUAL HEADER SECTIONS ==========//
 .web-side-main {
     .fa-code {
         color: $web-dark;
@@ -84,8 +120,21 @@
     }
 }
 
-//SIDEBAR LINK SECTION (SHOWN AT ALL SIZES)
-.sidebar-header {
+//==================== SIDEBAR LINK SECTION (SHOWN AT ALL SIZES) ====================//
+.sidebar-list-wrapper {
+    ul {
+        list-style-type: none;
+        border-top: 1px solid rgba(0,0,0,.25);
+        border-bottom: 1px solid hsla(0,0%,100%,.1);
+        li:not(:first-child) {
+            border-top: 1px solid hsla(0,0%,100%,.1);
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid rgba(0,0,0,.25);
+        }
+    }
+}
+.sidebar-header { //Header LIs for each section
     background-color: $dark-blue;
     font-size: 1rem;
     &:hover {
@@ -96,19 +145,16 @@
     }
 }
 
-.sidebar-sub {
+.sidebar-sub { //Sub LIs for each section
     background-color: $darker-blue;
     font-size: 0.875rem;
-    padding: 15px 0 15px 0;
+    padding: 15px 0 15px 0px;
     span {
         padding-right: 1rem;
         font-size: .5rem;
     }
     a {
         padding: 0 20px;
-    }
-    .sidebar-sub-link {
-        padding: 20px;
     }
 }
 

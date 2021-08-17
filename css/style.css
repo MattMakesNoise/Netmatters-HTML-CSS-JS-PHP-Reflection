@@ -3677,21 +3677,14 @@ address a {
   overflow-x: hidden;
   display: none;
 }
+.sidebar ul,
+.sidebar li {
+  list-style: none;
+}
 @media screen and (min-width: 992px) {
   .sidebar {
     width: 350px;
   }
-}
-.sidebar ul {
-  list-style-type: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.sidebar ul li:not(:first-child) {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.sidebar ul li:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 .sidebar a {
   text-decoration: none;
@@ -3714,6 +3707,7 @@ address a {
 .sidecards-nav {
   display: block;
   background-color: #333645;
+  padding: 21px;
 }
 @media screen and (min-width: 992px) {
   .sidecards-nav {
@@ -3721,10 +3715,51 @@ address a {
   }
 }
 
+.sidemenu-sub {
+  background-color: #262834;
+}
+.sidemenu-sub ul {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidemenu-sub ul li:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidemenu-sub ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.side-main > a {
+  padding: 19px 0 18px !important;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  font-size: 1.125rem;
+}
+.side-main > a:hover {
+  background-color: #3D404E;
+}
+.side-main > a span {
+  padding-bottom: 10px;
+  font-size: 1.438rem;
+}
+.side-main > a small {
+  font-size: 0.625rem;
+  padding-bottom: 1px;
+}
 .side-main a {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.side-main ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.side-main.side-main-contact {
+  margin-bottom: 20px;
 }
 
 .web-side-main .fa-code {
@@ -3751,6 +3786,18 @@ address a {
   color: #DE093F;
 }
 
+.sidebar-list-wrapper ul {
+  list-style-type: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar-list-wrapper ul li:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar-list-wrapper ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
 .sidebar-header {
   background-color: #333645;
   font-size: 1rem;
@@ -3765,7 +3812,7 @@ address a {
 .sidebar-sub {
   background-color: #262834;
   font-size: 0.875rem;
-  padding: 15px 0 15px 0;
+  padding: 15px 0 15px 0px;
 }
 .sidebar-sub span {
   padding-right: 1rem;
@@ -3773,9 +3820,6 @@ address a {
 }
 .sidebar-sub a {
   padding: 0 20px;
-}
-.sidebar-sub .sidebar-sub-link {
-  padding: 20px;
 }
 
 /*========== GLOBAL STYLES =*/
