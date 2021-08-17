@@ -22,11 +22,6 @@
     }
 }
 
-.sidebar>ul>li>a { //Target section header links
-    display: block;
-    padding: 20px;
-}
-
 .sidebar.sidebar-show { //Target class that is added by JS when hamburger clicked
     display: block;
 }
@@ -124,14 +119,18 @@
 .sidebar-list-wrapper {
     ul {
         list-style-type: none;
-        border-top: 1px solid rgba(0,0,0,.25);
-        border-bottom: 1px solid hsla(0,0%,100%,.1);
-        li:not(:first-child) {
+        // border-top: 1px solid rgba(0,0,0,.25);
+        // border-bottom: 1px solid hsla(0,0%,100%,.1);
+        li {
             border-top: 1px solid hsla(0,0%,100%,.1);
-        }
-        li:not(:last-child) {
             border-bottom: 1px solid rgba(0,0,0,.25);
         }
+        // li:not(:first-child) {
+        //     border-top: 1px solid hsla(0,0%,100%,.1);
+        // }
+        // li:not(:last-child) {
+        //     border-bottom: 1px solid rgba(0,0,0,.25);
+        // }
     }
 }
 .sidebar-header { //Header LIs for each section
@@ -141,6 +140,7 @@
         background-color: #3D404E;
     }
     .sidebar-header-link {
+        display: block;
         padding: 15px 20px;
     }
 }
@@ -148,9 +148,10 @@
 .sidebar-sub { //Sub LIs for each section
     background-color: $darker-blue;
     font-size: 0.875rem;
-    padding: 15px 0 15px 0px;
+    padding: 15px 20px 15px 20px;
     span {
         padding-right: 1rem;
+        margin-left: -20px;
         font-size: .5rem;
     }
     a {

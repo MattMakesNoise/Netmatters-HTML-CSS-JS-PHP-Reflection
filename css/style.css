@@ -3695,11 +3695,6 @@ address a {
   color: #fff;
 }
 
-.sidebar > ul > li > a {
-  display: block;
-  padding: 20px;
-}
-
 .sidebar.sidebar-show {
   display: block;
 }
@@ -3788,13 +3783,9 @@ address a {
 
 .sidebar-list-wrapper ul {
   list-style-type: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.sidebar-list-wrapper ul li:not(:first-child) {
+.sidebar-list-wrapper ul li {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.sidebar-list-wrapper ul li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -3806,16 +3797,18 @@ address a {
   background-color: #3D404E;
 }
 .sidebar-header .sidebar-header-link {
+  display: block;
   padding: 15px 20px;
 }
 
 .sidebar-sub {
   background-color: #262834;
   font-size: 0.875rem;
-  padding: 15px 0 15px 0px;
+  padding: 15px 20px 15px 20px;
 }
 .sidebar-sub span {
   padding-right: 1rem;
+  margin-left: -20px;
   font-size: 0.5rem;
 }
 .sidebar-sub a {
