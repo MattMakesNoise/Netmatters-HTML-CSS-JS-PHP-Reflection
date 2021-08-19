@@ -124,8 +124,6 @@
 			push.animate({left: "0px"}, menuSpeed);
 		}else{
 			body.removeClass(pushyOpenRight);
-			// burger.removeClass('is-active'); //ADDED BY ME
-			// sidebar.removeClass('sidebar-show'); //ADDED BY ME
 			pushy.animate({right: "-" + menuWidth}, menuSpeed);
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);

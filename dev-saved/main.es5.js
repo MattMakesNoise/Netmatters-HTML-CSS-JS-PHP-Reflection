@@ -146,3 +146,34 @@ window.addEventListener('scroll', function () {
 //     pageWrapper.style.marginRight = "0";
 // }
 //======================================== COOKIES POPUP ==============================================//
+
+var popup = document.querySelector('.cookies-modal-outer');
+var changeSettingsBtn = document.querySelector('.change-settings');
+var acceptCookiesBtn = document.querySelector('.accept-cookies');
+var consent = 'Mmmm cookies!'; //String that will be stored if user clicks accept cookies
+
+var myStorage = window.localStorage; //Check to see if cookie consent has been given. If not show the popup
+
+window.onload = function () {
+  if (cookieCheck()) {
+    popup.style.display = 'none;';
+  }
+}; //Save to users input to storage
+
+
+function saveCookie() {
+  localStorage.setItem(consent, 'true');
+} //Check the storage
+
+
+function cookieCheck() {
+  return !localStorage.getItem(consent);
+} //Make sure the user can't close the modal by escaping or clicking out of it.
+//Event listener for accept cookies
+
+
+acceptCookiesBtn.addEventListener('click', function () {
+  saveCookie();
+  console.log('You accepted the cookies');
+  popup.style.display = 'none';
+});

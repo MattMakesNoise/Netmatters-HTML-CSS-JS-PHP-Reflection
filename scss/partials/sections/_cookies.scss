@@ -1,0 +1,64 @@
+.cookies-modal-outer {
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cookies-modal-inner {
+    background-color: $white;
+    width: 32%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid $white;
+    border-radius: 10px;
+    z-index: 101;
+    position: absolute;
+    top: 25%;
+    left: 34%;
+    display: flex;
+    flex-direction: column;
+    .cookies-header {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $lightgrey;
+    }
+    .cookies-para {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $grey-text;
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+}
+
+.modal-buttons {
+    padding-top: 1rem;
+    border-top: 1px solid $lightgrey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .change-settings,
+    .accept-cookies {
+        @include button-styles;
+        font-size: 1rem;
+        color: white; 
+        padding: .75rem 3rem;
+    }
+    .change-settings {
+        background-color: $btn-grey;
+        &:hover {
+            background-color: $btn-grey-hover;
+        }
+    }
+    .accept-cookies {
+        background-color: $web;
+        &:hover {
+            background-color: $web-dark;
+        }
+    }
+}

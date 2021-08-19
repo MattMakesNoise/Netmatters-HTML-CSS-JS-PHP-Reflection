@@ -38,31 +38,6 @@ window.addEventListener('scroll', function(){ //On every scroll this function wi
 //     // console.log('You clicked the burger!');
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const burger = document.querySelector(".hamburger");
 // const sidebar = document.querySelector(".sidebar");
 // const pageWrapper = document.querySelector(".page-wrapper");
@@ -177,6 +152,36 @@ window.addEventListener('scroll', function(){ //On every scroll this function wi
 // }
 
 //======================================== COOKIES POPUP ==============================================//
+const popup = document.querySelector('.cookies-modal-outer');
+const changeSettingsBtn = document.querySelector('.change-settings');
+const acceptCookiesBtn = document.querySelector('.accept-cookies');
+const consent = 'Mmmm cookies!'; //String that will be stored if user clicks accept cookies
+const myStorage = window.localStorage; 
+
+//Check to see if cookie consent has been given. If not show the popup
+window.onload = function() {
+    if(cookieCheck()) {
+        popup.style.display = 'none;'
+    } 
+};
+
+//Save to users input to storage
+function saveCookie () {
+    localStorage.setItem(consent, 'true');
+}
+//Check the storage
+function cookieCheck () {
+    return !localStorage.getItem(consent);
+}
+
+//Make sure the user can't close the modal by escaping or clicking out of it.
+
+//Event listener for accept cookies
+acceptCookiesBtn.addEventListener('click', () => {
+    saveCookie();
+    console.log('You accepted the cookies');
+    popup.style.display = 'none';
+});
 
 
 

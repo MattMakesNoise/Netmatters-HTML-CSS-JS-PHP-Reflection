@@ -3993,6 +3993,78 @@ address a {
   padding: 0 20px;
 }
 
+.cookies-modal-outer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cookies-modal-inner {
+  background-color: #fff;
+  width: 32%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: 101;
+  position: absolute;
+  top: 25%;
+  left: 34%;
+  display: flex;
+  flex-direction: column;
+}
+.cookies-modal-inner .cookies-header {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.cookies-modal-inner .cookies-para {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+.modal-buttons {
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal-buttons .change-settings,
+.modal-buttons .accept-cookies {
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: white;
+  padding: 0.75rem 3rem;
+}
+.modal-buttons .change-settings {
+  background-color: #999AA2;
+}
+.modal-buttons .change-settings:hover {
+  background-color: #84858F;
+}
+.modal-buttons .accept-cookies {
+  background-color: #926FB1;
+}
+.modal-buttons .accept-cookies:hover {
+  background-color: #79539A;
+}
+
 /*========== GLOBAL STYLES =*/
 /*========== NAVBAR ========*/
 /*========== HERO ==========*/

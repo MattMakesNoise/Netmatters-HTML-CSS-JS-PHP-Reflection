@@ -147,9 +147,7 @@
         left: "0px"
       }, menuSpeed);
     } else {
-      body.removeClass(pushyOpenRight); // burger.removeClass('is-active'); //ADDED BY ME
-      // sidebar.removeClass('sidebar-show'); //ADDED BY ME
-
+      body.removeClass(pushyOpenRight);
       pushy.animate({
         right: "-" + menuWidth
       }, menuSpeed);
