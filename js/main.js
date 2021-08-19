@@ -27,16 +27,119 @@ window.addEventListener('scroll', function(){ //On every scroll this function wi
     lastScrollTop = scrollTop; //New position is stored
 }); 
 //======================================== BURGER MENU ==================================================//
-const burger = document.querySelector('.hamburger');
+const burger = document.querySelector(".hamburger");
 const sidebar = document.querySelector(".sidebar");
 const pageWrapper = document.querySelector(".page-wrapper");
 
 burger.addEventListener('click', () => {
-    burger.classList.toggle('is-active');
-    pageWrapper.classList.toggle('sidebar-show');
-    sidebar.classList.toggle('sidebar-show');
-    // openOverlay();
+    burger.classList.add('is-active');
+    // pageWrapper.classList.toggle('sidebar-show');
+    // sidebar.classList.toggle('sidebar-show');
+    // console.log('You clicked the burger!');
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const burger = document.querySelector(".hamburger");
+// const sidebar = document.querySelector(".sidebar");
+// const pageWrapper = document.querySelector(".page-wrapper");
+
+// // burger.addEventListener('click', () => {
+// //     burger.classList.toggle('is-active');
+// //     pageWrapper.classList.toggle('sidebar-show');
+// //     sidebar.classList.toggle('sidebar-show');
+// //     // console.log('You clicked the burger!');
+// //     pageWrapper.addEventListener('click', () => {
+// //         closeMenu();
+// //         console.log('You clicked the pagewrapper!');
+// //     })
+// // })
+
+// let showMenu = false;
+
+// burger.addEventListener('click', () => {
+//     if(showMenu === false) {
+//         openMenu();
+//         console.log('You clicked the burger bruv!');
+//     }
+// });
+
+// function openMenu() { 
+//     burger.classList.add('is-active');
+//     sidebar.classList.add('sidebar-show');
+//     pageWrapper.classList.add('sidebar-show');
+//     pageWrapper.addEventListener('click', () => {
+//         if(showMenu === true) {
+//             setTimeout
+//             closeMenu();
+//             console.log('You only went and clicked the frickin page wrapper geez!');
+//         }
+//     });
+//     showMenu = true;
+// }
+
+// function closeMenu() {
+//     burger.classList.remove('is-active');
+//     sidebar.classList.remove('sidebar-show');
+//     pageWrapper.classList.remove('sidebar-show');
+//     pageWrapper.removeEventListener('click', closeMenu);
+//     showMenu = false;
+// }
+
+// pageWrapper.addEventListener('click', () => {
+//     if(showMenu === true) {
+//         closeMenu();
+//         console.log('You only went and clicked the frickin page wrapper geez!');
+//     }
+// });
+
+// function closeMenu() {
+//     burger.classList.remove('is-active');
+//     sidebar.classList.remove('sidebar-show');
+//     pageWrapper.classList.remove('sidebar-show');
+// }
+
+// function closeNav() {
+//     burger.classList.remove('is-active');
+//     sidebar.classList.remove('sidebar-show');
+//     pageWrapper.classList.remove('sidebar-show');
+// }
+ 
+// burger.addEventListener('click', () => {
+//     burger.classList.toggle('is-active');
+//     pageWrapper.classList.toggle('sidebar-show');
+//     sidebar.classList.toggle('sidebar-show');
+// })
+
+// pageWrapper.addEventListener('click', () => {
+//     if (burger.classList.contains('is-active')) {
+//         closeNav();
+//         console.log('You clicked me!');
+//     }
+// })
 
 // function openOverlay() {
 //     pageWrapper:after.style.backgroundColor = 'rgba(0,0,0,0.4)';
@@ -44,34 +147,6 @@ burger.addEventListener('click', () => {
 // function closeOverlay() {
 //     document.body.style.backgroundColor = 'white';
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // burger.addEventListener("click", function () {
 //     openSidebar();
@@ -100,7 +175,6 @@ burger.addEventListener('click', () => {
 //     document.sidebar.style.width = "0";
 //     pageWrapper.style.marginRight = "0";
 // }
-
 
 //======================================== COOKIES POPUP ==============================================//
 

@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 275px;
+    // width: 275px;
     height: 100%;
     z-index: 11;
     overflow: auto;
@@ -14,9 +14,9 @@
     li {
         list-style: none;
     }
-    @media screen and (min-width: $break-lg) {
-        width: 350px;
-    }
+    // @media screen and (min-width: $break-lg) {
+    //     width: 350px;
+    // }
     a {
         @include link-styles;
     }
@@ -144,7 +144,6 @@
         padding: 15px 20px;
     }
 }
-
 .sidebar-sub { //Sub LIs for each section
     background-color: $darker-blue;
     font-size: 0.875rem;
