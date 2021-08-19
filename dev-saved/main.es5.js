@@ -37,15 +37,16 @@ window.addEventListener('scroll', function () {
 
   lastScrollTop = scrollTop; //New position is stored
 }); //======================================== BURGER MENU ==================================================//
-
-var burger = document.querySelector(".hamburger");
-var sidebar = document.querySelector(".sidebar");
-var pageWrapper = document.querySelector(".page-wrapper");
-burger.addEventListener('click', function () {
-  burger.classList.add('is-active'); // pageWrapper.classList.toggle('sidebar-show');
-  // sidebar.classList.toggle('sidebar-show');
-  // console.log('You clicked the burger!');
-}); // const burger = document.querySelector(".hamburger");
+// const burger = document.querySelector(".hamburger");
+// const sidebar = document.querySelector(".sidebar");
+// const pageWrapper = document.querySelector(".page-wrapper");
+// burger.addEventListener('click', () => {
+//     burger.classList.add('is-active');
+//     // pageWrapper.classList.toggle('sidebar-show');
+//     // sidebar.classList.toggle('sidebar-show');
+//     // console.log('You clicked the burger!');
+// })
+// const burger = document.querySelector(".hamburger");
 // const sidebar = document.querySelector(".sidebar");
 // const pageWrapper = document.querySelector(".page-wrapper");
 // // burger.addEventListener('click', () => {

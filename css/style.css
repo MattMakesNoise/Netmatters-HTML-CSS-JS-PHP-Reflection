@@ -118,6 +118,12 @@ body {
 /* Site Overlay */
 .site-overlay {
   display: none;
+  width: calc(100vw - 275px);
+}
+@media screen and (min-width: 992px) {
+  .site-overlay {
+    width: calc(100vw - 367px);
+  }
 }
 
 .pushy-open-left .site-overlay,

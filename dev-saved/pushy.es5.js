@@ -26,7 +26,11 @@
       //jQuery fallback menu width
   submenuClass = '.pushy-submenu',
       submenuOpenClass = 'pushy-submenu-open',
-      submenuClosedClass = 'pushy-submenu-closed'; //check if menu-btn-selector data attribute exists
+      submenuClosedClass = 'pushy-submenu-closed',
+      burger = $('.hamburger'),
+      //Selector for hamburger //ADDED BY ME
+  sidebar = $('.sidebar'); //Select sidebar //ADDED BY ME
+  //check if menu-btn-selector data attribute exists
 
   if (typeof pushy.data('menu-btn-selector') !== 'undefined') {
     var menuBtnClass = pushy.data('menu-btn-selector'); //take user defined menu button CSS class
@@ -73,6 +77,9 @@
       body.toggleClass(pushyOpenLeft);
     } else {
       body.toggleClass(pushyOpenRight);
+      burger.toggleClass('is-active'); //ADDED BY ME
+
+      sidebar.toggleClass('sidebar-show'); //ADDED BY ME
     } //focus on link in menu after css transition ends
 
 
@@ -86,9 +93,9 @@
   function closePushy() {
     if (pushy.hasClass(pushyLeft)) {
       body.removeClass(pushyOpenLeft);
-      menuBtn.removeClass('is-active');
     } else {
-      body.removeClass(pushyOpenRight);
+      body.removeClass(pushyOpenRight); // burger.removeClass('is-active'); //ADDED BY ME
+      // sidebar.removeClass('sidebar-show'); //ADDED BY ME
     }
   }
 
@@ -140,7 +147,9 @@
         left: "0px"
       }, menuSpeed);
     } else {
-      body.removeClass(pushyOpenRight);
+      body.removeClass(pushyOpenRight); // burger.removeClass('is-active'); //ADDED BY ME
+      // sidebar.removeClass('sidebar-show'); //ADDED BY ME
+
       pushy.animate({
         right: "-" + menuWidth
       }, menuSpeed);

@@ -16,7 +16,9 @@
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
 		submenuOpenClass = 'pushy-submenu-open',
-		submenuClosedClass = 'pushy-submenu-closed';
+		submenuClosedClass = 'pushy-submenu-closed',
+		burger = $('.hamburger'), //Selector for hamburger //ADDED BY ME
+		sidebar = $('.sidebar'); //Select sidebar //ADDED BY ME
 
 	//check if menu-btn-selector data attribute exists
 	if( typeof pushy.data('menu-btn-selector') !== 'undefined' ){
@@ -68,6 +70,8 @@
 			body.toggleClass(pushyOpenLeft);
 		}else{
 			body.toggleClass(pushyOpenRight);
+			burger.toggleClass('is-active'); //ADDED BY ME
+			sidebar.toggleClass('sidebar-show'); //ADDED BY ME
 		}
 
 		//focus on link in menu after css transition ends
@@ -82,9 +86,10 @@
 	function closePushy(){
 		if( pushy.hasClass(pushyLeft) ){
 			body.removeClass(pushyOpenLeft);
-			menuBtn.removeClass('is-active');
 		}else{
 			body.removeClass(pushyOpenRight);
+			// burger.removeClass('is-active'); //ADDED BY ME
+			// sidebar.removeClass('sidebar-show'); //ADDED BY ME
 		}
 	}
 
@@ -119,6 +124,8 @@
 			push.animate({left: "0px"}, menuSpeed);
 		}else{
 			body.removeClass(pushyOpenRight);
+			// burger.removeClass('is-active'); //ADDED BY ME
+			// sidebar.removeClass('sidebar-show'); //ADDED BY ME
 			pushy.animate({right: "-" + menuWidth}, menuSpeed);
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);
