@@ -150,24 +150,27 @@ window.addEventListener('scroll', function () {
 var popup = document.querySelector('.cookies-modal-outer');
 var changeSettingsBtn = document.querySelector('.change-settings');
 var acceptCookiesBtn = document.querySelector('.accept-cookies');
-var consent = 'Mmmm cookies!'; //String that will be stored if user clicks accept cookies
-
-var myStorage = window.localStorage; //Check to see if cookie consent has been given. If not show the popup
+var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
 
 window.onload = function () {
-  if (cookieCheck()) {
-    popup.style.display = 'none;';
+  if (cookiesYorN === "true") {
+    popup.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
   }
 }; //Save to users input to storage
 
 
 function saveCookie() {
-  localStorage.setItem(consent, 'true');
+  localStorage.setItem('consent', 'true');
+  console.log(localStorage);
+  cookiesYorN = localStorage.getItem('consent');
+  console.log(cookiesYorN);
 } //Check the storage
 
 
 function cookieCheck() {
-  return !localStorage.getItem(consent);
+  return localStorage.getItem('consent');
 } //Make sure the user can't close the modal by escaping or clicking out of it.
 //Event listener for accept cookies
 
