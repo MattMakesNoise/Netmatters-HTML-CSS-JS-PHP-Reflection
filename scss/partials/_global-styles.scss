@@ -14,13 +14,28 @@
     src: url('/Poppins_Font/Poppins-Regular.ttf') format('truetype');
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.4px;
     font-size: 1rem;
     background-color: #fff;
     letter-spacing: .4px;
+    height: 100%;
     overflow-x: hidden;
+    // overflow-y: hidden;
+}
+
+#container { //Copied from Otis...
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 
 // .page-wrapper {

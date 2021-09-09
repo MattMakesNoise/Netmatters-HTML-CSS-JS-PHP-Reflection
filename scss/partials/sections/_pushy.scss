@@ -3,21 +3,22 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
-// $menu_width: 275px !default;
+$menu_width_belowipad: 275px !default;
+$menu_width_aboveipad: 350px !default;
 
 /* Menu Appearance */
 
 .pushy{
     position: fixed;
-    width: $menu_width;
+    width: $menu_width_belowipad;
     height: 100%;
     top: 0;
     z-index: 9999;
     background: #191918;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
-    @media screen and (min-width: $break-lg) {
-        width: 350px;
+    @media screen and (min-width: 769px) {
+        width: $menu_width_aboveipad;
     }
     a{
         display: block;
@@ -50,32 +51,52 @@
 /* Menu Movement */
 
 .pushy-left{
-    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    -webkit-transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+    -ms-transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+    transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+    @media screen and (min-width: 769px) {
+        -webkit-transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+        -ms-transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+        transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+    }
 }
 
 .pushy-open-left{
     #container,
     .push{
-        -webkit-transform: translate3d( $menu_width ,0,0);
-        -ms-transform: translate3d( $menu_width ,0,0);
-        transform: translate3d( $menu_width ,0,0);
+        -webkit-transform: translate3d( $menu_width_belowipad ,0,0);
+        -ms-transform: translate3d( $menu_width_belowipad ,0,0);
+        transform: translate3d( $menu_width_belowipad ,0,0);
+        @media screen and (min-width: 769px) {
+            -webkit-transform: translate3d( $menu_width_aboveipad ,0,0);
+            -ms-transform: translate3d( $menu_width_aboveipad ,0,0);
+            transform: translate3d( $menu_width_aboveipad ,0,0);
+        }
     }
 }
 
 .pushy-right{
-    -webkit-transform: translate3d( $menu_width ,0,0);
-    -ms-transform: translate3d( $menu_width ,0,0);
-    transform: translate3d( $menu_width ,0,0);
+    -webkit-transform: translate3d( $menu_width_belowipad ,0,0);
+    -ms-transform: translate3d( $menu_width_belowipad ,0,0);
+    transform: translate3d( $menu_width_belowipad ,0,0);
+    @media screen and (min-width: 769px) {
+        -webkit-transform: translate3d( $menu_width_aboveipad ,0,0);
+        -ms-transform: translate3d( $menu_width_aboveipad ,0,0);
+        transform: translate3d( $menu_width_aboveipad ,0,0);
+    }
 }
 
 .pushy-open-right{
     #container,
     .push{
-        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        transform: translate3d( unquote('-' + $menu_width) ,0,0);
+        -webkit-transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+        -ms-transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+        transform: translate3d( unquote('-' + $menu_width_belowipad) ,0,0);
+        @media screen and (min-width: 769px) {
+            -webkit-transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+            -ms-transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+            transform: translate3d( unquote('-' + $menu_width_aboveipad) ,0,0);
+        }
     }
 }
 
@@ -109,8 +130,8 @@
 .site-overlay{
     display: none;
     width: calc(100vw - 275px);
-    @media screen and (min-width: 992px) {
-        width: calc(100vw - 367px);
+    @media screen and (min-width: 769px) {
+        width: calc(100vw - 350px);
     }
 }
 

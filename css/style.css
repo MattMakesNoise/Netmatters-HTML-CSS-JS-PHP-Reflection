@@ -13,13 +13,27 @@
   font-family: "Poppins";
   src: url("/Poppins_Font/Poppins-Regular.ttf") format("truetype");
 }
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.4px;
   font-size: 1rem;
   background-color: #fff;
   letter-spacing: 0.4px;
+  height: 100%;
   overflow-x: hidden;
+}
+
+#container {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 100%;
 }
 
 /*! Pushy - v1.4.0 - 2020-12-28
@@ -38,7 +52,7 @@ body {
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
   .pushy {
     width: 350px;
   }
@@ -72,6 +86,13 @@ body {
   -ms-transform: translate3d(-275px, 0, 0);
   transform: translate3d(-275px, 0, 0);
 }
+@media screen and (min-width: 769px) {
+  .pushy-left {
+    -webkit-transform: translate3d(-350px, 0, 0);
+    -ms-transform: translate3d(-350px, 0, 0);
+    transform: translate3d(-350px, 0, 0);
+  }
+}
 
 .pushy-open-left #container,
 .pushy-open-left .push {
@@ -79,11 +100,26 @@ body {
   -ms-transform: translate3d(275px, 0, 0);
   transform: translate3d(275px, 0, 0);
 }
+@media screen and (min-width: 769px) {
+  .pushy-open-left #container,
+.pushy-open-left .push {
+    -webkit-transform: translate3d(350px, 0, 0);
+    -ms-transform: translate3d(350px, 0, 0);
+    transform: translate3d(350px, 0, 0);
+  }
+}
 
 .pushy-right {
   -webkit-transform: translate3d(275px, 0, 0);
   -ms-transform: translate3d(275px, 0, 0);
   transform: translate3d(275px, 0, 0);
+}
+@media screen and (min-width: 769px) {
+  .pushy-right {
+    -webkit-transform: translate3d(350px, 0, 0);
+    -ms-transform: translate3d(350px, 0, 0);
+    transform: translate3d(350px, 0, 0);
+  }
 }
 
 .pushy-open-right #container,
@@ -91,6 +127,14 @@ body {
   -webkit-transform: translate3d(-275px, 0, 0);
   -ms-transform: translate3d(-275px, 0, 0);
   transform: translate3d(-275px, 0, 0);
+}
+@media screen and (min-width: 769px) {
+  .pushy-open-right #container,
+.pushy-open-right .push {
+    -webkit-transform: translate3d(-350px, 0, 0);
+    -ms-transform: translate3d(-350px, 0, 0);
+    transform: translate3d(-350px, 0, 0);
+  }
 }
 
 .pushy-open-left .pushy,
@@ -120,9 +164,9 @@ body {
   display: none;
   width: calc(100vw - 275px);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
   .site-overlay {
-    width: calc(100vw - 367px);
+    width: calc(100vw - 350px);
   }
 }
 
@@ -3858,7 +3902,6 @@ address a {
   overflow: auto;
   transition: 0.5s;
   overflow-x: hidden;
-  display: none;
 }
 .sidebar ul,
 .sidebar li {
