@@ -4049,21 +4049,78 @@ address a {
 
 .cookies-modal-inner {
   background-color: #fff;
-  width: 32%;
-  height: 50%;
+  width: 85%;
+  height: 87%;
   margin: 0 auto;
   padding: 1rem;
-  border: 2px solid #fff;
-  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   z-index: 101;
   position: absolute;
-  top: 25%;
-  left: 34%;
+  top: 5%;
+  left: 8%;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 320px) {
+  .cookies-modal-inner {
+    width: 82%;
+    height: 110%;
+    top: 4%;
+    left: 9%;
+  }
+}
+@media screen and (min-width: 375px) {
+  .cookies-modal-inner {
+    width: 85%;
+    height: 92%;
+    top: 3%;
+    left: 8%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .cookies-modal-inner {
+    width: 85%;
+    height: 87%;
+    top: 5%;
+    left: 8%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cookies-modal-inner {
+    width: 78%;
+    height: 55%;
+    top: 21%;
+    left: 11%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cookies-modal-inner {
+    width: 58%;
+    height: 58%;
+    top: 22%;
+    left: 21%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cookies-modal-inner {
+    width: 42%;
+    height: 55%;
+    top: 22%;
+    left: 29%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .cookies-modal-inner {
+    width: 24%;
+    height: 40%;
+    top: 30%;
+    left: 38%;
+  }
+}
 .cookies-modal-inner .cookies-header {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
+  font-weight: 400;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ddd;
 }
@@ -4074,13 +4131,36 @@ address a {
   font-size: 1rem;
   line-height: 1.7rem;
 }
+@media screen and (max-width: 768px) {
+  .cookies-modal-inner .cookies-para {
+    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cookies-modal-inner .cookies-para {
+    padding-top: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .cookies-modal-inner .cookies-para {
+    padding-bottom: 1.75rem;
+  }
+}
 
 .modal-buttons {
   padding-top: 1rem;
   border-top: 1px solid #ddd;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 575px) {
+  .modal-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .modal-buttons .change-settings,
 .modal-buttons .accept-cookies {
@@ -4096,8 +4176,26 @@ address a {
   color: white;
   padding: 0.75rem 3rem;
 }
+@media screen and (min-width: 1260px) {
+  .modal-buttons .change-settings,
+.modal-buttons .accept-cookies {
+    padding: 1rem 3.75rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .modal-buttons .change-settings,
+.modal-buttons .accept-cookies {
+    padding: 1rem 3.5rem;
+  }
+}
 .modal-buttons .change-settings {
   background-color: #999AA2;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 575px) {
+  .modal-buttons .change-settings {
+    margin-bottom: 0;
+  }
 }
 .modal-buttons .change-settings:hover {
   background-color: #84858F;
