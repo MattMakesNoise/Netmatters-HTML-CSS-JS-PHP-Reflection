@@ -88,8 +88,7 @@ function saveCookie() {
 
 function cookieCheck() {
   return localStorage.getItem('consent');
-} //Make sure the user can't close the modal by escaping or clicking out of it.
-//Event listener for accept cookies
+} //Event listener for accept cookies
 
 
 acceptCookiesBtn.addEventListener('click', function () {

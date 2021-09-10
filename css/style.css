@@ -436,8 +436,14 @@ body {
 }
 
 .logo-wrapper {
-  flex: 1 1 50% !important;
+  flex: 1 1 40% !important;
   order: 1;
+}
+@media screen and (min-width: 325px) {
+  .logo-wrapper {
+    flex: 1 1 50%;
+    order: 1;
+  }
 }
 @media screen and (max-width: 768px) {
   .logo-wrapper {

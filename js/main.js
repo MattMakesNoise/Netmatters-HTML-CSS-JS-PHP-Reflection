@@ -27,9 +27,6 @@ const floatyHead = staticHead.cloneNode(true); //copies statichead
 floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
 floatyHead.classList.add("floaty_default"); // I added this because the default visibility override, and can reference this in if statement to make things easier to read
 
-
-
-
 const headerElement = document.querySelector('header');
 headerElement.appendChild(floatyHead);
 
@@ -60,7 +57,6 @@ mainDiv.addEventListener('scroll', function() {
             floatyHead.classList.remove("floaty_default");
 
         }
-
         oldScrollPosition = newScrollPosition;
     }
 });
@@ -79,7 +75,6 @@ window.onload = function() {
         popup.style.display = 'block';
     }
 };
-
 //Save to users input to storage
 function saveCookie () {
     localStorage.setItem('consent', 'true');
@@ -91,9 +86,6 @@ function saveCookie () {
 function cookieCheck () {
     return localStorage.getItem('consent');
 }
-
-//Make sure the user can't close the modal by escaping or clicking out of it.
-
 //Event listener for accept cookies
 acceptCookiesBtn.addEventListener('click', () => {
     saveCookie();

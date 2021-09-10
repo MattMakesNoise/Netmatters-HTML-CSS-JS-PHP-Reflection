@@ -140,8 +140,12 @@
 }
 //===== LOGO STYLING =====//
 .logo-wrapper {
-    flex: 1 1 50% !important;
+    flex: 1 1 40% !important;
     order: 1;
+    @media screen and (min-width: 325px) {
+        flex: 1 1 50%;
+        order: 1;
+    }
     @media screen and (max-width: $break-m) {
         flex: 1 1 60%;
         order: 1;
@@ -945,5 +949,8 @@ form.search-form {
         button {
             width: 56px;
         }
+    }
+    .menu-main {
+        
     }
 }
