@@ -799,6 +799,10 @@ form.search-form input[type=text] {
   font-weight: 200;
   color: rgba(221, 221, 221, 0.8);
 }
+form.search-form input[type=text]:focus {
+  outline: none;
+  color: #555;
+}
 @media screen and (max-width: 768px) {
   form.search-form input[type=text] {
     display: inline-block;
@@ -810,6 +814,7 @@ form.search-form input[type=text] {
   }
   form.search-form input[type=text]:focus {
     outline: none;
+    color: #555;
   }
 }
 @media screen and (min-width: 768px) {

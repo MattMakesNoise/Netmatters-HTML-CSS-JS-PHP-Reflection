@@ -464,6 +464,10 @@ form.search-form {
         background: transparent;
         font-weight: $extra-light;
         color: $lightgrey-80;
+        &:focus {
+            outline: none;
+            color: #555;
+        }
         //Up to Medium
         @media screen and (max-width: $break-m) {
             display: inline-block;
@@ -474,6 +478,7 @@ form.search-form {
             opacity: 0.8;
             &:focus {
                 outline: none;
+                color: #555;
             }
         }
         //Medium and up
@@ -949,8 +954,5 @@ form.search-form {
         button {
             width: 56px;
         }
-    }
-    .menu-main {
-        
     }
 }
