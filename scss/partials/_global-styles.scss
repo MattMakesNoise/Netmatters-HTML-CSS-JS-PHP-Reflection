@@ -30,12 +30,16 @@ body {
     // overflow-y: hidden;
 }
 
-#container { //Copied from Otis...
+#container { 
     position: relative;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
     max-height: 100%;
+}
+
+.page-wrapper {
+    z-index: 10;
 }
 
 // .page-wrapper {

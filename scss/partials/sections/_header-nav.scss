@@ -1,8 +1,9 @@
 //========== HEADER/NAV ===============//
-.navbar-wrapper { //Main wrapper
-    position: sticky; //Make it sticky/fixed
+#static_head { //Main wrapper
+    // position: fixed; //Make it sticky/fixed
     z-index: 11; //Appear in front
     transition: top 0.4s ease-in-out; //Don't disappear instantly
+    width: 100%;
     top: 0;
     display: block;
     height: 168px !important;
@@ -22,7 +23,54 @@
     @media screen and (min-width: $break-xl) {
         height: 209px;
     }
+    #floaty_head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: left .5s, right .5s;
+        &.headpush { //This can be called whatever
+            left: -275px;
+            right: 275px;
+        }
+    }
+    .floaty_animation_up {
+        animation-name: float_up;
+        animation-duration: 0.3s;
+        visibility: visible;
+    }
+
+    @keyframes float_up {
+        0% {transform:translateY(-100%);}
+        100% {transform:translateY(0%);}
+    }
+
+    .floaty_animation_down {
+        animation-name: float_down;
+        animation-duration: 0.3s;
+        visibility: hidden;
+        transition: visibility 0.3s;
+        
+    }
+
+    @keyframes float_down {
+        0% {transform:translateY(0%);}
+        100% {transform:translateY(-100%);}
+    }
 }
+
+#static_head, 
+    #floaty_head {
+        display: block;
+        z-index: 100;
+    }
+    .floaty_default {
+        visibility: hidden;
+        z-index: 100;
+    }
+
+    
+
 .nav-bar { //Wraps Header and slider/cards section
     width: 100%;
     background-color: #fff;

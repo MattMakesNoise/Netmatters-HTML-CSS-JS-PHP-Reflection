@@ -36,6 +36,10 @@ body {
   max-height: 100%;
 }
 
+.page-wrapper {
+  z-index: 10;
+}
+
 /*! Pushy - v1.4.0 - 2020-12-28
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
@@ -270,33 +274,82 @@ body {
   transform: translateY(-50%) rotate(90deg);
 }
 
-.navbar-wrapper {
-  position: sticky;
+#static_head {
   z-index: 11;
   transition: top 0.4s ease-in-out;
+  width: 100%;
   top: 0;
   display: block;
   height: 168px !important;
 }
 @media screen and (max-width: 768px) {
-  .navbar-wrapper {
+  #static_head {
     height: 168px;
   }
 }
 @media screen and (min-width: 768px) {
-  .navbar-wrapper {
+  #static_head {
     height: 110px !important;
   }
 }
 @media screen and (min-width: 992px) {
-  .navbar-wrapper {
+  #static_head {
     height: 209px !important;
   }
 }
 @media screen and (min-width: 1260px) {
-  .navbar-wrapper {
+  #static_head {
     height: 209px;
   }
+}
+#static_head #floaty_head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: left 0.5s, right 0.5s;
+}
+#static_head #floaty_head.headpush {
+  left: -275px;
+  right: 275px;
+}
+#static_head .floaty_animation_up {
+  animation-name: float_up;
+  animation-duration: 0.3s;
+  visibility: visible;
+}
+@keyframes float_up {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+#static_head .floaty_animation_down {
+  animation-name: float_down;
+  animation-duration: 0.3s;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+@keyframes float_down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#static_head,
+#floaty_head {
+  display: block;
+  z-index: 100;
+}
+
+.floaty_default {
+  visibility: hidden;
+  z-index: 100;
 }
 
 .nav-bar {
@@ -4112,10 +4165,10 @@ address a {
 }
 @media screen and (min-width: 1800px) {
   .cookies-modal-inner {
-    width: 24%;
-    height: 40%;
-    top: 30%;
-    left: 38%;
+    width: 30%;
+    height: 56%;
+    top: 24%;
+    left: 34%;
   }
 }
 .cookies-modal-inner .cookies-header {
