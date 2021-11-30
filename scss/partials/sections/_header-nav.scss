@@ -1,10 +1,13 @@
 //========== HEADER/NAV ===============//
 #static_head { //Main wrapper
-    // position: fixed; //Make it sticky/fixed
+    position: fixed; //Make it sticky/fixed
     z-index: 11; //Appear in front
     transition: top 0.4s ease-in-out; //Don't disappear instantly
     width: 100%;
-    top: 0;
+    top: -214px;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: block;
     height: 168px !important;
     //Up to medium
@@ -23,51 +26,68 @@
     @media screen and (min-width: $break-xl) {
         height: 209px;
     }
-    #floaty_head {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        transition: left .5s, right .5s;
-        &.headpush { //This can be called whatever
-            left: -275px;
-            right: 275px;
-        }
-    }
-    .floaty_animation_up {
-        animation-name: float_up;
-        animation-duration: 0.3s;
-        visibility: visible;
-    }
-
-    @keyframes float_up {
-        0% {transform:translateY(-100%);}
-        100% {transform:translateY(0%);}
-    }
-
-    .floaty_animation_down {
-        animation-name: float_down;
-        animation-duration: 0.3s;
-        visibility: hidden;
-        transition: visibility 0.3s;
-        
-    }
-
-    @keyframes float_down {
-        0% {transform:translateY(0%);}
-        100% {transform:translateY(-100%);}
+}
+#sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    transition: top .25s ease-in-out;
+   
+}
+.headpush {
+    left: -275px;
+    @media screen and (min-width: 769px) {
+        left: -350px;
     }
 }
 
-#static_head, 
-    #floaty_head {
-        display: block;
-        z-index: 100;
-    }
-    .floaty_default {
-        visibility: hidden;
-        z-index: 100;
-    }
+// #floaty_head {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     transition: left .5s, right .5s;
+    // }
+    // #floaty_head > .headpush { //This can be called whatever
+    //     top: 100px;
+    //     left: -275px;
+    //     right: 275px;
+    // }
+    // .floaty_animation_up {
+    //     animation-name: float_up;
+    //     animation-duration: 0.3s;
+    //     visibility: visible;
+    // }
+
+    // @keyframes float_up {
+    //     0% {transform:translateY(-100%);}
+    //     100% {transform:translateY(0%);}
+    // }
+
+    // .floaty_animation_down {
+    //     animation-name: float_down;
+    //     animation-duration: 0.3s;
+    //     visibility: hidden;
+    //     transition: visibility 0.3s;
+        
+    // }
+
+    // @keyframes float_down {
+    //     0% {transform:translateY(0%);}
+    //     100% {transform:translateY(-100%);}
+    // }
+
+// #static_head, 
+//     #floaty_head {
+//         display: block;
+//         z-index: 9999;
+//     }
+//     .floaty_default {
+//         visibility: hidden;
+//         z-index: 100;
+//     }
 
     
 
@@ -400,7 +420,7 @@
     }
 }
 .hamburger--spin .hamburger-inner {
-    transition-duration: .22s; //YES
+    transition-duration: .22s;
 }
 .hamburger--spin.is-active
 .hamburger-inner{

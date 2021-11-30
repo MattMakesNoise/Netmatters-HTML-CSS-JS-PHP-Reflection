@@ -1,13 +1,14 @@
-/*========== CARDS ===========*/
+//=======================================================================================================//
+//=======================================================================================================//
+//======================================== MAIN CARDS SELECTORS =========================================//
+//=======================================================================================================//
+//=======================================================================================================//
 .cards-wrapper {
     display: block;
+    background-color: rgba(255,255,255,0.1);
 }
 .cards-section {
-    background-color: rgba(255,255,255,0.1);
-    @media screen and (max-width: $break-m) {
-        padding: 20px 15px 50px 15px;
-        @include mginlrauto;
-    }
+    height: auto;
     @media screen and (min-width: $break-m) {
         padding: 20px 15px 50px 15px;
         @include mginlrauto;
@@ -20,14 +21,14 @@
     @media screen and (min-width: $break-xl) {
         padding: 50px 15px 50px 15px;
         @include mginlrauto;
-        width: 1200px;
+        width: 1200px !important;
     }
 }
-.column {
-    @include flexcolumn;
-    flex-basis: 100%;
-    flex: 1;
-}
+//=======================================================================================================//
+//=======================================================================================================//
+//======================================== CARD GROUPS ==================================================//
+//=======================================================================================================//
+//=======================================================================================================//
 // First Three Cards
 .row-one {
     //Large and Up
@@ -39,9 +40,6 @@
 .row-double {
     @media screen and (min-width: $break-m) {
         @include flexcolumn;
-    }
-    @media screen and (min-width: $break-lg) {
-        @include flexcolumn; //is this needed?
     }
     @media screen and (min-width: $break-xl) {
         @include flexrow;
@@ -56,11 +54,7 @@
     @media screen and (min-width: $break-m) {
         display: flex;
     }
-    @media screen and (min-width: $break-lg) {
-        display: flex; //is this needed?
-    }
     @media screen and (min-width: $break-xl) {
-        display: flex; //is this needed?
         margin-top: 10px;
     }
 }
@@ -69,8 +63,15 @@
     @media screen and (min-width: $break-m) {
         display: flex;
     }
+    @media screen and (min-width: $break-xl) {
+        margin-top: 10px;
+    }
 }
-//========== CARD STYLING ===========//
+//=======================================================================================================//
+//=======================================================================================================//
+//======================================== CARD STYLING =================================================//
+//=======================================================================================================//
+//=======================================================================================================//
 .card-link {
     text-decoration: none;
     color: #000;
@@ -97,6 +98,7 @@
     @media screen and (min-width: $break-xl) {
         margin-top: 0;
         margin-right: 2rem;
+        padding: 15px;
     }
 }
 .icon-border {
@@ -151,267 +153,303 @@
     text-align: center;
     border-radius: 3px;
 }
-    /*========== SOFT CARD =======*/
-    .soft-card {
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            margin-right: 16px;
-        }
+//=======================================================================================================//
+//=======================================================================================================//
+//======================================== INDIVIDUAL CARDS =============================================//
+//=======================================================================================================//
+//=======================================================================================================//
+.soft-card {
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        margin-right: 16px;
+    }
+    .icon-border {
+        background-color: $soft;
+    }
+    .soft-btn {
+        background-color: $soft;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $soft-dark;
+        cursor: pointer;
         .icon-border {
-            background-color: $soft;
+            background-color: white;
+        }
+        .card-icon {
+            color: $soft-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .soft-btn {
-            background-color: $soft;
-            color: $white;
+            background-color: $white;
+            color: $soft-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $soft-dark;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $soft-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .soft-btn {
-                background-color: $white;
-                color: $soft-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== IT CARD =========*/
-    .it-card {
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            margin-left: 16px;
-            margin-right: 16px;
-        }
+}
+/*========== IT CARD =========*/
+.it-card {
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .icon-border {
+        background-color: $it;
+    }
+    .it-btn {
+        background-color: $it;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $it-dark;
+        cursor: pointer;
         .icon-border {
-            background-color: $it;
+            background-color: white;
+        }
+        .card-icon {
+            color: $it-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .it-btn {
-            background-color: $it;
-            color: $white;
+            background-color: $white;
+            color: $it-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $it-dark;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $it-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .it-btn {
-                background-color: $white;
-                color: $it-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== MARKET CARD =====*/
-    .market-card {
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            margin-left: 16px;
-        }
+}
+/*========== MARKET CARD =====*/
+.market-card {
+    //Large and Up
+    @media screen and (min-width: $break-lg) {
+        margin-left: 16px;
+    }
+    .icon-border {
+        background-color: $market;
+    }
+    .market-btn {
+        background-color: $market;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $market;
+        cursor: pointer;
         .icon-border {
-            background-color: $market;
+            background-color: white;
+        }
+        .card-icon {
+            color: $market-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .market-btn {
-            background-color: $market;
-            color: $white;
+            background-color: $white;
+            color: $market-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $market;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $market-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .market-btn {
-                background-color: $white;
-                color: $market-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== TELE CARD =======*/
-    .tele-card {
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            margin-right: 16px;
-        }
+}
+/*========== TELE CARD =======*/
+.tele-card {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-right: 16px;
+        width: 345px !important;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 455px !important;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 270px !important;
+    }
+    .icon-border {
+        background-color: $tele;
+    }
+    .tele-btn {
+        background-color: $tele;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $tele-dark;
+        cursor: pointer;
         .icon-border {
-            background-color: $tele;
+            background-color: white;
+        }
+        .card-icon {
+            color: $tele-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .tele-btn {
-            background-color: $tele;
-            color: $white;
+            background-color: $white;
+            color: $tele-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $tele-dark;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $tele-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .tele-btn {
-                background-color: $white;
-                color: $tele-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== WEB CARD ========*/
-    .web-card {
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            margin-left: 16px;
-        }
+}
+/*========== WEB CARD ========*/
+.web-card {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-left: 16px;
+        width: 345px !important;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 455px !important;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 270px !important;
+    }
+    .icon-border {
+        background-color: $web;
+    }
+    .web-btn {
+        background-color: $web;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $web-dark;
+        cursor: pointer;
         .icon-border {
-            background-color: $web;
+            background-color: white;
+        }
+        .card-icon {
+            color: $web-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .web-btn {
-            background-color: $web;
-            color: $white;
+            background-color: $white;
+            color: $web-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $web-dark;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $web-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .web-btn {
-                background-color: $white;
-                color: $web-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== CYBER CARD ======*/
-    .cyber-card {
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            margin-right: 16px;
-        }
+}
+/*========== CYBER CARD ======*/
+.cyber-card {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-right: 16px;
+        width: 345px !important;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 455px !important;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 270px !important;
+    }
+    .icon-border {
+        background-color: $cyber;
+    }
+    .cyber-btn {
+        background-color: $cyber;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $cyber-dark;
+        cursor: pointer;
         .icon-border {
-            background-color: $cyber;
+            background-color: white;
+        }
+        .card-icon {
+            color: $cyber-dark;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .cyber-btn {
-            background-color: $cyber;
-            color: $white;
+            background-color: $white;
+            color: $cyber-dark;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $cyber-dark;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $cyber-dark;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .cyber-btn {
-                background-color: $white;
-                color: $cyber-dark;
-                text-decoration: none;
-            }
-        }
     }
-    /*========== TRAIN CARD ======*/
-    .train-card {
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            margin-left: 16px;
-        }
+}
+/*========== TRAIN CARD ======*/
+.train-card {
+    //Medium and up
+    @media screen and (min-width: $break-m) {
+        margin-left: 16px;
+        width: 345px !important;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 455px !important;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 270px !important;
+    }
+    .icon-border {
+        background-color: $web;
+    }
+    .train-btn {
+        background-color: $web;
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $web;
+        cursor: pointer;
         .icon-border {
-            background-color: $web;
+            background-color: white;
+        }
+        .card-icon {
+            color: $web;
+        }
+        .card-title,
+        .card-text {
+        color: $white;
+        }
+        .card-title {
+            background-image: linear-gradient($white, $white);
         }
         .train-btn {
-            background-color: $web;
-            color: $white;
+            background-color: $white;
+            color: $web;
             text-decoration: none;
         }
-        &:hover {
-            background-color: $web;
-            cursor: pointer;
-            .icon-border {
-                background-color: white;
-            }
-            .card-icon {
-                color: $web;
-            }
-            .card-title,
-            .card-text {
-            color: $white;
-            }
-            .card-title {
-                background-image: linear-gradient($white, $white);
-            }
-            .train-btn {
-                background-color: $white;
-                color: $web;
-                text-decoration: none;
-            }
-        }
     }
-    //===== Target IE Specifically =====//
+}
+//=======================================================================================================//
+//=======================================================================================================//
+//======================================== TARGET IE SPECIFICALLY =======================================//
+//=======================================================================================================//
+//=======================================================================================================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .card-text {
         @media screen and (max-width: 425px) {
@@ -426,6 +464,5 @@
         @media screen and (min-width: 768px) {
             max-width: 250px;    
         }
-        
     }
 }

@@ -16,6 +16,7 @@
 
 html {
     overflow: hidden;
+    // overflow-y: initial;
     height: 100%;
 }
 
@@ -27,7 +28,7 @@ body {
     letter-spacing: .4px;
     height: 100%;
     overflow-x: hidden;
-    // overflow-y: hidden;
+    // overflow-y: scroll;
 }
 
 #container { 

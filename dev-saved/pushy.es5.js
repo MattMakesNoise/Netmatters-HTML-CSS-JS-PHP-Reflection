@@ -36,12 +36,15 @@
     var menuBtnClass = pushy.data('menu-btn-selector'); //take user defined menu button CSS class
   } else {
     var menuBtnClass = '.menu-btn'; //set default menu button CSS class
+    // var menuBtnClassFloaty = '#floaty_head .menu-btn';
   } //css classes to toggle the menu
 
 
-  var menuBtn = $(menuBtnClass + ', .pushy-link'); //css class to focus when menu is closed w/ esc key
+  var menuBtn = $(menuBtnClass + ', .pushy-link'); // var menuBtnFloaty = $(menuBtnClassFloaty + ', .pushy-link');
+  //css class to focus when menu is closed w/ esc key
 
-  var menuBtnFocus = $(menuBtnClass); // check if container-selector data attribute exists
+  var menuBtnFocus = $(menuBtnClass); // var menuBtnFocusFloaty = $(menuBtnClassFloaty);
+  // check if container-selector data attribute exists
 
   var containerSelector = '#container';
 
@@ -76,10 +79,8 @@
     if (pushy.hasClass(pushyLeft)) {
       body.toggleClass(pushyOpenLeft);
     } else {
-      body.toggleClass(pushyOpenRight);
-      burger.toggleClass('is-active'); //ADDED BY ME
-
-      sidebar.toggleClass('sidebar-show'); //ADDED BY ME
+      body.toggleClass(pushyOpenRight); // burger.toggleClass('is-active'); //ADDED BY ME
+      // sidebar.toggleClass('sidebar-show'); //ADDED BY ME
     } //focus on link in menu after css transition ends
 
 
@@ -94,8 +95,7 @@
     if (pushy.hasClass(pushyLeft)) {
       body.removeClass(pushyOpenLeft);
     } else {
-      body.removeClass(pushyOpenRight); // burger.removeClass('is-active'); //ADDED BY ME
-      // sidebar.removeClass('sidebar-show'); //ADDED BY ME
+      body.removeClass(pushyOpenRight);
     }
   }
 

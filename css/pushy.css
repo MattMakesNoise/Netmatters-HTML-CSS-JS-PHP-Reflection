@@ -85,11 +85,11 @@
 #container,
 .pushy,
 .push {
-  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: transform 0.1s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
 .pushy-content {
-  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: visibility 0.1s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
 /* Site Overlay */
@@ -107,8 +107,8 @@
   left: 0;
   z-index: 9998;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: fade 500ms;
-  animation: fade 500ms;
+  -webkit-animation: fade 100ms;
+  animation: fade 100ms;
 }
 
 @keyframes fade {
@@ -137,11 +137,11 @@
 
 .pushy-submenu > ul {
   padding-left: 15px;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.1s ease-in-out, visibility 0.1s ease-in-out;
 }
 
 .pushy-submenu > ul .pushy-link {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .pushy-submenu button {
@@ -175,7 +175,7 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 
 /* Submenu Movement */

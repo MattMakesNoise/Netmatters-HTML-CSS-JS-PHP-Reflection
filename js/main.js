@@ -1,4 +1,8 @@
+//=======================================================================================================//
+//=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
+//=======================================================================================================//
+//=======================================================================================================//
 $(document).ready(function(){
     $('.carousel').slick({
         autoplay: true,
@@ -13,55 +17,94 @@ $(document).ready(function(){
     });
 });
 
+//=======================================================================================================//
+//=======================================================================================================//
 //======================================== STICKY HEADER ================================================//
-const staticHead = document.querySelector('#static_head');
+//=======================================================================================================//
+//=======================================================================================================//
+var mainBody = document.getElementById('container');
 
-let buffer = 0
-let oldScrollPosition = 0;
-let newnewScrollPosition;
+if (Modernizr.hiddenscroll === true) {
+    $('#sticky').css("width", "100%");
+  } else {
+    $('#sticky').css("width", mainBody.clientWidth);
+  }
+  
+  $(window).resize(function () {
+    $('#sticky').css("width", mainBody.clientWidth);
+  }); 
 
-const afterHeader = staticHead.clientHeight;
+var prevScrollpos = 0;
 
-const floatyHead = staticHead.cloneNode(true); //copies statichead
+mainBody.onscroll = function () {
+  var currentScrollPos = $(this).scrollTop();
 
-floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
-floatyHead.classList.add("floaty_default"); // I added this because the default visibility override, and can reference this in if statement to make things easier to read
+  if (currentScrollPos > prevScrollpos && currentScrollPos >= 208) {
+    $("#sticky").css({
+      top: '-214px'
+    });
+  } else {
+    $("#sticky").css({
+      top: '0px'
+    });
+  }
 
-const headerElement = document.querySelector('header');
-headerElement.appendChild(floatyHead);
+  prevScrollpos = currentScrollPos;
+}; 
 
-const mainDiv = document.querySelector(".page-wrapper");
 
-// When we detect scrolling
-mainDiv.addEventListener('scroll', function() {
-    // Get the value
-    newScrollPosition = mainDiv.scrollTop;
-    let ua = navigator.userAgent;
-    /* MSIE used to detect old browsers and Trident used to newer ones*/
-    let is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+//======================================== OLD, SHIT, REDUNDANT, STINKY =================================//
+// const staticHead = document.querySelector('#static_head');
 
-    if (!is_ie
-         || (is_ie && (newScrollPosition - oldScrollPosition) != 0)) {
-        const hasJustScrolledUp = newScrollPosition < oldScrollPosition;
-        const isFarDownPage = newScrollPosition > afterHeader;
+// let buffer = 0
+// let oldScrollPosition = 0;
+// let newScrollPosition;
 
-        if (hasJustScrolledUp && isFarDownPage) {
-            console.log('show!');
-            floatyHead.classList.add("floaty_animation_up");
-            floatyHead.classList.remove("floaty_animation_down");
-            floatyHead.classList.remove("floaty_default");
-        } else {
-            console.log('hide');
-            floatyHead.classList.remove("floaty_animation_up");
-            floatyHead.classList.add("floaty_animation_down");
-            floatyHead.classList.remove("floaty_default");
+// const afterHeader = staticHead.clientHeight;
 
-        }
-        oldScrollPosition = newScrollPosition;
-    }
-});
+// const floatyHead = staticHead.cloneNode(true); //copies statichead
 
+// floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
+// floatyHead.classList.add("floaty_default"); // I added this because the default visibility override, and can reference this in if statement to make things easier to read
+
+// const headerElement = document.querySelector('header');
+// headerElement.appendChild(floatyHead);
+
+// const mainDiv = document.querySelector(".page-wrapper");
+
+// // When we detect scrolling
+// mainDiv.addEventListener('scroll', function() {
+//     // Get the value
+//     newScrollPosition = mainDiv.scrollTop;
+//     let ua = navigator.userAgent;
+//     /* MSIE used to detect old browsers and Trident used to newer ones*/
+//     let is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+
+//     if (!is_ie || (is_ie && (newScrollPosition - oldScrollPosition) != 0)) {
+//         const hasJustScrolledUp = newScrollPosition < oldScrollPosition;
+//         const isFarDownPage = newScrollPosition > afterHeader;
+
+//         if (hasJustScrolledUp && isFarDownPage) {
+//             console.log('show!');
+//             floatyHead.classList.add("floaty_animation_up");
+//             floatyHead.classList.remove("floaty_animation_down");
+//             floatyHead.classList.remove("floaty_default");
+//         } else {
+//             console.log('hide');
+//             floatyHead.classList.remove("floaty_animation_up");
+//             floatyHead.classList.add("floaty_animation_down");
+//             floatyHead.classList.remove("floaty_default");
+
+//         }
+//         oldScrollPosition = newScrollPosition;
+//     } 
+// });
+
+//=====================================================================================================//
+//=====================================================================================================//
 //======================================== COOKIES POPUP ==============================================//
+//=====================================================================================================//
+//=====================================================================================================//
 const popup = document.querySelector('.cookies-modal-outer');
 const changeSettingsBtn = document.querySelector('.change-settings');
 const acceptCookiesBtn = document.querySelector('.accept-cookies');
@@ -92,3 +135,41 @@ acceptCookiesBtn.addEventListener('click', () => {
     console.log('You accepted the cookies');
     popup.style.display = 'none';
 });
+
+//====================================================================================================//
+//====================================================================================================//
+//======================================== BURGER SPIN ===============================================//
+//====================================================================================================//
+//====================================================================================================//
+const burgerButton = document.querySelector('#burger2');
+const overlay = document.querySelector('.site-overlay');
+let burgerSpin = true;
+const bodySelect = document.querySelector('body');
+const sticky = document.querySelector('#sticky');
+// const floatyHeader = document.querySelector('#floaty_head');
+// const burgerButtonFloaty = document.querySelector('#floaty_head .nav-bar .header .hamburger');
+
+//FIXED HEADER SCRIPT
+burgerButton.addEventListener('click', () => {
+    burgerButton.classList.add('is-active');
+    sticky.classList.add('headpush');
+    burgerSpin = true;
+});
+
+overlay.addEventListener('click', () => {
+    if(burgerSpin === true) {
+        burgerButton.classList.remove('is-active');
+        sticky.classList.remove('headpush');
+        burgerSpin = false;
+    }
+})
+
+//FLOATY HEADER SCRIPT
+// burgerButtonFloaty.addEventListener('click', () => {
+//     console.log('You clicked the floaty burger broski!');
+//     burgerButtonFloaty.classList.add('is-active');
+//     bodySelect.classList.add('pushy-open-right');
+//     burgerSpin = true;
+//     floatyHead.classList.add('headpush');
+// })
+

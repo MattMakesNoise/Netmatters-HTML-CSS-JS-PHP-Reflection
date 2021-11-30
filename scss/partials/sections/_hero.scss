@@ -1,6 +1,9 @@
 /*========== HERO ============*/
 .hero-wrapper {
-    min-height: 490px;
+    // min-height: 490px;
+    position: relative;
+    // height: auto;
+    margin-top: 168px; //To account for the floating header
     display: block;
     //Up to medium devices
     @media screen and (max-width: $break-m) {
@@ -9,14 +12,12 @@
     //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
+        margin-top: 110px; //To account for the floating header
     }
     //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        height: calc(100vh - 209px);
+        margin-top: 209px; //To account for the floating header
     }
 }
 .slide {
@@ -27,7 +28,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 692px;
+    min-height: 715px;
     //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
@@ -202,31 +203,34 @@
 }
 .slick-dots li button::before {
     position: absolute;
-    top: -128px;
+    top: -128px; //Where the dots are vertically in comparison to the hero itself
     color: white;
     opacity: .5;
     font-size: 12px;
     //Medium and up
     @media screen and (min-width: $break-m) {
-        top: -64px;
+        top: -64px; //Where the dots are vertically in comparison to the hero itself
     }
     //Large and up
     @media screen and (min-width: $break-lg) {
-        top: -112px;
+        top: -112px; //Where the dots are vertically in comparison to the hero itself
     }
     //XXL
     @media screen and (min-width: 1920px) {
-        top: -80px;
+        top: -80px; //Where the dots are vertically in comparison to the hero itself
     }
 }
-.slick-dots li.slick-active button:before {
+.slick-dots li.slick-active button::before {
     color:white;
     opacity: 1;
     border: 2px solid white;
     border-radius: 50%;
     box-sizing: border-box;
-    padding: 0px 15px 18px 2px;
-    margin-top: -2px;
+    padding: 0px 15px 18px 3px; //Adjusts where the dots are relative to the border
+    margin-top: -2px; //Corrects the position relative to the other dots
+    @media screen and (min-width: $break-m) {
+        padding: 0px 15px 18px 2px; //Adjusts where the dots are relative to the border
+    }
 }
 //===== Target IE Specifically =====//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
