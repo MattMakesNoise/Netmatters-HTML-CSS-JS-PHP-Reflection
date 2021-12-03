@@ -1609,32 +1609,46 @@ form.search-form::after {
 .cards-wrapper {
   display: block;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px 15px 50px 15px;
+}
+@media screen and (min-width: 768px) {
+  .cards-wrapper {
+    padding: 20px 15px 50px 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards-wrapper {
+    padding: 50px 15px 50px 15px;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .cards-wrapper {
+    padding: 50px 15px 50px 15px;
+    margin-top: 0;
+  }
 }
 
 .cards-section {
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .cards-section {
-    padding: 20px 15px 50px 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 750px;
+    width: 720px;
   }
 }
 @media screen and (min-width: 992px) {
   .cards-section {
-    margin-left: auto;
-    margin-right: auto;
     width: 970px;
   }
 }
 @media screen and (min-width: 1260px) {
   .cards-section {
-    padding: 50px 15px 50px 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px !important;
+    width: 1170px !important;
   }
 }
 
@@ -1642,6 +1656,23 @@ form.search-form::after {
   .row-one {
     display: flex;
     flex-direction: row;
+    margin: 0 -15px;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .row-one a {
+    width: 33.3333333333%;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .row-one a .card-text {
+    height: 82px;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .row-one a .card-text {
+    height: 56px;
   }
 }
 
@@ -1649,6 +1680,7 @@ form.search-form::after {
   .row-double {
     display: flex;
     flex-direction: column;
+    margin: 0 -15px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -1665,6 +1697,7 @@ form.search-form::after {
 @media screen and (min-width: 768px) {
   .row-two {
     display: flex;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -1672,15 +1705,48 @@ form.search-form::after {
     margin-top: 10px;
   }
 }
+@media screen and (min-width: 768px) {
+  .row-two a {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .row-two a .card-text {
+    height: 56px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .row-two a .card-text {
+    height: 56px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .row-three {
     display: flex;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1260px) {
   .row-three {
     margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .row-three a {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .row-three a .card-text {
+    height: 56px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .row-three a .card-text {
+    height: 56px;
   }
 }
 
@@ -1695,15 +1761,10 @@ form.search-form::after {
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 0 2rem;
+  margin-top: 30px;
+  padding: 30px;
   box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
-}
-@media screen and (max-width: 768px) {
-  .card {
-    margin-top: 30px;
-    padding: 30px;
-  }
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -1714,8 +1775,6 @@ form.search-form::after {
 @media screen and (min-width: 1260px) {
   .card {
     margin-top: 0;
-    margin-right: 2rem;
-    padding: 15px;
   }
 }
 
@@ -1778,11 +1837,6 @@ form.search-form::after {
   border-radius: 3px;
 }
 
-@media screen and (min-width: 992px) {
-  .soft-card {
-    margin-right: 16px;
-  }
-}
 .soft-card .icon-border {
   background-color: #67809F;
 }
@@ -1814,13 +1868,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== IT CARD =========*/
-@media screen and (min-width: 992px) {
-  .it-card {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-}
 .it-card .icon-border {
   background-color: #4183D7;
 }
@@ -1852,12 +1899,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== MARKET CARD =====*/
-@media screen and (min-width: 992px) {
-  .market-card {
-    margin-left: 16px;
-  }
-}
 .market-card .icon-border {
   background-color: #2ECC71;
 }
@@ -1889,23 +1930,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== TELE CARD =======*/
-@media screen and (min-width: 768px) {
-  .tele-card {
-    margin-right: 16px;
-    width: 345px !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .tele-card {
-    width: 455px !important;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .tele-card {
-    width: 270px !important;
-  }
-}
 .tele-card .icon-border {
   background-color: #D64541;
 }
@@ -1937,23 +1961,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== WEB CARD ========*/
-@media screen and (min-width: 768px) {
-  .web-card {
-    margin-left: 16px;
-    width: 345px !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .web-card {
-    width: 455px !important;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .web-card {
-    width: 270px !important;
-  }
-}
 .web-card .icon-border {
   background-color: #926FB1;
 }
@@ -1985,23 +1992,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== CYBER CARD ======*/
-@media screen and (min-width: 768px) {
-  .cyber-card {
-    margin-right: 16px;
-    width: 345px !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .cyber-card {
-    width: 455px !important;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .cyber-card {
-    width: 270px !important;
-  }
-}
 .cyber-card .icon-border {
   background-color: #F62459;
 }
@@ -2033,23 +2023,6 @@ form.search-form::after {
   text-decoration: none;
 }
 
-/*========== TRAIN CARD ======*/
-@media screen and (min-width: 768px) {
-  .train-card {
-    margin-left: 16px;
-    width: 345px !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .train-card {
-    width: 455px !important;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .train-card {
-    width: 270px !important;
-  }
-}
 .train-card .icon-border {
   background-color: #926FB1;
 }
