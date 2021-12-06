@@ -231,6 +231,9 @@
     @media screen and (min-width: $break-m) {
         padding: 0px 15px 18px 2px; //Adjusts where the dots are relative to the border
     }
+    @media screen and (min-width: $break-lg) {
+        padding: 0px 15px 18px 3px; //Adjusts where the dots are relative to the border
+    }
 }
 //===== Target IE Specifically =====//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

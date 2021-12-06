@@ -1595,6 +1595,11 @@ form.search-form::after {
     padding: 0px 15px 18px 2px;
   }
 }
+@media screen and (min-width: 992px) {
+  .slick-dots li.slick-active button::before {
+    padding: 0px 15px 18px 3px;
+  }
+}
 
 @media screen and (-ms-high-contrast: active) and (max-width: 425px), screen and (-ms-high-contrast: none) and (max-width: 425px) {
   .hero-text-wrapper {
@@ -4076,7 +4081,7 @@ address a {
   display: none;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   z-index: 100;
   position: absolute;
   top: 0;
@@ -4104,35 +4109,35 @@ address a {
   .cookies-modal-inner {
     width: 82%;
     height: auto;
-    top: 4%;
+    top: 13%;
     left: 9%;
   }
 }
 @media screen and (min-width: 375px) {
   .cookies-modal-inner {
     width: 85%;
-    top: 3%;
+    top: 13%;
     left: 8%;
   }
 }
 @media screen and (min-width: 425px) {
   .cookies-modal-inner {
     width: 85%;
-    top: 5%;
+    top: 13%;
     left: 8%;
   }
 }
 @media screen and (min-width: 768px) {
   .cookies-modal-inner {
     width: 78%;
-    top: 21%;
+    top: 20%;
     left: 11%;
   }
 }
 @media screen and (min-width: 992px) {
   .cookies-modal-inner {
     width: 58%;
-    top: 22%;
+    top: 25%;
     left: 21%;
   }
 }
