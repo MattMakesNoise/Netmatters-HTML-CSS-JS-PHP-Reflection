@@ -22,35 +22,54 @@ $(document).ready(function(){
 //======================================== STICKY HEADER ================================================//
 //=======================================================================================================//
 //=======================================================================================================//
-var mainBody = document.getElementById('container');
+// var mainBody = document.getElementById('container');
+const body = document.body;
+let lastScroll = 0; 
 
-if (Modernizr.hiddenscroll === true) {
-    $('#sticky').css("width", "100%");
-  } else {
-    $('#sticky').css("width", mainBody.clientWidth);
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  console.log(currentScroll);
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
   }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+  lastScroll = currentScroll;
+})
+// if (Modernizr.hiddenscroll === true) {
+//     $('#sticky').css("width", "100%");
+//   } else {
+//     $('#sticky').css("width", mainBody.clientWidth);
+//   }
   
-  $(window).resize(function () {
-    $('#sticky').css("width", mainBody.clientWidth);
-  }); 
+//   $(window).resize(function () {
+//     $('#sticky').css("width", mainBody.clientWidth);
+//   }); 
 
-var prevScrollpos = 0;
+// var prevScrollpos = 0;
 
-mainBody.onscroll = function () {
-  var currentScrollPos = $(this).scrollTop();
+// mainBody.onscroll = function () {
+//   var currentScrollPos = $(this).scrollTop();
 
-  if (currentScrollPos > prevScrollpos && currentScrollPos >= 208) {
-    $("#sticky").css({
-      top: '-214px'
-    });
-  } else {
-    $("#sticky").css({
-      top: '0px'
-    });
-  }
+//   if (currentScrollPos > prevScrollpos && currentScrollPos >= 208) {
+//     $("#sticky").css({
+//       top: '-214px'
+//     });
+//   } else {
+//     $("#sticky").css({
+//       top: '0px'
+//     });
+//   }
 
-  prevScrollpos = currentScrollPos;
-}; 
+//   prevScrollpos = currentScrollPos;
+// }; 
 
 
 //======================================== OLD, SHIT, REDUNDANT, STINKY =================================//
@@ -150,11 +169,11 @@ const sticky = document.querySelector('#sticky');
 // const burgerButtonFloaty = document.querySelector('#floaty_head .nav-bar .header .hamburger');
 
 //FIXED HEADER SCRIPT
-burgerButton.addEventListener('click', () => {
-    burgerButton.classList.add('is-active');
-    sticky.classList.add('headpush');
-    burgerSpin = true;
-});
+// burgerButton.addEventListener('click', () => {
+//     burgerButton.classList.add('is-active');
+//     sticky.classList.add('headpush');
+//     burgerSpin = true;
+// });
 
 overlay.addEventListener('click', () => {
     if(burgerSpin === true) {

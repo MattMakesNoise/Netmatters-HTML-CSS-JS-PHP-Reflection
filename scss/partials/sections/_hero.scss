@@ -1,14 +1,9 @@
 /*========== HERO ============*/
 .hero-wrapper {
-    // min-height: 490px;
     position: relative;
-    // height: auto;
     margin-top: 168px; //To account for the floating header
     display: block;
-    //Up to medium devices
-    @media screen and (max-width: $break-m) {
-        height: calc(100vh - 168px);
-    }
+    height: calc(100vh - 168px);
     //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
@@ -50,12 +45,28 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(270deg, transparent 25%, #000);
+        background: linear-gradient(270deg, transparent 1%, #000);
     }
 }
+
+.hero-text-outer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media screen and (max-width: $break-m) {
+        height: calc(100vh - 168px);
+    }
+    //Medium devices
+    @media screen and (min-width: $break-m) {
+        height: calc(100vh - 110px);
+    }
+    //Large Devices
+    @media screen and (min-width: $break-lg) {
+        height: calc(100vh - 209px);
+    }
+}
+
 .hero-text-wrapper {
-    position: absolute;
-    top: 20%;
     padding: 0 15px;
     display: flex;
     z-index: 10;
@@ -72,7 +83,6 @@
     }
     //Large and Up
     @media screen and (min-width: $break-lg) {
-        top: 30%;
         width: 970px;
         @include mginlrauto;
         padding-left: 40px;
@@ -84,16 +94,13 @@
     //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
-        @include mginlrauto;
-        top: 30%;
-        right: 10%;
+        margin: 0 auto;
+        justify-content: center;
     }
     //XXL
     @media screen and (min-width: 1920px) {
         width: 1200px;
         @include mginlrauto;
-        top: 38%;
-        right: 28%;
     }
 }
 .hero-title,

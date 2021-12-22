@@ -14,7 +14,6 @@
   src: url("/Poppins_Font/Poppins-Regular.ttf") format("truetype");
 }
 html {
-  overflow: hidden;
   height: 100%;
 }
 
@@ -25,14 +24,11 @@ body {
   background-color: #fff;
   letter-spacing: 0.4px;
   height: 100%;
-  overflow-x: hidden;
 }
 
 #container {
   position: relative;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
   max-height: 100%;
 }
 
@@ -277,11 +273,10 @@ body {
 #static_head {
   position: fixed;
   z-index: 11;
-  transition: top 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   width: 100%;
-  top: -214px;
+  top: 0;
   left: 0;
-  right: 0;
   z-index: 10;
   display: block;
   height: 168px !important;
@@ -307,13 +302,12 @@ body {
   }
 }
 
-#sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 11;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
-  transition: top 0.25s ease-in-out;
+.scroll-down #static_head {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up #static_head {
+  filter: drop-shadow(0 -10px 20px #aaaaaa);
 }
 
 .headpush {
@@ -1317,11 +1311,7 @@ form.search-form::after {
   position: relative;
   margin-top: 168px;
   display: block;
-}
-@media screen and (max-width: 768px) {
-  .hero-wrapper {
-    height: calc(100vh - 168px);
-  }
+  height: calc(100vh - 168px);
 }
 @media screen and (min-width: 768px) {
   .hero-wrapper {
@@ -1369,12 +1359,31 @@ form.search-form::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(270deg, transparent 25%, #000);
+  background: linear-gradient(270deg, transparent 1%, #000);
+}
+
+.hero-text-outer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .hero-text-outer {
+    height: calc(100vh - 168px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-text-outer {
+    height: calc(100vh - 110px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-text-outer {
+    height: calc(100vh - 209px);
+  }
 }
 
 .hero-text-wrapper {
-  position: absolute;
-  top: 20%;
   padding: 0 15px;
   display: flex;
   z-index: 10;
@@ -1394,7 +1403,6 @@ form.search-form::after {
 }
 @media screen and (min-width: 992px) {
   .hero-text-wrapper {
-    top: 30%;
     width: 970px;
     margin-left: auto;
     margin-right: auto;
@@ -1408,10 +1416,8 @@ form.search-form::after {
 @media screen and (min-width: 1260px) {
   .hero-text-wrapper {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 30%;
-    right: 10%;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1419,8 +1425,6 @@ form.search-form::after {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    top: 38%;
-    right: 28%;
   }
 }
 
