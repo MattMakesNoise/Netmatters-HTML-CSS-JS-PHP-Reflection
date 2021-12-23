@@ -1,20 +1,28 @@
 /*========== HERO ============*/
 .hero-wrapper {
     position: relative;
-    margin-top: 168px; //To account for the floating header
     display: block;
     height: calc(100vh - 168px);
     //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
-        margin-top: 110px; //To account for the floating header
     }
     //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
-        margin-top: 209px; //To account for the floating header
     }
 }
+// .hero-mt {
+//     margin-top: 168px; //To account for the floating header
+//     //Medium devices
+//     @media screen and (min-width: $break-m) {
+//         margin-top: 110px; //To account for the floating header
+//     }
+//     //Large Devices
+//     @media screen and (min-width: $break-lg) {
+//         margin-top: 209px; //To account for the floating header
+//     }
+// }
 .slide {
     z-index: 1;
     position: relative;

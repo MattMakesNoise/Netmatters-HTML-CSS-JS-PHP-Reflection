@@ -24,12 +24,12 @@ body {
   background-color: #fff;
   letter-spacing: 0.4px;
   height: 100%;
+  position: relative;
+  top: 209px;
 }
 
 #container {
-  position: relative;
   height: 100%;
-  max-height: 100%;
 }
 
 .page-wrapper {
@@ -65,9 +65,6 @@ body {
 }
 .pushy a:hover {
   color: #FFF;
-}
-.pushy ul:first-child {
-  margin-top: 10px;
 }
 .pushy.pushy-left {
   left: 0;
@@ -271,13 +268,12 @@ body {
 }
 
 #static_head {
+  background-color: #fff;
   position: fixed;
   z-index: 11;
   transition: all 0.4s ease-in-out;
   width: 100%;
   top: 0;
-  left: 0;
-  z-index: 10;
   display: block;
   height: 168px !important;
 }
@@ -302,21 +298,50 @@ body {
   }
 }
 
+.head-push {
+  top: -168px;
+}
+@media screen and (min-width: 768px) {
+  .head-push {
+    top: -110px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .head-push {
+    top: -209px;
+  }
+}
+
+.head-top {
+  top: 0;
+}
+@media screen and (min-width: 768px) {
+  .head-top {
+    top: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .head-top {
+    top: 0;
+  }
+}
+
 .scroll-down #static_head {
-  transform: translate3d(0, -100%, 0);
+  top: -168px;
+}
+@media screen and (min-width: 768px) {
+  .scroll-down #static_head {
+    top: -110px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .scroll-down #static_head {
+    top: -209px;
+  }
 }
 
 .scroll-up #static_head {
-  filter: drop-shadow(0 -10px 20px #aaaaaa);
-}
-
-.headpush {
-  left: -275px;
-}
-@media screen and (min-width: 769px) {
-  .headpush {
-    left: -350px;
-  }
+  filter: drop-shadow(0 -1px 2px #aaaaaa);
 }
 
 .nav-bar {
@@ -1309,20 +1334,17 @@ form.search-form::after {
 /*========== HERO ============*/
 .hero-wrapper {
   position: relative;
-  margin-top: 168px;
   display: block;
   height: calc(100vh - 168px);
 }
 @media screen and (min-width: 768px) {
   .hero-wrapper {
     height: calc(100vh - 110px);
-    margin-top: 110px;
   }
 }
 @media screen and (min-width: 992px) {
   .hero-wrapper {
     height: calc(100vh - 209px);
-    margin-top: 209px;
   }
 }
 
@@ -3968,7 +3990,7 @@ address a {
 .sidecards-nav {
   display: block;
   background-color: #333645;
-  padding: 21px;
+  padding: 0 21px;
 }
 @media screen and (min-width: 992px) {
   .sidecards-nav {
