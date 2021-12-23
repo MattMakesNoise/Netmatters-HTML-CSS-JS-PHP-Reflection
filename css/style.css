@@ -13,23 +13,14 @@
   font-family: "Poppins";
   src: url("/Poppins_Font/Poppins-Regular.ttf") format("truetype");
 }
-html {
-  height: 100%;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.4px;
   font-size: 1rem;
-  background-color: #fff;
+  background-color: red;
   letter-spacing: 0.4px;
-  height: 100%;
   position: relative;
   top: 209px;
-}
-
-#container {
-  height: 100%;
 }
 
 .page-wrapper {

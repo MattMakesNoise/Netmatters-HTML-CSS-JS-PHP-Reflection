@@ -96,7 +96,7 @@ burgerButton.addEventListener('click', () => {
     burgerSpin = true;
     console.log(lastScroll);
     sticky.classList.add('head-top');
-    sticky.style.position = 'sticky';
+    // sticky.style.position = 'sticky';
     body.style.top = '0';
     // if(lastScroll = 0) {
         

@@ -102,8 +102,8 @@ burgerButton.addEventListener('click', function () {
   body.style.overflow = 'hidden';
   burgerSpin = true;
   console.log(lastScroll);
-  sticky.classList.add('head-top');
-  sticky.style.position = 'sticky';
+  sticky.classList.add('head-top'); // sticky.style.position = 'sticky';
+
   body.style.top = '0'; // if(lastScroll = 0) {
   // } 
   // if(lastScroll > 300 && !body.classList.contains("scroll-down")) {
