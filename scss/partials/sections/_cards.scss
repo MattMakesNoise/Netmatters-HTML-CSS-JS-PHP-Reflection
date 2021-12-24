@@ -28,9 +28,11 @@
     }
     @media screen and (min-width: $break-lg) {
         width: 970px;
+        padding: 0 15px;
     }
     @media screen and (min-width: $break-xl) {
         width: 1170px !important;
+        padding: 0;
     }
 }
 //=======================================================================================================//
@@ -52,9 +54,6 @@
             .card-text {
                 @media screen and (min-width: $break-lg) { 
                     height: 82px;
-                }
-                @media screen and (min-width: $break-lg) { 
-                    height: 56px;
                 }
             }
         }

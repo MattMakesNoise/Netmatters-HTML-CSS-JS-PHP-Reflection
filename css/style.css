@@ -1641,11 +1641,13 @@ form.search-form::after {
 @media screen and (min-width: 992px) {
   .cards-section {
     width: 970px;
+    padding: 0 15px;
   }
 }
 @media screen and (min-width: 1260px) {
   .cards-section {
     width: 1170px !important;
+    padding: 0;
   }
 }
 
@@ -1665,11 +1667,6 @@ form.search-form::after {
 @media screen and (min-width: 992px) and (min-width: 992px) {
   .row-one a .card-text {
     height: 82px;
-  }
-}
-@media screen and (min-width: 992px) and (min-width: 992px) {
-  .row-one a .card-text {
-    height: 56px;
   }
 }
 
