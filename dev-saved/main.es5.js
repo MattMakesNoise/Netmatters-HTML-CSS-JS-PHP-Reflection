@@ -33,7 +33,7 @@ var body = document.body;
 var lastScroll = 0;
 var sticky = document.querySelector('#static_head');
 window.addEventListener("scroll", function () {
-  var currentScroll = window.pageYOffset; //   console.log(currentScroll);
+  var currentScroll = window.pageYOffset;
 
   if (currentScroll <= 209) {
     body.classList.remove("scroll-up");
@@ -71,7 +71,6 @@ window.onload = function () {
 
 function saveCookie() {
   localStorage.setItem('consent', 'true');
-  console.log(localStorage);
   cookiesYorN = localStorage.getItem('consent');
   console.log(cookiesYorN);
 } //Check the storage
@@ -84,7 +83,6 @@ function cookieCheck() {
 
 acceptCookiesBtn.addEventListener('click', function () {
   saveCookie();
-  console.log('You accepted the cookies');
   popup.style.display = 'none';
 }); //====================================================================================================//
 //====================================================================================================//
@@ -96,32 +94,21 @@ var burgerButton = document.querySelector('.menu-btn');
 var overlay = document.querySelector('.site-overlay');
 var burgerSpin = true;
 var hero = document.querySelector('.hero-wrapper');
-var container = document.querySelector('.page-wrapper');
 burgerButton.addEventListener('click', function () {
   burgerButton.classList.add('is-active');
-  body.style.overflow = 'hidden';
-  burgerSpin = true;
-  console.log(lastScroll);
-  sticky.classList.add('head-top'); // sticky.style.position = 'sticky';
+  body.style.overflow = 'hidden'; //Hide main page scrollbar when sidebar is open
 
-  body.style.top = '0'; // if(lastScroll = 0) {
-  // } 
-  // if(lastScroll > 300 && !body.classList.contains("scroll-down")) {
-  //     sticky.classList.add('head-top');
-  //     sticky.style.position = 'sticky';
-  //     console.log(sticky.style.position);
-  // } else {
-  //     sticky.classList.add('head-push');
-  // }
+  sticky.style.position = 'sticky'; //Make header appear at top of the page when sidebar is open
+
+  burgerSpin = true;
+  hero.classList.remove('hero-mt'); //Remove the margin top from the hero to stop page pushing down
 });
 overlay.addEventListener('click', function () {
   if (burgerSpin === true) {
     burgerButton.classList.remove('is-active');
-    body.style.overflow = 'auto'; // sticky.classList.remove('head-push');
-
+    body.style.overflow = 'auto';
     sticky.style.position = 'fixed';
-    sticky.classList.remove('head-top');
     burgerSpin = false;
-    body.style.top = '209px';
+    hero.classList.add('hero-mt');
   }
 });

@@ -7,45 +7,23 @@
     width: 100%;
     top: 0;
     display: block;
-    height: 168px !important;
+    height: 168px;
     //Up to medium
     @media screen and (max-width: $break-m) {
         height: 168px;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-        height: 110px !important;
+        height: 110px;
     }
     //Large devices
     @media screen and (min-width: $break-lg) {
-        height: 209px !important;
-    }
-    //X-large devices
-    @media screen and (min-width: $break-xl) {
         height: 209px;
     }
 }
-.head-push {
-    top: -168px;
-    @media screen and (min-width: $break-m) {
-        top: -110px;
-    }
-    @media screen and (min-width: $break-lg) {
-        top: -209px;
-    }
-}
-.head-top {
-    top: 0;
-    @media screen and (min-width: $break-m) {
-        top: 0;
-    }
-    @media screen and (min-width: $break-lg) {
-        top: 0;
-    }
-}
+
 .scroll-down {
 	#static_head {
-		// transform: translate3d(0, -110%, 0);
         top: -168px;
         @media screen and (min-width: $break-m) {
             top: -110px;
@@ -62,13 +40,6 @@
 		filter: drop-shadow(0 -1px 2px rgb(170, 170, 170));
 	}
 }
-
-// .headpush {
-//     left: -275px;
-//     @media screen and (min-width: 769px) {
-//         left: -350px;
-//     }
-// }
 
 .nav-bar { //Wraps Header and slider/cards section
     width: 100%;

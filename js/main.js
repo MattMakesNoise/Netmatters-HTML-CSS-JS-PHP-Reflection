@@ -28,7 +28,6 @@ const sticky = document.querySelector('#static_head');
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
-//   console.log(currentScroll);
   if (currentScroll <= 209) {
     body.classList.remove("scroll-up");
     return;
@@ -64,7 +63,6 @@ window.onload = function() {
 //Save to users input to storage
 function saveCookie () {
     localStorage.setItem('consent', 'true');
-    console.log(localStorage);
     cookiesYorN = localStorage.getItem('consent');
     console.log(cookiesYorN);
 }
@@ -75,7 +73,6 @@ function cookieCheck () {
 //Event listener for accept cookies
 acceptCookiesBtn.addEventListener('click', () => {
     saveCookie();
-    console.log('You accepted the cookies');
     popup.style.display = 'none';
 });
 
@@ -88,37 +85,22 @@ const burgerButton = document.querySelector('.menu-btn');
 const overlay = document.querySelector('.site-overlay');
 let burgerSpin = true;
 const hero = document.querySelector('.hero-wrapper'); 
-const container = document.querySelector('.page-wrapper');
 
 burgerButton.addEventListener('click', () => {
     burgerButton.classList.add('is-active');
-    body.style.overflow = 'hidden';
+    body.style.overflow = 'hidden'; //Hide main page scrollbar when sidebar is open
+    sticky.style.position = 'sticky'; //Make header appear at top of the page when sidebar is open
     burgerSpin = true;
-    console.log(lastScroll);
-    sticky.classList.add('head-top');
-    // sticky.style.position = 'sticky';
-    body.style.top = '0';
-    // if(lastScroll = 0) {
-        
-    // } 
-    // if(lastScroll > 300 && !body.classList.contains("scroll-down")) {
-    //     sticky.classList.add('head-top');
-    //     sticky.style.position = 'sticky';
-    //     console.log(sticky.style.position);
-    // } else {
-    //     sticky.classList.add('head-push');
-    // }
+    hero.classList.remove('hero-mt'); //Remove the margin top from the hero to stop page pushing down
 });
 
 overlay.addEventListener('click', () => {
     if(burgerSpin === true) {
         burgerButton.classList.remove('is-active');
         body.style.overflow = 'auto';
-        // sticky.classList.remove('head-push');
-        sticky.style.position = 'fixed';
-        sticky.classList.remove('head-top');
+        sticky.style.position = 'fixed'; 
         burgerSpin = false;
-        body.style.top = '209px';
+        hero.classList.add('hero-mt');
     }
 })
 

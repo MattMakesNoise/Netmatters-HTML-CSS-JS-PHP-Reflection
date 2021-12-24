@@ -17,14 +17,13 @@ body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.4px;
   font-size: 1rem;
-  background-color: red;
+  background-color: #fff;
   letter-spacing: 0.4px;
-  position: relative;
-  top: 209px;
 }
 
 .page-wrapper {
   z-index: 10;
+  position: relative;
 }
 
 /*! Pushy - v1.4.0 - 2020-12-28
@@ -266,7 +265,7 @@ body {
   width: 100%;
   top: 0;
   display: block;
-  height: 168px !important;
+  height: 168px;
 }
 @media screen and (max-width: 768px) {
   #static_head {
@@ -275,45 +274,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   #static_head {
-    height: 110px !important;
+    height: 110px;
   }
 }
 @media screen and (min-width: 992px) {
-  #static_head {
-    height: 209px !important;
-  }
-}
-@media screen and (min-width: 1260px) {
   #static_head {
     height: 209px;
-  }
-}
-
-.head-push {
-  top: -168px;
-}
-@media screen and (min-width: 768px) {
-  .head-push {
-    top: -110px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .head-push {
-    top: -209px;
-  }
-}
-
-.head-top {
-  top: 0;
-}
-@media screen and (min-width: 768px) {
-  .head-top {
-    top: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .head-top {
-    top: 0;
   }
 }
 
@@ -1339,6 +1305,20 @@ form.search-form::after {
   }
 }
 
+.hero-mt {
+  margin-top: 168px;
+}
+@media screen and (min-width: 768px) {
+  .hero-mt {
+    margin-top: 110px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-mt {
+    margin-top: 209px;
+  }
+}
+
 .slide {
   z-index: 1;
   position: relative;
@@ -1355,11 +1335,6 @@ form.search-form::after {
   }
 }
 @media screen and (min-width: 992px) {
-  .slide {
-    height: calc(100vh - 209px);
-  }
-}
-@media screen and (min-width: 1260px) {
   .slide {
     height: calc(100vh - 209px);
   }
