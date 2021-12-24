@@ -56,8 +56,10 @@ let cookiesYorN = localStorage.getItem('consent');
 window.onload = function() {
     if(cookiesYorN === "true") {
         popup.style.display = 'none';
+        body.classList.remove('overflow-hidden');
     } else {
         popup.style.display = 'block';
+        body.classList.add('overflow-hidden');
     }
 };
 //Save to users input to storage
@@ -74,6 +76,7 @@ function cookieCheck () {
 acceptCookiesBtn.addEventListener('click', () => {
     saveCookie();
     popup.style.display = 'none';
+    body.classList.remove('overflow-hidden');
 });
 
 //====================================================================================================//

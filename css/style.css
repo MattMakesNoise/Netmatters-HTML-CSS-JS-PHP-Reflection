@@ -21,6 +21,10 @@ body {
   letter-spacing: 0.4px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .page-wrapper {
   z-index: 10;
   position: relative;
@@ -4067,129 +4071,90 @@ address a {
 }
 
 .cookies-modal-outer {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  min-height: 100%;
-  z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
-  padding: 10%;
-  overflow: scroll;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 30px;
 }
 
 .cookies-modal-inner {
+  margin: auto;
+  position: relative;
+  width: auto;
+}
+
+.cookies-box {
+  position: relative;
   background-color: #fff;
-  width: 85%;
-  height: 85%;
-  margin: 1rem auto;
-  padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   z-index: 101;
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 320px) {
-  .cookies-modal-inner {
-    width: 82%;
-    height: auto;
-    top: 13%;
-    left: 9%;
-  }
-}
-@media screen and (min-width: 375px) {
-  .cookies-modal-inner {
-    width: 85%;
-    top: 13%;
-    left: 8%;
-  }
-}
-@media screen and (min-width: 425px) {
-  .cookies-modal-inner {
-    width: 85%;
-    top: 13%;
-    left: 8%;
-  }
 }
 @media screen and (min-width: 768px) {
-  .cookies-modal-inner {
-    width: 78%;
-    top: 20%;
-    left: 11%;
+  .cookies-box {
+    width: 600px;
   }
 }
-@media screen and (min-width: 992px) {
-  .cookies-modal-inner {
-    width: 58%;
-    top: 25%;
-    left: 21%;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .cookies-modal-inner {
-    width: 42%;
-    top: 22%;
-    left: 29%;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .cookies-modal-inner {
-    width: 30%;
-    top: 24%;
-    left: 34%;
-  }
-}
-.cookies-modal-inner .cookies-header {
-  font-size: 1.625rem;
-  font-weight: 400;
-  padding-bottom: 1rem;
+.cookies-header {
+  min-height: 1rem;
+  padding: 15px 20px;
   border-bottom: 1px solid #ddd;
 }
-.cookies-modal-inner .cookies-para {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.cookies-header .cookies-title {
+  line-height: 1.4287143;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #333645;
+}
+
+.cookies-body {
+  position: relative;
+  padding: 20px;
+}
+.cookies-body .cookies-para {
+  padding: 0 0 25px 0;
   color: #666;
   font-size: 1rem;
-  line-height: 1.7rem;
-}
-@media screen and (max-width: 768px) {
-  .cookies-modal-inner .cookies-para {
-    padding-bottom: 1.5rem;
-  }
+  line-height: 1.875rem;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 992px) {
-  .cookies-modal-inner .cookies-para {
+  .cookies-body .cookies-para {
     padding-top: 1.25rem;
     line-height: 1.875rem;
   }
 }
 @media screen and (min-width: 1800px) {
-  .cookies-modal-inner .cookies-para {
+  .cookies-body .cookies-para {
     padding-bottom: 1.75rem;
   }
 }
 
-.modal-buttons {
-  padding-top: 1rem;
+.cookies-footer {
+  margin: 15px 0 0 0;
+  padding: 19px 20px 20px;
+  text-align: right;
   border-top: 1px solid #ddd;
+}
+.cookies-footer .modal-buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-@media screen and (min-width: 575px) {
-  .modal-buttons {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-.modal-buttons .change-settings,
-.modal-buttons .accept-cookies {
+.cookies-footer .modal-buttons .change-settings,
+.cookies-footer .modal-buttons .accept-cookies {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -4203,33 +4168,33 @@ address a {
   padding: 0.75rem 3rem;
 }
 @media screen and (min-width: 1260px) {
-  .modal-buttons .change-settings,
-.modal-buttons .accept-cookies {
+  .cookies-footer .modal-buttons .change-settings,
+.cookies-footer .modal-buttons .accept-cookies {
     padding: 1rem 3.75rem;
   }
 }
 @media screen and (min-width: 1800px) {
-  .modal-buttons .change-settings,
-.modal-buttons .accept-cookies {
+  .cookies-footer .modal-buttons .change-settings,
+.cookies-footer .modal-buttons .accept-cookies {
     padding: 1rem 3.5rem;
   }
 }
-.modal-buttons .change-settings {
+.cookies-footer .modal-buttons .change-settings {
   background-color: #999AA2;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 575px) {
-  .modal-buttons .change-settings {
+  .cookies-footer .modal-buttons .change-settings {
     margin-bottom: 0;
   }
 }
-.modal-buttons .change-settings:hover {
+.cookies-footer .modal-buttons .change-settings:hover {
   background-color: #84858F;
 }
-.modal-buttons .accept-cookies {
+.cookies-footer .modal-buttons .accept-cookies {
   background-color: #926FB1;
 }
-.modal-buttons .accept-cookies:hover {
+.cookies-footer .modal-buttons .accept-cookies:hover {
   background-color: #79539A;
 }
 
