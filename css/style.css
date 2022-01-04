@@ -307,15 +307,7 @@ body {
 .nav-bar {
   width: 100%;
   background-color: #fff;
-  padding-top: 1rem;
-}
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  padding: 5px 15px 0 15px;
 }
 @media screen and (min-width: 768px) {
   .nav-bar {
@@ -340,17 +332,12 @@ body {
 
 .header {
   display: flex;
-  flex-flow: row nowrap;
-}
-@media screen and (max-width: 768px) {
-  .header {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 16px;
-  }
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -368,7 +355,6 @@ body {
 @media screen and (min-width: 992px) {
   .header {
     display: flex;
-    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 15px 19px 15px;
@@ -388,20 +374,8 @@ body {
 }
 
 .logo-wrapper {
-  flex: 1 1 40% !important;
+  flex: 1 0 55%;
   order: 1;
-}
-@media screen and (min-width: 325px) {
-  .logo-wrapper {
-    flex: 1 1 50%;
-    order: 1;
-  }
-}
-@media screen and (max-width: 768px) {
-  .logo-wrapper {
-    flex: 1 1 60%;
-    order: 1;
-  }
 }
 @media screen and (min-width: 768px) {
   .logo-wrapper {
@@ -416,9 +390,9 @@ body {
   .logo-wrapper {
     flex: 0 1 41.66666667%;
     order: 1;
-    padding-right: 15px;
+    padding-right: 0px;
     padding-bottom: 8px;
-    margin-right: 70px;
+    margin-right: 50px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -431,15 +405,13 @@ body {
 }
 
 .logo {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
 }
 .logo a {
   cursor: pointer;
 }
 .logo img {
   max-width: 100%;
-  height: auto;
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
@@ -448,22 +420,11 @@ body {
     table-layout: fixed;
   }
 }
-@media screen and (min-width: 1260px) {
-  .logo {
-    width: 100%;
-  }
-}
 
 .phone-wrapper {
-  font-size: 2rem;
-  flex: 0 1 40px !important;
-}
-@media screen and (max-width: 768px) {
-  .phone-wrapper {
-    margin-left: 20px;
-    order: 2;
-    flex: 0 1 70px;
-  }
+  font-size: 1.75rem;
+  margin-left: 20px;
+  order: 2;
 }
 @media screen and (min-width: 768px) {
   .phone-wrapper {
@@ -476,6 +437,7 @@ body {
 }
 
 .support-wrapper {
+  display: none;
   background-color: #4183D7;
   border-radius: 3px;
   height: 56px;
@@ -503,16 +465,6 @@ body {
   font-size: 1.438rem;
   padding-right: 0.25rem;
 }
-@media screen and (max-width: 768px) {
-  .support-wrapper {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .support-wrapper {
-    display: none;
-  }
-}
 @media screen and (min-width: 992px) {
   .support-wrapper {
     display: initial;
@@ -521,20 +473,16 @@ body {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    margin-right: 16px;
   }
 }
 @media screen and (min-width: 1260px) {
   .support-wrapper {
-    display: initial;
-    order: 2;
-    display: flex;
-    align-items: center;
     margin-right: 20px;
   }
 }
 
 .contact-wrapper {
+  display: none;
   background-color: #999AA2;
   border-radius: 3px;
   height: 56px;
@@ -560,16 +508,6 @@ body {
   font-size: 1.438rem;
   padding-right: 0.25rem;
 }
-@media screen and (max-width: 768px) {
-  .contact-wrapper {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact-wrapper {
-    display: none;
-  }
-}
 @media screen and (min-width: 992px) {
   .contact-wrapper {
     display: initial;
@@ -580,15 +518,6 @@ body {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 1260px) {
-  .contact-wrapper {
-    display: initial;
-    order: 3;
-    display: flex;
-    align-items: center;
-    margin-right: 0;
-  }
-}
 
 .hamburger {
   display: flex;
@@ -596,6 +525,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 56px;
+  width: 63px;
   font-size: 0.75rem;
   color: #fff;
   text-transform: uppercase;
@@ -609,26 +539,14 @@ body {
   transition-property: opacity filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
-  margin: 0;
+  margin: 0 0 0 20px;
   overflow: visible;
-}
-@media screen and (min-width: 768px) {
-  .hamburger {
-    margin-left: 20px;
-    order: 3;
-    flex: 0 0 63px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hamburger {
-    margin-left: 20px;
-    flex: 0 0 63px;
-    order: 3;
-  }
+  order: 3;
 }
 @media screen and (min-width: 992px) {
   .hamburger {
     order: 5;
+    margin: 0 0 0 0;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -641,7 +559,8 @@ body {
   display: block;
   position: relative;
   top: 5px;
-  margin: 0 auto;
+  margin: 0 auto 2px;
+  font-size: 0.75rem;
 }
 .hamburger:hover {
   background-color: #262834;
@@ -703,16 +622,16 @@ body {
   transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
-@media screen and (max-width: 768px) {
-  .search-wrapper {
-    order: 4;
-    height: 47px;
-    width: 100%;
-    margin-top: 1.25rem;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    outline: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+.search-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  order: 4;
+  height: 47px;
+  width: 100%;
+  margin-top: 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 768px) {
   .search-wrapper {
@@ -728,20 +647,12 @@ body {
 @media screen and (min-width: 992px) {
   .search-wrapper {
     order: 4;
-    width: 63px;
+    width: auto;
     height: 56px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .search-wrapper {
-    order: 4;
-    width: 301px;
+    margin: 0 0 0 0;
   }
 }
 
-form.search-form {
-  width: 100%;
-}
 form.search-form input[type=text] {
   /* Style the search field */
   font-size: 14px;
@@ -750,30 +661,21 @@ form.search-form input[type=text] {
   background: transparent;
   font-weight: 200;
   color: rgba(221, 221, 221, 0.8);
+  height: 46px;
+  width: 80%;
+  padding-left: 16px;
+  border: none;
+  opacity: 0.8;
 }
 form.search-form input[type=text]:focus {
   outline: none;
   color: #555;
 }
-@media screen and (max-width: 768px) {
-  form.search-form input[type=text] {
-    display: inline-block;
-    height: 46px;
-    width: 80%;
-    padding-left: 16px;
-    border: none;
-    opacity: 0.8;
-  }
-  form.search-form input[type=text]:focus {
-    outline: none;
-    color: #555;
-  }
-}
 @media screen and (min-width: 768px) {
   form.search-form input[type=text] {
     display: inline-block;
-    width: 75%;
-    height: 54px;
+    width: 172px;
+    height: 56px;
     padding-left: 16px;
     border: 1px solid #ccc;
     opacity: 0.9;
@@ -788,7 +690,7 @@ form.search-form input[type=text]:focus {
 }
 @media screen and (min-width: 992px) {
   form.search-form input[type=text] {
-    display: none;
+    width: 300px;
     border: 1px solid #ccc;
   }
 }
@@ -796,7 +698,6 @@ form.search-form input[type=text]:focus {
   form.search-form input[type=text] {
     border-radius: 0;
     display: inline-block;
-    border: 1px solid #ccc;
     height: 56px;
   }
 }
@@ -813,18 +714,15 @@ form.search-form button {
   text-align: right;
   vertical-align: bottom;
   overflow: visible;
-}
-@media screen and (max-width: 768px) {
-  form.search-form button {
-    background: transparent;
-    color: #333645;
-    width: 20%;
-    padding: 3px 8px 5px 20px;
-  }
+  background: transparent;
+  color: #333645;
+  width: 20%;
+  padding: 3px 8px 5px 20px;
 }
 @media screen and (min-width: 768px) {
   form.search-form button {
-    width: 25%;
+    width: 63px;
+    height: 56px;
     background: #999AA2;
     color: #fff;
     padding: 6px 16px 2px 0px;
@@ -833,9 +731,6 @@ form.search-form button {
 @media screen and (min-width: 992px) {
   form.search-form button {
     border-radius: 3px;
-    width: 100%;
-    height: 100%;
-    background: #999AA2;
     padding: 8px 16px 2px 0px;
   }
 }
@@ -843,7 +738,6 @@ form.search-form button {
   form.search-form button {
     width: 20%;
     height: 56px;
-    background: #999AA2;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
@@ -858,13 +752,25 @@ form.search-form button i {
   line-height: 1;
   width: 23px;
   height: 46px;
-  padding: 8px 2px 5px 0;
+  padding: 8px 0 5px 0;
 }
 form.search-form::after {
   /* Clear floats */
   content: "";
   clear: both;
   display: table;
+}
+
+@media screen and (min-width: 992px) {
+  .search-show {
+    display: block !important;
+    margin-left: 26px;
+    transition: all 0.5s;
+  }
+}
+
+.search-hide {
+  display: none !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -1618,14 +1524,12 @@ form.search-form::after {
 }
 @media screen and (min-width: 992px) {
   .cards-wrapper {
-    padding: 50px 15px 50px 15px;
-    margin-top: 50px;
+    padding: 20px 15px 50px 15px;
   }
 }
 @media screen and (min-width: 1260px) {
   .cards-wrapper {
     padding: 50px 15px 50px 15px;
-    margin-top: 0;
   }
 }
 
@@ -4106,6 +4010,7 @@ address a {
     width: 600px;
   }
 }
+
 .cookies-header {
   min-height: 16.42857143px;
   padding: 15px 20px;

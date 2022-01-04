@@ -107,3 +107,32 @@ overlay.addEventListener('click', () => {
     }
 })
 
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== SEARCH SWAP ================================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const searchBtn = document.querySelector('.search-form button');
+const searchInput = document.querySelector('.search-form input[type=text]');
+const support = document.querySelector('.support-wrapper');
+const contact = document.querySelector('.contact-wrapper');
+let searchToggle = false;
+
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (searchToggle === false) {
+        searchInput.classList.add('search-show');
+        searchInput.classList.remove('search-hide');
+        support.classList.add('search-hide');
+        contact.classList.add('search-hide');
+        searchToggle = true;
+        console.log('Show the search input, hide support and contact buttons!');
+    } else if (searchToggle) {
+        searchInput.classList.remove('search-show');
+        searchInput.classList.add('search-hide');
+        support.classList.remove('search-hide');
+        contact.classList.remove('search-hide');
+        searchToggle = false;
+        console.log('Hide the search input, show support and contact buttons!');
+    }
+});

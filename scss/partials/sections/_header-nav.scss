@@ -44,24 +44,15 @@
 .nav-bar { //Wraps Header and slider/cards section
     width: 100%;
     background-color: #fff;
-    padding-top: 1rem;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        @include mginlrauto;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    //Medium and up
+    padding: 5px 15px 0 15px;
     @media screen and (min-width: $break-m) {
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
     }
-    //Large devices
     @media screen and (min-width: $break-lg) {
         @include flexcolumn;
     }
-    //X-large devices
     @media screen and (min-width: $break-xl) {
         @include flexcolumn;
         justify-content: space-evenly;
@@ -70,16 +61,11 @@
 //========== HEADER SECTION ==========//
 .header { //Wraps the standard elements but not the cards/slider section
     display: flex;
-    flex-flow: row nowrap;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        @include mginlrauto;
-        padding-top: 16px;
-    }
-    //Medium and up
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include mginlrauto;
+    padding: 20px 0 20px 0;
     @media screen and (min-width: $break-m) {
         display: flex;
         flex-flow: row nowrap;
@@ -90,15 +76,13 @@
         padding-top: 18px;
         width: 750px;
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         @include mginlrauto;
         padding: 20px 15px 19px 15px;
         width: 970px;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         display: flex;
         justify-content: space-between;
@@ -110,33 +94,23 @@
 }
 //===== LOGO STYLING =====//
 .logo-wrapper {
-    flex: 1 1 40% !important;
+    flex: 1 0 55%;
     order: 1;
-    @media screen and (min-width: 325px) {
-        flex: 1 1 50%;
-        order: 1;
-    }
-    @media screen and (max-width: $break-m) {
-        flex: 1 1 60%;
-        order: 1;
-    }
-    //Medium and up
     @media screen and (min-width: $break-m) {
         flex: 0 1 50%;
         order: 1;
         padding-right: 15px;
         padding-bottom: 15px;
         margin-right: 28px;
+        // padding-top: 16px;
     }
-    //Large devices
     @media screen and (min-width: $break-lg) {
         flex: 0 1 41.66666667%;
         order: 1;
-        padding-right: 15px;
+        padding-right: 0px;
         padding-bottom: 8px;
-        margin-right: 70px;
+        margin-right: 50px;
     }
-    //X-large devices
     @media screen and (min-width: $break-xl) {
         padding-right: 4px;
         margin-right: 60px;
@@ -145,39 +119,31 @@
     }
 }
 .logo {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    // height: auto;
     a {
         cursor: pointer;
     }
     img {
         max-width: 100%;
-        height: auto;
+        // height: auto;
         vertical-align: middle;
     }
-    //Medium and up
     @media screen and (min-width: $break-m) {
         display: table;
         table-layout: fixed;
     }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        width: 100%;
-    }
+    // @media screen and (min-width: $break-lg) {
+    //     width: auto;
+    // }
 }
 //===== LOGO STYLING ENDS =====//
 
 //===== PHONE STYLING =====//
 .phone-wrapper {
-    font-size: 2rem;
-    flex: 0 1 40px !important;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        margin-left: 20px;
-        order: 2;
-        flex: 0 1 70px;
-    }
-    //Medium and up
+    font-size: 1.75rem;
+    margin-left: 20px;
+    order: 2;
     @media screen and (min-width: $break-m) {
         display: none;
     }
@@ -189,9 +155,11 @@
 
 //===== SUPPORT STYLING =====//
 .support-wrapper {
+    display: none;
     background-color: $btn-blue;
     border-radius: 3px;
     height: 56px;
+    // width: 157px;
     @include flexctrboth;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -208,28 +176,15 @@
         font-size: 1.438rem;
         padding-right: 0.25rem;
     }
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        display: none;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        display: none;
-    }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         display: initial;
         order: 2;
         width: 136px;
         @include flexalignctr;
         white-space: nowrap;
-        margin-right: 16px;
+        // margin-right: 16px;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
-        display: initial;
-        order: 2;
-        @include flexalignctr;
         margin-right: 20px;
     }
 }
@@ -237,9 +192,11 @@
 
 //===== CONTACT STYLING =====//
 .contact-wrapper {
+    display: none;
     background-color: $btn-grey;
     border-radius: 3px;
     height: 56px;
+    // width: 149px;
     @include flexctrboth;
     padding: 5px 15px;
     &:hover {
@@ -254,27 +211,11 @@
         font-size: 1.438rem;
         padding-right: 0.25rem;
     }
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        display: none;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        display: none;
-    }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         display: initial;
         order: 3;
         @include flexalignctr;
         white-space: nowrap;
-        margin-right: 0;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        display: initial;
-        order: 3;
-        @include flexalignctr;
         margin-right: 0;
     }
 }
@@ -287,6 +228,7 @@
     justify-content: space-between;
     align-items: center;
     height: 56px; //YES
+    width: 63px;
     font-size: .75rem;
     color: $white;
     text-transform: uppercase; //YES
@@ -300,25 +242,14 @@
     transition-property: opacity filter; //YES
     transition-duration: .15s; //YES
     transition-timing-function: linear; //YES
-    margin: 0; //YES
+    margin: 0 0 0 20px; //YES
     overflow: visible; //YES
-    //Up to medium
-    @media screen and (min-width: $break-m) {
-        margin-left: 20px;
-        order: 3;
-        flex: 0 0 63px;
-    }
-    //Medium and up
-    @media screen and (max-width: $break-m) {
-        margin-left: 20px;
-        flex: 0 0 63px;
-        order: 3;
-    }
-    //Large
+    order: 3;
     @media screen and (min-width: $break-lg) {
         order: 5;
+        // margin: 0 0 0 20px;
+        margin: 0 0 0 0;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         margin-left: 0;
         order: 5;
@@ -327,7 +258,8 @@
         display: block;
         position: relative;
         top: 5px;
-        margin: 0 auto;
+        margin: 0 auto 2px;
+        font-size: .75rem;
     }
     &:hover {
         background-color: $darker-blue;
@@ -393,17 +325,15 @@
 
 //===== SEARCH STYLING =====//
 .search-wrapper {
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        order: 4;
-        height: 47px;
-        width: 100%;
-        margin-top: 1.25rem;
-        border: 2px solid rgba(0,0,0,.1);
-        outline: 1px solid hsla(0,0%,100%,.2);
-        background-color: $black-10;
-    }
-    //Medium
+    display: flex;
+    flex-wrap: nowrap;
+    order: 4;
+    height: 47px;
+    width: 100%;
+    margin-top: 1.25rem;
+    border: 2px solid rgba(0,0,0,.1);
+    outline: 1px solid hsla(0,0%,100%,.2);
+    background-color: $black-10;
     @media screen and (min-width: $break-m) {
         order: 2;
         height: 56px;
@@ -413,20 +343,15 @@
         border: none;
         background-color: $white;
     }
-    //Large
     @media screen and (min-width: $break-lg) {
         order: 4;
-        width: 63px;
+        width: auto;
         height: 56px;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        order: 4;
-        width: 301px;
+        margin: 0 0 0 0;
     }
 } 
 form.search-form {
-    width: 100%;
+    // width: 100%;
     input[type=text] { /* Style the search field */
         font-size: 14px;
         float: left;
@@ -434,28 +359,20 @@ form.search-form {
         background: transparent;
         font-weight: $extra-light;
         color: $lightgrey-80;
+        // display: inline-block;
+        height: 46px;
+        width: 80%;
+        padding-left: 16px;
+        border: none;
+        opacity: 0.8;
         &:focus {
             outline: none;
             color: #555;
         }
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            display: inline-block;
-            height: 46px;
-            width: 80%;
-            padding-left: 16px;
-            border: none;
-            opacity: 0.8;
-            &:focus {
-                outline: none;
-                color: #555;
-            }
-        }
-        //Medium and up
         @media screen and (min-width: $break-m) {
             display: inline-block;
-            width: 75%;
-            height: 54px;
+            width: 172px;
+            height: 56px;
             padding-left: 16px;
             border: 1px solid #ccc;
             opacity: .9;
@@ -467,16 +384,14 @@ form.search-form {
                 box-shadow: 0px 0px 4px 0px#5BC0DE;
             }
         }
-        //Large and Up
         @media screen and (min-width: $break-lg) {
-            display: none;
+            // display: none;
+            width: 300px;
             border: 1px solid #ccc;
         }
-        //Extra Large
         @media screen and (min-width: $break-xl) {
             border-radius: 0;
             display: inline-block;
-            border: 1px solid #ccc;
             height: 56px;
         }
     }
@@ -491,16 +406,13 @@ form.search-form {
         text-align: right;
         vertical-align: bottom;
         overflow: visible;
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            background: transparent;
-            color: $dark-blue;
-            width: 20%;
-            padding: 3px 8px 5px 20px;
-        }
-        //Medium and up
+        background: transparent;
+        color: $dark-blue;
+        width: 20%;
+        padding: 3px 8px 5px 20px;
         @media screen and (min-width: $break-m) {
-            width: 25%;
+            width: 63px;
+            height: 56px;
             background: $btn-grey;
             color: $white;
             padding: 6px 16px 2px 0px;
@@ -508,21 +420,18 @@ form.search-form {
         //Large and Up
         @media screen and (min-width: $break-lg) {
             border-radius: 3px;
-            width: 100%;
-            height: 100%;
-            background: $btn-grey;
+            // width: 63px;
+            // height: 100%;
             padding: 8px 16px 2px 0px;
         }
         //Extra Large
         @media screen and (min-width: $break-xl) {
             width: 20%;
             height: 56px;
-            background: $btn-grey;
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
         }
         &:hover {
-            //Medium and up
             @media screen and (min-width: $break-m) {
                 background: $btn-grey-hover;
             }
@@ -532,7 +441,7 @@ form.search-form {
             line-height: 1;
             width: 23px;
             height: 46px;
-            padding: 8px 2px 5px 0;
+            padding: 8px 0 5px 0;
             // @media screen and (min-width: $break-m) {
             //     font-size: 23px;
             //     line-height: 1;
@@ -547,6 +456,17 @@ form.search-form {
         clear: both;
         display: table;
     }
+}
+
+.search-show {
+    @media screen and (min-width: $break-lg) {
+        display: block !important;
+        margin-left: 26px;
+        transition: all .5s;
+    }
+}
+.search-hide {
+    display: none !important;
 }
 //===== SEARCH STYLING ENDS=====//
 

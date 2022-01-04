@@ -114,4 +114,33 @@ overlay.addEventListener('click', function () {
     burgerSpin = false;
     hero.classList.add('hero-mt');
   }
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== SEARCH SWAP ================================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var searchBtn = document.querySelector('.search-form button');
+var searchInput = document.querySelector('.search-form input[type=text]');
+var support = document.querySelector('.support-wrapper');
+var contact = document.querySelector('.contact-wrapper');
+var searchToggle = false;
+searchBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (searchToggle === false) {
+    searchInput.classList.add('search-show');
+    searchInput.classList.remove('search-hide');
+    support.classList.add('search-hide');
+    contact.classList.add('search-hide');
+    searchToggle = true;
+    console.log('Show the search input, hide support and contact buttons!');
+  } else if (searchToggle) {
+    searchInput.classList.remove('search-show');
+    searchInput.classList.add('search-hide');
+    support.classList.remove('search-hide');
+    contact.classList.remove('search-hide');
+    searchToggle = false;
+    console.log('Hide the search input, show support and contact buttons!');
+  }
 });
