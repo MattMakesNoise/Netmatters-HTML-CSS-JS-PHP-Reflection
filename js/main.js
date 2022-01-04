@@ -1,3 +1,40 @@
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== COOKIES POPUP ==============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const popup = document.querySelector('.cookies-modal-outer');
+const changeSettingsBtn = document.querySelector('.change-settings');
+const acceptCookiesBtn = document.querySelector('.accept-cookies');
+let cookiesYorN = localStorage.getItem('consent');
+
+//Check to see if cookie consent has been given. If not show the popup
+window.onload = function() {
+    if(cookiesYorN === "true") {
+        popup.style.display = 'none';
+        body.classList.remove('overflow-hidden');
+    } else {
+        // popup.style.display = 'block';
+        body.classList.add('overflow-hidden');
+    }
+};
+//Save to users input to storage
+function saveCookie () {
+    localStorage.setItem('consent', 'true');
+    cookiesYorN = localStorage.getItem('consent');
+    console.log(cookiesYorN);
+}
+//Check the storage
+function cookieCheck () {
+    return localStorage.getItem('consent');
+}
+//Event listener for accept cookies
+acceptCookiesBtn.addEventListener('click', () => {
+    saveCookie();
+    popup.style.display = 'none';
+    body.classList.remove('overflow-hidden');
+});
+
 //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
@@ -42,42 +79,7 @@ window.addEventListener("scroll", () => {
   }
   lastScroll = currentScroll;
 })
-//=====================================================================================================//
-//=====================================================================================================//
-//======================================== COOKIES POPUP ==============================================//
-//=====================================================================================================//
-//=====================================================================================================//
-const popup = document.querySelector('.cookies-modal-outer');
-const changeSettingsBtn = document.querySelector('.change-settings');
-const acceptCookiesBtn = document.querySelector('.accept-cookies');
-let cookiesYorN = localStorage.getItem('consent');
 
-//Check to see if cookie consent has been given. If not show the popup
-window.onload = function() {
-    if(cookiesYorN === "true") {
-        popup.style.display = 'none';
-        body.classList.remove('overflow-hidden');
-    } else {
-        // popup.style.display = 'block';
-        body.classList.add('overflow-hidden');
-    }
-};
-//Save to users input to storage
-function saveCookie () {
-    localStorage.setItem('consent', 'true');
-    cookiesYorN = localStorage.getItem('consent');
-    console.log(cookiesYorN);
-}
-//Check the storage
-function cookieCheck () {
-    return localStorage.getItem('consent');
-}
-//Event listener for accept cookies
-acceptCookiesBtn.addEventListener('click', () => {
-    saveCookie();
-    popup.style.display = 'none';
-    body.classList.remove('overflow-hidden');
-});
 
 //====================================================================================================//
 //====================================================================================================//
@@ -121,18 +123,22 @@ let searchToggle = false;
 searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (searchToggle === false) {
-        searchInput.classList.add('search-show');
-        searchInput.classList.remove('search-hide');
-        support.classList.add('search-hide');
-        contact.classList.add('search-hide');
+        setTimeout(() => {
+            support.classList.add('search-hide');
+            contact.classList.add('search-hide');
+        }, 200);
+        setTimeout(() => {
+            searchInput.classList.add('search-show');
+            searchInput.classList.remove('search-hide');
+        }, 500);
         searchToggle = true;
-        console.log('Show the search input, hide support and contact buttons!');
     } else if (searchToggle) {
         searchInput.classList.remove('search-show');
         searchInput.classList.add('search-hide');
-        support.classList.remove('search-hide');
-        contact.classList.remove('search-hide');
+        setTimeout(() => {
+            support.classList.remove('search-hide');
+            contact.classList.remove('search-hide');
+        }, 200);
         searchToggle = false;
-        console.log('Hide the search input, show support and contact buttons!');
     }
 });

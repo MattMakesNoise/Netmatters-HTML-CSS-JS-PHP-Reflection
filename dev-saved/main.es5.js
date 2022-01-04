@@ -1,10 +1,48 @@
 "use strict";
 
-//=======================================================================================================//
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== COOKIES POPUP ==============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+var popup = document.querySelector('.cookies-modal-outer');
+var changeSettingsBtn = document.querySelector('.change-settings');
+var acceptCookiesBtn = document.querySelector('.accept-cookies');
+var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
+
+window.onload = function () {
+  if (cookiesYorN === "true") {
+    popup.style.display = 'none';
+    body.classList.remove('overflow-hidden');
+  } else {
+    // popup.style.display = 'block';
+    body.classList.add('overflow-hidden');
+  }
+}; //Save to users input to storage
+
+
+function saveCookie() {
+  localStorage.setItem('consent', 'true');
+  cookiesYorN = localStorage.getItem('consent');
+  console.log(cookiesYorN);
+} //Check the storage
+
+
+function cookieCheck() {
+  return localStorage.getItem('consent');
+} //Event listener for accept cookies
+
+
+acceptCookiesBtn.addEventListener('click', function () {
+  saveCookie();
+  popup.style.display = 'none';
+  body.classList.remove('overflow-hidden');
+}); //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
 //=======================================================================================================//
 //=======================================================================================================//
+
 $(document).ready(function () {
   $('.carousel').slick({
     autoplay: true,
@@ -49,44 +87,6 @@ window.addEventListener("scroll", function () {
   }
 
   lastScroll = currentScroll;
-}); //=====================================================================================================//
-//=====================================================================================================//
-//======================================== COOKIES POPUP ==============================================//
-//=====================================================================================================//
-//=====================================================================================================//
-
-var popup = document.querySelector('.cookies-modal-outer');
-var changeSettingsBtn = document.querySelector('.change-settings');
-var acceptCookiesBtn = document.querySelector('.accept-cookies');
-var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
-
-window.onload = function () {
-  if (cookiesYorN === "true") {
-    popup.style.display = 'none';
-    body.classList.remove('overflow-hidden');
-  } else {
-    // popup.style.display = 'block';
-    body.classList.add('overflow-hidden');
-  }
-}; //Save to users input to storage
-
-
-function saveCookie() {
-  localStorage.setItem('consent', 'true');
-  cookiesYorN = localStorage.getItem('consent');
-  console.log(cookiesYorN);
-} //Check the storage
-
-
-function cookieCheck() {
-  return localStorage.getItem('consent');
-} //Event listener for accept cookies
-
-
-acceptCookiesBtn.addEventListener('click', function () {
-  saveCookie();
-  popup.style.display = 'none';
-  body.classList.remove('overflow-hidden');
 }); //====================================================================================================//
 //====================================================================================================//
 //======================================== BURGER SPIN ===============================================//
@@ -129,18 +129,22 @@ searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
 
   if (searchToggle === false) {
-    searchInput.classList.add('search-show');
-    searchInput.classList.remove('search-hide');
-    support.classList.add('search-hide');
-    contact.classList.add('search-hide');
+    setTimeout(function () {
+      support.classList.add('search-hide');
+      contact.classList.add('search-hide');
+    }, 200);
+    setTimeout(function () {
+      searchInput.classList.add('search-show');
+      searchInput.classList.remove('search-hide');
+    }, 500);
     searchToggle = true;
-    console.log('Show the search input, hide support and contact buttons!');
   } else if (searchToggle) {
     searchInput.classList.remove('search-show');
     searchInput.classList.add('search-hide');
-    support.classList.remove('search-hide');
-    contact.classList.remove('search-hide');
+    setTimeout(function () {
+      support.classList.remove('search-hide');
+      contact.classList.remove('search-hide');
+    }, 200);
     searchToggle = false;
-    console.log('Hide the search input, show support and contact buttons!');
   }
 });
