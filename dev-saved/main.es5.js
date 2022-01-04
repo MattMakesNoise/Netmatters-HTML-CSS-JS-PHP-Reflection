@@ -65,7 +65,7 @@ window.onload = function () {
     popup.style.display = 'none';
     body.classList.remove('overflow-hidden');
   } else {
-    popup.style.display = 'block';
+    // popup.style.display = 'block';
     body.classList.add('overflow-hidden');
   }
 }; //Save to users input to storage

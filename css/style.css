@@ -18,7 +18,6 @@ body {
   letter-spacing: 0.4px;
   font-size: 1rem;
   background-color: #fff;
-  letter-spacing: 0.4px;
 }
 
 .overflow-hidden {
@@ -4108,15 +4107,16 @@ address a {
   }
 }
 .cookies-header {
-  min-height: 1rem;
+  min-height: 16.42857143px;
   padding: 15px 20px;
   border-bottom: 1px solid #ddd;
 }
 .cookies-header .cookies-title {
+  margin: 0;
   line-height: 1.4287143;
-  font-size: 1.625rem;
   font-weight: 400;
   color: #333645;
+  font-size: 26px;
 }
 
 .cookies-body {
@@ -4126,24 +4126,16 @@ address a {
 .cookies-body .cookies-para {
   padding: 0 0 25px 0;
   color: #666;
-  font-size: 1rem;
   line-height: 1.875rem;
-  margin-bottom: 25px;
 }
 @media screen and (min-width: 992px) {
   .cookies-body .cookies-para {
-    padding-top: 1.25rem;
+    padding: 0 0 1.25rem 0;
     line-height: 1.875rem;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .cookies-body .cookies-para {
-    padding-bottom: 1.75rem;
   }
 }
 
 .cookies-footer {
-  margin: 15px 0 0 0;
   padding: 19px 20px 20px;
   text-align: right;
   border-top: 1px solid #ddd;
@@ -4152,6 +4144,13 @@ address a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .cookies-footer .modal-buttons {
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 .cookies-footer .modal-buttons .change-settings,
 .cookies-footer .modal-buttons .accept-cookies {
@@ -4163,27 +4162,26 @@ address a {
   font-weight: 400;
   cursor: pointer;
   border-radius: 3px;
-  font-size: 1rem;
+  height: auto;
+  line-height: 35px;
+  font-size: 1.063rem;
   color: white;
-  padding: 0.75rem 3rem;
+  padding: 5px 15px;
+  white-space: normal;
 }
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 768px) {
   .cookies-footer .modal-buttons .change-settings,
 .cookies-footer .modal-buttons .accept-cookies {
-    padding: 1rem 3.75rem;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .cookies-footer .modal-buttons .change-settings,
-.cookies-footer .modal-buttons .accept-cookies {
-    padding: 1rem 3.5rem;
+    width: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 .cookies-footer .modal-buttons .change-settings {
   background-color: #999AA2;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 768px) {
   .cookies-footer .modal-buttons .change-settings {
     margin-bottom: 0;
   }
