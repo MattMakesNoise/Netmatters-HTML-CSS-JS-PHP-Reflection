@@ -1,24 +1,24 @@
 /*========== CLIENTS =========*/
 .clients-wrapper {
     display: block;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #efefef 1%, 5%, #fff 15%);
     //Up to Medium
     @media screen and (max-width: $break-m) {
       display: none !important;
     }
     //Medium and up
     @media screen and (min-width: $break-m) {
-      display: initial !important;
+      display: block;
       max-width: 100%;
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-      display: initial !important;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-      display: inital !important;
-    }
+    // //Large and Up
+    // @media screen and (min-width: $break-lg) {
+    //   display: initial !important;
+    // }
+    // //Extra Large
+    // @media screen and (min-width: $break-xl) {
+    //   display: inital !important;
+    // }
 }
 .clients {
     //Medium and up

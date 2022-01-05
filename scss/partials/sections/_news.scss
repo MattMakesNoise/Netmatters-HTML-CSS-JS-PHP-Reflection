@@ -43,7 +43,8 @@
 }
 //========== CARDS SECTION ==========//
 .news {
-    background-color: rgba(221, 221, 221, .4);
+    // background-color: rgba(221, 221, 221, .4);
+    background: linear-gradient(to bottom, #efefef 1%, 5%, #fff 15%);
 }
 .news-cards-wrapper {
     display: block;
@@ -146,6 +147,7 @@
         transition: all .25s ease-in-out;
         z-index: 1;
         &:hover {
+            cursor: pointer;
             //Large and Up
             @media screen and (min-width: $break-lg) {
                 transform: scale(1.1);
@@ -207,10 +209,11 @@
     }
 } 
 .news-text {
-    font-weight: $light;
+    // font-weight: $light;
     font-size: .85rem;
     margin-bottom: 1.5rem;
     line-height: 1.375rem;
+    color: $grey-text;
     //Extra Large
     @media screen and (min-width: $break-xl) {
         height: 66px;

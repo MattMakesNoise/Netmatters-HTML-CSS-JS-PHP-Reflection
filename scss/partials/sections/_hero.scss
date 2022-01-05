@@ -31,7 +31,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 715px;
+    // min-height: 715px;
     //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);

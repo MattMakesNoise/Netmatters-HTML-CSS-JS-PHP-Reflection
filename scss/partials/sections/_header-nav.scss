@@ -94,8 +94,11 @@
 }
 //===== LOGO STYLING =====//
 .logo-wrapper {
-    flex: 1 0 55%;
+    flex: 0 1 45%;
     order: 1;
+    @media screen and (min-width: 325px) {
+        flex: 0 1 55%;
+    }
     @media screen and (min-width: $break-m) {
         flex: 0 1 50%;
         order: 1;

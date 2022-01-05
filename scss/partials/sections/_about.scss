@@ -2,30 +2,13 @@
 .about-wrapper {
     background-color: $dark-blue;
     height: 100% !important;
-    @media screen and (min-width: 375px) {
-        height: 85% !important;
-    }
-    @media screen and (min-width: 425px) {
-        height: 82vh !important;
-    }
-    @media screen and (min-width: $break-xs) {
-        height: 700px !important;
-    }
-    @media screen and (max-width: $break-m) {
-        height: 493px;
-    }
-    @media screen and (min-width: $break-m) {
-        height: 493px !important;
-    }
     @media screen and (min-width: $break-lg) {
-        height: 493px;
         background-image: url(/img/branded.png);
         background-position: 100%;
         background-repeat: no-repeat;
         background-size: auto 100%;
     }
     @media screen and (min-width: $break-xl) {
-        height: 583px !important;
         background-position: right;
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -35,40 +18,27 @@
     color: $white;
     @include flexcolumn;
     justify-content: space-between;
-    @media screen and (max-width: $break-m) {
-        padding: 36px 15px 36px 15px;
-    }
+    padding: 36px 15px 36px 15px;
     @media screen and (min-width: $break-m) {
-        padding: 36px 15px 36px 15px;
         @include mginlrauto;
         width: 750px;
     }
     @media screen and (min-width: $break-lg) {
-        padding: 30px 15px 0px 15px;
+        padding: 30px 15px 50px 15px;
         width: 970px;
     }
     @media screen and (min-width: $break-xl) {
-        padding: 30px 15px 0px 15px;
-        @include mginlrauto;
+        padding: 50px 15px 50px 15px;
         width: 1200px;
     }
 }
 .about-title {
     font-size: 2.25rem;
     font-weight: $regular;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        padding-bottom: 28px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        padding-bottom: 28px;
-    }
-    //Large and Up
+    padding-bottom: 28px;
     @media screen and (min-width: $break-lg) {
         padding-bottom: 20px;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
         width: 50%;
@@ -78,63 +48,25 @@
     font-size: 1rem;
     font-weight: $semibold;
     line-height: 1.9;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Large and Up
+    padding-bottom: 25px;
     @media screen and (min-width: $break-lg) {
         padding-bottom: 20px;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
         width: 50%;
     }
 }
+
 .about-p1,
 .about-p2 {
     font-size: 1rem;
     font-weight: $regular;
     line-height: 1.875rem;
-}
-.about-p1 {
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Large and Up
+    padding-bottom: 25px;
     @media screen and (min-width: $break-lg) {
         padding-bottom: 20px;
     }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-        padding-bottom: 24px;
-        width: 50%;
-    }
-}
-.about-p2 {
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        padding-bottom: 25px;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-        padding-bottom: 24px;
-    }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         padding-bottom: 24px;
         width: 50%;

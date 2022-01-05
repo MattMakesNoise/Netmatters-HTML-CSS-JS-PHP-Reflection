@@ -147,6 +147,9 @@
         height: 32px;
         width: 32px;
         margin-right: 20px;
+        &:hover {
+            cursor: pointer;
+        }
         &::after { // Create the checkmark/indicator (hidden when not checked)
             content: "";
             position: absolute;
