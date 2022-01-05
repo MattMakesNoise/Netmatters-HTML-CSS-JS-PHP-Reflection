@@ -2,15 +2,52 @@
 
 //=====================================================================================================//
 //=====================================================================================================//
+//======================================== GET SCREEN WIDTH ===========================================//
+//=====================================================================================================//
+//=====================================================================================================//
+var width;
+var searchWrapper = document.querySelector('.search-wrapper');
+var searchBtn = document.querySelector('.search-form button');
+var searchInput = document.querySelector('.search-form input[type=text]');
+var support = document.querySelector('.support-wrapper');
+var contact = document.querySelector('.contact-wrapper');
+var searchToggle = false;
+
+function getWidth() {
+  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
+
+window.addEventListener('resize', function (e) {
+  getWidth();
+
+  if (width > 1260) {
+    support.style.display = 'flex';
+    contact.style.display = 'flex';
+    searchInput.style.display = 'block';
+    searchWrapper.style.marginLeft = '0';
+  } else if (width >= 992 && width < 1260 && searchToggle === false) {
+    support.style.display = 'flex';
+    contact.style.display = 'flex';
+    searchInput.style.display = 'none';
+  } else {
+    support.style.display = 'none';
+    contact.style.display = 'none';
+    searchInput.style.display = 'block';
+  }
+}); //=====================================================================================================//
+//=====================================================================================================//
 //======================================== COOKIES POPUP ==============================================//
 //=====================================================================================================//
 //=====================================================================================================//
+
 var popup = document.querySelector('.cookies-modal-outer');
 var changeSettingsBtn = document.querySelector('.change-settings');
 var acceptCookiesBtn = document.querySelector('.accept-cookies');
 var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
 
 window.onload = function () {
+  getWidth();
+
   if (cookiesYorN === "true") {
     popup.style.display = 'none';
     body.classList.remove('overflow-hidden');
@@ -120,31 +157,70 @@ overlay.addEventListener('click', function () {
 //=====================================================================================================//
 //=====================================================================================================//
 
-var searchBtn = document.querySelector('.search-form button');
-var searchInput = document.querySelector('.search-form input[type=text]');
-var support = document.querySelector('.support-wrapper');
-var contact = document.querySelector('.contact-wrapper');
-var searchToggle = false;
 searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
+  console.log('clicked!');
 
-  if (searchToggle === false) {
-    setTimeout(function () {
-      support.classList.add('search-hide');
-      contact.classList.add('search-hide');
-    }, 200);
-    setTimeout(function () {
-      searchInput.classList.add('search-show');
-      searchInput.classList.remove('search-hide');
-    }, 500);
-    searchToggle = true;
-  } else if (searchToggle) {
-    searchInput.classList.remove('search-show');
-    searchInput.classList.add('search-hide');
-    setTimeout(function () {
-      support.classList.remove('search-hide');
-      contact.classList.remove('search-hide');
-    }, 200);
-    searchToggle = false;
+  if (width >= 992 && width < 1260) {
+    if (searchToggle === false) {
+      setTimeout(function () {
+        support.style.display = 'none';
+        contact.style.display = 'none';
+      }, 200);
+      setTimeout(function () {
+        searchInput.style.display = 'block';
+        searchWrapper.style.marginLeft = '26px';
+      }, 500);
+      searchToggle = true;
+    } else if (searchToggle) {
+      setTimeout(function () {
+        searchInput.style.display = 'none';
+        searchWrapper.style.marginLeft = '0';
+      }, 200);
+      setTimeout(function () {
+        support.style.display = 'flex';
+        contact.style.display = 'flex';
+      }, 500);
+      searchToggle = false;
+    }
   }
-});
+}); // window.addEventListener('resize', (e) => {
+//     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//     if (width >= 1260) {
+//         searchInput.classList.remove('search-hide');
+//         searchInput.classList.add('search-show');
+//         support.classList.remove('search-hide');
+//         contact.classList.remove('search-hide');
+//     } else if (width < 992) {
+//         support.classList.add('search-hide');
+//         contact.classList.add('search-hide');
+//         searchInput.classList.remove('search-hide');
+//     }
+// });
+// searchBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     if (width >= 992 && width < 1260 ) {
+//         if (searchToggle === false) {
+//             searchInput.classList.add('search-hide');
+//             support.classList.remove('search-hide');
+//             contact.classList.remove('search-hide');
+//             setTimeout(() => {
+//                 support.classList.add('search-hide');
+//                 contact.classList.add('search-hide');
+//             }, 200);
+//             setTimeout(() => {
+//                 searchInput.classList.add('search-show');
+//                 searchInput.classList.remove('search-hide');
+//             }, 500);
+//             searchToggle = true;
+//         } else if (searchToggle) {
+//             searchInput.classList.remove('search-show');
+//             searchInput.classList.add('search-hide');
+//             setTimeout(() => {
+//                 support.classList.remove('search-hide');
+//                 contact.classList.remove('search-hide');
+//             }, 200);
+//             searchToggle = false;
+//         }
+//     }
+// });

@@ -392,14 +392,14 @@ body {
     order: 1;
     padding-right: 0px;
     padding-bottom: 8px;
-    margin-right: 50px;
+    margin-right: 40px;
   }
 }
 @media screen and (min-width: 1260px) {
   .logo-wrapper {
     padding-right: 4px;
-    margin-right: 60px;
-    flex: 0 1 33.333%;
+    margin-right: 62px;
+    flex: 0 1 32%;
     order: 1;
   }
 }
@@ -441,11 +441,6 @@ body {
   background-color: #4183D7;
   border-radius: 3px;
   height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
   padding: 5px 15px;
 }
 .support-wrapper:hover {
@@ -467,17 +462,16 @@ body {
 }
 @media screen and (min-width: 992px) {
   .support-wrapper {
-    display: initial;
-    order: 2;
-    width: 136px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    order: 2;
     white-space: nowrap;
   }
 }
 @media screen and (min-width: 1260px) {
   .support-wrapper {
-    margin-right: 20px;
+    display: flex;
   }
 }
 
@@ -486,9 +480,6 @@ body {
   background-color: #999AA2;
   border-radius: 3px;
   height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 5px 15px;
 }
 .contact-wrapper:hover {
@@ -510,12 +501,16 @@ body {
 }
 @media screen and (min-width: 992px) {
   .contact-wrapper {
-    display: initial;
-    order: 3;
     display: flex;
     align-items: center;
+    justify-content: center;
+    order: 3;
     white-space: nowrap;
-    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .contact-wrapper {
+    display: flex;
   }
 }
 
@@ -547,12 +542,6 @@ body {
   .hamburger {
     order: 5;
     margin: 0 0 0 0;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .hamburger {
-    margin-left: 0;
-    order: 5;
   }
 }
 .hamburger .burger-label {
@@ -623,8 +612,6 @@ body {
 }
 
 .search-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
   order: 4;
   height: 47px;
   width: 100%;
@@ -652,9 +639,16 @@ body {
     margin: 0 0 0 0;
   }
 }
+@media screen and (min-width: 1260px) {
+  .search-wrapper {
+    margin: 0;
+    display: block;
+  }
+}
 
 form.search-form input[type=text] {
   /* Style the search field */
+  display: block;
   font-size: 14px;
   float: left;
   padding-bottom: 1.25px;
@@ -673,7 +667,6 @@ form.search-form input[type=text]:focus {
 }
 @media screen and (min-width: 768px) {
   form.search-form input[type=text] {
-    display: inline-block;
     width: 172px;
     height: 56px;
     padding-left: 16px;
@@ -690,6 +683,7 @@ form.search-form input[type=text]:focus {
 }
 @media screen and (min-width: 992px) {
   form.search-form input[type=text] {
+    display: none;
     width: 300px;
     border: 1px solid #ccc;
   }
@@ -697,8 +691,9 @@ form.search-form input[type=text]:focus {
 @media screen and (min-width: 1260px) {
   form.search-form input[type=text] {
     border-radius: 0;
-    display: inline-block;
+    display: block;
     height: 56px;
+    width: 240px;
   }
 }
 form.search-form button {
@@ -736,7 +731,6 @@ form.search-form button {
 }
 @media screen and (min-width: 1260px) {
   form.search-form button {
-    width: 20%;
     height: 56px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -759,18 +753,6 @@ form.search-form::after {
   content: "";
   clear: both;
   display: table;
-}
-
-@media screen and (min-width: 992px) {
-  .search-show {
-    display: block !important;
-    margin-left: 26px;
-    transition: all 0.5s;
-  }
-}
-
-.search-hide {
-  display: none !important;
 }
 
 @media screen and (max-width: 768px) {
