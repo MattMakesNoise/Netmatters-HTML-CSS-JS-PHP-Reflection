@@ -2124,11 +2124,7 @@ form.search-form::after {
 
 .news-title {
   height: 104px;
-}
-@media screen and (max-width: 768px) {
-  .news-title {
-    margin-left: 1rem;
-  }
+  margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .news-title {
@@ -2141,15 +2137,11 @@ form.search-form::after {
 @media screen and (min-width: 992px) {
   .news-title {
     width: 970px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 1260px) {
   .news-title {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -2175,16 +2167,12 @@ form.search-form::after {
 
 .news-cards-wrapper {
   display: block;
-}
-@media screen and (max-width: 768px) {
-  .news-cards-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 15px 25px 15px;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px 25px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
 }
 @media screen and (min-width: 768px) {
   .news-cards-wrapper {
@@ -2192,29 +2180,16 @@ form.search-form::after {
     flex-direction: row;
     width: 750px;
     padding: 20px 0px 25px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
   }
 }
 @media screen and (min-width: 992px) {
   .news-cards-wrapper {
-    display: flex;
-    flex-direction: row;
     width: 970px;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
   }
 }
 @media screen and (min-width: 1260px) {
   .news-cards-wrapper {
-    display: flex;
-    flex-direction: row;
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
   }
 }
 
@@ -2224,11 +2199,7 @@ form.search-form::after {
   box-shadow: 0 3px 2rem rgba(156, 152, 152, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
   padding-bottom: 1rem;
-}
-@media screen and (max-width: 768px) {
-  .news-card {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .news-card {
@@ -2240,13 +2211,11 @@ form.search-form::after {
 @media screen and (min-width: 992px) {
   .news-card {
     height: 633px;
-    flex: 1;
   }
 }
 @media screen and (min-width: 1260px) {
   .news-card {
     height: 583px;
-    flex: 1;
   }
 }
 .news-card .news-card-main {
@@ -2305,13 +2274,6 @@ form.search-form::after {
     overflow: clip !important;
   }
 }
-@media screen and (min-width: 1260px) {
-  .card-img-top img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-    overflow: clip !important;
-  }
-}
 
 .scion a {
   background-color: #926FB1;
@@ -2355,13 +2317,6 @@ form.search-form::after {
     height: 47px;
   }
 }
-@media screen and (min-width: 1260px) {
-  .scion-title,
-.notable-title,
-.job-title {
-    height: 47px;
-  }
-}
 .scion-title:hover,
 .notable-title:hover,
 .job-title:hover {
@@ -2393,18 +2348,9 @@ form.search-form::after {
   display: block;
   padding: 5px 15px 5px 15px;
   line-height: 35px;
-}
-@media screen and (max-width: 768px) {
-  .news-btn {
-    margin: 0 auto 3px 0;
-  }
+  margin: 0 auto 3px 0;
 }
 @media screen and (min-width: 768px) {
-  .news-btn {
-    margin: 20px auto 3px 0;
-  }
-}
-@media screen and (min-width: 992px) {
   .news-btn {
     margin: 20px auto 3px 0;
   }
@@ -2419,56 +2365,31 @@ form.search-form::after {
   display: flex;
   max-width: 100%;
   position: relative;
+  margin: 0 0 0 2rem;
+  padding-top: 32px;
 }
-@media screen and (max-width: 768px) {
-  .card-footer {
-    margin: 0 0 0 2rem;
-    padding-top: 32px;
-  }
-  .card-footer::before {
-    content: "";
-    border-bottom: 1px solid #ddd;
-    width: 90%;
-    position: absolute;
-    top: 4px;
-  }
+.card-footer::before {
+  content: "";
+  border-bottom: 1px solid #ddd;
+  width: 90%;
+  position: absolute;
+  top: 4px;
 }
 @media screen and (min-width: 768px) {
-  .card-footer {
-    margin: 0 0 0 2rem;
-    padding-top: 32px;
-  }
   .card-footer::before {
-    content: "";
-    border-bottom: 1px solid #ddd;
-    width: 90%;
-    position: absolute;
     top: 0;
   }
 }
 @media screen and (min-width: 992px) {
   .card-footer {
-    margin: 0 0 0 2rem;
     padding-top: 40px;
   }
   .card-footer::before {
-    content: "";
-    border-bottom: 1px solid #ddd;
-    width: 90%;
-    position: absolute;
     top: 4px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .card-footer {
-    margin: 0 0 0 2rem;
-    padding-top: 40px;
-  }
   .card-footer::before {
-    content: "";
-    border-bottom: 1px solid #ddd;
-    width: 95%;
-    position: absolute;
     top: 8px;
   }
 }
@@ -2520,17 +2441,10 @@ form.search-form::after {
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  .job-card {
-    display: block;
-  }
+.job-card {
+  display: block;
 }
 @media screen and (min-width: 768px) {
-  .job-card {
-    display: none;
-  }
-}
-@media screen and (min-width: 992px) {
   .job-card {
     display: none;
   }
