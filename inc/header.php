@@ -12,6 +12,13 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <!-- Pushy CSS file
     <link rel="stylesheet" href="/css/pushy.css"> -->
+    <!-- Leaflet CSS File -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Maps JS and CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/dist/style.min.css"> 
     <!-- Font Awesome -->

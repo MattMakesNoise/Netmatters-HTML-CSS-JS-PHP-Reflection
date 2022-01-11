@@ -179,3 +179,36 @@ searchBtn.addEventListener('click', (e) => {
         }
     } 
 });
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== OUT OF HOURS ACCORDIAN =====================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const accordianButton = document.querySelector('#accordian-btn');
+const accordian = document.querySelector('.out-of-hours-accordian');
+let accordianOpen = false;
+
+accordianButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("clicked the accordian");
+})
+
+// function outOfHoursToggle() {
+
+// }
+
+// //=====================================================================================================//
+// //=====================================================================================================//
+// //======================================== LEAFLET JS MAPS ============================================//
+// //=====================================================================================================//
+// //=====================================================================================================//
+// var map = L.map('map').setView([51.505, -0.09], 13);
+
+// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//     maxZoom: 18,
+//     id: 'mapbox/streets-v11',
+//     tileSize: 512,
+//     zoomOffset: -1,
+//     accessToken: 'pk.eyJ1IjoibWF0dG1ha2Vzbm9pc2UiLCJhIjoiY2t5YWNmbnQxMDQyejJvcGJjcWJjdnIxbSJ9.b9WKtKRD9iOtsygz2N4mig'
+// }).addTo(map);

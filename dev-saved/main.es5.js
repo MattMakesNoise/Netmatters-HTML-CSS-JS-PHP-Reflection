@@ -184,43 +184,31 @@ searchBtn.addEventListener('click', function (e) {
       searchToggle = false;
     }
   }
-}); // window.addEventListener('resize', (e) => {
-//     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//     if (width >= 1260) {
-//         searchInput.classList.remove('search-hide');
-//         searchInput.classList.add('search-show');
-//         support.classList.remove('search-hide');
-//         contact.classList.remove('search-hide');
-//     } else if (width < 992) {
-//         support.classList.add('search-hide');
-//         contact.classList.add('search-hide');
-//         searchInput.classList.remove('search-hide');
-//     }
-// });
-// searchBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     if (width >= 992 && width < 1260 ) {
-//         if (searchToggle === false) {
-//             searchInput.classList.add('search-hide');
-//             support.classList.remove('search-hide');
-//             contact.classList.remove('search-hide');
-//             setTimeout(() => {
-//                 support.classList.add('search-hide');
-//                 contact.classList.add('search-hide');
-//             }, 200);
-//             setTimeout(() => {
-//                 searchInput.classList.add('search-show');
-//                 searchInput.classList.remove('search-hide');
-//             }, 500);
-//             searchToggle = true;
-//         } else if (searchToggle) {
-//             searchInput.classList.remove('search-show');
-//             searchInput.classList.add('search-hide');
-//             setTimeout(() => {
-//                 support.classList.remove('search-hide');
-//                 contact.classList.remove('search-hide');
-//             }, 200);
-//             searchToggle = false;
-//         }
-//     }
-// });
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== OUT OF HOURS ACCORDIAN =====================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var accordianButton = document.querySelector('#accordian-btn');
+var accordian = document.querySelector('.out-of-hours-accordian');
+var accordianOpen = false;
+accordianButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log("clicked the accordian");
+}); // function outOfHoursToggle() {
+// }
+// //=====================================================================================================//
+// //=====================================================================================================//
+// //======================================== LEAFLET JS MAPS ============================================//
+// //=====================================================================================================//
+// //=====================================================================================================//
+// var map = L.map('map').setView([51.505, -0.09], 13);
+// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//     maxZoom: 18,
+//     id: 'mapbox/streets-v11',
+//     tileSize: 512,
+//     zoomOffset: -1,
+//     accessToken: 'pk.eyJ1IjoibWF0dG1ha2Vzbm9pc2UiLCJhIjoiY2t5YWNmbnQxMDQyejJvcGJjcWJjdnIxbSJ9.b9WKtKRD9iOtsygz2N4mig'
+// }).addTo(map);
