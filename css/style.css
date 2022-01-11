@@ -4019,6 +4019,100 @@ address a {
 .contact-banner-wrapper {
   background-color: #333645;
   color: white;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-banner-wrapper h1 {
+  max-width: 750px;
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+
+.location-card-container {
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+.location-card {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.location-card-main .location-body {
+  padding: 30px;
+}
+.location-card-main .location-body h2 {
+  font-size: 18px;
+  color: #333645;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+.location-card-main .location-body .location-address {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #666;
+}
+.location-card-main .location-body .location-tel-no {
+  color: #926FB1;
+}
+
+.location-img-top {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.location-img-top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.25s ease-in-out;
+  z-index: 1;
+}
+.location-img-top img:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .location-img-top img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    overflow: clip !important;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .location-img-top img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    overflow: clip !important;
+  }
+}
+
+.location-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #926FB1;
+  color: #fff;
+  padding: 5px 30px;
+  height: auto;
+  line-height: 35px;
+  margin-top: 15px;
+  font-size: 14.4px;
+}
+.location-btn:hover {
+  background: #79539A;
 }
 
 /*========== GLOBAL STYLES =*/

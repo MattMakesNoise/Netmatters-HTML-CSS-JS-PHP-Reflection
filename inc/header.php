@@ -13,7 +13,7 @@
     <!-- Pushy CSS file
     <link rel="stylesheet" href="/css/pushy.css"> -->
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="/dist/style.min.css"> 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
     <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
@@ -233,8 +233,6 @@
     </nav>
     <!-- SIDEBAR ENDS -->
     <div class="site-overlay"></div>
-    <!-- PAGE WRAPPER -->
-    <main class="page-wrapper" id="container">
         <!-- NAVBAR -->
         <header id="static_head">
             <div class="nav-bar">

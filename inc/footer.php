@@ -147,7 +147,7 @@
         </div>
     </div>
     <!-- Awards End --> 
-</main>
+
     <!-- COOKIES MODAL -->
     <div class="cookies-modal-outer"> 
         <div class="cookies-modal-inner">
@@ -177,4 +177,3 @@
 <!-- MAIN JS FILE -->
 <script src="/js/main.js"></script>
 </body>
-</html>
