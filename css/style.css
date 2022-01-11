@@ -4016,6 +4016,11 @@ address a {
   background-color: #79539A;
 }
 
+.contact-banner-wrapper {
+  background-color: #333645;
+  color: white;
+}
+
 /*========== GLOBAL STYLES =*/
 /*========== NAVBAR ========*/
 /*========== HERO ==========*/
@@ -4026,3 +4031,6 @@ address a {
 /*========== EMAIL FORM ====*/
 /*========== FOOTER ========*/
 /*========== AWARDS ========*/
+/*========== SIDEBAR ========*/
+/*========== COOKIES ========*/
+/*========== CONTACT-US ========*/
