@@ -10,7 +10,12 @@ var mapOne = new mapboxgl.Map({
   // starting position [lng, lat]
   zoom: 14 // starting zoom
 
-});
+}); // Set marker
+
+var marker1 = new mapboxgl.Marker({
+  color: "#ea4335",
+  draggable: false
+}).setLngLat([0.1542174437756883, 52.23541300922571]).addTo(mapOne);
 var mapTwo = new mapboxgl.Map({
   container: 'map-wymondham',
   // container ID
@@ -20,7 +25,12 @@ var mapTwo = new mapboxgl.Map({
   // starting position [lng, lat]
   zoom: 14 // starting zoom
 
-});
+}); // Set marker
+
+var marker2 = new mapboxgl.Marker({
+  color: "#ea4335",
+  draggable: false
+}).setLngLat([1.1366204803894677, 52.57607476277063]).addTo(mapTwo);
 var mapThree = new mapboxgl.Map({
   container: 'map-yarmouth',
   // container ID
@@ -30,4 +40,9 @@ var mapThree = new mapboxgl.Map({
   // starting position [lng, lat]
   zoom: 14 // starting zoom
 
-});
+}); // Set marker
+
+var marker3 = new mapboxgl.Marker({
+  color: "#ea4335",
+  draggable: false
+}).setLngLat([1.7131110765190403, 52.555933010791406]).addTo(mapThree);

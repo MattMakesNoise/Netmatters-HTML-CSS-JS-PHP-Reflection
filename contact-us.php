@@ -1,11 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <!-- Pushy CSS file
+    <link rel="stylesheet" href="/css/pushy.css"> -->
+    <!-- Leaflet CSS File -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Maps JS and CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/dist/style.min.css"> 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
+    <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
+</head>
+<body>
+<!-- INCLUDE THE HEADER -->
 <?php
     include('inc/header.php'); 
 ?>
-<!DOCTYPE html>
-<html>
+
 <!-- PAGE WRAPPER -->
-<main class="page-wrapper" id="container">
-<div class="contact-body-wrapper hero-mt">
+<main class="page-wrapper hero-mt" id="container">
     <!-- TOP BANNER START -->
     <div class="contact-banner-wrapper">
         <h1>Our Offices</h1>
@@ -14,6 +41,7 @@
 
     <!-- LOCATION CARDS START -->
     <div class="location-card-container">
+        <!-- CAMBRIDGE CARD START -->
         <div class="location-card cambridge-card">
             <div class="location-card-main">
                 <div class="location-img-wrap">
@@ -38,11 +66,11 @@
                     </div>
                 </div>
             </div>
-            <div id='map-cambridge'>
-            
-            </div>
+            <div id='map-cambridge'></div>
         </div>
-        
+        <!-- CAMBRIDGE CARD END -->
+
+        <!-- WYMONDHAM CARD START -->
         <div class="location-card wymondham-card">
             <div class="location-card-main">
                 <div class="location-img-wrap">
@@ -67,11 +95,11 @@
                     </div>
                 </div>
             </div>
-            <div id="map-wymondham">
-            
-            </div>
+            <div id="map-wymondham"></div>
         </div>
-        
+        <!-- WYMONDHAM CARD END -->
+
+        <!-- YARMOUTH CARD START -->
         <div class="location-card yarmouth-card">
             <div class="location-card-main">
                 <div class="location-img-wrap">
@@ -96,14 +124,13 @@
                     </div>
                 </div>
             </div>
-            <div id="map-yarmouth">
-            
-            </div>
+            <div id="map-yarmouth"></div>
         </div>
-        
-        
+        <!-- YARMOUTH CARD END -->
     </div>
     <!-- LOCATION CARDS END -->
+
+    <!-- OPENING TIMES AND CONTACT FORM STARTS-->
     <div class="bottom-wrapper">
         <!-- OPENING TIMES START -->
         <div class="opening-times-wrapper">
@@ -146,49 +173,58 @@
         <!-- ENQUIRY FORM START -->
         <div class="enquiry-form-wrapper">
             <form action="" class="enquiry-form">
-            <div class="enquiry-boxes">
-                <div class="name-mail">
-                    <div class="name-wrapper">
-                        <label for="inputName" class="form-label">Your Name <span class="make-red">*</span></label>
-                        <input type="text" class="form-control" id="inputName">
+                <div class="enquiry-boxes">
+                    <div class="name-mail">
+                        <div class="name-wrap">
+                            <label for="inputName" class="form-label">Your Name <span class="make-red">*</span></label>
+                            <input type="text" class="form-control" id="inputNameContact">
+                        </div>
+                        <div class="mail-wrap">
+                            <label for="inputEmail" class="form-label">Your Email <span class="make-red">*</span></label>
+                            <input type="email" class="form-control" id="inputEmailContact">
+                        </div>
                     </div>
-                    <div class="mail-wrapper">
-                        <label for="inputEmail" class="form-label">Your Email <span class="make-red">*</span></label>
-                        <input type="email" class="form-control" id="inputEmail">
+                    <div class="tel-subject">
+                        <div class="tel-no-wrap">
+                            <label for="telephone" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
+                            <input type="tel" class="form-control" id="inputTelContact">
+                        </div>
+                        <div class="subject-wrap">
+                            <label for="subject" class="form-label">Subject <span class="make-red">*</span></label>
+                            <input type="text" class="form-control" id="inputSubjectContact">
+                        </div>
+                    </div>
+                    <div class="message-wrap">
+                        <label for="message" class="form-label">Message <span class="make-red">*</span></label>
+                        <input type="text" class="form-control" id="inputMessageContact">
                     </div>
                 </div>
-                <div class="tel-subject">
-                    <div class="tel-no-wrapper">
-                        <label for="telephone" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
-                        <input type="tel" class="form-control" id="inputTel">
-                    </div>
-                    <div class="subject-wrapper">
-                        <label for="subject" class="form-label">Subject <span class="make-red">*</span></label>
-                        <input type="text" class="form-control" id="inputSubject">
-                    </div>
-                </div>
-                <div class="message-wrapper">
-                    <label for="message" class="form-label">Message <span class="make-red">*</span></label>
-                    <input type="text" class="form-control" id="inputMessage">
-                </div>
-            </div>
-            <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
-            Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <button type="submit" class="enquiry-btn">Send Enquiry</button>
+                <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
+                Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <button type="submit" class="enquiry-btn">Send Enquiry</button>
             </form>
-            
         </div>
         <!-- ENQUIRY FORM END -->
     </div>
-</div>
+    <!-- OPENING TIMES AND CONTACT FORM ENDS-->
 </main>
 
-
+<!-- INCLUDE THE FOOTER -->
 <?php
     include('inc/footer.php'); 
 ?>
+<!-- SCRIPT FOR MAP JS -->
 <script src="/js/map.js"></script>
+<!-- SCRIPT FOR JQUERY -->
+<script src="/js/jquery-3.6.0.min.js"></script>
+<!-- SCRIPT FOR SLICK CAROUSEL -->
+<script src="/js/slick.min.js"></script>
+<!-- SCRIPT FOR PUSHY SIDEBAR -->
+<script src="js/pushy.min.js"></script>
+<!-- MAIN JS FILE -->
+<script src="/js/main.js"></script>
+</body>
 </html>

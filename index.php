@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <!-- Pushy CSS file
+    <link rel="stylesheet" href="/css/pushy.css"> -->
+    <!-- Leaflet CSS File -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Maps JS and CSS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/dist/style.min.css"> 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
+    <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
+</head>
+<body>
+<!-- INCLUDE THE HEADER -->
 <?php
     include('inc/header.php'); 
 ?>
@@ -302,7 +331,20 @@
         <!-- Clients End -->
 
         
-
+<!-- INCLUDE THE FOOTER -->
 <?php
     include('inc/footer.php'); 
 ?>
+<!-- SCRIPT FOR MAP JS -->
+<script src="/js/map.js"></script>
+<!-- SCRIPT FOR JQUERY -->
+<script src="/js/jquery-3.6.0.min.js"></script>
+<!-- SCRIPT FOR SLICK CAROUSEL -->
+<script src="/js/slick.min.js"></script>
+<!-- SCRIPT FOR PUSHY SIDEBAR -->
+<script src="js/pushy.min.js"></script>
+<!-- MAIN JS FILE -->
+<script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -2893,7 +2893,7 @@ form.search-form::after {
 }
 
 /*========== EMAIL FORM ======*/
-.email-wrapper {
+.newsletter-wrapper {
   background-color: #ddd;
 }
 
@@ -4040,6 +4040,7 @@ address a {
 }
 
 .bottom-wrapper {
+  background: #fff;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -4110,10 +4111,10 @@ address a {
     margin-right: -15px;
   }
 }
-.enquiry-form-wrapper .name-wrapper,
-.enquiry-form-wrapper .mail-wrapper,
-.enquiry-form-wrapper .tel-no-wrapper,
-.enquiry-form-wrapper .subject-wrapper {
+.enquiry-form-wrapper .name-wrap,
+.enquiry-form-wrapper .mail-wrap,
+.enquiry-form-wrapper .tel-no-wrap,
+.enquiry-form-wrapper .subject-wrap {
   width: 50%;
   padding: 0 15px;
 }

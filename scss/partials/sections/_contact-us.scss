@@ -1,7 +1,6 @@
 //=========================================================//
 //==================== BANNER =============================//
 //=========================================================//
-
 .contact-banner-wrapper {
     background-color: $dark-blue;
     color: white;
@@ -144,6 +143,7 @@
 //==================== OPENING & FORM WRAPPER =============//
 //=========================================================//
 .bottom-wrapper {
+    background: $white;
     margin: 0 auto;
     @media screen and (min-width: $break-m) {
         width: 750px;
@@ -207,10 +207,10 @@
             margin-right: -15px;
         }
     }
-    .name-wrapper,
-    .mail-wrapper,
-    .tel-no-wrapper,
-    .subject-wrapper {
+    .name-wrap,
+    .mail-wrap,
+    .tel-no-wrap,
+    .subject-wrap {
         width: 50%;
         padding: 0 15px;
     }
