@@ -2900,34 +2900,23 @@ form.search-form::after {
 .email {
   display: flex;
   flex-direction: column;
-}
-@media screen and (max-width: 768px) {
-  .email {
-    padding: 50px 45px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  padding: 50px 45px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .email {
-    padding: 50px 45px;
     width: 750px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 992px) {
   .email {
     width: 970px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 1260px) {
   .email {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -2940,60 +2929,27 @@ form.search-form::after {
   line-height: 1.1;
 }
 
-.boxes .name-wrapper,
-.boxes .mail-wrapper {
-  flex: 1 1 450px;
-}
-.boxes .name-wrapper input,
-.boxes .mail-wrapper input {
-  margin-top: 0.25rem;
-}
-@media screen and (max-width: 768px) {
-  .boxes .name-wrapper {
-    padding-right: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .boxes .name-wrapper {
-    padding-right: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .boxes .name-wrapper {
-    padding-right: 15px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .boxes .name-wrapper {
-    padding-right: 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .boxes .mail-wrapper {
-    padding-left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .boxes .mail-wrapper {
-    padding-left: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .boxes .mail-wrapper {
-    padding-left: 15px;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .boxes .mail-wrapper {
-    padding-left: 15px;
-  }
-}
 @media screen and (min-width: 992px) {
   .boxes {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.boxes .name-wrapper,
+.boxes .mail-wrapper {
+  flex: 1 1 450px;
+  padding-left: 0;
+}
+@media screen and (min-width: 992px) {
+  .boxes .name-wrapper,
+.boxes .mail-wrapper {
+    padding-left: 15px;
+  }
+}
+.boxes .name-wrapper input,
+.boxes .mail-wrapper input {
+  margin-top: 0.25rem;
 }
 
 .make-red {
@@ -3011,6 +2967,8 @@ form.search-form::after {
   height: 3rem;
   background-color: #fff;
   border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 2px;
   margin-bottom: 1rem;
   padding-left: 15px;
@@ -3935,18 +3893,53 @@ address a {
   color: white;
   padding: 24px 0;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .contact-banner-wrapper {
+    padding-top: 50px;
+    background-color: #fff;
+    color: #333645;
+  }
+}
 .contact-banner-wrapper h1 {
-  max-width: 750px;
+  width: 750px;
   font-weight: 400;
   font-size: 2.25rem;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .contact-banner-wrapper h1 {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .contact-banner-wrapper h1 {
+    width: 1200px;
+  }
 }
 
 .location-card-container {
-  margin-top: 50px;
+  margin: 50px auto 0;
   padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .location-card-container {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .location-card-container {
+    width: 970px;
+    padding: 0;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .location-card-container {
+    width: 1200px;
+  }
 }
 
 .location-card {
@@ -3954,6 +3947,12 @@ address a {
   border-radius: 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
+}
+@media screen and (min-width: 992px) {
+  .location-card {
+    width: 33.333333%;
+    margin: 0 15px;
+  }
 }
 
 .location-card-main .location-body {
@@ -3965,6 +3964,10 @@ address a {
   margin-bottom: 15px;
   font-weight: 400;
 }
+.location-card-main .location-body h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .location-card-main .location-body .location-address {
   font-size: 0.8125rem;
   line-height: 1.375rem;
@@ -3973,7 +3976,18 @@ address a {
   color: #666;
 }
 .location-card-main .location-body .location-tel-no {
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
   color: #926FB1;
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+.location-card-main .location-body .location-tel-no:hover {
+  text-decoration: underline;
 }
 
 .location-img-top {
@@ -3993,22 +4007,11 @@ address a {
 .location-img-top img:hover {
   cursor: pointer;
 }
-@media screen and (min-width: 992px) {
-  .location-img-top img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-    overflow: clip !important;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .location-img-top img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-    overflow: clip !important;
-  }
-}
 
-.location-btn {
+.location-btn-wrapper {
+  margin-top: 30px;
+}
+.location-btn-wrapper .location-btn {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -4019,13 +4022,13 @@ address a {
   border-radius: 3px;
   background: #926FB1;
   color: #fff;
-  padding: 5px 30px;
   height: auto;
   line-height: 35px;
   margin-top: 15px;
-  font-size: 14.4px;
+  font-size: 1.1rem;
+  padding: 5px 30px;
 }
-.location-btn:hover {
+.location-btn-wrapper .location-btn:hover {
   background: #79539A;
 }
 
@@ -4036,8 +4039,34 @@ address a {
   height: 300px;
 }
 
+.bottom-wrapper {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .bottom-wrapper {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bottom-wrapper {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .bottom-wrapper {
+    width: 1200px;
+  }
+}
+
 .opening-times-wrapper {
   padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1260px) {
+  .opening-times-wrapper {
+    width: 33%;
+    float: right;
+  }
 }
 .opening-times-wrapper .opening-times-p {
   line-height: 1.875rem;
@@ -4062,6 +4091,32 @@ address a {
   padding: 30px;
   margin: 0 15px 50px;
 }
+@media screen and (min-width: 768px) {
+  .enquiry-form-wrapper {
+    margin: 0 auto 50px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .enquiry-form-wrapper {
+    width: 66%;
+    float: left;
+  }
+}
+@media screen and (min-width: 992px) {
+  .enquiry-form-wrapper .name-mail,
+.enquiry-form-wrapper .tel-subject {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.enquiry-form-wrapper .name-wrapper,
+.enquiry-form-wrapper .mail-wrapper,
+.enquiry-form-wrapper .tel-no-wrapper,
+.enquiry-form-wrapper .subject-wrapper {
+  width: 50%;
+  padding: 0 15px;
+}
 .enquiry-form-wrapper .enquiry-btn {
   background-color: #926FB1;
   color: #fff;
@@ -4082,6 +4137,10 @@ address a {
 }
 .enquiry-form-wrapper .enquiry-btn:hover {
   background-color: #79539A;
+}
+
+#inputMessage {
+  min-height: 100px;
 }
 
 /*========== GLOBAL STYLES =*/

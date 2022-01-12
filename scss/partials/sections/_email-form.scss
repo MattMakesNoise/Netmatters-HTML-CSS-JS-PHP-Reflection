@@ -4,26 +4,16 @@
 }
 .email {
     @include flexcolumn;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        padding: 50px 45px;
-        @include mginlrauto;
-    }
-    //Medium and up
+    padding: 50px 45px;
+    @include mginlrauto;
     @media screen and (min-width: $break-m) {
-        padding: 50px 45px;
         width: 750px;
-        @include mginlrauto;
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         width: 970px;
-        @include mginlrauto;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
-        @include mginlrauto;
     }
 }
 .email-header {
@@ -35,53 +25,20 @@
     line-height: 1.1;
 }
 .boxes {
-    .name-wrapper,
-    .mail-wrapper {
-        flex: 1 1 450px;
-        input {
-            margin-top: 0.25rem;
-        }
-    }
-    .name-wrapper {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            padding-right: 0;
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            padding-right: 0;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            padding-right: 15px;
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            padding-right: 15px;
-        }
-    }
-    .mail-wrapper {
-        //Up to Medium
-        @media screen and (max-width: $break-m) {
-            padding-left: 0;
-        }
-        //Medium and up
-        @media screen and (min-width: $break-m) {
-            padding-left: 0;
-        }
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            padding-left: 15px;
-        }
-        //Extra Large
-        @media screen and (min-width: $break-xl) {
-            padding-left: 15px;
-        }
-    }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         @include flexrow;
         justify-content: space-between;
+    }
+    .name-wrapper,
+    .mail-wrapper {
+        flex: 1 1 450px;
+        padding-left: 0;
+        @media screen and (min-width: $break-lg) {
+            padding-left: 15px;
+        }
+        input {
+            margin-top: 0.25rem;
+        }
     }
 }
 .make-red {
@@ -97,6 +54,8 @@
     height: 3rem;
     background-color: $white;
     border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,8%);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     border-radius: 2px;
     margin-bottom: 1rem;
     padding-left: 15px;

@@ -7,20 +7,43 @@
     color: white;
     padding: 24px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    @media screen and (min-width: $break-lg) {
+        padding-top: 50px;
+        background-color: $white;
+        color: $dark-blue;
+    }
     h1 {
-        max-width: 750px;
+        width: 750px;
         font-weight: 400;
         font-size: 2.25rem;
+        padding: 0 15px;
+        margin: 0 auto;
+        @media screen and (min-width: $break-lg) {
+            width: 970px;
+        }
+        @media screen and (min-width: $break-xl) {
+            width: 1200px;
+        }
     }
 }
 //=========================================================//
 //==================== LOCATION CARDS =====================//
 //=========================================================//
 .location-card-container {
-    margin-top: 50px;
+    margin: 50px auto 0;
     padding: 0 15px;
+    @media screen and (min-width: $break-m) {
+        width: 750px;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 970px;
+        padding: 0;
+        display: flex;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 1200px;
+    }
 }
 
 .location-card {
@@ -28,6 +51,10 @@
     border-radius: 3px;
     box-shadow: 0 3px 35px rgba(0,0,0, 10%);
     margin-top: 30px;
+    @media screen and (min-width: $break-lg) {
+        width: 33.333333%;
+        margin: 0 15px;
+    }
 }
 
 .location-card-main {
@@ -38,6 +65,10 @@
             color: $dark-blue;
             margin-bottom: 15px;
             font-weight: 400;
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
         .location-address {
             font-size: .8125rem;
@@ -47,7 +78,13 @@
             color: $grey-text;
         }
         .location-tel-no {
+            @include link-styles;
             color: $web;
+            font-size: 1.625rem;
+            font-weight: $bold;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -66,35 +103,32 @@
         z-index: 1;
         &:hover {
             cursor: pointer;
-            //Large and Up
-            @media screen and (min-width: $break-lg) {
-                transform: scale(1.1);
-                opacity: 0.8;
-                overflow: clip !important;
-            }
-            //Extra Large
-            @media screen and (min-width: $break-xl) {
-                transform: scale(1.1);
-                opacity: 0.8;
-                overflow: clip !important;
-            }
+            // @media screen and (min-width: $break-lg) {
+            //     transform: scale(1.1);
+            //     opacity: 0.8;
+            //     overflow: clip !important;
+            // }
         }
     }
 }
 
-.location-btn {
-    @include button-styles;
-    background: $web;
-    color: $white;
-    padding: 5px 30px;
-    height: auto;
-    line-height: 35px;
-    margin-top: 15px;
-    font-size: 14.4px;  
-    &:hover {
-        background: $web-dark;
+.location-btn-wrapper {
+    margin-top: 30px;
+    .location-btn {
+        @include button-styles;
+        background: $web;
+        color: $white;
+        height: auto;
+        line-height: 35px;
+        margin-top: 15px;
+        font-size: 1.1rem;  
+        padding: 5px 30px;
+        &:hover {
+            background: $web-dark;
+        }
     }
 }
+
 
 //=========================================================//
 //==================== MAPS ===============================//
@@ -107,10 +141,31 @@
 }
 
 //=========================================================//
+//==================== OPENING & FORM WRAPPER =============//
+//=========================================================//
+.bottom-wrapper {
+    margin: 0 auto;
+    @media screen and (min-width: $break-m) {
+        width: 750px;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 970px;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 1200px;
+    }
+}
+
+//=========================================================//
 //==================== OPENING TIMES ======================//
 //=========================================================//
 .opening-times-wrapper {
     padding: 0 15px;
+    margin: 0 auto;
+    @media screen and (min-width: $break-xl) {
+        width: 33%;
+        float: right;
+    }
     .opening-times-p {
         line-height: 1.875rem;
         margin-bottom: 25px;
@@ -137,12 +192,32 @@
     border-radius: 10px;
     padding: 30px;
     margin: 0 15px 50px;
+    @media screen and (min-width: $break-m) {
+        margin: 0 auto 50px;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 66%;
+        float: left;
+    }
+    .name-mail,
+    .tel-subject {
+        @media screen and (min-width: $break-lg) {
+            display: flex;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .name-wrapper,
+    .mail-wrapper,
+    .tel-no-wrapper,
+    .subject-wrapper {
+        width: 50%;
+        padding: 0 15px;
+    }
     .enquiry-btn {
         background-color: $web;
         color: $white;
         @include button-styles;
-        // width: 130px;
-        // height: 45px;
         padding: 5px 15px;
         font-size: 1.063rem;
         text-align: center;
@@ -153,4 +228,10 @@
             background-color: $web-dark;
         }
     }
+}
+
+
+
+#inputMessage {
+    min-height: 100px;
 }
