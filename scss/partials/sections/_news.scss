@@ -129,19 +129,13 @@
     }
 }
 .scion {
-    a {
-        background-color: $web;
-    }
+    background-color: $web;
 }
 .notable {
-    a {
-        background-color: $tele;
-    }
+    background-color: $tele;
 }
 .job {
-    a {
-        background-color: $soft;
-    }
+    background-color: $soft;
 }
 .news-body {
     padding: 1rem 1rem;
@@ -167,6 +161,61 @@
         text-decoration: underline;
     }
 } 
+
+//===== SCION CARD =====//
+.scion-title {
+    color: $web;
+}
+.scion-btn {
+    background-color: $web;
+    color: $white;
+    &:hover {
+        background-color: $web-dark;
+        color: $white;
+    }
+}
+//===== NOTABLE CARD =====//
+.notable-title {
+    color: $tele;
+}
+.notable-btn {
+    background-color: $tele;
+    color: $white;
+    &:hover {
+        background-color: $tele-dark;
+        color: $white;
+    }
+}
+//===== JOB CARD =====//
+.job-card {
+    display: block;
+    @media screen and (min-width: $break-m) {
+        display: none;
+    }
+    @media screen and (min-width: $break-xl) {
+        display: block;
+    }
+    .job-title {
+        color: $soft;
+    }
+    .job-btn {
+        background-color: $soft;
+        color: $white;
+        &:hover {
+            background-color: $soft-dark;
+            color: $white;
+        }
+    }
+}
+// .scion-title {
+//     color: $web;
+// }
+// .notable-title {
+//     color: $tele;
+// }
+// .job-title {
+//     color: $soft;
+// }
 .news-text {
     font-size: .85rem;
     margin-bottom: 1.5rem;
@@ -235,57 +284,8 @@
 .text-muted {
     color: $grey-text;
 }
-//===== SCION CARD =====//
-.scion-card {
-    display: block;
-    .scion-title {
-        color: $web;
-    }
-    .scion-btn {
-        background-color: $web;
-        color: $white;
-        &:hover {
-            background-color: $web-dark;
-            color: $white;
-        }
-    }
-}
-//===== NOTABLE CARD =====//
-.notable-card {
-    display: block;
-    .notable-title {
-        color: $tele;
-    }
-    .notable-btn {
-        background-color: $tele;
-        color: $white;
-        &:hover {
-            background-color: $tele-dark;
-            color: $white;
-        }
-    }
-}
-//===== JOB CARD =====//
-.job-card {
-    display: block;
-    @media screen and (min-width: $break-m) {
-        display: none;
-    }
-    @media screen and (min-width: $break-xl) {
-        display: block;
-    }
-    .job-title {
-        color: $soft;
-    }
-    .job-btn {
-        background-color: $soft;
-        color: $white;
-        &:hover {
-            background-color: $soft-dark;
-            color: $white;
-        }
-    }
-}
+
+
 //===== Target IE Specifically =====//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .news-body {

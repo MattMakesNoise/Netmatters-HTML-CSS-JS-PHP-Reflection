@@ -1,3 +1,8 @@
+<?php 
+    //connect to database
+    require 'db/connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +36,7 @@
     include('inc/header.php'); 
 ?>
 
-
-
-    
-
-        <!-- HERO -->
+        <!-- HERO START -->
         <div class="hero-wrapper hero-mt">    
             <div class="carousel">
                 <div class="slide web-slide">
@@ -118,9 +119,9 @@
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+        <!-- HERO END -->
         
-        <!-- Cards -->
+        <!-- CARDS START -->
         <div class="cards-wrapper">
             <div class="cards-section">
                 <div class="row-one"> <!-- TOP THREE CARDS -->
@@ -203,9 +204,9 @@
                 </div>
             </div>
         </div>
-        <!-- Cards End -->
+        <!-- CCARDS END -->
 
-        <!-- About -->
+        <!-- ABOUT START -->
         <div class="about-wrapper">
             <section class="about">
                 <h1 class="about-title">NETMATTERS</h1>
@@ -215,87 +216,28 @@
                 <button type="button" class="culture-btn">Our Culture <span class="about-icon"><i class="fas fa-arrow-right"></i></span></button>
             </section>
         </div>
-        <!-- About End -->
+        <!-- ABOUT END -->
 
-        <!-- News -->
+        <!-- NEWS START -->
         <div class="news-wrapper">
+            <!-- NEWS TITLE BANNER START -->
             <div class="news-title">
                 <h2 class="news-title-text">LATEST</h2>
             </div>
+            <!-- NEWS TITLE BANNER END -->
+            <!-- NEWS CARDS START -->
             <div class="news">
                 <div class="news-cards-wrapper">
-                    <div class="news-card scion-card">
-                        <div class="news-card-main">
-                            <div class="img-wrap">
-                                <div class="card-img-top scion">
-                                    <a href="#">News</a>
-                                    <img src="img/congratulations-to-lloyd-OGgS.jpg" alt="New Scion Graduate">
-                                </div>
-                            </div>
-                            <div class="news-body">
-                                <a class="scion-title">Congratulations to Lloyd Cox for Graduating t...</a>
-                                <p class="news-text">We are pleased to announce that after a year spent on our Netmatters Scion Coalition Scheme (...</p>
-                                <a href="#" class="scion-btn news-btn">Read More</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <img src="img/netmatters-ltd-VXAv.png" class="rounded-circle float-start" alt="Netmatters">
-                            <div class="user-date">
-                                <p class="posted-by">Posted by Netmatters Ltd</p>
-                                <small class="text-muted">10th May 2021</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card notable-card">
-                        <div class="news-card-main">
-                            <div class="img-wrap">
-                                <div class="card-img-top notable">
-                                    <a href="#">News</a>
-                                    <img src="img/april-2021-notables-0C1u.jpg" alt="New Scion Graduate">
-                                </div>
-                            </div>
-                            <div class="news-body">
-                            <a class="notable-title">April 2021 Notables</a>
-                            <p class="news-text">Every month we celebrate the most notable of the employees here at Netmatters. Each department he...</p>
-                            <a href="#" class="notable-btn news-btn">Read More</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <img src="img/netmatters-ltd-VXAv.png" class="rounded-circle float-start" alt="Netmatters">
-                            <div class="user-date">
-                                <p class="posted-by">Posted by Netmatters Ltd</p>
-                                <small class="text-muted">6th May 2021</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card job-card">
-                        <div class="news-card-main">
-                            <div class="img-wrap">
-                                <div class="card-img-top job">
-                                    <a href="#">Careers</a>
-                                    <img src="img/web-developer-r6Y3.jpg" class="card-img-top" alt="New Scion Graduate">
-                                </div>
-                            </div>
-                            <div class="news-body">
-                            <a class="job-title">Web Developer</a>
-                            <p class="news-text">Salary Range £25,000 - £45,000 (DOE) + Bonus Hours 40 hours per week, Monday - Flexible Opt...</p>
-                            <a href="#" class="job-btn news-btn">Read More</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <img src="img/simon-wright-7UFt.jpg" class="rounded-circle float-start" alt="Simon Wright">
-                            <div class="user-date">
-                                <p class="posted-by">Posted by Simon Wright</p>
-                                <small class="text-muted">1st May 2021</small>
-                            </div>
-                        </div>
-                    </div>
+                    <?php 
+                        include('inc/news-cards.php'); 
+                    ?>
                 </div>
             </div>
+            <!-- NEWS CARDS END -->
         </div>
-        <!-- News End -->
+        <!-- NEWS END -->
 
-        <!-- Clients -->
+        <!-- CLIENTS START -->
         <div class="clients-wrapper">
             <section class="clients">
                 <div class="busseys-container show">
@@ -328,7 +270,7 @@
                 </a>
             </section>
         </div>
-        <!-- Clients End -->
+        <!-- CLIENTS END -->
 
         
 <!-- INCLUDE THE FOOTER -->

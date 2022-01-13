@@ -2275,15 +2275,15 @@ form.search-form::after {
   }
 }
 
-.scion a {
+.scion {
   background-color: #926FB1;
 }
 
-.notable a {
+.notable {
   background-color: #D64541;
 }
 
-.job a {
+.job {
   background-color: #67809F;
 }
 
@@ -2322,6 +2322,57 @@ form.search-form::after {
 .job-title:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.scion-title {
+  color: #926FB1;
+}
+
+.scion-btn {
+  background-color: #926FB1;
+  color: #fff;
+}
+.scion-btn:hover {
+  background-color: #79539A;
+  color: #fff;
+}
+
+.notable-title {
+  color: #D64541;
+}
+
+.notable-btn {
+  background-color: #D64541;
+  color: #fff;
+}
+.notable-btn:hover {
+  background-color: #BC2C28;
+  color: #fff;
+}
+
+.job-card {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .job-card {
+    display: none;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .job-card {
+    display: block;
+  }
+}
+.job-card .job-title {
+  color: #67809F;
+}
+.job-card .job-btn {
+  background-color: #67809F;
+  color: #fff;
+}
+.job-card .job-btn:hover {
+  background-color: #526784;
+  color: #fff;
 }
 
 .news-text {
@@ -2409,61 +2460,6 @@ form.search-form::after {
 
 .text-muted {
   color: #666;
-}
-
-.scion-card {
-  display: block;
-}
-.scion-card .scion-title {
-  color: #926FB1;
-}
-.scion-card .scion-btn {
-  background-color: #926FB1;
-  color: #fff;
-}
-.scion-card .scion-btn:hover {
-  background-color: #79539A;
-  color: #fff;
-}
-
-.notable-card {
-  display: block;
-}
-.notable-card .notable-title {
-  color: #D64541;
-}
-.notable-card .notable-btn {
-  background-color: #D64541;
-  color: #fff;
-}
-.notable-card .notable-btn:hover {
-  background-color: #BC2C28;
-  color: #fff;
-}
-
-.job-card {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .job-card {
-    display: none;
-  }
-}
-@media screen and (min-width: 1260px) {
-  .job-card {
-    display: block;
-  }
-}
-.job-card .job-title {
-  color: #67809F;
-}
-.job-card .job-btn {
-  background-color: #67809F;
-  color: #fff;
-}
-.job-card .job-btn:hover {
-  background-color: #526784;
-  color: #fff;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
