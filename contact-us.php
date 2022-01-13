@@ -172,31 +172,95 @@
 
         <!-- ENQUIRY FORM START -->
         <div class="enquiry-form-wrapper">
-            <form action="" class="enquiry-form">
+            <form action="enquiry-form.php" method="POST" class="enquiry-form">
+
+                <label for="inputNameContact" class="form-label">Your Name <span class="make-red">*</span></label>
+                <input type="text" name="name" class="form-control">
+
+                <label for="inputEmailContact" class="form-label">Your Email <span class="make-red">*</span></label>
+                <input type="text" name="email" class="form-control">
+
+                <label for="inputTelContact" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
+                <input type="text" name="tel" class="form-control">
+
+                <label for="inputSubjectContact" class="form-label">Subject <span class="make-red">*</span></label>
+                <input type="text" name="subject" class="form-control">
+
+                <label for="inputMessageContact" class="form-label">Message <span class="make-red">*</span></label>
+                <textarea name="message" id="inputMessageContact" class="form-control"></textarea>
+
+                <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
+                Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+                <button type="submit" name="submit" class="enquiry-btn">SEND ENQUIRY</button>
+
+            </form>    
+            <?php
+            /* 
+                //MESSAGE VARS
+                $formMessage = '';
+                $formMessageClass = '';
+                //CHECK FOR SUBMIT
+                if(filter_has_var(INPUT_POST, 'submit')) {
+                    //GET FORM DATA
+                    $name = filter_input(INPUT_POST, 'inputNameContact', FILTER_SANITIZE_STRING); 
+                    $email = filter_input(INPUT_POST, 'inputEmailContact', FILTER_SANITIZE_STRING);
+                    $tel = filter_input(INPUT_POST, 'inputTelContact', FILTER_SANITIZE_STRING);
+                    $subject = filter_input(INPUT_POST, 'inputSubjectContact', FILTER_SANITIZE_STRING);
+                    $msg = filter_input(INPUT_POST, 'inputMessageContact', FILTER_SANITIZE_STRING);
+                    //CHECK REQUIRED FIELDS
+                    if(!empty($name) && !empty($email) && !empty($tel) && !empty($subject) && !empty($msg)) {
+                        //PASSED
+                        //CHECK EMAIL
+                        if($email === false) {
+                            //Failed
+                            $formMessage = 'Please use a valid email';
+                            $formMessageClass = 'make-red';
+                        } else {
+                            //Passed
+                            echo 'EMAIL PASSED!';
+                        }
+                        echo 'PASSED!';
+                    } else {
+                        //FAILED
+                        $formMessage = 'Please fill in all fields';
+                        $formMessageClass = 'make-red';
+                    }
+                }
+                if($formMessage != '') {
+                    echo '<div class="'. $formMessageClass .'">'. $formMessage .'</div>';
+                }
+                    
+                */
+            ?> 
+            <!-- <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="POST" class="enquiry-form">
                 <div class="enquiry-boxes">
                     <div class="name-mail">
                         <div class="name-wrap">
-                            <label for="inputName" class="form-label">Your Name <span class="make-red">*</span></label>
-                            <input type="text" class="form-control" id="inputNameContact">
+                            <label for="inputNameContact" class="form-label">Your Name <span class="make-red">*</span></label>
+                            <input name="inputNameContact" type="text" value="<?php //echo isset($_POST['name']) ? $name : ''; ?>" class="form-control" id="inputNameContact">
                         </div>
                         <div class="mail-wrap">
-                            <label for="inputEmail" class="form-label">Your Email <span class="make-red">*</span></label>
-                            <input type="email" class="form-control" id="inputEmailContact">
+                            <label for="inputEmailContact" class="form-label">Your Email <span class="make-red">*</span></label>
+                            <input name="inputEmailContact" type="email" value="<?php //echo isset($_POST['email']) ? $email : ''; ?>" class="form-control" id="inputEmailContact">
                         </div>
                     </div>
                     <div class="tel-subject">
                         <div class="tel-no-wrap">
-                            <label for="telephone" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
-                            <input type="tel" class="form-control" id="inputTelContact">
+                            <label for="inputTelContact" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
+                            <input name="inputTelContact" type="tel" value="<?php //echo isset($_POST['tel']) ? $tel : ''; ?>" class="form-control" id="inputTelContact">
                         </div>
                         <div class="subject-wrap">
-                            <label for="subject" class="form-label">Subject <span class="make-red">*</span></label>
-                            <input type="text" class="form-control" id="inputSubjectContact">
+                            <label for="inputSubjectContact" class="form-label">Subject <span class="make-red">*</span></label>
+                            <input name="inputSubjectContact" type="text" value="<?php //echo isset($_POST['subject']) ? $subject : ''; ?>" class="form-control" id="inputSubjectContact">
                         </div>
                     </div>
                     <div class="message-wrap">
-                        <label for="message" class="form-label">Message <span class="make-red">*</span></label>
-                        <input type="text" class="form-control" id="inputMessageContact">
+                        <label for="inputMessageContact" class="form-label">Message <span class="make-red">*</span></label>
+                        <textarea name="inputMessageContact" type="text" class="form-control" id="inputMessageContact"><?php //echo isset($_POST['msg']) ? $msg : ''; ?></textarea>
                     </div>
                 </div>
                 <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
@@ -204,8 +268,8 @@
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <button type="submit" class="enquiry-btn">Send Enquiry</button>
-            </form>
+                <button type="submit" name="submit" value="submit" class="enquiry-btn">Send Enquiry</button>
+            </form> -->
         </div>
         <!-- ENQUIRY FORM END -->
     </div>
