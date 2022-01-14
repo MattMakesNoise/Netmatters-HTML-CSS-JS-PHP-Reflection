@@ -1,3 +1,8 @@
+<?php 
+    //connect to database
+    require 'db/connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,22 +177,22 @@
 
         <!-- ENQUIRY FORM START -->
         <div class="enquiry-form-wrapper">
-            <form action="enquiry-form.php" method="POST" class="enquiry-form">
+            <form action="/inc/enquiry-form.php" method="POST" class="enquiry-form">
 
                 <label for="inputNameContact" class="form-label">Your Name <span class="make-red">*</span></label>
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="enq_name" class="form-control">
 
                 <label for="inputEmailContact" class="form-label">Your Email <span class="make-red">*</span></label>
-                <input type="text" name="email" class="form-control">
+                <input type="text" name="enq_email" class="form-control">
 
                 <label for="inputTelContact" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
-                <input type="text" name="tel" class="form-control">
+                <input type="text" name="enq_tel" class="form-control">
 
                 <label for="inputSubjectContact" class="form-label">Subject <span class="make-red">*</span></label>
-                <input type="text" name="subject" class="form-control">
+                <input type="text" name="enq_subject" class="form-control">
 
                 <label for="inputMessageContact" class="form-label">Message <span class="make-red">*</span></label>
-                <textarea name="message" id="inputMessageContact" class="form-control"></textarea>
+                <textarea name="enq_message" id="inputMessageContact" class="form-control"></textarea>
 
                 <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
                 Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
