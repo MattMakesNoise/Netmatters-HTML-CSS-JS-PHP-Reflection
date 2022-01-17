@@ -25,6 +25,7 @@
     line-height: 1.1;
 }
 .boxes {
+
     @media screen and (min-width: $break-lg) {
         @include flexrow;
         justify-content: space-between;
@@ -33,11 +34,13 @@
     .mail-wrapper {
         flex: 1 1 450px;
         padding-left: 0;
-        @media screen and (min-width: $break-lg) {
-            padding-left: 15px;
-        }
         input {
             margin-top: 0.25rem;
+        }
+    }
+    .mail-wrapper {
+        @media screen and (min-width: $break-lg) {
+            padding-left: 15px;
         }
     }
 }

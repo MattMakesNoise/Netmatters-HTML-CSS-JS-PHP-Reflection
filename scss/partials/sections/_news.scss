@@ -83,16 +83,9 @@
         justify-content: space-between;
     }
 }
-.img-wrap {
-    overflow: hidden;
-    max-height: 261px !important;
-    @media screen and (min-width: $break-xl) {
-        max-height: 214px !important;
-    }
-}
 .card-img-top {
     overflow: hidden;
-    height: 100%;
+    height: auto;
     width: 100%;
     position: relative;
     z-index: 10;
@@ -113,7 +106,7 @@
         }
     }
     img {
-        height: 100%;
+        height: auto;
         width: 100%;
         object-fit: cover;
         transition: all .25s ease-in-out;
@@ -207,15 +200,6 @@
         }
     }
 }
-// .scion-title {
-//     color: $web;
-// }
-// .notable-title {
-//     color: $tele;
-// }
-// .job-title {
-//     color: $soft;
-// }
 .news-text {
     font-size: .85rem;
     margin-bottom: 1.5rem;

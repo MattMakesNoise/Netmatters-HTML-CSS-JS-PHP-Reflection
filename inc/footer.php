@@ -124,6 +124,9 @@
 </div>
 <!-- AWARDS END --> 
 
+<!-- CLOSE PAGE WRAPPER -->
+</main>
+
 <!-- COOKIES MODAL START -->
 <div class="cookies-modal-outer"> 
     <div class="cookies-modal-inner">

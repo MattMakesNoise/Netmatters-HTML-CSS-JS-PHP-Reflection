@@ -3,11 +3,9 @@
     position: relative;
     display: block;
     height: calc(100vh - 168px);
-    //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
     }
-    //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
     }
@@ -18,7 +16,6 @@
     @media screen and (min-width: $break-m) {
         margin-top: 110px;
     }
-    //Large devices
     @media screen and (min-width: $break-lg) {
         margin-top: 209px;
     }
@@ -31,12 +28,9 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    // min-height: 715px;
-    //Medium devices
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
     }
-    //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
     }
@@ -57,14 +51,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    @media screen and (max-width: $break-m) {
-        height: calc(100vh - 168px);
-    }
-    //Medium devices
+    height: calc(100vh - 168px);
     @media screen and (min-width: $break-m) {
         height: calc(100vh - 110px);
     }
-    //Large Devices
     @media screen and (min-width: $break-lg) {
         height: calc(100vh - 209px);
     }
@@ -77,34 +67,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //Medium and up
     @media screen and (min-width: $break-m) {
         width: 750px;
         @include mginlrauto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
         width: 970px;
-        @include mginlrauto;
-        padding-left: 40px;
-        padding-right: 15px;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
         width: 1200px;
-        margin: 0 auto;
-        justify-content: center;
-    }
-    //XXL
-    @media screen and (min-width: 1920px) {
-        width: 1200px;
-        @include mginlrauto;
     }
 }
 .hero-title,
@@ -112,7 +84,6 @@
     color: $white;
     text-align: center;
     font-weight: 400;
-    //Large and Up
     @media screen and (min-width: $break-lg) {
     text-align: left;
     }
@@ -120,25 +91,13 @@
 .hero-title {
     text-transform: uppercase;
     font-size: 3rem;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        margin-bottom: 16px;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        margin-bottom: 1rem;
-    }
+    margin-bottom: 16px;
 }
 .hero-subtitle {
     line-height: 2.25rem;
     margin-bottom: 2.25rem;
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        font-size: 1.25rem;
-    }
-    //Medium and up
+    font-size: 1.25rem;
     @media screen and (min-width: $break-m) {
-        font-size: 1.25rem;
         margin-bottom: 2rem;
     }
 }
@@ -218,15 +177,12 @@
     color: white;
     opacity: .5;
     font-size: 12px;
-    //Medium and up
     @media screen and (min-width: $break-m) {
         top: -64px; //Where the dots are vertically in comparison to the hero itself
     }
-    //Large and up
     @media screen and (min-width: $break-lg) {
         top: -112px; //Where the dots are vertically in comparison to the hero itself
     }
-    //XXL
     @media screen and (min-width: 1920px) {
         top: -80px; //Where the dots are vertically in comparison to the hero itself
     }

@@ -37,6 +37,7 @@
     <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
 </head>
 <body>
+
 <!-- INCLUDE THE HEADER -->
 <?php
     include('inc/header.php'); 
@@ -285,8 +286,6 @@
 <?php
     include('inc/footer.php'); 
 ?>
-<!-- SCRIPT FOR MAP JS -->
-<script src="/js/map.js"></script>
 <!-- SCRIPT FOR JQUERY -->
 <script src="/js/jquery-3.6.0.min.js"></script>
 <!-- SCRIPT FOR SLICK CAROUSEL -->
@@ -296,5 +295,4 @@
 <!-- MAIN JS FILE -->
 <script src="/js/main.js"></script>
 </body>
-
 </html>

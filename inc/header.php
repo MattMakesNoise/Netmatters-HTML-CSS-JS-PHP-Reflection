@@ -212,6 +212,8 @@
 </nav>
 <!-- SIDEBAR ENDS -->
 <div class="site-overlay"></div>
+<!-- PAGE WRAPPER -->
+<main class="page-wrapper" id="container">
     <!-- NAVBAR -->
     <header id="static_head">
         <div class="nav-bar">

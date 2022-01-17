@@ -1,34 +1,23 @@
 <?php 
-    //=================================================================================================================//
     //======================================== CONNECT TO THE DATABASE ================================================//
-    //=================================================================================================================//
     require 'db/connect.php';
-    require __DIR__ . '/inc/globals.php';
     // if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //     header('Location: location: /contact-us.php');
     //     exit;
     // }
-    //=================================================================================================================//
     //======================================== INPUT VARIABLES ========================================================//
-    //=================================================================================================================//
     $name = $email = $tel = $subject = $msg = ''; 
     $marketing = '';
-    //=================================================================================================================//
     //======================================== ADD RED BORDERS ========================================================//
-    //=================================================================================================================//
     // function redBorder() {
     //     echo 'class="has-error"';
     // }
-    //=================================================================================================================//
-    //======================================== FUNCTION FOR ERROR MESSAGES ============================================//
-    //=================================================================================================================//
+    //======================================== ERROR MESSAGES ============================================//
     $errorName = $errorEmail = $errorTel = $errorSubject = $errorMsg = "";
     $dispName = $dispEmail = $dispTel = $dispSubject = $dispMsg = "";
     $dispSuccess = false;
-    //=================================================================================================================//
     //======================================== ON FORM SUBMISSON PERFORM CHECKS =======================================//
     //======================================== IF THEY PASS WRITE TO THE DATABASE =====================================//
-    //=================================================================================================================//
     if(isset($_POST['submit'])) {
         //Variable to check if form is valid
         $nameFullyFilled = $emailFullyFilled = $telFullyFilled = $subjectFullyFilled = $msgFullyFilled = false;
@@ -100,11 +89,7 @@
         // if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
         //     $dispSuccess = "success-display";
         // }
-        //=================================================================================================================//
-        //=================================================================================================================//
         //======================================== INSERT DATA TO DB ======================================================//
-        //=================================================================================================================//
-        //=================================================================================================================//
         if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
             $dispSuccess = true;
             try {
@@ -114,27 +99,18 @@
                 echo $e->getMessage();
                 die();
             } 
-            //=================================================================================================================//
-            //=================================================================================================================//
             //======================================== PRINT RESPONSE FROM DB =================================================//
-            //=================================================================================================================//
-            //=================================================================================================================//
             if($sqlInsert) {
                 header("location: /contact-us.php");
                 exit();
             } else {
                 die("Error: '. $e .'");
             }
-            //=================================================================================================================//
-            //=================================================================================================================//
             //======================================== CLOSE CONNECTION =======================================================//
-            //=================================================================================================================//
-            //=================================================================================================================//
             $sqlInsert->close();
             }
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,8 +121,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <!-- Pushy CSS file
     <link rel="stylesheet" href="/css/pushy.css"> -->
     <!-- Leaflet CSS File -->
@@ -160,18 +134,17 @@
     <link rel="stylesheet" href="/dist/style.min.css"> 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
-    <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
+    <title>Contact Us | Netmatters</title>
 </head>
 <body>
+
 <!-- INCLUDE THE HEADER -->
 <?php
     include('inc/header.php'); 
 ?>
 
-<!-- PAGE WRAPPER -->
-<main class="page-wrapper hero-mt" id="container">
     <!-- TOP BANNER START -->
-    <div class="contact-banner-wrapper">
+    <div class="contact-banner-wrapper hero-mt">
         <h1>Our Offices</h1>
     </div>
     <!-- TOP BANNER END -->
@@ -309,14 +282,14 @@
 
         <!-- ENQUIRY FORM START -->
         <div class="enquiry-form-wrapper">
-            
-            <!-- <form action="" method="POST" class="enquiry-form"> -->
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="enquiry-form">
+                <!-- ERROR MESSAGE DIVS -->
                 <div class="enq-form-error <?php echo $dispName ?>"><?php echo $errorName ?></div>
                 <div class="enq-form-error <?php echo $dispEmail ?>"><?php echo $errorEmail ?></div>
                 <div class="enq-form-error <?php echo $dispTel ?>"><?php echo $errorTel ?></div>
                 <div class="enq-form-error <?php echo $dispSubject ?>"><?php echo $errorSubject ?></div>
                 <div class="enq-form-error <?php echo $dispMsg ?>"><?php echo $errorMsg ?></div>
+                <!-- SUCCESS MESSAGE DIV -->
                 <?php
                     if($dispSuccess) {
                         echo '<div class="enq-form-success">Your message has been sent!</div>';
@@ -351,13 +324,12 @@
         <!-- ENQUIRY FORM END -->
     </div>
     <!-- OPENING TIMES AND CONTACT FORM ENDS-->
-</main>
+
 
 <!-- INCLUDE THE NEWSLETTER -->
 <?php
     include('inc/newsletter-form.php'); 
 ?>
-
 <!-- INCLUDE THE FOOTER -->
 <?php
     include('inc/footer.php'); 
@@ -367,8 +339,6 @@
 <!-- SCRIPT FOR JQUERY -->
 <script src="/js/jquery-3.6.0.min.js"></script>
 <!-- SCRIPT FOR SLICK CAROUSEL -->
-<script src="/js/slick.min.js"></script>
-<!-- SCRIPT FOR PUSHY SIDEBAR -->
 <script src="js/pushy.min.js"></script>
 <!-- MAIN JS FILE -->
 <script src="/js/main.js"></script>
