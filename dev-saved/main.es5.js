@@ -200,15 +200,31 @@ accordianButton.addEventListener('click', function (e) {
 // }
 // //=====================================================================================================//
 // //=====================================================================================================//
-// //======================================== LEAFLET JS MAPS ============================================//
+// //======================================== CONTACT FORM EMPTY INPUTS ==================================//
 // //=====================================================================================================//
 // //=====================================================================================================//
-// var map = L.map('map').setView([51.505, -0.09], 13);
-// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-//     maxZoom: 18,
-//     id: 'mapbox/streets-v11',
-//     tileSize: 512,
-//     zoomOffset: -1,
-//     accessToken: 'pk.eyJ1IjoibWF0dG1ha2Vzbm9pc2UiLCJhIjoiY2t5YWNmbnQxMDQyejJvcGJjcWJjdnIxbSJ9.b9WKtKRD9iOtsygz2N4mig'
-// }).addTo(map);
+// const enqName = document.querySelector('#enqName');
+// const enqEmail = document.querySelector('#enqEmail');
+// const enqTel = document.querySelector('#enqTel');
+// const enqSubject = document.querySelector('#enqSubject');
+// const enqMessage = document.querySelector('#enqMessage');
+// const enqSubmit = document.querySelector('.enquiry-btn');
+// enqSubmit.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     console.log("clicked the form");
+//     if(enqName == '') {
+//         enqName.classList.add('has-error');
+//     }
+//     if(enqEmail == '') {
+//         enqEmail.classList.add('has-error');
+//     }
+//     if(enqTel == '') {
+//         enqTel.classList.add('has-error');
+//     }
+//     if(enqSubject == '') {
+//         enqSubject.classList.add('has-error');
+//     }
+//     if(enqMessage == '') {
+//         enqMessage.classList.add('has-error');
+//     }
+// })

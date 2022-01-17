@@ -1,6 +1,138 @@
 <?php 
-    //connect to database
+    //=================================================================================================================//
+    //======================================== CONNECT TO THE DATABASE ================================================//
+    //=================================================================================================================//
     require 'db/connect.php';
+    require __DIR__ . '/inc/globals.php';
+    // if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    //     header('Location: location: /contact-us.php');
+    //     exit;
+    // }
+    //=================================================================================================================//
+    //======================================== INPUT VARIABLES ========================================================//
+    //=================================================================================================================//
+    $name = $email = $tel = $subject = $msg = ''; 
+    $marketing = '';
+    //=================================================================================================================//
+    //======================================== ADD RED BORDERS ========================================================//
+    //=================================================================================================================//
+    // function redBorder() {
+    //     echo 'class="has-error"';
+    // }
+    //=================================================================================================================//
+    //======================================== FUNCTION FOR ERROR MESSAGES ============================================//
+    //=================================================================================================================//
+    $errorName = $errorEmail = $errorTel = $errorSubject = $errorMsg = "";
+    $dispName = $dispEmail = $dispTel = $dispSubject = $dispMsg = "";
+    $dispSuccess = false;
+    //=================================================================================================================//
+    //======================================== ON FORM SUBMISSON PERFORM CHECKS =======================================//
+    //======================================== IF THEY PASS WRITE TO THE DATABASE =====================================//
+    //=================================================================================================================//
+    if(isset($_POST['submit'])) {
+        //Variable to check if form is valid
+        $nameFullyFilled = $emailFullyFilled = $telFullyFilled = $subjectFullyFilled = $msgFullyFilled = false;
+        //Check name
+        if (empty($_POST["enq_name"])) {
+            $errorName = " Name field is required";
+            $dispName = "error-display";
+        } elseif(strlen($_POST["enq_name"]) < 4) {
+            $errorName = " Name must be more than 4 characters";
+            $dispName = "error-display";
+        } else {
+            $name = filter_input(INPUT_POST, 'enq_name', FILTER_SANITIZE_STRING);
+            $nameFullyFilled = true;
+        }
+        //Check email
+        if (empty($_POST["enq_email"])) {
+            $errorEmail = " You must enter a valid email address";
+            $dispEmail = "error-display";
+        } else {
+            $email = filter_input(INPUT_POST, 'enq_email', FILTER_SANITIZE_STRING);
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $errorEmail = "Invalid email format";
+                    $dispEmail = "error-display";
+                } else {
+                    $emailFullyFilled = true;
+                }
+        }
+        $phonePattern = "/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/";
+        //Check telephone number
+        if (empty($_POST["enq_tel"])) {
+            $errorTel = " You must enter a phone number";
+            $dispTel = "error-display";
+        } else {
+            $tel = $_POST['enq_tel'];
+            $match = preg_match($phonePattern, $tel);
+                if ($match != false) {
+                    // We have a valid phone number
+                    $telFullyFilled = true;
+                    // $tel = filter_input(INPUT_POST, 'enq_tel', FILTER_SANITIZE_STRING);
+                } else {
+                    // We have an invalid phone number
+                    $errorTel = " Telephone number is invalid";
+                    $dispTel = "error-display";
+                }
+        }
+        //Check subject
+        if (empty($_POST["enq_subject"])) {
+            $errorSubject = " You must enter a subject";
+            $dispSubject = "error-display";
+        } elseif(strlen($_POST["enq_subject"]) < 5) {
+            $errorSubject = " The subject must be at least 5 characters";
+            $dispSubject = "error-display";
+        } else {
+            $subject = filter_input(INPUT_POST, 'enq_subject', FILTER_SANITIZE_STRING);
+            $subjectFullyFilled = true;
+        }
+        //Check message
+        if (empty($_POST["enq_message"])) {
+            $errorMsg = " The message must be at least 5 characters";
+            $dispMsg = "error-display";
+        } elseif(strlen($_POST["enq_message"]) < 5) {
+            $errorMsg = " The message must be at least 5 characters";
+            $dispMsg = "error-display";
+        } else {
+            $msg = filter_input(INPUT_POST, 'enq_message', FILTER_SANITIZE_STRING);
+            $msgFullyFilled = true;
+        }
+        $marketing = isset($_POST['enq_marketing']) ? $_POST['enq_marketing'] : 0; 
+        // if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
+        //     $dispSuccess = "success-display";
+        // }
+        //=================================================================================================================//
+        //=================================================================================================================//
+        //======================================== INSERT DATA TO DB ======================================================//
+        //=================================================================================================================//
+        //=================================================================================================================//
+        if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
+            $dispSuccess = true;
+            try {
+                $sqlInsert = $db->query("INSERT INTO enquiries (enq_name, enq_email, enq_tel, enq_subject, enq_message, enq_marketing) 
+                                        VALUES ('" . $name . "', '" .  $email . "', '" .  $tel . "', '" .  $subject . "', '" .  $msg . "', '" .  $marketing . "')");
+            } catch(Exception $e) {
+                echo $e->getMessage();
+                die();
+            } 
+            //=================================================================================================================//
+            //=================================================================================================================//
+            //======================================== PRINT RESPONSE FROM DB =================================================//
+            //=================================================================================================================//
+            //=================================================================================================================//
+            if($sqlInsert) {
+                header("location: /contact-us.php");
+                exit();
+            } else {
+                die("Error: '. $e .'");
+            }
+            //=================================================================================================================//
+            //=================================================================================================================//
+            //======================================== CLOSE CONNECTION =======================================================//
+            //=================================================================================================================//
+            //=================================================================================================================//
+            $sqlInsert->close();
+            }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -177,109 +309,54 @@
 
         <!-- ENQUIRY FORM START -->
         <div class="enquiry-form-wrapper">
-            <form action="/inc/enquiry-form.php" method="POST" class="enquiry-form">
+            
+            <!-- <form action="" method="POST" class="enquiry-form"> -->
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="enquiry-form">
+                <div class="enq-form-error <?php echo $dispName ?>"><?php echo $errorName ?></div>
+                <div class="enq-form-error <?php echo $dispEmail ?>"><?php echo $errorEmail ?></div>
+                <div class="enq-form-error <?php echo $dispTel ?>"><?php echo $errorTel ?></div>
+                <div class="enq-form-error <?php echo $dispSubject ?>"><?php echo $errorSubject ?></div>
+                <div class="enq-form-error <?php echo $dispMsg ?>"><?php echo $errorMsg ?></div>
+                <?php
+                    if($dispSuccess) {
+                        echo '<div class="enq-form-success">Your message has been sent!</div>';
+                    }
+                ?>
 
-                <label for="inputNameContact" class="form-label">Your Name <span class="make-red">*</span></label>
-                <input type="text" name="enq_name" class="form-control">
+                <label for="enqName" class="form-label-enq">Your Name <span class="make-red">*</span></label>
+                <input type="text" name="enq_name" id="enqName" class="form-control-enq">
 
-                <label for="inputEmailContact" class="form-label">Your Email <span class="make-red">*</span></label>
-                <input type="text" name="enq_email" class="form-control">
+                <label for="enqEmail" class="form-label-enq">Your Email <span class="make-red">*</span></label>
+                <input type="text" name="enq_email" id="enqEmail" class="form-control-enq">
 
-                <label for="inputTelContact" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
-                <input type="text" name="enq_tel" class="form-control">
+                <label for="enqTel" class="form-label-enq">Your Telephone Number <span class="make-red">*</span></label>
+                <input type="text" name="enq_tel" id="enqTel" class="form-control-enq">
 
-                <label for="inputSubjectContact" class="form-label">Subject <span class="make-red">*</span></label>
-                <input type="text" name="enq_subject" class="form-control">
+                <label for="enqSubject" class="form-label-enq">Subject <span class="make-red">*</span></label>
+                <input type="text" name="enq_subject" id="enqSubject" class="form-control-enq">
 
-                <label for="inputMessageContact" class="form-label">Message <span class="make-red">*</span></label>
-                <textarea name="enq_message" id="inputMessageContact" class="form-control"></textarea>
+                <label for="enqMessage" class="form-label-enq">Message <span class="make-red">*</span></label>
+                <textarea name="enq_message" id="enqMessage" class="form-control-enq"></textarea>
 
                 <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
                 Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
-                    <input type="checkbox">
+                    <input type="checkbox" name="enq_marketing" value="1">
                     <span class="checkmark"></span>
                 </label>
 
                 <button type="submit" name="submit" class="enquiry-btn">SEND ENQUIRY</button>
 
             </form>    
-            <?php
-            /* 
-                //MESSAGE VARS
-                $formMessage = '';
-                $formMessageClass = '';
-                //CHECK FOR SUBMIT
-                if(filter_has_var(INPUT_POST, 'submit')) {
-                    //GET FORM DATA
-                    $name = filter_input(INPUT_POST, 'inputNameContact', FILTER_SANITIZE_STRING); 
-                    $email = filter_input(INPUT_POST, 'inputEmailContact', FILTER_SANITIZE_STRING);
-                    $tel = filter_input(INPUT_POST, 'inputTelContact', FILTER_SANITIZE_STRING);
-                    $subject = filter_input(INPUT_POST, 'inputSubjectContact', FILTER_SANITIZE_STRING);
-                    $msg = filter_input(INPUT_POST, 'inputMessageContact', FILTER_SANITIZE_STRING);
-                    //CHECK REQUIRED FIELDS
-                    if(!empty($name) && !empty($email) && !empty($tel) && !empty($subject) && !empty($msg)) {
-                        //PASSED
-                        //CHECK EMAIL
-                        if($email === false) {
-                            //Failed
-                            $formMessage = 'Please use a valid email';
-                            $formMessageClass = 'make-red';
-                        } else {
-                            //Passed
-                            echo 'EMAIL PASSED!';
-                        }
-                        echo 'PASSED!';
-                    } else {
-                        //FAILED
-                        $formMessage = 'Please fill in all fields';
-                        $formMessageClass = 'make-red';
-                    }
-                }
-                if($formMessage != '') {
-                    echo '<div class="'. $formMessageClass .'">'. $formMessage .'</div>';
-                }
-                    
-                */
-            ?> 
-            <!-- <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="POST" class="enquiry-form">
-                <div class="enquiry-boxes">
-                    <div class="name-mail">
-                        <div class="name-wrap">
-                            <label for="inputNameContact" class="form-label">Your Name <span class="make-red">*</span></label>
-                            <input name="inputNameContact" type="text" value="<?php //echo isset($_POST['name']) ? $name : ''; ?>" class="form-control" id="inputNameContact">
-                        </div>
-                        <div class="mail-wrap">
-                            <label for="inputEmailContact" class="form-label">Your Email <span class="make-red">*</span></label>
-                            <input name="inputEmailContact" type="email" value="<?php //echo isset($_POST['email']) ? $email : ''; ?>" class="form-control" id="inputEmailContact">
-                        </div>
-                    </div>
-                    <div class="tel-subject">
-                        <div class="tel-no-wrap">
-                            <label for="inputTelContact" class="form-label">Your Telephone Number <span class="make-red">*</span></label>
-                            <input name="inputTelContact" type="tel" value="<?php //echo isset($_POST['tel']) ? $tel : ''; ?>" class="form-control" id="inputTelContact">
-                        </div>
-                        <div class="subject-wrap">
-                            <label for="inputSubjectContact" class="form-label">Subject <span class="make-red">*</span></label>
-                            <input name="inputSubjectContact" type="text" value="<?php //echo isset($_POST['subject']) ? $subject : ''; ?>" class="form-control" id="inputSubjectContact">
-                        </div>
-                    </div>
-                    <div class="message-wrap">
-                        <label for="inputMessageContact" class="form-label">Message <span class="make-red">*</span></label>
-                        <textarea name="inputMessageContact" type="text" class="form-control" id="inputMessageContact"><?php //echo isset($_POST['msg']) ? $msg : ''; ?></textarea>
-                    </div>
-                </div>
-                <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
-                Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-                <button type="submit" name="submit" value="submit" class="enquiry-btn">Send Enquiry</button>
-            </form> -->
-        </div>
+        </div>  
         <!-- ENQUIRY FORM END -->
     </div>
     <!-- OPENING TIMES AND CONTACT FORM ENDS-->
 </main>
+
+<!-- INCLUDE THE NEWSLETTER -->
+<?php
+    include('inc/newsletter-form.php'); 
+?>
 
 <!-- INCLUDE THE FOOTER -->
 <?php

@@ -1,28 +1,4 @@
-<!-- Email Form -->
-<div class="newsletter-wrapper">
-    <section class="email">
-        <h2 class="email-header">Email Newsletter Sign-Up</h2>
-        <div class="boxes">
-            <div class="name-wrapper">
-                <label for="inputName" class="form-label">Your Name <span class="make-red">*</span></label>
-                <input type="text" class="form-control" id="inputName">
-            </div>
-            <div class="mail-wrapper">
-                <label for="inputEmail" class="form-label">Your Email <span class="make-red">*</span></label>
-                <input type="email" class="form-control" id="inputEmail">
-            </div>
-        </div>
-        <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
-            Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        <button type="submit" class="subscribe-btn">Subscribe</button>
-    </section>
-</div>
-<!-- Email Form End -->
-
-<!-- Footer -->
+<!-- FOOTER START -->
 <div class="footer-wrapper">
     <section class="footer">
         <div class="footer-about-services">
@@ -115,9 +91,9 @@
         </div>
     </section>
 </div>
-<!-- Footer End -->
+<!-- FOOTER END -->
 
-<!-- Awards -->
+<!-- AWARDS START -->
 <div class="awards-wrapper">
     <div class="awards">
         <div class="awards-row-one">
@@ -146,9 +122,9 @@
         </div>
     </div>
 </div>
-<!-- Awards End --> 
+<!-- AWARDS END --> 
 
-<!-- COOKIES MODAL -->
+<!-- COOKIES MODAL START -->
 <div class="cookies-modal-outer"> 
     <div class="cookies-modal-inner">
         <div class="cookies-box">
