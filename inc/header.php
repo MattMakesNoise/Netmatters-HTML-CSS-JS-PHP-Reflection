@@ -220,7 +220,7 @@
             <div class="header">
                 <div class="logo-wrapper"> <!-- LOGO -->
                     <div class="logo">
-                        <a href="#"><img src="/img/netmatters-logo.png" alt="Netmatters Logo"></a>
+                        <a href="index.php"><img src="/img/netmatters-logo.png" alt="Netmatters Logo"></a>
                     </div>
                 </div>
                 <div class="phone-wrapper"> <!-- PHONE -->
@@ -230,7 +230,7 @@
                     <a href="#"><span class="fas fa-mouse"></span>support</a>
                 </div>
                 <div class="contact-wrapper"> <!-- CONTACT -->
-                    <a href="#"><span class="fas fa-paper-plane"></span>contact</a>
+                    <a href="contact-us.php"><span class="fas fa-paper-plane"></span>contact</a>
                 </div>
                 <button class="menu-btn hamburger hamburger--spin"> <!-- BURGER -->
                     <span class="hamburger-box">

@@ -2,44 +2,9 @@
 
 //=====================================================================================================//
 //=====================================================================================================//
-//======================================== GET SCREEN WIDTH ===========================================//
-//=====================================================================================================//
-//=====================================================================================================//
-var width;
-var searchWrapper = document.querySelector('.search-wrapper');
-var searchBtn = document.querySelector('.search-form button');
-var searchInput = document.querySelector('.search-form input[type=text]');
-var support = document.querySelector('.support-wrapper');
-var contact = document.querySelector('.contact-wrapper');
-var searchToggle = false;
-
-function getWidth() {
-  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-}
-
-window.addEventListener('resize', function (e) {
-  getWidth();
-
-  if (width > 1260) {
-    support.style.display = 'flex';
-    contact.style.display = 'flex';
-    searchInput.style.display = 'block';
-    searchWrapper.style.marginLeft = '0';
-  } else if (width >= 992 && width < 1260 && searchToggle === false) {
-    support.style.display = 'flex';
-    contact.style.display = 'flex';
-    searchInput.style.display = 'none';
-  } else {
-    support.style.display = 'none';
-    contact.style.display = 'none';
-    searchInput.style.display = 'block';
-  }
-}); //=====================================================================================================//
-//=====================================================================================================//
 //======================================== COOKIES POPUP ==============================================//
 //=====================================================================================================//
 //=====================================================================================================//
-
 var popup = document.querySelector('.cookies-modal-outer');
 var changeSettingsBtn = document.querySelector('.change-settings');
 var acceptCookiesBtn = document.querySelector('.accept-cookies');
@@ -74,6 +39,41 @@ acceptCookiesBtn.addEventListener('click', function () {
   saveCookie();
   popup.style.display = 'none';
   body.classList.remove('overflow-hidden');
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== GET SCREEN WIDTH ===========================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var width;
+var searchWrapper = document.querySelector('.search-wrapper');
+var searchBtn = document.querySelector('.search-form button');
+var searchInput = document.querySelector('.search-form input[type=text]');
+var support = document.querySelector('.support-wrapper');
+var contact = document.querySelector('.contact-wrapper');
+var searchToggle = false;
+
+function getWidth() {
+  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
+
+window.addEventListener('resize', function (e) {
+  getWidth();
+
+  if (width > 1260) {
+    support.style.display = 'flex';
+    contact.style.display = 'flex';
+    searchInput.style.display = 'block';
+    searchWrapper.style.marginLeft = '0';
+  } else if (width >= 992 && width < 1260 && searchToggle === false) {
+    support.style.display = 'flex';
+    contact.style.display = 'flex';
+    searchInput.style.display = 'none';
+  } else {
+    support.style.display = 'none';
+    contact.style.display = 'none';
+    searchInput.style.display = 'block';
+  }
 }); //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
@@ -183,6 +183,63 @@ searchBtn.addEventListener('click', function (e) {
       }, 500);
       searchToggle = false;
     }
+  }
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== FORM VALIDATION ============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var enqBtn = document.querySelector('.enquiry-btn');
+var enqName = document.querySelector('#enqName');
+var enqEmail = document.querySelector('#enqEmail');
+var enqTel = document.querySelector('#enqTel');
+var enqSubject = document.querySelector('#enqSubject');
+var enqMsg = document.querySelector('#enqMessage');
+var shouldSubmit = false;
+enqBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log("You tried to send an enquiry");
+  enqName.classList.add('has-error'); //If statements to check each if form fields empty, display a red border if they are
+
+  if (enqName == "") {
+    enqName.classList.add('has-error');
+    enqBtn.disabled = true;
+  } else if (enqName > 4) {
+    enqName.classList.remove('has-error');
+    enqBtn.disabled = false;
+  }
+
+  if (enqEmail == "") {
+    enqEmail.classList.add('has-error');
+    enqBtn.disabled = true;
+  } else if (enqEmail > 4) {
+    enqEmail.classList.remove('has-error');
+    enqBtn.disabled = false;
+  }
+
+  if (enqTel == "") {
+    enqTel.classList.add('has-error');
+    enqBtn.disabled = true;
+  } else if (enqTel > 4) {
+    enqTel.classList.remove('has-error');
+    enqBtn.disabled = false;
+  }
+
+  if (enqSubject == "") {
+    enqSubject.classList.add('has-error');
+    enqBtn.disabled = true;
+  } else if (enqSubject > 4) {
+    enqSubject.classList.remove('has-error');
+    enqBtn.disabled = false;
+  }
+
+  if (enqMsg == "") {
+    enqMsg.classList.add('has-error');
+    enqBtn.disabled = true;
+  } else if (enqMsg > 4) {
+    enqMsg.classList.remove('has-error');
+    enqBtn.disabled = false;
   }
 }); //=====================================================================================================//
 //=====================================================================================================//

@@ -2676,6 +2676,7 @@ form.search-form::after {
 /*========== EMAIL FORM ======*/
 .newsletter-wrapper {
   background-color: #ddd;
+  height: 100%;
 }
 
 .email {
@@ -3698,6 +3699,7 @@ address a {
 }
 
 .bottom-wrapper {
+  height: 100%;
   background: #fff !important;
   margin: 0 auto;
 }

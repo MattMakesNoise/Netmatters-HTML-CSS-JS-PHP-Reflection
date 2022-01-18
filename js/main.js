@@ -1,41 +1,5 @@
 //=====================================================================================================//
 //=====================================================================================================//
-//======================================== GET SCREEN WIDTH ===========================================//
-//=====================================================================================================//
-//=====================================================================================================//
-let width;
-const searchWrapper = document.querySelector('.search-wrapper');
-const searchBtn = document.querySelector('.search-form button');
-const searchInput = document.querySelector('.search-form input[type=text]');
-const support = document.querySelector('.support-wrapper');
-const contact = document.querySelector('.contact-wrapper');
-let searchToggle = false;
-
-function getWidth () {
-    width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-}
-window.addEventListener('resize', (e) => {
-    getWidth();
-    if (width > 1260) {
-        support.style.display = 'flex';
-        contact.style.display = 'flex';
-        searchInput.style.display = 'block';
-        searchWrapper.style.marginLeft = '0';
-        
-    } else if (width >= 992 && width < 1260 && searchToggle === false) {
-        support.style.display = 'flex';
-        contact.style.display = 'flex';
-        searchInput.style.display = 'none';
-    } else {
-        support.style.display = 'none';
-        contact.style.display = 'none';
-        searchInput.style.display = 'block';
-    }
-});
-
-
-//=====================================================================================================//
-//=====================================================================================================//
 //======================================== COOKIES POPUP ==============================================//
 //=====================================================================================================//
 //=====================================================================================================//
@@ -72,6 +36,40 @@ acceptCookiesBtn.addEventListener('click', () => {
     body.classList.remove('overflow-hidden');
 });
 
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== GET SCREEN WIDTH ===========================================//
+//=====================================================================================================//
+//=====================================================================================================//
+let width;
+const searchWrapper = document.querySelector('.search-wrapper');
+const searchBtn = document.querySelector('.search-form button');
+const searchInput = document.querySelector('.search-form input[type=text]');
+const support = document.querySelector('.support-wrapper');
+const contact = document.querySelector('.contact-wrapper');
+let searchToggle = false;
+
+function getWidth () {
+    width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
+window.addEventListener('resize', (e) => {
+    getWidth();
+    if (width > 1260) {
+        support.style.display = 'flex';
+        contact.style.display = 'flex';
+        searchInput.style.display = 'block';
+        searchWrapper.style.marginLeft = '0';
+        
+    } else if (width >= 992 && width < 1260 && searchToggle === false) {
+        support.style.display = 'flex';
+        contact.style.display = 'flex';
+        searchInput.style.display = 'none';
+    } else {
+        support.style.display = 'none';
+        contact.style.display = 'none';
+        searchInput.style.display = 'block';
+    }
+});
 //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
@@ -90,7 +88,6 @@ $(document).ready(function(){
         nextArrow: false //Don't show next arrow
     });
 });
-
 //=======================================================================================================//
 //=======================================================================================================//
 //======================================== STICKY HEADER ================================================//
@@ -116,8 +113,6 @@ window.addEventListener("scroll", () => {
   }
   lastScroll = currentScroll;
 })
-
-
 //====================================================================================================//
 //====================================================================================================//
 //======================================== BURGER SPIN ===============================================//
@@ -145,7 +140,6 @@ overlay.addEventListener('click', () => {
         hero.classList.add('hero-mt');
     }
 })
-
 //=====================================================================================================//
 //=====================================================================================================//
 //======================================== SEARCH SWAP ================================================//
@@ -179,6 +173,62 @@ searchBtn.addEventListener('click', (e) => {
         }
     } 
 });
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== FORM VALIDATION ============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const enqBtn = document.querySelector('.enquiry-btn');
+const enqName = document.querySelector('#enqName');
+const enqEmail = document.querySelector('#enqEmail');
+const enqTel = document.querySelector('#enqTel');
+const enqSubject = document.querySelector('#enqSubject');
+const enqMsg = document.querySelector('#enqMessage');
+let shouldSubmit = false;
+
+enqBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("You tried to send an enquiry");
+    enqName.classList.add('has-error');
+    //If statements to check each if form fields empty, display a red border if they are
+    if(enqName == "") {
+        enqName.classList.add('has-error');
+        enqBtn.disabled = true;
+    } else if(enqName > 4) { 
+        enqName.classList.remove('has-error');
+        enqBtn.disabled = false; 
+    }
+    if(enqEmail == "") {
+        enqEmail.classList.add('has-error');
+        enqBtn.disabled = true;
+    } else if(enqEmail > 4) { 
+        enqEmail.classList.remove('has-error');
+        enqBtn.disabled = false;                 
+    }
+    if(enqTel == "") {
+        enqTel.classList.add('has-error');
+        enqBtn.disabled = true;
+    } else if(enqTel > 4) { 
+        enqTel.classList.remove('has-error');
+        enqBtn.disabled = false;       
+    }
+    if(enqSubject == "") {
+        enqSubject.classList.add('has-error');
+        enqBtn.disabled = true;
+    } else if(enqSubject > 4) { 
+        enqSubject.classList.remove('has-error');
+        enqBtn.disabled = false;
+    }
+    if(enqMsg == "") {
+        enqMsg.classList.add('has-error');
+        enqBtn.disabled = true;
+    } else if(enqMsg > 4) { 
+        enqMsg.classList.remove('has-error');
+        enqBtn.disabled = false;
+    }
+})
+
+
 //=====================================================================================================//
 //=====================================================================================================//
 //======================================== OUT OF HOURS ACCORDIAN =====================================//

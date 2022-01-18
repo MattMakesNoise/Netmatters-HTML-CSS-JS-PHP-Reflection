@@ -1,6 +1,7 @@
 /*========== EMAIL FORM ======*/
 .newsletter-wrapper {
     background-color: $lightgrey;
+    height: 100%;
 }
 .email {
     @include flexcolumn;

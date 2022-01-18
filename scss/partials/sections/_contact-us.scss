@@ -143,6 +143,7 @@
 //==================== OPENING & FORM WRAPPER =============//
 //=========================================================//
 .bottom-wrapper {
+    height: 100%;
     background: $white !important;
     margin: 0 auto;
     @media screen and (min-width: $break-m) {
