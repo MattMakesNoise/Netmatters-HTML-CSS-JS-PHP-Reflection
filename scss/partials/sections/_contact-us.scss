@@ -270,18 +270,18 @@
     margin: .5rem auto;
 }
 
-.error-display {
-    display: block;
-}
-
 .enq-form-success {
     background: #2ECC71;
     border: 2px solid #2ECC71;
     border-radius: 3px;
     color: white;
-    display: block;
+    display: none;
     padding: 1rem;
     margin: .5rem auto;
+}
+
+.display {
+    display: block;
 }
 
 // .success-display {

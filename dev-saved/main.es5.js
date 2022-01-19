@@ -190,56 +190,86 @@ searchBtn.addEventListener('click', function (e) {
 //=====================================================================================================//
 //=====================================================================================================//
 
+var enqForm = document.querySelector('.enquiry-form');
 var enqBtn = document.querySelector('.enquiry-btn');
 var enqName = document.querySelector('#enqName');
 var enqEmail = document.querySelector('#enqEmail');
 var enqTel = document.querySelector('#enqTel');
-var enqSubject = document.querySelector('#enqSubject');
+var enqSubj = document.querySelector('#enqSubject');
 var enqMsg = document.querySelector('#enqMessage');
-var shouldSubmit = false;
-enqBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log("You tried to send an enquiry");
-  enqName.classList.add('has-error'); //If statements to check each if form fields empty, display a red border if they are
+var shouldSubmit = false; //get the values from the inputs
 
-  if (enqName == "") {
+var nameVal;
+var emailVal;
+var telVal;
+var subjVal;
+var msgVal;
+
+function getVals() {
+  nameVal = enqName.value.trim();
+  emailVal = enqEmail.value.trim();
+  telVal = enqTel.value.trim();
+  subjVal = enqSubj.value.trim();
+  msgVal = enqMsg.value.trim();
+} //check if inputs blank
+
+
+function inputsBlank() {
+  if (nameVal == "") {
     enqName.classList.add('has-error');
-    enqBtn.disabled = true;
-  } else if (enqName > 4) {
+    shouldSubmit = false;
+  } else if (nameVal != "") {
     enqName.classList.remove('has-error');
-    enqBtn.disabled = false;
+    shouldSubmit = true;
   }
 
-  if (enqEmail == "") {
+  if (emailVal == "") {
     enqEmail.classList.add('has-error');
-    enqBtn.disabled = true;
-  } else if (enqEmail > 4) {
+    shouldSubmit = false;
+  } else if (emailVal != "") {
     enqEmail.classList.remove('has-error');
-    enqBtn.disabled = false;
+    shouldSubmit = true;
   }
 
-  if (enqTel == "") {
+  if (telVal == "") {
     enqTel.classList.add('has-error');
-    enqBtn.disabled = true;
-  } else if (enqTel > 4) {
+    shouldSubmit = false;
+  } else if (telVal != "") {
     enqTel.classList.remove('has-error');
-    enqBtn.disabled = false;
+    shouldSubmit = true;
   }
 
-  if (enqSubject == "") {
-    enqSubject.classList.add('has-error');
-    enqBtn.disabled = true;
-  } else if (enqSubject > 4) {
-    enqSubject.classList.remove('has-error');
-    enqBtn.disabled = false;
+  if (subjVal == "") {
+    enqSubj.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (subjVal != "") {
+    enqSubj.classList.remove('has-error');
+    shouldSubmit = true;
   }
 
-  if (enqMsg == "") {
+  if (msgVal == "") {
     enqMsg.classList.add('has-error');
-    enqBtn.disabled = true;
-  } else if (enqMsg > 4) {
+    shouldSubmit = false;
+  } else if (msgVal != "") {
     enqMsg.classList.remove('has-error');
-    enqBtn.disabled = false;
+    shouldSubmit = true;
+  }
+} //Click event listener
+
+
+enqBtn.addEventListener('click', function (e) {
+  console.log("You clicked the enquiry button");
+  getVals();
+  inputsBlank();
+}); //Submit event listener
+
+enqForm.addEventListener('submit', function (e) {
+  console.log("You tried to send an enquiry"); //get the values from the inputs
+
+  getVals();
+
+  if (!shouldSubmit) {
+    e.preventDefault();
   }
 }); //=====================================================================================================//
 //=====================================================================================================//

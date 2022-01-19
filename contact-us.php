@@ -1,97 +1,96 @@
 <?php 
+    session_start();
+    $dispSuccess = "";
+    if(isset($_SESSION['success'])) {
+        if($_SESSION['success'] == 'success') {
+            $dispSuccess = 'display';
+        } elseif($_SESSION['success'] == 'fail') {
+            $dispSuccess = '';
+        } 
+    }
     //======================================== CONNECT TO THE DATABASE ================================================//
     require 'db/connect.php';
     // if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //     header('Location: location: /contact-us.php');
     //     exit;
     // }
-    //======================================== INPUT VARIABLES ========================================================//
-    $name = $email = $tel = $subject = $msg = ''; 
+    //======================================== SANITIZE AND VALIDATE INPUTS ===========================================//
+    $name = trim(filter_input(INPUT_POST, 'enq_name', FILTER_SANITIZE_STRING));
+    $email = trim(filter_input(INPUT_POST, 'enq_email', FILTER_SANITIZE_STRING));
+    $tel = trim(filter_input(INPUT_POST, 'enq_tel', FILTER_SANITIZE_NUMBER_INT));
+    $subject = trim(filter_input(INPUT_POST, 'enq_subject', FILTER_SANITIZE_STRING));
+    $msg = trim(filter_input(INPUT_POST, 'enq_message', FILTER_SANITIZE_STRING)); 
     $marketing = '';
-    //======================================== ADD RED BORDERS ========================================================//
-    // function redBorder() {
-    //     echo 'class="has-error"';
-    // }
     //======================================== ERROR MESSAGES ============================================//
     $errorName = $errorEmail = $errorTel = $errorSubject = $errorMsg = "";
     $dispName = $dispEmail = $dispTel = $dispSubject = $dispMsg = "";
-    $dispSuccess = false;
     //======================================== ON FORM SUBMISSON PERFORM CHECKS =======================================//
     //======================================== IF THEY PASS WRITE TO THE DATABASE =====================================//
     if(isset($_POST['submit'])) {
         //Variable to check if form is valid
         $nameFullyFilled = $emailFullyFilled = $telFullyFilled = $subjectFullyFilled = $msgFullyFilled = false;
         //Check name
-        if (empty($_POST["enq_name"])) {
+        if (empty($name)) {
             $errorName = " Name field is required";
-            $dispName = "error-display";
-        } elseif(strlen($_POST["enq_name"]) < 4) {
+            $dispName = "display";
+        } elseif(strlen($name) < 4) {
             $errorName = " Name must be more than 4 characters";
-            $dispName = "error-display";
+            $dispName = "display";
         } else {
-            $name = filter_input(INPUT_POST, 'enq_name', FILTER_SANITIZE_STRING);
             $nameFullyFilled = true;
         }
         //Check email
-        if (empty($_POST["enq_email"])) {
+        if (empty($email)) {
             $errorEmail = " You must enter a valid email address";
-            $dispEmail = "error-display";
+            $dispEmail = "display";
         } else {
-            $email = filter_input(INPUT_POST, 'enq_email', FILTER_SANITIZE_STRING);
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $errorEmail = "Invalid email format";
-                    $dispEmail = "error-display";
-                } else {
-                    $emailFullyFilled = true;
-                }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errorEmail = "Invalid email format";
+                $dispEmail = "display";
+            } else {
+                $emailFullyFilled = true;
+            }
         }
         $phonePattern = "/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/";
         //Check telephone number
-        if (empty($_POST["enq_tel"])) {
+        if (empty($tel)) {
             $errorTel = " You must enter a phone number";
-            $dispTel = "error-display";
+            $dispTel = "display";
         } else {
-            $tel = $_POST['enq_tel'];
             $match = preg_match($phonePattern, $tel);
                 if ($match != false) {
                     // We have a valid phone number
                     $telFullyFilled = true;
-                    // $tel = filter_input(INPUT_POST, 'enq_tel', FILTER_SANITIZE_STRING);
                 } else {
                     // We have an invalid phone number
                     $errorTel = " Telephone number is invalid";
-                    $dispTel = "error-display";
+                    $dispTel = "display";
                 }
         }
         //Check subject
-        if (empty($_POST["enq_subject"])) {
+        if (empty($subject)) {
             $errorSubject = " You must enter a subject";
-            $dispSubject = "error-display";
-        } elseif(strlen($_POST["enq_subject"]) < 5) {
+            $dispSubject = "display";
+        } elseif(strlen($subject) < 5) {
             $errorSubject = " The subject must be at least 5 characters";
-            $dispSubject = "error-display";
+            $dispSubject = "display";
         } else {
-            $subject = filter_input(INPUT_POST, 'enq_subject', FILTER_SANITIZE_STRING);
             $subjectFullyFilled = true;
         }
         //Check message
-        if (empty($_POST["enq_message"])) {
+        if (empty($msg)) {
             $errorMsg = " The message must be at least 5 characters";
-            $dispMsg = "error-display";
-        } elseif(strlen($_POST["enq_message"]) < 5) {
+            $dispMsg = "display";
+        } elseif(strlen($msg) < 5) {
             $errorMsg = " The message must be at least 5 characters";
-            $dispMsg = "error-display";
+            $dispMsg = "display";
         } else {
-            $msg = filter_input(INPUT_POST, 'enq_message', FILTER_SANITIZE_STRING);
             $msgFullyFilled = true;
         }
         $marketing = isset($_POST['enq_marketing']) ? $_POST['enq_marketing'] : 0; 
-        // if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
-        //     $dispSuccess = "success-display";
-        // }
         //======================================== INSERT DATA TO DB ======================================================//
         if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
-            $dispSuccess = true;
+            $_SESSION['success'] = 'success';
             try {
                 $sqlInsert = $db->query("INSERT INTO enquiries (enq_name, enq_email, enq_tel, enq_subject, enq_message, enq_marketing) 
                                         VALUES ('" . $name . "', '" .  $email . "', '" .  $tel . "', '" .  $subject . "', '" .  $msg . "', '" .  $marketing . "')");
@@ -108,6 +107,8 @@
             }
             //======================================== CLOSE CONNECTION =======================================================//
             $sqlInsert->close();
+        } else {
+            $_SESSION['success'] = 'fail';
         }
     }
 ?>
@@ -137,12 +138,10 @@
     <title>Contact Us | Netmatters</title>
 </head>
 <body>
-
 <!-- INCLUDE THE HEADER -->
 <?php
     include('inc/header.php'); 
 ?>
-
     <!-- TOP BANNER START -->
     <div class="contact-banner-wrapper hero-mt">
         <h1>Our Offices</h1>
@@ -290,26 +289,22 @@
                 <div class="enq-form-error <?php echo $dispSubject ?>"><?php echo $errorSubject ?></div>
                 <div class="enq-form-error <?php echo $dispMsg ?>"><?php echo $errorMsg ?></div>
                 <!-- SUCCESS MESSAGE DIV -->
-                <?php
-                    if($dispSuccess) {
-                        echo '<div class="enq-form-success">Your message has been sent!</div>';
-                    }
-                ?>
+                <div class="enq-form-success <?php echo $dispSuccess ?>">Your message has been sent!</div>
 
                 <label for="enqName" class="form-label-enq">Your Name <span class="make-red">*</span></label>
-                <input type="text" name="enq_name" id="enqName" class="form-control-enq">
+                <input type="text" value="<?php if(isset($_POST['enq_name'])) { echo $name; } ?>" name="enq_name" id="enqName" class="form-control-enq">
 
                 <label for="enqEmail" class="form-label-enq">Your Email <span class="make-red">*</span></label>
-                <input type="text" name="enq_email" id="enqEmail" class="form-control-enq">
+                <input type="text" value="<?php if(isset($_POST['enq_email'])) { echo $email; } ?>" name="enq_email" id="enqEmail" class="form-control-enq">
 
                 <label for="enqTel" class="form-label-enq">Your Telephone Number <span class="make-red">*</span></label>
-                <input type="text" name="enq_tel" id="enqTel" class="form-control-enq">
+                <input type="text" value="<?php if(isset($_POST['enq_tel'])) { echo $tel; } ?>" name="enq_tel" id="enqTel" class="form-control-enq">
 
                 <label for="enqSubject" class="form-label-enq">Subject <span class="make-red">*</span></label>
-                <input type="text" name="enq_subject" id="enqSubject" class="form-control-enq">
+                <input type="text" value="<?php if(isset($_POST['enq_subject'])) { echo $subject; } ?>" name="enq_subject" id="enqSubject" class="form-control-enq">
 
                 <label for="enqMessage" class="form-label-enq">Message <span class="make-red">*</span></label>
-                <textarea name="enq_message" id="enqMessage" class="form-control-enq"></textarea>
+                <textarea name="enq_message" id="enqMessage" class="form-control-enq"><?php if(isset($_POST['enq_message'])) { echo $msg; } ?></textarea>
 
                 <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
                 Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
