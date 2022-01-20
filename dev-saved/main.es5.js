@@ -8,17 +8,25 @@
 var popup = document.querySelector('.cookies-modal-outer');
 var changeSettingsBtn = document.querySelector('.change-settings');
 var acceptCookiesBtn = document.querySelector('.accept-cookies');
-var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
+var cookiesYorN = localStorage.getItem('consent'); //Check the storage
+
+function cookieCheck() {
+  return localStorage.getItem('consent');
+} //Check to see if cookie consent has been given. If not show the popup
+
 
 window.onload = function () {
   getWidth();
 
-  if (cookiesYorN === "true") {
-    popup.style.display = 'none';
-    body.classList.remove('overflow-hidden');
-  } else {
-    // popup.style.display = 'block';
+  if (width < 1260) {
+    searchWrapper.style.marginLeft = '0';
+  }
+
+  if (cookiesYorN != "true") {
+    popup.style.display = 'flex';
     body.classList.add('overflow-hidden');
+  } else {
+    body.classList.remove('overflow-hidden');
   }
 }; //Save to users input to storage
 
@@ -27,11 +35,6 @@ function saveCookie() {
   localStorage.setItem('consent', 'true');
   cookiesYorN = localStorage.getItem('consent');
   console.log(cookiesYorN);
-} //Check the storage
-
-
-function cookieCheck() {
-  return localStorage.getItem('consent');
 } //Event listener for accept cookies
 
 
@@ -281,6 +284,13 @@ var accordianButton = document.querySelector('#accordian-btn');
 var accordian = document.querySelector('.out-of-hours-accordian');
 var accordianOpen = false;
 accordianButton.addEventListener('click', function (e) {
-  e.preventDefault();
   console.log("clicked the accordian");
+
+  if (!accordianOpen) {
+    accordian.classList.add('display');
+    accordianOpen = true;
+  } else {
+    accordian.classList.remove('display');
+    accordianOpen = false;
+  }
 });

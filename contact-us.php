@@ -1,19 +1,6 @@
 <?php 
-    session_start();
-    $dispSuccess = "";
-    if(isset($_SESSION['success'])) {
-        if($_SESSION['success'] == 'success') {
-            $dispSuccess = 'display';
-        } elseif($_SESSION['success'] == 'fail') {
-            $dispSuccess = '';
-        } 
-    }
     //======================================== CONNECT TO THE DATABASE ================================================//
     require 'db/connect.php';
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    //     header('Location: location: /contact-us.php');
-    //     exit;
-    // }
     //======================================== SANITIZE AND VALIDATE INPUTS ===========================================//
     $name = trim(filter_input(INPUT_POST, 'enq_name', FILTER_SANITIZE_STRING));
     $email = trim(filter_input(INPUT_POST, 'enq_email', FILTER_SANITIZE_STRING));
@@ -24,6 +11,8 @@
     //======================================== ERROR MESSAGES ============================================//
     $errorName = $errorEmail = $errorTel = $errorSubject = $errorMsg = "";
     $dispName = $dispEmail = $dispTel = $dispSubject = $dispMsg = "";
+    $dispSuccess = "";
+    $success = "";
     //======================================== ON FORM SUBMISSON PERFORM CHECKS =======================================//
     //======================================== IF THEY PASS WRITE TO THE DATABASE =====================================//
     if(isset($_POST['submit'])) {
@@ -90,26 +79,23 @@
         $marketing = isset($_POST['enq_marketing']) ? $_POST['enq_marketing'] : 0; 
         //======================================== INSERT DATA TO DB ======================================================//
         if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
-            $_SESSION['success'] = 'success';
+            $success = "?success=1";
             try {
-                $sqlInsert = $db->query("INSERT INTO enquiries (enq_name, enq_email, enq_tel, enq_subject, enq_message, enq_marketing) 
-                                        VALUES ('" . $name . "', '" .  $email . "', '" .  $tel . "', '" .  $subject . "', '" .  $msg . "', '" .  $marketing . "')");
+                $sqlInsert = $db->query("INSERT INTO enquiries (enq_name, enq_email, enq_tel, enq_subject, enq_message, enq_marketing) VALUES ('" . $name . "', '" .  $email . "', '" .  $tel . "', '" .  $subject . "', '" .  $msg . "', '" .  $marketing . "')");
             } catch(Exception $e) {
                 echo $e->getMessage();
                 die();
             } 
             //======================================== PRINT RESPONSE FROM DB =================================================//
             if($sqlInsert) {
-                header("location: /contact-us.php");
+                header("location:contact-us.php" . $success);
                 exit();
             } else {
                 die("Error: '. $e .'");
             }
             //======================================== CLOSE CONNECTION =======================================================//
             $sqlInsert->close();
-        } else {
-            $_SESSION['success'] = 'fail';
-        }
+        } 
     }
 ?>
 <!DOCTYPE html>
@@ -241,82 +227,92 @@
 
     <!-- OPENING TIMES AND CONTACT FORM STARTS-->
     <div class="bottom-wrapper">
-        <!-- OPENING TIMES START -->
-        <div class="opening-times-wrapper">
-            <p class="opening-times-p">
-                <strong>Email us on:</strong>
-                <br>
-            </p>
-            <p class="opening-times-p">
-                <a href="mailto:sales@netmatters.com" class="sales-email">sales@netmatters.com</a>
-            </p>
-            <p class="opening-times-p">
-                <strong>Business hours:</strong>
-            </p>
-            <p class="opening-times-p">
-                <strong>Monday - Friday 07:00 - 18:00&nbsp;</strong>
-            </p>
-            <div class="out-of-hours-wrapper">
-                <div class="out-of-hours-header" id="accordian-btn">
-                    <h4>
-                        <!-- <a href=""> -->
-                            <p>Out of Hours IT Support</p>
-                            <span class="fas fa-chevron-down"></span>
-                        <!-- </a> -->
-                    </h4>
-                </div>
-                <div class="out-of-hours-accordian">
-                    <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical Tasks</p>
-                    <p>
-                        <strong>Monday - Friday 18:00 - 22:00</strong>
-                        <strong>Saturday 08:00 - 16:00</strong>
-                        <br>
-                        <strong>Sunday 10:00 - 18:00</strong>
-                    </p>
-                    <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp;voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;</p>
+        <div class="bottom-inner">
+            <!-- OPENING TIMES START -->
+            <div class="opening-times-wrapper">
+                <p class="opening-times-p">
+                    <strong>Email us on:</strong>
+                    <br>
+                </p>
+                <p class="opening-times-p">
+                    <a href="mailto:sales@netmatters.com" class="sales-email">sales@netmatters.com</a>
+                </p>
+                <p class="opening-times-p">
+                    <strong>Business hours:</strong>
+                </p>
+                <p class="opening-times-p">
+                    <strong>Monday - Friday 07:00 - 18:00&nbsp;</strong>
+                </p>
+                <div class="out-of-hours-wrapper">
+                    <div class="out-of-hours-header" id="accordian-btn">
+                        <h4>
+                            <!-- <a href=""> -->
+                                <p>Out of Hours IT Support</p>
+                                <span class="fas fa-chevron-down"></span>
+                            <!-- </a> -->
+                        </h4>
+                    </div>
+                    <div class="out-of-hours-accordian">
+                        <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical Tasks</p>
+                        <p>
+                            <strong>Monday - Friday 18:00 - 22:00</strong>
+                            <strong>Saturday 08:00 - 16:00</strong>
+                            <br>
+                            <strong>Sunday 10:00 - 18:00</strong>
+                        </p>
+                        <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp;voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;</p>
+                    </div>
                 </div>
             </div>
+            <!-- OPENING TIMES END -->
+
+            <!-- ENQUIRY FORM START -->
+            <div class="enquiry-form-wrapper">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . $success; ?>" method="POST" class="enquiry-form">
+                    <!-- ERROR MESSAGE DIVS -->
+                    <div class="enq-form-error <?php echo $dispName ?>"><?php echo $errorName ?></div>
+                    <div class="enq-form-error <?php echo $dispEmail ?>"><?php echo $errorEmail ?></div>
+                    <div class="enq-form-error <?php echo $dispTel ?>"><?php echo $errorTel ?></div>
+                    <div class="enq-form-error <?php echo $dispSubject ?>"><?php echo $errorSubject ?></div>
+                    <div class="enq-form-error <?php echo $dispMsg ?>"><?php echo $errorMsg ?></div>
+                    <!-- SUCCESS MESSAGE DIV -->
+                    <?php if(isset($_GET['success']) && $_GET['success'] == 1) { echo "<div class='enq-form-success display'>Your message has been sent!</div>"; }; ?>
+                    <div class="box1">
+                        <div class="name-wrap">
+                            <label for="enqName" class="form-label-enq">Your Name <span class="make-red">*</span></label>
+                            <input type="text" value="<?php if(isset($_POST['enq_name'])) { echo $name; } ?>" name="enq_name" id="enqName" class="form-control-enq">
+                        </div>
+                        <div class="email-wrap">
+                            <label for="enqEmail" class="form-label-enq">Your Email <span class="make-red">*</span></label>
+                            <input type="text" value="<?php if(isset($_POST['enq_email'])) { echo $email; } ?>" name="enq_email" id="enqEmail" class="form-control-enq">
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="tel-wrap">
+                            <label for="enqTel" class="form-label-enq">Your Telephone Number <span class="make-red">*</span></label>
+                            <input type="text" value="<?php if(isset($_POST['enq_tel'])) { echo $tel; } ?>" name="enq_tel" id="enqTel" class="form-control-enq">
+                        </div>
+                        <div class="subj-wrap">
+                            <label for="enqSubject" class="form-label-enq">Subject <span class="make-red">*</span></label>
+                            <input type="text" value="<?php if(isset($_POST['enq_subject'])) { echo $subject; } ?>" name="enq_subject" id="enqSubject" class="form-control-enq">
+                        </div>
+                    </div>
+
+                    <label for="enqMessage" class="form-label-enq">Message <span class="make-red">*</span></label>
+                    <textarea name="enq_message" id="enqMessage" class="form-control-enq"><?php if(isset($_POST['enq_message'])) { echo $msg; } ?></textarea>
+
+                    <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
+                    Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
+                        <input type="checkbox" name="enq_marketing" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <button type="submit" name="submit" class="enquiry-btn">SEND ENQUIRY</button>
+
+                </form>    
+            </div>  
+            <!-- ENQUIRY FORM END -->
         </div>
-        <!-- OPENING TIMES END -->
-
-        <!-- ENQUIRY FORM START -->
-        <div class="enquiry-form-wrapper">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="enquiry-form">
-                <!-- ERROR MESSAGE DIVS -->
-                <div class="enq-form-error <?php echo $dispName ?>"><?php echo $errorName ?></div>
-                <div class="enq-form-error <?php echo $dispEmail ?>"><?php echo $errorEmail ?></div>
-                <div class="enq-form-error <?php echo $dispTel ?>"><?php echo $errorTel ?></div>
-                <div class="enq-form-error <?php echo $dispSubject ?>"><?php echo $errorSubject ?></div>
-                <div class="enq-form-error <?php echo $dispMsg ?>"><?php echo $errorMsg ?></div>
-                <!-- SUCCESS MESSAGE DIV -->
-                <div class="enq-form-success <?php echo $dispSuccess ?>">Your message has been sent!</div>
-
-                <label for="enqName" class="form-label-enq">Your Name <span class="make-red">*</span></label>
-                <input type="text" value="<?php if(isset($_POST['enq_name'])) { echo $name; } ?>" name="enq_name" id="enqName" class="form-control-enq">
-
-                <label for="enqEmail" class="form-label-enq">Your Email <span class="make-red">*</span></label>
-                <input type="text" value="<?php if(isset($_POST['enq_email'])) { echo $email; } ?>" name="enq_email" id="enqEmail" class="form-control-enq">
-
-                <label for="enqTel" class="form-label-enq">Your Telephone Number <span class="make-red">*</span></label>
-                <input type="text" value="<?php if(isset($_POST['enq_tel'])) { echo $tel; } ?>" name="enq_tel" id="enqTel" class="form-control-enq">
-
-                <label for="enqSubject" class="form-label-enq">Subject <span class="make-red">*</span></label>
-                <input type="text" value="<?php if(isset($_POST['enq_subject'])) { echo $subject; } ?>" name="enq_subject" id="enqSubject" class="form-control-enq">
-
-                <label for="enqMessage" class="form-label-enq">Message <span class="make-red">*</span></label>
-                <textarea name="enq_message" id="enqMessage" class="form-control-enq"><?php if(isset($_POST['enq_message'])) { echo $msg; } ?></textarea>
-
-                <label class="checkbox-container">Please tick this box if you wish to receive marketing information from us.
-                Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we use your data.
-                    <input type="checkbox" name="enq_marketing" value="1">
-                    <span class="checkmark"></span>
-                </label>
-
-                <button type="submit" name="submit" class="enquiry-btn">SEND ENQUIRY</button>
-
-            </form>    
-        </div>  
-        <!-- ENQUIRY FORM END -->
     </div>
     <!-- OPENING TIMES AND CONTACT FORM ENDS-->
 

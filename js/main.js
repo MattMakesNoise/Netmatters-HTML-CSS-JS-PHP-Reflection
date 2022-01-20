@@ -7,27 +7,28 @@ const popup = document.querySelector('.cookies-modal-outer');
 const changeSettingsBtn = document.querySelector('.change-settings');
 const acceptCookiesBtn = document.querySelector('.accept-cookies');
 let cookiesYorN = localStorage.getItem('consent');
-
+//Check the storage
+function cookieCheck() {
+    return localStorage.getItem('consent');
+}
 //Check to see if cookie consent has been given. If not show the popup
 window.onload = function() {
     getWidth();
-    if(cookiesYorN === "true") {
-        popup.style.display = 'none';
-        body.classList.remove('overflow-hidden');
-    } else {
-        // popup.style.display = 'block';
+    if(width < 1260) {
+        searchWrapper.style.marginLeft = '0';
+    }
+    if(cookiesYorN != "true") {
+        popup.style.display = 'flex';
         body.classList.add('overflow-hidden');
+    } else {
+        body.classList.remove('overflow-hidden');
     }
 };
 //Save to users input to storage
-function saveCookie () {
+function saveCookie() {
     localStorage.setItem('consent', 'true');
     cookiesYorN = localStorage.getItem('consent');
     console.log(cookiesYorN);
-}
-//Check the storage
-function cookieCheck () {
-    return localStorage.getItem('consent');
 }
 //Event listener for accept cookies
 acceptCookiesBtn.addEventListener('click', () => {
@@ -49,18 +50,18 @@ const support = document.querySelector('.support-wrapper');
 const contact = document.querySelector('.contact-wrapper');
 let searchToggle = false;
 
-function getWidth () {
+function getWidth() {
     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 }
 window.addEventListener('resize', (e) => {
     getWidth();
-    if (width > 1260) {
+    if(width > 1260) {
         support.style.display = 'flex';
         contact.style.display = 'flex';
         searchInput.style.display = 'block';
         searchWrapper.style.marginLeft = '0';
         
-    } else if (width >= 992 && width < 1260 && searchToggle === false) {
+    } else if(width >= 992 && width < 1260 && searchToggle === false) {
         support.style.display = 'flex';
         contact.style.display = 'flex';
         searchInput.style.display = 'none';
@@ -99,15 +100,15 @@ const sticky = document.querySelector('#static_head');
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
-  if (currentScroll <= 209) {
+  if(currentScroll <= 209) {
     body.classList.remove("scroll-up");
     return;
   }
 
-  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+  if(currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
     body.classList.remove("scroll-up");
     body.classList.add("scroll-down");
-  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+  } else if(currentScroll < lastScroll && body.classList.contains("scroll-down")) {
     body.classList.remove("scroll-down");
     body.classList.add("scroll-up");
   }
@@ -149,7 +150,7 @@ searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     console.log('clicked!');
     if (width >= 992 && width < 1260) {
-        if (searchToggle === false) {
+        if(searchToggle === false) {
             setTimeout(() => {
                 support.style.display = 'none';
                 contact.style.display = 'none';
@@ -159,7 +160,7 @@ searchBtn.addEventListener('click', (e) => {
                 searchWrapper.style.marginLeft = '26px';
             }, 500);
             searchToggle = true;
-        } else if (searchToggle) {
+        } else if(searchToggle) {
             setTimeout(() => {
                 searchInput.style.display = 'none';
                 searchWrapper.style.marginLeft = '0';
@@ -168,7 +169,6 @@ searchBtn.addEventListener('click', (e) => {
                 support.style.display = 'flex';
                 contact.style.display = 'flex';
             }, 500);
-            
             searchToggle = false;
         }
     } 
@@ -253,8 +253,6 @@ enqForm.addEventListener('submit', (e) => {
         e.preventDefault();
     } 
 })
-
-
 //=====================================================================================================//
 //=====================================================================================================//
 //======================================== OUT OF HOURS ACCORDIAN =====================================//
@@ -265,6 +263,12 @@ const accordian = document.querySelector('.out-of-hours-accordian');
 let accordianOpen = false;
 
 accordianButton.addEventListener('click', (e) => {
-    e.preventDefault();
     console.log("clicked the accordian");
+    if(!accordianOpen) {
+        accordian.classList.add('display');
+        accordianOpen = true;
+    } else {
+        accordian.classList.remove('display');
+        accordianOpen = false;
+    }
 })
