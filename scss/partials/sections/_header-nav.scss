@@ -465,10 +465,16 @@ form.search-form {
             text-align: left;
         }
         &:not(:last-child) a { 
-            padding-right: 30px;
+            padding-right: 20px;
+            @media screen and (min-width: $break-xl) {
+                padding-right: 30px;
+            }
             &::after { //Adds the dashes after each dropdown item.
                 content: '-';
-                padding-left: 38px;
+                padding-left: 23px;
+                @media screen and (min-width: $break-xl) {
+                    padding-left: 38px;
+                }
             }
         }
     }

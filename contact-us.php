@@ -17,23 +17,23 @@
     //======================================== IF THEY PASS WRITE TO THE DATABASE =====================================//
     if(isset($_POST['submit'])) {
         //Variable to check if form is valid
-        $nameFullyFilled = $emailFullyFilled = $telFullyFilled = $subjectFullyFilled = $msgFullyFilled = false;
+        $nameFullyFilled = $emailFullyFilled = $telFullyFilled = $subjectFullyFilled = $msgFullyFilled = false; 
         //Check name
-        if (empty($name)) {
+        if(empty($name)) {
             $errorName = " Name field is required";
             $dispName = "display";
-        } elseif(strlen($name) < 4) {
-            $errorName = " Name must be more than 4 characters";
+        } elseif(strlen($name) < 2 || preg_match("/[^a-zA-Z- ]/", $name)) {
+            $errorName = " Name must be more than 2 characters and only contain letters";
             $dispName = "display";
         } else {
             $nameFullyFilled = true;
         }
         //Check email
-        if (empty($email)) {
+        if(empty($email)) {
             $errorEmail = " You must enter a valid email address";
             $dispEmail = "display";
         } else {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $errorEmail = "Invalid email format";
                 $dispEmail = "display";
             } else {
@@ -42,7 +42,7 @@
         }
         $phonePattern = "/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/";
         //Check telephone number
-        if (empty($tel)) {
+        if(empty($tel)) {
             $errorTel = " You must enter a phone number";
             $dispTel = "display";
         } else {
@@ -57,7 +57,7 @@
                 }
         }
         //Check subject
-        if (empty($subject)) {
+        if(empty($subject)) {
             $errorSubject = " You must enter a subject";
             $dispSubject = "display";
         } elseif(strlen($subject) < 5) {
@@ -67,7 +67,7 @@
             $subjectFullyFilled = true;
         }
         //Check message
-        if (empty($msg)) {
+        if(empty($msg)) {
             $errorMsg = " The message must be at least 5 characters";
             $dispMsg = "display";
         } elseif(strlen($msg) < 5) {
@@ -79,7 +79,7 @@
         $marketing = isset($_POST['enq_marketing']) ? $_POST['enq_marketing'] : 0; 
         //======================================== INSERT DATA TO DB ======================================================//
         if($nameFullyFilled && $emailFullyFilled && $telFullyFilled && $subjectFullyFilled && $msgFullyFilled) {
-            $success = "?success=1";
+            $success = "?success=1#enqForm";
             try {
                 $sqlInsert = $db->query("INSERT INTO enquiries (enq_name, enq_email, enq_tel, enq_subject, enq_message, enq_marketing) VALUES ('" . $name . "', '" .  $email . "', '" .  $tel . "', '" .  $subject . "', '" .  $msg . "', '" .  $marketing . "')");
             } catch(Exception $e) {
@@ -129,7 +129,13 @@
     include('inc/header.php'); 
 ?>
     <!-- TOP BANNER START -->
+    
     <div class="contact-banner-wrapper hero-mt">
+        <div class="paginate-wrapper">
+            <div class="paginate">
+                <a href="index.php">Home</a><span>Our Offices</span>
+            </div>
+        </div>
         <h1>Our Offices</h1>
     </div>
     <!-- TOP BANNER END -->
@@ -267,7 +273,7 @@
             <!-- OPENING TIMES END -->
 
             <!-- ENQUIRY FORM START -->
-            <div class="enquiry-form-wrapper">
+            <div class="enquiry-form-wrapper" id="enqForm">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . $success; ?>" method="POST" class="enquiry-form">
                     <!-- ERROR MESSAGE DIVS -->
                     <div class="enq-form-error <?php echo $dispName ?>"><?php echo $errorName ?></div>

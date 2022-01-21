@@ -5,10 +5,12 @@
 //======================================== COOKIES POPUP ==============================================//
 //=====================================================================================================//
 //=====================================================================================================//
+var body = document.body;
 var popup = document.querySelector('.cookies-modal-outer');
 var changeSettingsBtn = document.querySelector('.change-settings');
 var acceptCookiesBtn = document.querySelector('.accept-cookies');
-var cookiesYorN = localStorage.getItem('consent'); //Check the storage
+var cookiesYorN = localStorage.getItem('consent');
+var success = document.querySelector('.enq-form-success'); //Check the storage
 
 function cookieCheck() {
   return localStorage.getItem('consent');
@@ -28,6 +30,10 @@ window.onload = function () {
   } else {
     body.classList.remove('overflow-hidden');
   }
+
+  setTimeout(function () {
+    success.classList.remove('display');
+  }, 5000);
 }; //Save to users input to storage
 
 
@@ -107,7 +113,6 @@ $(document).ready(function () {
 //=======================================================================================================//
 //=======================================================================================================//
 
-var body = document.body;
 var lastScroll = 0;
 var sticky = document.querySelector('#static_head');
 window.addEventListener("scroll", function () {

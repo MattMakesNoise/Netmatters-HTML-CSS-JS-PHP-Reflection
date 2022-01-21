@@ -20,6 +20,10 @@ body {
   background-color: #fff;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .page-wrapper {
   z-index: 10;
   position: relative;
@@ -786,11 +790,21 @@ form.search-form::after {
   text-align: left;
 }
 .menu-sub li:not(:last-child) a {
-  padding-right: 30px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1260px) {
+  .menu-sub li:not(:last-child) a {
+    padding-right: 30px;
+  }
 }
 .menu-sub li:not(:last-child) a::after {
   content: "-";
-  padding-left: 38px;
+  padding-left: 23px;
+}
+@media screen and (min-width: 1260px) {
+  .menu-sub li:not(:last-child) a::after {
+    padding-left: 38px;
+  }
 }
 
 .web-main,
@@ -3550,22 +3564,60 @@ address a {
 .contact-banner-wrapper {
   background-color: #333645;
   color: white;
-  padding: 24px 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 @media screen and (min-width: 992px) {
   .contact-banner-wrapper {
-    padding-top: 50px;
     background-color: #fff;
     color: #333645;
   }
+}
+.contact-banner-wrapper .paginate-wrapper {
+  display: none;
+  padding: 14px 0 13px;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 992px) {
+  .contact-banner-wrapper .paginate-wrapper {
+    display: block;
+  }
+}
+.contact-banner-wrapper .paginate-wrapper .paginate {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+@media screen and (min-width: 992px) {
+  .contact-banner-wrapper .paginate-wrapper .paginate {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .contact-banner-wrapper .paginate-wrapper .paginate {
+    width: 1200px;
+  }
+}
+.contact-banner-wrapper .paginate-wrapper .paginate a {
+  font-weight: 700;
+  color: #333645;
+  text-decoration: none;
+  font-size: 0.8125rem;
+}
+.contact-banner-wrapper .paginate-wrapper .paginate span {
+  color: #333645;
+  font-size: 0.8125rem;
+}
+.contact-banner-wrapper .paginate-wrapper .paginate span::before {
+  content: "/";
+  padding: 0 5px;
+  color: #333645;
 }
 .contact-banner-wrapper h1 {
   width: 750px;
   font-weight: 400;
   font-size: 2.25rem;
-  padding: 0 15px;
+  padding: 50px 15px 0;
   margin: 0 auto;
 }
 @media screen and (min-width: 992px) {
@@ -3591,6 +3643,7 @@ address a {
 @media screen and (min-width: 992px) {
   .location-card-container {
     width: 970px;
+    margin: 30px auto 40px;
     padding: 0;
     display: flex;
   }
@@ -3743,7 +3796,15 @@ address a {
   color: #926FB1;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.625rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 350px) {
+  .sales-email {
+    font-size: 1.625rem;
+  }
+}
+.sales-email:hover {
+  text-decoration: underline;
 }
 
 #accordian-btn {
@@ -3863,6 +3924,7 @@ address a {
 #enqMessage {
   min-height: 100px;
   font-family: "Poppins";
+  padding-top: 5px;
 }
 
 .has-error {

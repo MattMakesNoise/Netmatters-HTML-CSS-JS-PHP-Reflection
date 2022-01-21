@@ -4,19 +4,52 @@
 .contact-banner-wrapper {
     background-color: $dark-blue;
     color: white;
-    padding: 24px 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     @media screen and (min-width: $break-lg) {
-        padding-top: 50px;
         background-color: $white;
         color: $dark-blue;
     }
+    .paginate-wrapper {
+        display: none;
+        padding: 14px 0 13px;
+        box-shadow: 0 5px 13px rgba(0,0,0,10%);
+        @media screen and (min-width: $break-lg) {
+            display: block;
+        }
+        .paginate {
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            @media screen and (min-width: $break-lg) {
+                width: 970px;
+            }
+            @media screen and (min-width: $break-xl) {
+                width: 1200px;
+            }
+            a {
+                font-weight: 700;
+                color: $dark-blue;
+                text-decoration: none;
+                font-size: .8125rem;
+            }
+            span {
+                color: $dark-blue;
+                font-size: .8125rem;
+                &::before {
+                    content: "/";
+                    padding: 0 5px;
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+
     h1 {
         width: 750px;
         font-weight: 400;
         font-size: 2.25rem;
-        padding: 0 15px;
+        padding: 50px 15px 0;
         margin: 0 auto;
         @media screen and (min-width: $break-lg) {
             width: 970px;
@@ -37,6 +70,7 @@
     }
     @media screen and (min-width: $break-lg) {
         width: 970px;
+        margin: 30px auto 40px;
         padding: 0;
         display: flex;
     }
@@ -102,11 +136,6 @@
         z-index: 1;
         &:hover {
             cursor: pointer;
-            // @media screen and (min-width: $break-lg) {
-            //     transform: scale(1.1);
-            //     opacity: 0.8;
-            //     overflow: clip !important;
-            // }
         }
     }
 }
@@ -183,7 +212,13 @@
     color: $web;
     text-decoration: none;
     font-weight: $semibold;
-    font-size: 1.625rem;
+    font-size: 1.4rem;
+    @media screen and (min-width: 350px) {
+        font-size: 1.625rem;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 #accordian-btn {
@@ -296,6 +331,7 @@
 #enqMessage {
     min-height: 100px;
     font-family: 'Poppins';
+    padding-top: 5px;
 }
 
 .has-error {

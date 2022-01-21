@@ -3,10 +3,12 @@
 //======================================== COOKIES POPUP ==============================================//
 //=====================================================================================================//
 //=====================================================================================================//
+const body = document.body;
 const popup = document.querySelector('.cookies-modal-outer');
 const changeSettingsBtn = document.querySelector('.change-settings');
 const acceptCookiesBtn = document.querySelector('.accept-cookies');
 let cookiesYorN = localStorage.getItem('consent');
+const success = document.querySelector('.enq-form-success');
 //Check the storage
 function cookieCheck() {
     return localStorage.getItem('consent');
@@ -23,6 +25,9 @@ window.onload = function() {
     } else {
         body.classList.remove('overflow-hidden');
     }
+    setTimeout(() => {
+        success.classList.remove('display');
+    }, 5000);
 };
 //Save to users input to storage
 function saveCookie() {
@@ -94,7 +99,6 @@ $(document).ready(function(){
 //======================================== STICKY HEADER ================================================//
 //=======================================================================================================//
 //=======================================================================================================//
-const body = document.body;
 let lastScroll = 0; 
 const sticky = document.querySelector('#static_head');
 
