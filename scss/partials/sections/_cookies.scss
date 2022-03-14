@@ -6,7 +6,7 @@
     right: 0;
     z-index: 100;
     background-color: rgba(0,0,0,.7);
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
     background-color: $white;
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 50%);
     z-index: 101;
     @media screen and (min-width: $break-m) {
         width: 600px;

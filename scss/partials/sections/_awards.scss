@@ -1,44 +1,25 @@
 /*========== AWARDS ======*/
 .awards-wrapper {
-    display: block;
-    @media screen and (max-width: $break-m) {
-      display: none;
-    }
-    //Medium and up
+    display: none;
     @media screen and (min-width: $break-m) {
       display: initial;
-      height: 274px;
-    }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-      display: initial;
-      height: 320px;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
-      display: initial;
-      height: 266px !important;
+      height: auto;
     }
 }
 .awards {
     @include flexcolumn;
     padding: 50px 0;
-      //Medium and up
       @media screen and (min-width: $break-m) {
         width: 750px;
         @include mginlrauto;
         padding-left: 15px;
         padding-right: 15px;
       }
-      //Large and Up
       @media screen and (min-width: $break-lg) {
         width: 970px;
-        @include mginlrauto;
       }
-      //Extra Large
       @media screen and (min-width: $break-xl) {
         width: 1200px;
-        @include mginlrauto;
         padding: 50px 15px;
       }
 }

@@ -1,47 +1,24 @@
 /*========== CLIENTS =========*/
 .clients-wrapper {
-    display: block;
     background: linear-gradient(to bottom, #efefef 1%, 5%, #fff 15%);
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-      display: none !important;
-    }
-    //Medium and up
+    display: none;
     @media screen and (min-width: $break-m) {
       display: block;
       max-width: 100%;
     }
-    // //Large and Up
-    // @media screen and (min-width: $break-lg) {
-    //   display: initial !important;
-    // }
-    // //Extra Large
-    // @media screen and (min-width: $break-xl) {
-    //   display: inital !important;
-    // }
 }
 .clients {
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-      @include flexrow;
-      justify-content: space-between;
-      width: 750px;
-      @include mginlrauto;
-      padding: 50px 15px;
-    }
-    //Large and Up
+    @include flexrow;
+    justify-content: space-between;
+    width: 750px;
+    @include mginlrauto;
+    padding: 50px 15px;
     @media screen and (min-width: $break-lg) {
       justify-content: space-around;
       width: 970px;
-      @include mginlrauto;
-      padding-left: 15px;
-      padding-right: 15px;
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
-      justify-content: space-around;
       width: 1200px;
-      @include mginlrauto;
     }
 }
 .client-title {
@@ -83,85 +60,71 @@
     }
 }
 .busseys-container {
-  //Medium and up
-  @media screen and (min-width: $break-m) {
-      background-image: url('/img/home-T5gi.jpg');
-      background-size: contain;
-      width: 121px;
-      height: 45px;
-      &:hover {
-        background-image: url('/img/home-gZQR.png');
+    @media screen and (min-width: $break-m) {
+        background-image: url('/img/home-T5gi.jpg');
+        background-size: contain;
         width: 121px;
         height: 45px;
-      }
-  }
-  //Large and Up
-  @media screen and (min-width: $break-lg) {
-      background-image: url('/img/home-T5gi.jpg');
-      width: 188px;
-      height: 70px;
-      &:hover {
-        background-image: url('/img/home-gZQR.png');
+        &:hover {
+          background-image: url('/img/home-gZQR.png');
+          width: 121px;
+          height: 45px;
+        }
+    }
+    @media screen and (min-width: $break-lg) {
+        background-image: url('/img/home-T5gi.jpg');
         width: 188px;
         height: 70px;
-      }
-  }
+        &:hover {
+          background-image: url('/img/home-gZQR.png');
+          width: 188px;
+          height: 70px;
+        }
+    }
 }
 .busseys-tooltip {
-    //Medium and up
     @media screen and (min-width: $break-m) {
       transform: translate(-65px , -188px); //Positions it above logo (L-R , U-D)
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(-30px , -188px); //Positions it above logo (L-R , U-D)
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
       transform: translate(-30px , -188px); //Positions it above logo (L-R , U-D)
     }
 }
 .crane-container {
-  //Medium and up
-  @media screen and (min-width: $break-m) {
-      background-image: url('/img/home-BsyK.jpg');
-      background-size: contain;
-      width: 184px;
-      height: 45px;
-      &:hover {
-        background-image: url('/img/home-MjHw.png');
+    @media screen and (min-width: $break-m) {
+        background-image: url('/img/home-BsyK.jpg');
+        background-size: contain;
         width: 184px;
         height: 45px;
-      }
-  }
-  //Large and Up
-  @media screen and (min-width: $break-lg) {
-      background-image: url('/img/home-BsyK.jpg');
-      width: 287px;
-      height: 70px;
-      &:hover {
-        background-image: url('/img/home-MjHw.png');
+        &:hover {
+          background-image: url('/img/home-MjHw.png');
+          width: 184px;
+          height: 45px;
+        }
+    }
+    @media screen and (min-width: $break-lg) {
+        background-image: url('/img/home-BsyK.jpg');
         width: 287px;
         height: 70px;
-      }
-  }
+        &:hover {
+          background-image: url('/img/home-MjHw.png');
+          width: 287px;
+          height: 70px;
+        }
+    }
 }
 .crane-tooltip {
-    //Medium and up
     @media screen and (min-width: $break-m) {
       transform: translate(-34px , -250px); //Positions it above logo (L-R , U-D)
     }
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-      transform: translate(20px , -250px); //Positions it above logo (L-R , U-D)
-    }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
       transform: translate(20px , -251px); //Positions it above logo (L-R , U-D)
     }
 }
 .beat-container {
-  //Medium and up
   @media screen and (min-width: $break-m) {
     background-image: url('/img/home-RfLc.jpg');
     background-size: contain;
@@ -173,7 +136,6 @@
       height: 45px;
     }
   }
-  //Large and Up
   @media screen and (min-width: $break-lg) {
     background-image: url('/img/home-RfLc.jpg');
     width: 72px;
@@ -186,55 +148,46 @@
   }
 }
 .beat-tooltip {
-    //Medium and up
     @media screen and (min-width: $break-m) {
       transform: translate(-102px , -190px); //Positions it above logo (L-R , U-D)
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(-90px , -190px); //Positions it above logo (L-R , U-D)
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
       transform: translate(-88px , -188px); //Positions it above logo (L-R , U-D)
     }
 }
 .diver-container {
-  //Medium and up
-  @media screen and (min-width: $break-m) {
-    background-image: url('/img/home-jHUl.jpg');
-    background-size: contain;
-    width: 207px;
-    height: 45px;
-    &:hover {
-      background-image: url('/img/home-kGn4.png');
+    @media screen and (min-width: $break-m) {
+      background-image: url('/img/home-jHUl.jpg');
+      background-size: contain;
       width: 207px;
       height: 45px;
+      &:hover {
+        background-image: url('/img/home-kGn4.png');
+        width: 207px;
+        height: 45px;
+      }
     }
-  }
-  //Large and Up
-  @media screen and (min-width: $break-lg) {
-    background-image: url('/img/home-jHUl.jpg');
-    width: 322px;
-    height: 70px;
-    &:hover {
-      background-image: url('/img/home-kGn4.png');
+    @media screen and (min-width: $break-lg) {
+      background-image: url('/img/home-jHUl.jpg');
       width: 322px;
       height: 70px;
+      &:hover {
+        background-image: url('/img/home-kGn4.png');
+        width: 322px;
+        height: 70px;
+      }
     }
-  }
-  
 }
 .diver-tooltip {
-    //Medium and up
     @media screen and (min-width: $break-m) {
       transform: translate(-24px , -232px); //Positions it above logo (L-R , U-D)
     }
-    //Large and Up
     @media screen and (min-width: $break-lg) {
       transform: translate(30px , -232px); //Positions it above logo (L-R , U-D)
     }
-    //Extra Large
     @media screen and (min-width: $break-xl) {
       transform: translate(34px ,-231px); //Positions it above logo (L-R , U-D)
     }

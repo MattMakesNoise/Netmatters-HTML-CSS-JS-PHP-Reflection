@@ -2,9 +2,58 @@
 
 //=====================================================================================================//
 //=====================================================================================================//
+//======================================== COOKIES POPUP ==============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+var body = document.body;
+var popup = document.querySelector('.cookies-modal-outer');
+var changeSettingsBtn = document.querySelector('.change-settings');
+var acceptCookiesBtn = document.querySelector('.accept-cookies');
+var cookiesYorN = localStorage.getItem('consent');
+var success = document.querySelector('.enq-form-success'); //Check the storage
+
+function cookieCheck() {
+  return localStorage.getItem('consent');
+} //Check to see if cookie consent has been given. If not show the popup
+
+
+window.onload = function () {
+  getWidth();
+
+  if (width < 1260) {
+    searchWrapper.style.marginLeft = '0';
+  }
+
+  if (cookiesYorN != "true") {
+    popup.style.display = 'flex';
+    body.classList.add('overflow-hidden');
+  } else {
+    body.classList.remove('overflow-hidden');
+  }
+
+  setTimeout(function () {
+    success.classList.remove('display');
+  }, 5000);
+}; //Save to users input to storage
+
+
+function saveCookie() {
+  localStorage.setItem('consent', 'true');
+  cookiesYorN = localStorage.getItem('consent');
+  console.log(cookiesYorN);
+} //Event listener for accept cookies
+
+
+acceptCookiesBtn.addEventListener('click', function () {
+  saveCookie();
+  popup.style.display = 'none';
+  body.classList.remove('overflow-hidden');
+}); //=====================================================================================================//
+//=====================================================================================================//
 //======================================== GET SCREEN WIDTH ===========================================//
 //=====================================================================================================//
 //=====================================================================================================//
+
 var width;
 var searchWrapper = document.querySelector('.search-wrapper');
 var searchBtn = document.querySelector('.search-form button');
@@ -34,46 +83,6 @@ window.addEventListener('resize', function (e) {
     contact.style.display = 'none';
     searchInput.style.display = 'block';
   }
-}); //=====================================================================================================//
-//=====================================================================================================//
-//======================================== COOKIES POPUP ==============================================//
-//=====================================================================================================//
-//=====================================================================================================//
-
-var popup = document.querySelector('.cookies-modal-outer');
-var changeSettingsBtn = document.querySelector('.change-settings');
-var acceptCookiesBtn = document.querySelector('.accept-cookies');
-var cookiesYorN = localStorage.getItem('consent'); //Check to see if cookie consent has been given. If not show the popup
-
-window.onload = function () {
-  getWidth();
-
-  if (cookiesYorN === "true") {
-    popup.style.display = 'none';
-    body.classList.remove('overflow-hidden');
-  } else {
-    // popup.style.display = 'block';
-    body.classList.add('overflow-hidden');
-  }
-}; //Save to users input to storage
-
-
-function saveCookie() {
-  localStorage.setItem('consent', 'true');
-  cookiesYorN = localStorage.getItem('consent');
-  console.log(cookiesYorN);
-} //Check the storage
-
-
-function cookieCheck() {
-  return localStorage.getItem('consent');
-} //Event listener for accept cookies
-
-
-acceptCookiesBtn.addEventListener('click', function () {
-  saveCookie();
-  popup.style.display = 'none';
-  body.classList.remove('overflow-hidden');
 }); //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
@@ -104,7 +113,6 @@ $(document).ready(function () {
 //=======================================================================================================//
 //=======================================================================================================//
 
-var body = document.body;
 var lastScroll = 0;
 var sticky = document.querySelector('#static_head');
 window.addEventListener("scroll", function () {
@@ -184,43 +192,110 @@ searchBtn.addEventListener('click', function (e) {
       searchToggle = false;
     }
   }
-}); // window.addEventListener('resize', (e) => {
-//     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//     if (width >= 1260) {
-//         searchInput.classList.remove('search-hide');
-//         searchInput.classList.add('search-show');
-//         support.classList.remove('search-hide');
-//         contact.classList.remove('search-hide');
-//     } else if (width < 992) {
-//         support.classList.add('search-hide');
-//         contact.classList.add('search-hide');
-//         searchInput.classList.remove('search-hide');
-//     }
-// });
-// searchBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     if (width >= 992 && width < 1260 ) {
-//         if (searchToggle === false) {
-//             searchInput.classList.add('search-hide');
-//             support.classList.remove('search-hide');
-//             contact.classList.remove('search-hide');
-//             setTimeout(() => {
-//                 support.classList.add('search-hide');
-//                 contact.classList.add('search-hide');
-//             }, 200);
-//             setTimeout(() => {
-//                 searchInput.classList.add('search-show');
-//                 searchInput.classList.remove('search-hide');
-//             }, 500);
-//             searchToggle = true;
-//         } else if (searchToggle) {
-//             searchInput.classList.remove('search-show');
-//             searchInput.classList.add('search-hide');
-//             setTimeout(() => {
-//                 support.classList.remove('search-hide');
-//                 contact.classList.remove('search-hide');
-//             }, 200);
-//             searchToggle = false;
-//         }
-//     }
-// });
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== FORM VALIDATION ============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var enqForm = document.querySelector('.enquiry-form');
+var enqBtn = document.querySelector('.enquiry-btn');
+var enqName = document.querySelector('#enqName');
+var enqEmail = document.querySelector('#enqEmail');
+var enqTel = document.querySelector('#enqTel');
+var enqSubj = document.querySelector('#enqSubject');
+var enqMsg = document.querySelector('#enqMessage');
+var shouldSubmit = false; //get the values from the inputs
+
+var nameVal;
+var emailVal;
+var telVal;
+var subjVal;
+var msgVal;
+
+function getVals() {
+  nameVal = enqName.value.trim();
+  emailVal = enqEmail.value.trim();
+  telVal = enqTel.value.trim();
+  subjVal = enqSubj.value.trim();
+  msgVal = enqMsg.value.trim();
+} //check if inputs blank
+
+
+function inputsBlank() {
+  if (nameVal == "") {
+    enqName.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (nameVal != "") {
+    enqName.classList.remove('has-error');
+    shouldSubmit = true;
+  }
+
+  if (emailVal == "") {
+    enqEmail.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (emailVal != "") {
+    enqEmail.classList.remove('has-error');
+    shouldSubmit = true;
+  }
+
+  if (telVal == "") {
+    enqTel.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (telVal != "") {
+    enqTel.classList.remove('has-error');
+    shouldSubmit = true;
+  }
+
+  if (subjVal == "") {
+    enqSubj.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (subjVal != "") {
+    enqSubj.classList.remove('has-error');
+    shouldSubmit = true;
+  }
+
+  if (msgVal == "") {
+    enqMsg.classList.add('has-error');
+    shouldSubmit = false;
+  } else if (msgVal != "") {
+    enqMsg.classList.remove('has-error');
+    shouldSubmit = true;
+  }
+} //Click event listener
+
+
+enqBtn.addEventListener('click', function (e) {
+  console.log("You clicked the enquiry button");
+  getVals();
+  inputsBlank();
+}); //Submit event listener
+
+enqForm.addEventListener('submit', function (e) {
+  console.log("You tried to send an enquiry"); //get the values from the inputs
+
+  getVals();
+
+  if (!shouldSubmit) {
+    e.preventDefault();
+  }
+}); //=====================================================================================================//
+//=====================================================================================================//
+//======================================== OUT OF HOURS ACCORDIAN =====================================//
+//=====================================================================================================//
+//=====================================================================================================//
+
+var accordianButton = document.querySelector('#accordian-btn');
+var accordian = document.querySelector('.out-of-hours-accordian');
+var accordianOpen = false;
+accordianButton.addEventListener('click', function (e) {
+  console.log("clicked the accordian");
+
+  if (!accordianOpen) {
+    accordian.classList.add('display');
+    accordianOpen = true;
+  } else {
+    accordian.classList.remove('display');
+    accordianOpen = false;
+  }
+});

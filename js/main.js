@@ -1,5 +1,49 @@
 //=====================================================================================================//
 //=====================================================================================================//
+//======================================== COOKIES POPUP ==============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const body = document.body;
+const popup = document.querySelector('.cookies-modal-outer');
+const changeSettingsBtn = document.querySelector('.change-settings');
+const acceptCookiesBtn = document.querySelector('.accept-cookies');
+let cookiesYorN = localStorage.getItem('consent');
+const success = document.querySelector('.enq-form-success');
+//Check the storage
+function cookieCheck() {
+    return localStorage.getItem('consent');
+}
+//Check to see if cookie consent has been given. If not show the popup
+window.onload = function() {
+    getWidth();
+    if(width < 1260) {
+        searchWrapper.style.marginLeft = '0';
+    }
+    if(cookiesYorN != "true") {
+        popup.style.display = 'flex';
+        body.classList.add('overflow-hidden');
+    } else {
+        body.classList.remove('overflow-hidden');
+    }
+    setTimeout(() => {
+        success.classList.remove('display');
+    }, 5000);
+};
+//Save to users input to storage
+function saveCookie() {
+    localStorage.setItem('consent', 'true');
+    cookiesYorN = localStorage.getItem('consent');
+    console.log(cookiesYorN);
+}
+//Event listener for accept cookies
+acceptCookiesBtn.addEventListener('click', () => {
+    saveCookie();
+    popup.style.display = 'none';
+    body.classList.remove('overflow-hidden');
+});
+
+//=====================================================================================================//
+//=====================================================================================================//
 //======================================== GET SCREEN WIDTH ===========================================//
 //=====================================================================================================//
 //=====================================================================================================//
@@ -11,18 +55,18 @@ const support = document.querySelector('.support-wrapper');
 const contact = document.querySelector('.contact-wrapper');
 let searchToggle = false;
 
-function getWidth () {
+function getWidth() {
     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 }
 window.addEventListener('resize', (e) => {
     getWidth();
-    if (width > 1260) {
+    if(width > 1260) {
         support.style.display = 'flex';
         contact.style.display = 'flex';
         searchInput.style.display = 'block';
         searchWrapper.style.marginLeft = '0';
         
-    } else if (width >= 992 && width < 1260 && searchToggle === false) {
+    } else if(width >= 992 && width < 1260 && searchToggle === false) {
         support.style.display = 'flex';
         contact.style.display = 'flex';
         searchInput.style.display = 'none';
@@ -32,46 +76,6 @@ window.addEventListener('resize', (e) => {
         searchInput.style.display = 'block';
     }
 });
-
-
-//=====================================================================================================//
-//=====================================================================================================//
-//======================================== COOKIES POPUP ==============================================//
-//=====================================================================================================//
-//=====================================================================================================//
-const popup = document.querySelector('.cookies-modal-outer');
-const changeSettingsBtn = document.querySelector('.change-settings');
-const acceptCookiesBtn = document.querySelector('.accept-cookies');
-let cookiesYorN = localStorage.getItem('consent');
-
-//Check to see if cookie consent has been given. If not show the popup
-window.onload = function() {
-    getWidth();
-    if(cookiesYorN === "true") {
-        popup.style.display = 'none';
-        body.classList.remove('overflow-hidden');
-    } else {
-        // popup.style.display = 'block';
-        body.classList.add('overflow-hidden');
-    }
-};
-//Save to users input to storage
-function saveCookie () {
-    localStorage.setItem('consent', 'true');
-    cookiesYorN = localStorage.getItem('consent');
-    console.log(cookiesYorN);
-}
-//Check the storage
-function cookieCheck () {
-    return localStorage.getItem('consent');
-}
-//Event listener for accept cookies
-acceptCookiesBtn.addEventListener('click', () => {
-    saveCookie();
-    popup.style.display = 'none';
-    body.classList.remove('overflow-hidden');
-});
-
 //=======================================================================================================//
 //=======================================================================================================//
 //======================================== SLICK CAROUSEL PLUGIN ========================================//
@@ -90,34 +94,30 @@ $(document).ready(function(){
         nextArrow: false //Don't show next arrow
     });
 });
-
 //=======================================================================================================//
 //=======================================================================================================//
 //======================================== STICKY HEADER ================================================//
 //=======================================================================================================//
 //=======================================================================================================//
-const body = document.body;
 let lastScroll = 0; 
 const sticky = document.querySelector('#static_head');
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
-  if (currentScroll <= 209) {
+  if(currentScroll <= 209) {
     body.classList.remove("scroll-up");
     return;
   }
 
-  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+  if(currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
     body.classList.remove("scroll-up");
     body.classList.add("scroll-down");
-  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+  } else if(currentScroll < lastScroll && body.classList.contains("scroll-down")) {
     body.classList.remove("scroll-down");
     body.classList.add("scroll-up");
   }
   lastScroll = currentScroll;
 })
-
-
 //====================================================================================================//
 //====================================================================================================//
 //======================================== BURGER SPIN ===============================================//
@@ -145,7 +145,6 @@ overlay.addEventListener('click', () => {
         hero.classList.add('hero-mt');
     }
 })
-
 //=====================================================================================================//
 //=====================================================================================================//
 //======================================== SEARCH SWAP ================================================//
@@ -155,7 +154,7 @@ searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     console.log('clicked!');
     if (width >= 992 && width < 1260) {
-        if (searchToggle === false) {
+        if(searchToggle === false) {
             setTimeout(() => {
                 support.style.display = 'none';
                 contact.style.display = 'none';
@@ -165,7 +164,7 @@ searchBtn.addEventListener('click', (e) => {
                 searchWrapper.style.marginLeft = '26px';
             }, 500);
             searchToggle = true;
-        } else if (searchToggle) {
+        } else if(searchToggle) {
             setTimeout(() => {
                 searchInput.style.display = 'none';
                 searchWrapper.style.marginLeft = '0';
@@ -174,52 +173,106 @@ searchBtn.addEventListener('click', (e) => {
                 support.style.display = 'flex';
                 contact.style.display = 'flex';
             }, 500);
-            
             searchToggle = false;
         }
     } 
 });
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== FORM VALIDATION ============================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const enqForm = document.querySelector('.enquiry-form');
+const enqBtn = document.querySelector('.enquiry-btn');
+const enqName = document.querySelector('#enqName');
+const enqEmail = document.querySelector('#enqEmail');
+const enqTel = document.querySelector('#enqTel');
+const enqSubj = document.querySelector('#enqSubject');
+const enqMsg = document.querySelector('#enqMessage');
+let shouldSubmit = false;
+//get the values from the inputs
+let nameVal; 
+let emailVal; 
+let telVal; 
+let subjVal;
+let msgVal;
+function getVals() {
+    nameVal = enqName.value.trim();
+    emailVal = enqEmail.value.trim();
+    telVal = enqTel.value.trim();
+    subjVal = enqSubj.value.trim();
+    msgVal = enqMsg.value.trim();
+}
+//check if inputs blank
+function inputsBlank() {
+    if(nameVal == "") {
+        enqName.classList.add('has-error');
+        shouldSubmit = false;
+    } else if(nameVal != "") {
+        enqName.classList.remove('has-error');
+        shouldSubmit = true;
+    }
+    if(emailVal == "") {
+        enqEmail.classList.add('has-error');
+        shouldSubmit = false;
+    } else if(emailVal != "") {
+        enqEmail.classList.remove('has-error');
+        shouldSubmit = true;
+    }
+    if(telVal == "") {
+        enqTel.classList.add('has-error');
+        shouldSubmit = false;
+    } else if(telVal != "") {
+        enqTel.classList.remove('has-error');
+        shouldSubmit = true;
+    }
+    if(subjVal == "") {
+        enqSubj.classList.add('has-error');
+        shouldSubmit = false;
+    } else if(subjVal != "") {
+        enqSubj.classList.remove('has-error');
+        shouldSubmit = true;
+    }
+    if(msgVal == "") {
+        enqMsg.classList.add('has-error');
+        shouldSubmit = false;
+    } else if(msgVal != "") {
+        enqMsg.classList.remove('has-error');
+        shouldSubmit = true;
+    }
+}
+//Click event listener
+enqBtn.addEventListener('click', (e) => {
+    console.log("You clicked the enquiry button");
+    getVals()
+    inputsBlank();
+})
 
+//Submit event listener
+enqForm.addEventListener('submit', (e) => {
+    console.log("You tried to send an enquiry");
+    //get the values from the inputs
+    getVals();
+    if(!shouldSubmit) {
+        e.preventDefault();
+    } 
+})
+//=====================================================================================================//
+//=====================================================================================================//
+//======================================== OUT OF HOURS ACCORDIAN =====================================//
+//=====================================================================================================//
+//=====================================================================================================//
+const accordianButton = document.querySelector('#accordian-btn');
+const accordian = document.querySelector('.out-of-hours-accordian');
+let accordianOpen = false;
 
-
-
-// window.addEventListener('resize', (e) => {
-//     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//     if (width >= 1260) {
-//         searchInput.classList.remove('search-hide');
-//         searchInput.classList.add('search-show');
-//         support.classList.remove('search-hide');
-//         contact.classList.remove('search-hide');
-//     } else if (width < 992) {
-//         support.classList.add('search-hide');
-//         contact.classList.add('search-hide');
-//         searchInput.classList.remove('search-hide');
-//     }
-// });
-// searchBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     if (width >= 992 && width < 1260 ) {
-//         if (searchToggle === false) {
-//             searchInput.classList.add('search-hide');
-//             support.classList.remove('search-hide');
-//             contact.classList.remove('search-hide');
-//             setTimeout(() => {
-//                 support.classList.add('search-hide');
-//                 contact.classList.add('search-hide');
-//             }, 200);
-//             setTimeout(() => {
-//                 searchInput.classList.add('search-show');
-//                 searchInput.classList.remove('search-hide');
-//             }, 500);
-//             searchToggle = true;
-//         } else if (searchToggle) {
-//             searchInput.classList.remove('search-show');
-//             searchInput.classList.add('search-hide');
-//             setTimeout(() => {
-//                 support.classList.remove('search-hide');
-//                 contact.classList.remove('search-hide');
-//             }, 200);
-//             searchToggle = false;
-//         }
-//     }
-// });
+accordianButton.addEventListener('click', (e) => {
+    console.log("clicked the accordian");
+    if(!accordianOpen) {
+        accordian.classList.add('display');
+        accordianOpen = true;
+    } else {
+        accordian.classList.remove('display');
+        accordianOpen = false;
+    }
+})

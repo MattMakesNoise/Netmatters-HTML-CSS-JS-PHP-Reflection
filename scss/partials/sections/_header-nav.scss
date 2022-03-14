@@ -8,15 +8,9 @@
     top: 0;
     display: block;
     height: 168px;
-    //Up to medium
-    @media screen and (max-width: $break-m) {
-        height: 168px;
-    }
-    //Medium and up
     @media screen and (min-width: $break-m) {
         height: 110px;
     }
-    //Large devices
     @media screen and (min-width: $break-lg) {
         height: 209px;
     }
@@ -28,7 +22,6 @@
         @media screen and (min-width: $break-m) {
             top: -110px;
         }
-        //Large devices
         @media screen and (min-width: $break-lg) {
             top: -209px;
         }
@@ -54,7 +47,6 @@
         @include flexcolumn;
     }
     @media screen and (min-width: $break-xl) {
-        @include flexcolumn;
         justify-content: space-evenly;
     }
 }
@@ -67,26 +59,14 @@
     @include mginlrauto;
     padding: 20px 0 20px 0;
     @media screen and (min-width: $break-m) {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        @include mginlrauto;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 18px;
+        padding: 20px 15px 19px 15px;
         width: 750px;
     }
     @media screen and (min-width: $break-lg) {
-        display: flex;
-        // justify-content: space-between;
-        @include mginlrauto;
-        padding: 20px 15px 19px 15px;
+        padding: 20px 15px 18px 15px;
         width: 970px;
     }
     @media screen and (min-width: $break-xl) {
-        display: flex;
-        justify-content: space-between;
-        @include mginlrauto;
         padding: 20px 15px 20px 15px;
         width: 1200px;
         height: 110px;
@@ -101,24 +81,20 @@
     }
     @media screen and (min-width: $break-m) {
         flex: 0 1 50%;
-        order: 1;
         padding-right: 15px;
         padding-bottom: 15px;
         margin-right: 28px;
-        // padding-top: 16px;
     }
     @media screen and (min-width: $break-lg) {
         flex: 0 1 41.66666667%;
-        order: 1;
         padding-right: 0px;
         padding-bottom: 8px;
         margin-right: 40px;
     }
     @media screen and (min-width: $break-xl) {
+        flex: 0 1 32%;
         padding-right: 4px;
         margin-right: 62px;
-        flex: 0 1 32%;
-        order: 1;
     }
 }
 .logo {
@@ -177,10 +153,6 @@
         order: 2;
         white-space: nowrap;
     }
-    @media screen and (min-width: $break-xl) {
-        display: flex;
-        // margin-left: 0;
-    }
 }
 //===== SUPPORT STYLING ENDS=====//
 
@@ -209,10 +181,6 @@
         justify-content: center;
         order: 3;
         white-space: nowrap;
-        // margin-right: 0;
-    }
-    @media screen and (min-width: $break-xl) {
-        display: flex;
     }
 }
 //===== CONTACT STYLING =====//
@@ -243,13 +211,8 @@
     order: 3;
     @media screen and (min-width: $break-lg) {
         order: 5;
-        // margin: 0 0 0 20px;
         margin: 0 0 0 0;
     }
-    // @media screen and (min-width: $break-xl) {
-    //     margin-left: 0;
-    //     order: 5;
-    // }
     .burger-label {
         display: block;
         position: relative;
@@ -321,8 +284,6 @@
 
 //===== SEARCH STYLING =====//
 .search-wrapper {
-    // display: flex;
-    // flex-wrap: nowrap;
     order: 4;
     height: 47px;
     width: 100%;
@@ -342,16 +303,10 @@
     @media screen and (min-width: $break-lg) {
         order: 4;
         width: auto;
-        height: 56px;
         margin: 0 0 0 0;
-    }
-    @media screen and (min-width: $break-xl) {
-        margin: 0;
-        display: block;
     }
 } 
 form.search-form {
-    // width: 100%;
     input[type=text] { /* Style the search field */
         display: block;
         font-size: 14px;
@@ -372,7 +327,6 @@ form.search-form {
         @media screen and (min-width: $break-m) {
             width: 172px;
             height: 56px;
-            padding-left: 16px;
             border: 1px solid #ccc;
             opacity: .9;
             letter-spacing: .5px;
@@ -391,7 +345,6 @@ form.search-form {
         @media screen and (min-width: $break-xl) {
             border-radius: 0;
             display: block;
-            height: 56px;
             width: 240px;
         }
     }
@@ -417,16 +370,11 @@ form.search-form {
             color: $white;
             padding: 6px 16px 2px 0px;
         }
-        //Large and Up
         @media screen and (min-width: $break-lg) {
             border-radius: 3px;
-            // width: 63px;
-            // height: 100%;
             padding: 8px 16px 2px 0px;
         }
-        //Extra Large
         @media screen and (min-width: $break-xl) {
-            height: 56px;
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
         }
@@ -441,13 +389,6 @@ form.search-form {
             width: 23px;
             height: 46px;
             padding: 8px 0 5px 0;
-            // @media screen and (min-width: $break-m) {
-            //     font-size: 23px;
-            //     line-height: 1;
-            //     width: 23px;
-            //     height: 46px;
-            //     padding: 12px 2px 3px 0;
-            // }
         }
     }
     &::after { /* Clear floats */
@@ -456,38 +397,14 @@ form.search-form {
         display: table;
     }
 }
-
-// .search-show {
-//     @media screen and (min-width: $break-lg) {
-//         display: block !important;
-//         margin-left: 26px;
-//         transition: all .5s;
-//     }
-// }
-// .search-hide {
-//     display: none !important;
-// }
 //===== SEARCH STYLING ENDS=====//
 
 //========== HEADER SECTION ENDS ==========//
 
 //========== CARDS SECTION ================//
 .cards-nav {
-    //Up to Medium
-    @media screen and (max-width: $break-m) {
-        display: none;
-    }
-    //Medium and up
-    @media screen and (min-width: $break-m) {
-        display: none;
-    }
-    //Large and Up
+    display: none;
     @media screen and (min-width: $break-lg) {
-        display: inline-block;
-        background-color: $dark-blue;
-    }
-    //Extra Large
-    @media screen and (min-width: $break-xl) {
         display: inline-block;
         background-color: $dark-blue;
     }
@@ -506,19 +423,13 @@ form.search-form {
     }
 }
 .navcards-container {
-    //Large and Up
-    @media screen and (min-width: $break-lg) {
-        width: 970px;
-        height: 99px;
-        @include mginlrauto;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    //Extra Large
+    width: 970px;
+    height: 99px;
+    @include mginlrauto;
+    padding-left: 15px;
+    padding-right: 15px;
     @media screen and (min-width: $break-xl) {
         width: 1200px;
-        height: 99px;
-        @include mginlrauto;
     }
 }
 .menu-main { // The initial UL that contains the six product cards.
@@ -529,7 +440,6 @@ form.search-form {
 .menu-sub { // Collective selecter for all dropdown menus.
     position: absolute;
     left: 0; // Aligns each dropdown with the first LI (WEB).
-    // width: 100%; // Makes dropdown as large as it's containing UL.
     height: 40px;
     display: none; //Stops the dropdown appearing unless hovered over.
     ul {
@@ -555,11 +465,16 @@ form.search-form {
             text-align: left;
         }
         &:not(:last-child) a { 
-            padding-right: 30px;
+            padding-right: 20px;
+            @media screen and (min-width: $break-xl) {
+                padding-right: 30px;
+            }
             &::after { //Adds the dashes after each dropdown item.
                 content: '-';
-                // float: right;
-                padding-left: 38px;
+                padding-left: 23px;
+                @media screen and (min-width: $break-xl) {
+                    padding-left: 38px;
+                }
             }
         }
     }
@@ -573,30 +488,19 @@ form.search-form {
     border-left: 1px solid rgba(0,0,0,.25);
     border-right: 1px solid hsla(0, 0%, 100%, 0.1);
     a { // Styles the product cards 
-        //Large and Up
-        @media screen and (min-width: $break-lg) {
-            font-size: 1rem;
-            @include flexcolumn;
-            text-align: center;
-            text-decoration: none;
-            color: $white;
-            text-transform: uppercase;
-            padding: 19px 0 18px 0;
-            line-height: 1;
-            small {
-                // font-size: 0.5rem;
-                padding-bottom: 1px;
-            }
+        font-size: 1rem;
+        @include flexcolumn;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+        padding: 19px 0 18px 0;
+        line-height: 1;
+        small {
+            padding-bottom: 1px;
         }
-        //Extra Large
         @media screen and (min-width: $break-xl) {
             font-size: 1.125rem;
-            @include flexcolumn;
-            text-align: center;
-            text-decoration: none;
-            color: $white;
-            text-transform: uppercase;
-            padding: 19px 0 18px 0;
             small {
                 font-size: 0.625rem;
                 padding-bottom: 1px;
@@ -611,9 +515,7 @@ form.search-form {
 .web-main {
     .fa-code {
         color: $web-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -626,8 +528,8 @@ form.search-form {
     }
 }
 .web-dropdown {
-        background: $web-dark;
-        z-index: 10;
+    background: $web-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
@@ -648,9 +550,7 @@ form.search-form {
 .it-main {
     .fa-desktop {
         color: $it-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -663,8 +563,8 @@ form.search-form {
     }
 }
 .it-dropdown {
-        background: $it-dark;
-        z-index: 10;
+    background: $it-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
@@ -685,9 +585,7 @@ form.search-form {
 .telecoms-main {
     .fa-phone-volume {
         color: $tele-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -700,8 +598,8 @@ form.search-form {
     }
 }
 .telecoms-dropdown {
-        background: $tele-dark;
-        z-index: 10;
+    background: $tele-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
@@ -722,9 +620,7 @@ form.search-form {
 .software-main {
     .fa-th {
         color: $soft-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -737,8 +633,8 @@ form.search-form {
     }
 }   
 .software-dropdown {
-        background: $soft-dark;
-        z-index: 10;
+    background: $soft-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
@@ -759,9 +655,7 @@ form.search-form {
 .digital-main {
     .fa-signal {
         color: $market-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -774,8 +668,8 @@ form.search-form {
     }
 }
 .digital-dropdown {
-        background: $market-dark;
-        z-index: 10;
+    background: $market-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
@@ -796,9 +690,7 @@ form.search-form {
 .security-main {
     .fa-shield-virus {
         color: $cyber-dark;
-        @media screen and (min-width: $break-lg) {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
         @media screen and (min-width: $break-xl) {
             font-size: 1.438rem;
         }
@@ -811,8 +703,8 @@ form.search-form {
     }
 }
 .security-dropdown {
-        background: $cyber-dark;
-        z-index: 10;
+    background: $cyber-dark;
+    z-index: 10;
     &::before,
     &::after {
         content: '';
