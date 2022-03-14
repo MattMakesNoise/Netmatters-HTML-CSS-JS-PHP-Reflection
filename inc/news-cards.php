@@ -1,6 +1,6 @@
 <?php
     try {
-        $results = $db->query("SELECT * FROM news_cards");
+        $results = $db->query("SELECT * FROM news_cards LIMIT 3");
     } catch(Exception $e) {
         echo $e->getMessage();
         die();
