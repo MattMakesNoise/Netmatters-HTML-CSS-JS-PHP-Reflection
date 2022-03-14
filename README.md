@@ -1,4 +1,4 @@
-# Netmatters-HTML-CSS-Reflection
+# Netmatters-HTML/CSS/JS/PHP-Reflection
 
 A project for my course where we where tasked with recreating the companies homepage.
 
